@@ -67,4 +67,4 @@ Constructed with the following guidelines:
 
 ## License
 
-[easyGraph](https://github.com/JairFrancesco/easyGraph) is released under [MIT licence](https://github.com/JairFrancesco/easyGraph/blob/master/LICENSE) . Copyright (c) [Jair Huaman](https://sites.google.com/site/jafrahuamancanqui/).
+[easyGraph](https://github.com/JairFrancesco/easyGraph) is released under [GNU GENERAL PUBLIC LICENSE](https://github.com/JairFrancesco/easyGraph/blob/master/LICENSE) . Copyright (c) [Jair Huaman](https://sites.google.com/site/jafrahuamancanqui/).
