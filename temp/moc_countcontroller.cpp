@@ -1,18 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'countcontroller.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.6.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "Controller/countcontroller.h"
+#include "../Controller/countcontroller.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'countcontroller.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.6.0. It"
+#error "This file was generated using the moc from 5.2.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,26 +20,25 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Controller__CountController_t {
     QByteArrayData data[7];
-    char stringdata0[74];
+    char stringdata[75];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Controller__CountController_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
+    offsetof(qt_meta_stringdata_Controller__CountController_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData) \
     )
 static const qt_meta_stringdata_Controller__CountController_t qt_meta_stringdata_Controller__CountController = {
     {
-QT_MOC_LITERAL(0, 0, 27), // "Controller::CountController"
-QT_MOC_LITERAL(1, 28, 12), // "valueChanged"
-QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 8), // "newValue"
-QT_MOC_LITERAL(4, 51, 7), // "onStart"
-QT_MOC_LITERAL(5, 59, 6), // "onStop"
-QT_MOC_LITERAL(6, 66, 7) // "onTimer"
-
+QT_MOC_LITERAL(0, 0, 27),
+QT_MOC_LITERAL(1, 28, 12),
+QT_MOC_LITERAL(2, 41, 0),
+QT_MOC_LITERAL(3, 42, 8),
+QT_MOC_LITERAL(4, 51, 7),
+QT_MOC_LITERAL(5, 59, 6),
+QT_MOC_LITERAL(6, 66, 7)
     },
     "Controller::CountController\0valueChanged\0"
-    "\0newValue\0onStart\0onStop\0onTimer"
+    "\0newValue\0onStart\0onStop\0onTimer\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,12 +56,12 @@ static const uint qt_meta_data_Controller__CountController[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06 /* Public */,
+       1,    1,   34,    2, 0x06,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   37,    2, 0x0a /* Public */,
-       5,    0,   38,    2, 0x0a /* Public */,
-       6,    0,   39,    2, 0x0a /* Public */,
+       4,    0,   37,    2, 0x0a,
+       5,    0,   38,    2, 0x0a,
+       6,    0,   39,    2, 0x0a,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -79,7 +78,6 @@ void Controller::CountController::qt_static_metacall(QObject *_o, QMetaObject::C
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         CountController *_t = static_cast<CountController *>(_o);
-        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->onStart(); break;
@@ -94,7 +92,6 @@ void Controller::CountController::qt_static_metacall(QObject *_o, QMetaObject::C
             typedef void (CountController::*_t)(int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&CountController::valueChanged)) {
                 *result = 0;
-                return;
             }
         }
     }
@@ -102,7 +99,7 @@ void Controller::CountController::qt_static_metacall(QObject *_o, QMetaObject::C
 
 const QMetaObject Controller::CountController::staticMetaObject = {
     { &QObject::staticMetaObject, qt_meta_stringdata_Controller__CountController.data,
-      qt_meta_data_Controller__CountController,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_Controller__CountController,  qt_static_metacall, 0, 0}
 };
 
 
@@ -113,8 +110,8 @@ const QMetaObject *Controller::CountController::metaObject() const
 
 void *Controller::CountController::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_Controller__CountController.stringdata0))
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_Controller__CountController.stringdata))
         return static_cast<void*>(const_cast< CountController*>(this));
     return QObject::qt_metacast(_clname);
 }
@@ -139,7 +136,7 @@ int Controller::CountController::qt_metacall(QMetaObject::Call _c, int _id, void
 // SIGNAL 0
 void Controller::CountController::valueChanged(int _t1)
 {
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

@@ -1,9 +1,9 @@
 #ifndef APPCONTROLLER_H
 #define APPCONTROLLER_H
 
-#include "Controller/countcontroller.h"
-#include "Model/countmodel.h"
-#include "View/mainwindow.h"
+#include "countcontroller.h"
+#include "countmodel.h"
+#include "mainwindow.h"
 
 namespace Controller{
     class AppController

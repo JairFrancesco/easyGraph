@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "Controller/countcontroller.h"
+#include "countcontroller.h"
 #include <QMainWindow>
 
 using namespace Controller;
