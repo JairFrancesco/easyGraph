@@ -13,14 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    countmodel.cpp \
-    countcontroller.cpp \
-    appcontroller.cpp
+        View/mainwindow.cpp \
+    Model/countmodel.cpp \
+    Controller/countcontroller.cpp \
+    Controller/appcontroller.cpp
 
-HEADERS  += mainwindow.h \
-    countmodel.h \
-    countcontroller.h \
-    appcontroller.h
+HEADERS  += View/mainwindow.h \
+    Model/countmodel.h \
+    Controller/countcontroller.h \
+    Controller/appcontroller.h
 
 FORMS    += mainwindow.ui
