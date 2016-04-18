@@ -23,4 +23,4 @@ HEADERS  += View/mainwindow.h \
     Controller/countcontroller.h \
     Controller/appcontroller.h
 
-FORMS    += mainwindow.ui
+FORMS    += View/mainwindow.ui
