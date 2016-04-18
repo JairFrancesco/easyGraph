@@ -4,7 +4,7 @@
 #include <QSharedPointer>
 #include <QTimer>
 #include <QObject>
-#include <countmodel.h>
+#include <Model/countmodel.h>
 
 using namespace Model;
 
