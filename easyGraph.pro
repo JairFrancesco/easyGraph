@@ -11,6 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = easyGraph
 TEMPLATE = app
 
+DEPENDPATH += Controller
+INCLUDEPATH += Controller
 
 SOURCES += main.cpp\
         View/mainwindow.cpp \
