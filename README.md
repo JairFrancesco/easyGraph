@@ -9,9 +9,20 @@ Members
 * **Luis Antonio Bernal Chahuayo.**
 * **Aldo Alexis Mendoza villarroel.**
 
-Computer Science - National University of Saint Augustine
+Computer Science - Universidad Nacional San Agustín - Arequipa, Peru
 
 ***
+##Compilando y Ejecutando el proyecto
+Para compilar y ejecutar el proyecto:
+```
+bash build.sh
+1
+```
+
+Para ejecutar, despues de una compilación previa
+```
+./easyGraph
+```
 
 ## Getting Involved
 
