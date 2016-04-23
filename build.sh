@@ -9,7 +9,7 @@ make
 echo "Compilado Finalizado"
 echo "1)Correr"
 read opcion
-if [ opcion=1 ]; then
+if [ $opcion == "1" ]; then
 	cd ../
 	./easyGraph
 else
