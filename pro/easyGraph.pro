@@ -12,8 +12,8 @@ TARGET = easyGraph
 TEMPLATE = app
 
 INCLUDEPATH += ../Controller \
-				../Model \
-				../View
+                ../Model \
+                ../View
 
 SOURCES += ../main.cpp\
         ../View/mainwindow.cpp \
@@ -34,4 +34,5 @@ OBJECTS_DIR = ../temp
 
 MOC_DIR = ../temp
 UI_DIR = ../temp
+
 
