@@ -28,7 +28,7 @@ HEADERS  += ../View/mainwindow.h \
 
 FORMS    += ../View/mainwindow.ui
 
-DESTDIR = ../
+DESTDIR = ../temp
 OBJECTS_DIR = ../temp
 
 
