@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>737</width>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -57,38 +57,284 @@
      </item>
     </layout>
    </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>40</y>
+      <width>341</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QOpenGLWidget" name="openGLWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>100</y>
+      <width>161</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>60</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>60</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Ecuaciones</string>
+    </property>
+    <widget class="QFontComboBox" name="fontComboBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>737</width>
      <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuEasyGraph_using_MVC">
     <property name="title">
-     <string>easyGraph using MVC pattern C++</string>
+     <string>Archivo</string>
     </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionSalir"/>
+    <addaction name="actionExportar_como_imagen"/>
+    <addaction name="actionImprimir_como_imagen"/>
+    <addaction name="actionSalir_2"/>
    </widget>
    <widget class="QMenu" name="menuJair">
     <property name="title">
-     <string>Jair</string>
+     <string>Editar</string>
     </property>
+    <addaction name="actionInsertar_Ecuaci_n"/>
+    <addaction name="actionRemover_ecuaci_n"/>
+    <addaction name="separator"/>
+    <addaction name="actionCortar"/>
+    <addaction name="actionCopiar"/>
+    <addaction name="actionPegar"/>
+    <addaction name="separator"/>
+    <addaction name="actionReiniciar_Configuraciones"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+    <addaction name="actionTutorial"/>
+    <addaction name="action_Que_hay_de_nuevo"/>
+    <addaction name="actionContactanos"/>
+   </widget>
+   <widget class="QMenu" name="menuVer">
+    <property name="title">
+     <string>Ver</string>
+    </property>
+    <addaction name="actionTeclado"/>
+    <addaction name="actionConfiguraci_n_de_ejes"/>
+    <addaction name="actionAtributos_del_Grafico"/>
+    <addaction name="separator"/>
+    <addaction name="actionConfiguraciones"/>
    </widget>
    <addaction name="menuEasyGraph_using_MVC"/>
    <addaction name="menuJair"/>
+   <addaction name="menuVer"/>
+   <addaction name="menuAyuda"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>false</bool>
+    <bool>true</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNuevo">
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar...</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Guardar Como ...</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de ...</string>
+   </property>
+  </action>
+  <action name="actionTutorial">
+   <property name="text">
+    <string>Tutorial</string>
+   </property>
+  </action>
+  <action name="actionExportar_como_imagen">
+   <property name="text">
+    <string>Exportar como imagen ...</string>
+   </property>
+  </action>
+  <action name="actionImprimir_como_imagen">
+   <property name="text">
+    <string>Imprimir como imagen ...</string>
+   </property>
+  </action>
+  <action name="actionSalir_2">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionInsertar_Ecuaci_n">
+   <property name="text">
+    <string>Insertar Ecuación</string>
+   </property>
+  </action>
+  <action name="actionRemover_ecuaci_n">
+   <property name="text">
+    <string>Remover Ecuación</string>
+   </property>
+  </action>
+  <action name="actionReiniciar_Configuraciones">
+   <property name="text">
+    <string>Reiniciar Configuraciones</string>
+   </property>
+  </action>
+  <action name="actionCortar">
+   <property name="text">
+    <string>Cortar</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+  </action>
+  <action name="actionPegar">
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+  </action>
+  <action name="actionTeclado">
+   <property name="text">
+    <string>Teclado</string>
+   </property>
+  </action>
+  <action name="actionConfiguraci_n_de_ejes">
+   <property name="text">
+    <string>Configuración de ejes</string>
+   </property>
+  </action>
+  <action name="actionAtributos_del_Grafico">
+   <property name="text">
+    <string>Atributos del Grafico</string>
+   </property>
+  </action>
+  <action name="actionConfiguraciones">
+   <property name="text">
+    <string>Configuraciones</string>
+   </property>
+  </action>
+  <action name="action_Que_hay_de_nuevo">
+   <property name="text">
+    <string>¿Que hay de nuevo?</string>
+   </property>
+  </action>
+  <action name="actionContactanos">
+   <property name="text">
+    <string>Contactanos ...</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
