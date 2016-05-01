@@ -6,227 +6,322 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>737</width>
-    <height>468</height>
+    <width>1024</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>easyGraph - OAD</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>40</y>
-      <width>341</width>
-      <height>321</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Tab 1</string>
-     </attribute>
-     <widget class="QOpenGLWidget" name="openGLWidget">
-      <property name="geometry">
-       <rect>
-        <x>-10</x>
-        <y>0</y>
-        <width>331</width>
-        <height>281</height>
-       </rect>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="Line" name="line">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>60</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>X</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>60</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Y</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>60</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Z</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>191</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Ecuaciones</string>
-    </property>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>111</width>
-       <height>27</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>21</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>20</y>
-       <width>31</width>
-       <height>27</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>21</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>50</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>+</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>50</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>-</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>215</x>
-      <y>91</y>
-      <width>161</width>
-      <height>191</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>201</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 1</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-    </widget>
-   </widget>
-   <widget class="QProgressBar" name="progressBar">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>370</y>
-      <width>181</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-   </widget>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitterEquations_Table_Graphs">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="">
+       <layout class="QHBoxLayout" name="horizontalEquations">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayoutEquations">
+          <item>
+           <widget class="QGroupBox" name="grpEquations">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Ecuaciones</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+                 </property>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QGraphicsView" name="graphicsView">
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="lblStatus">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>15</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>15</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Estado:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="txtStatus">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnRedraw">
+              <property name="text">
+               <string>Redibujar Todo</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="tabWidget_2">
+            <property name="tabPosition">
+             <enum>QTabWidget::South</enum>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="tab_2">
+             <attribute name="title">
+              <string>Tab 1</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="tab_3">
+             <attribute name="title">
+              <string>Tab 2</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QSplitter" name="splitter_Table_Graph">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QWidget" name="">
+        <layout class="QHBoxLayout" name="horizontalLayoutTable">
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="minimumSize">
+            <size>
+             <width>125</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>140</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>40</number>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>40</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderMinimumSectionSize">
+            <number>25</number>
+           </attribute>
+           <attribute name="verticalHeaderStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>X</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Y</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Z</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <layout class="QVBoxLayout" name="verticalLayoutGraph">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QCheckBox" name="chkGrid">
+             <property name="text">
+              <string>Ver Cuadricula</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QSlider" name="verticalSlider">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_3">
+             <property name="minimumSize">
+              <size>
+               <width>500</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="tab_4">
+              <attribute name="title">
+               <string>Tab 1</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QOpenGLWidget" name="openGLWidget2D"/>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_5">
+              <attribute name="title">
+               <string>Tab 2</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QOpenGLWidget" name="openGLWidget3D"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>737</width>
+     <width>1024</width>
      <height>25</height>
     </rect>
    </property>
@@ -302,6 +397,10 @@
    <addaction name="actionSaveGraph"/>
    <addaction name="actionCopyToClipboard"/>
    <addaction name="actionShareFacebook"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomAll"/>
+   <addaction name="actionZoomMore"/>
+   <addaction name="actionZoomLess"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNuevo">
