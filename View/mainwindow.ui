@@ -7,56 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>737</width>
-    <height>428</height>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>381</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="btnStart">
-         <property name="text">
-          <string>Start</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnStop">
-         <property name="text">
-          <string>Stop</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>0</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
@@ -76,7 +33,7 @@
      <widget class="QOpenGLWidget" name="openGLWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
         <width>331</width>
         <height>281</height>
@@ -89,16 +46,6 @@
       <string>Tab 2</string>
      </attribute>
     </widget>
-   </widget>
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>100</y>
-      <width>161</width>
-      <height>261</height>
-     </rect>
-    </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -144,23 +91,134 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>120</width>
+      <width>191</width>
       <height>80</height>
      </rect>
     </property>
     <property name="title">
      <string>Ecuaciones</string>
     </property>
-    <widget class="QFontComboBox" name="fontComboBox">
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>111</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>20</y>
-       <width>51</width>
-       <height>31</height>
+       <width>21</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>20</y>
+       <width>31</width>
+       <height>27</height>
       </rect>
      </property>
     </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>50</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>91</y>
+      <width>161</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>201</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>370</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -179,10 +237,10 @@
     <addaction name="actionNuevo"/>
     <addaction name="actionAbrir"/>
     <addaction name="actionGuardar"/>
-    <addaction name="actionSalir"/>
+    <addaction name="actionSaveAs"/>
     <addaction name="actionExportar_como_imagen"/>
     <addaction name="actionImprimir_como_imagen"/>
-    <addaction name="actionSalir_2"/>
+    <addaction name="actionSalir"/>
    </widget>
    <widget class="QMenu" name="menuJair">
     <property name="title">
@@ -226,28 +284,72 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
+   <addaction name="actionNuevo"/>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionGuardar"/>
+   <addaction name="actionImprimir_como_imagen"/>
+   <addaction name="separator"/>
+   <addaction name="actionMore"/>
+   <addaction name="actionLess"/>
+   <addaction name="separator"/>
+   <addaction name="actionCheckUncheck"/>
+   <addaction name="actionExample"/>
+   <addaction name="separator"/>
+   <addaction name="actionTable"/>
+   <addaction name="separator"/>
+   <addaction name="actionSaveGraph"/>
+   <addaction name="actionCopyToClipboard"/>
+   <addaction name="actionShareFacebook"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+   </property>
    <property name="text">
     <string>Nuevo</string>
    </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
   </action>
   <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+   </property>
    <property name="text">
     <string>Abrir</string>
    </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
   </action>
   <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
    <property name="text">
     <string>Guardar...</string>
    </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
   </action>
-  <action name="actionSalir">
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
    <property name="text">
     <string>Guardar Como ...</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
    </property>
   </action>
   <action name="actionAcerca_de">
@@ -261,16 +363,27 @@
    </property>
   </action>
   <action name="actionExportar_como_imagen">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
+   </property>
    <property name="text">
     <string>Exportar como imagen ...</string>
    </property>
   </action>
   <action name="actionImprimir_como_imagen">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/print.ico</normaloff>:/images/print.ico</iconset>
+   </property>
    <property name="text">
     <string>Imprimir como imagen ...</string>
    </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
   </action>
-  <action name="actionSalir_2">
+  <action name="actionSalir">
    <property name="text">
     <string>Salir</string>
    </property>
@@ -335,8 +448,130 @@
     <string>Contactanos ...</string>
    </property>
   </action>
+  <action name="actionMore">
+   <property name="text">
+    <string>+</string>
+   </property>
+   <property name="toolTip">
+    <string>Agregar Nueva ecuación</string>
+   </property>
+  </action>
+  <action name="actionLess">
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="toolTip">
+    <string>Quitar ecuación</string>
+   </property>
+  </action>
+  <action name="actionCheckUncheck">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/check.png</normaloff>:/images/check.png</iconset>
+   </property>
+   <property name="text">
+    <string>check/uncheck</string>
+   </property>
+   <property name="toolTip">
+    <string>Seleccionar/Deseleccionar todas las ecuaciones</string>
+   </property>
+  </action>
+  <action name="actionExample">
+   <property name="text">
+    <string>Ejemplo</string>
+   </property>
+   <property name="toolTip">
+    <string>Insertar un Ejemplo</string>
+   </property>
+  </action>
+  <action name="actionTable">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/table.png</normaloff>:/images/table.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tabla</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostrar/Esconder Tabla</string>
+   </property>
+  </action>
+  <action name="actionZoomAll">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/restorezoom.png</normaloff>:/images/restorezoom.png</iconset>
+   </property>
+   <property name="text">
+    <string>zoomAll</string>
+   </property>
+   <property name="toolTip">
+    <string>Restaurar Zoom</string>
+   </property>
+  </action>
+  <action name="actionZoomMore">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/zoommore.png</normaloff>:/images/zoommore.png</iconset>
+   </property>
+   <property name="text">
+    <string>zoomMore</string>
+   </property>
+   <property name="toolTip">
+    <string>Aumentar Zoom</string>
+   </property>
+  </action>
+  <action name="actionZoomLess">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/zoomless.png</normaloff>:/images/zoomless.png</iconset>
+   </property>
+   <property name="text">
+    <string>zoomLess</string>
+   </property>
+   <property name="toolTip">
+    <string>Disminuir Zoom</string>
+   </property>
+  </action>
+  <action name="actionSaveGraph">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/saveGraph.png</normaloff>:/images/saveGraph.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveGraph</string>
+   </property>
+   <property name="toolTip">
+    <string>Guardar Grafico</string>
+   </property>
+  </action>
+  <action name="actionShareFacebook">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/facebook.ico</normaloff>:/images/facebook.ico</iconset>
+   </property>
+   <property name="text">
+    <string>ShareFacebook</string>
+   </property>
+   <property name="toolTip">
+    <string>Compartir en Facebook</string>
+   </property>
+  </action>
+  <action name="actionCopyToClipboard">
+   <property name="icon">
+    <iconset resource="../Resources/resources.qrc">
+     <normaloff>:/images/copyclipboard.png</normaloff>:/images/copyclipboard.png</iconset>
+   </property>
+   <property name="text">
+    <string>CopyToClipboard</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Copiar al Portapapeles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../Resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

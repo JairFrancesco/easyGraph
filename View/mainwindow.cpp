@@ -17,6 +17,15 @@ MainWindow::~MainWindow()
 void MainWindow::setValueLabel(int value)
 {
     QString s("%1");
-    ui->label->setText(s.arg(value));
+    //ui->label->setText(s.arg(value));
 }
 
+
+void MainWindow::on_actionConfiguraciones_triggered()
+{
+    //SettingsDialog settingDialog;
+    //settingDialog.setModal(true);
+    //settingDialog.exec();
+    settingDialog = new SettingsDialog(this);
+    settingDialog->show();
+}

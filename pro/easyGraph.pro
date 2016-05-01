@@ -19,14 +19,17 @@ SOURCES += ../main.cpp\
         ../View/mainwindow.cpp \
     ../Model/countmodel.cpp \
     ../Controller/countcontroller.cpp \
-    ../Controller/appcontroller.cpp
+    ../Controller/appcontroller.cpp \
+    settingsdialog.cpp
 
 HEADERS  += ../View/mainwindow.h \
     ../Model/countmodel.h \
     ../Controller/countcontroller.h \
-    ../Controller/appcontroller.h
+    ../Controller/appcontroller.h \
+    settingsdialog.h
 
-FORMS    += ../View/mainwindow.ui
+FORMS    += ../View/mainwindow.ui \
+    settingsdialog.ui
 
 DESTDIR = ../temp
 OBJECTS_DIR = ../temp
@@ -34,5 +37,10 @@ OBJECTS_DIR = ../temp
 
 MOC_DIR = ../temp
 UI_DIR = ../temp
+
+RESOURCES += \
+    ../Resources/resources.qrc
+
+DISTFILES +=
 
 
