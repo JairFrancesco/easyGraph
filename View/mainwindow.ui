@@ -144,7 +144,7 @@
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab_2">
              <attribute name="title">
@@ -269,7 +269,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QTabWidget" name="tabWidget_3">
+            <widget class="QTabWidget" name="tabGraphics">
              <property name="minimumSize">
               <size>
                <width>500</width>
@@ -278,16 +278,16 @@
              </property>
              <property name="maximumSize">
               <size>
-               <width>500</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
-             <widget class="QWidget" name="tab_4">
+             <widget class="QWidget" name="tab2D">
               <attribute name="title">
-               <string>Tab 1</string>
+               <string>2D</string>
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_7">
                <item>
@@ -295,9 +295,9 @@
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="tab_5">
+             <widget class="QWidget" name="tab3D">
               <attribute name="title">
-               <string>Tab 2</string>
+               <string>3D</string>
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_8">
                <item>
