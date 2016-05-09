@@ -1,7 +1,7 @@
 #ifndef NODO_FUNCION_BINARIA_H
 #define NODO_FUNCION_BINARIA_H
-#include <Nodo.h>
-#include <iostream>
+#include "Nodo.h"
+#include "iostream"
 using namespace std;
 
 class Nodo_funcion_binaria: public Nodo

@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1462767485 source:/home/jairfrancesco/easyGraphGit/easyGraph/Parser/arbol_binario.cpp
+	"arbol_binario.h"
+
+1462768213 /home/jairfrancesco/easyGraphGit/easyGraph/Parser/arbol_binario.h
+	"Nodo.h"
+	"Nodo_double.h"
+	"Nodo_funcion_binaria.h"
+	"Nodo_funcion_unaria.h"
+
+1462767485 /home/jairfrancesco/easyGraphGit/easyGraph/Parser/Nodo.h
+
+1462768221 /home/jairfrancesco/easyGraphGit/easyGraph/Parser/Nodo_double.h
+	"Nodo.h"
+
+1462768234 /home/jairfrancesco/easyGraphGit/easyGraph/Parser/Nodo_funcion_binaria.h
+	"Nodo.h"
+	"iostream"
+
+1462768241 /home/jairfrancesco/easyGraphGit/easyGraph/Parser/Nodo_funcion_unaria.h
+	"Nodo.h"
+

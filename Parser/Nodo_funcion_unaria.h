@@ -1,6 +1,6 @@
 #ifndef NODO_FUNCION_UNARIA_H
 #define NODO_FUNCION_UNARIA_H
-#include <Nodo.h>
+#include "Nodo.h"
 
 class Nodo_funcion_unaria: public Nodo
 {
