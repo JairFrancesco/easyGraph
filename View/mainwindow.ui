@@ -30,7 +30,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QHBoxLayout" name="horizontalEquations">
         <item>
          <layout class="QVBoxLayout" name="verticalLayoutEquations">
@@ -173,7 +173,7 @@
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <layout class="QHBoxLayout" name="horizontalLayoutTable">
          <item>
           <widget class="QTableWidget" name="tableWidget">
@@ -291,7 +291,7 @@
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_7">
                <item>
-                <widget class="QOpenGLWidget" name="openGLWidget2D"/>
+                <widget class="Myopengl" name="myopenglw"/>
                </item>
               </layout>
              </widget>
@@ -322,7 +322,7 @@
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuEasyGraph_using_MVC">
@@ -669,6 +669,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Myopengl</class>
+   <extends>QOpenGLWidget</extends>
+   <header>myopengl.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../Resources/resources.qrc"/>
  </resources>

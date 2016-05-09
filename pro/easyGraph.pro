@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,13 +20,15 @@ SOURCES += ../main.cpp\
     ../Model/countmodel.cpp \
     ../Controller/countcontroller.cpp \
     ../Controller/appcontroller.cpp \
-    settingsdialog.cpp
+    settingsdialog.cpp \
+    myopengl.cpp
 
 HEADERS  += ../View/mainwindow.h \
     ../Model/countmodel.h \
     ../Controller/countcontroller.h \
     ../Controller/appcontroller.h \
-    settingsdialog.h
+    settingsdialog.h \
+    myopengl.h
 
 FORMS    += ../View/mainwindow.ui \
     settingsdialog.ui
