@@ -7,6 +7,7 @@
 #include "Nodo_funcion_unaria.h"
 #include "arbol_binario.h"
 #include "Nodo.h"
+#include "funciones.h"
 
 using namespace std;
 
@@ -26,18 +27,6 @@ double string_to_double(std::string strg){
     }
 
 }
-
-
-
-
-double suma(double a, double b){
-    return a+b;
-}
-
-double cuadrado(double a){
-    return a*a;
-}
-
 
 
 int main()
