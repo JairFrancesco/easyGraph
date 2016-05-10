@@ -21,14 +21,16 @@ SOURCES += ../main.cpp\
     ../Controller/countcontroller.cpp \
     ../Controller/appcontroller.cpp \
     settingsdialog.cpp \
-    myopengl.cpp
+    myopengl.cpp \
+    myopengl2.cpp
 
 HEADERS  += ../View/mainwindow.h \
     ../Model/countmodel.h \
     ../Controller/countcontroller.h \
     ../Controller/appcontroller.h \
     settingsdialog.h \
-    myopengl.h
+    myopengl.h \
+    myopengl2.h
 
 FORMS    += ../View/mainwindow.ui \
     settingsdialog.ui

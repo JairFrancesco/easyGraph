@@ -190,7 +190,7 @@
             </size>
            </property>
            <attribute name="horizontalHeaderVisible">
-            <bool>true</bool>
+            <bool>false</bool>
            </attribute>
            <attribute name="horizontalHeaderCascadingSectionResizes">
             <bool>false</bool>
@@ -205,7 +205,7 @@
             <bool>false</bool>
            </attribute>
            <attribute name="verticalHeaderVisible">
-            <bool>true</bool>
+            <bool>false</bool>
            </attribute>
            <attribute name="verticalHeaderMinimumSectionSize">
             <number>25</number>
@@ -283,7 +283,7 @@
               </size>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="tab2D">
               <attribute name="title">
@@ -301,7 +301,7 @@
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_8">
                <item>
-                <widget class="QOpenGLWidget" name="openGLWidget3D"/>
+                <widget class="Myopengl2" name="openGLWidget3D"/>
                </item>
               </layout>
              </widget>
@@ -674,6 +674,11 @@
    <class>Myopengl</class>
    <extends>QOpenGLWidget</extends>
    <header>myopengl.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Myopengl2</class>
+   <extends>QOpenGLWidget</extends>
+   <header>myopengl2.h</header>
   </customwidget>
  </customwidgets>
  <resources>
