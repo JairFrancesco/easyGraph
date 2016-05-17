@@ -12,6 +12,73 @@
 using namespace std;
 
 
+string isOperator(string c){
+        if(c.compare("+")==0)
+            return "+";
+        else if(c.compare("-")==0)
+            return "-";
+        else if(c.compare("*")==0)
+            return "*";
+        else if(c.compare("/")==0)
+            return "/";
+        return "";
+}
+
+boolean precedence(string c1, string c2){
+        int i1 = 0;
+        int i2 = 0;
+        if(c1.compare("+") == 0)
+            i1 = 1;
+        else if(c1.compare("-") == 0)
+            i1 = 2;
+        else if(c1.compare("*") == 0)
+            i1 = 3;
+        else if(c1.compare("/") == 0)
+            i1 = 4;
+        if(c2.compare("+") == 0)
+            i2 = 1;
+        else if(c2.compare("-") == 0)
+            i2 = 2;
+        else if(c2.compare("*") == 0)
+            i2 = 3;
+        else if(c2.compare("/") == 0)
+            i2 = 4;
+        if(i1 >= i2)
+            return true;
+        else
+            return false;
+}
+
+
+string isParenthesis(String c){
+        if(c.compare("(")==0)
+            return "(";
+        else if(c.compare(")")==0)
+            return ")";
+        return "";
+}
+int p(char op)
+{
+    int p;
+    switch (op)
+    {
+        case '+' :
+        case '-' :
+             p = 1;
+             break;
+        case '*' :
+        case '/' :
+             p = 2;
+             break;
+        default:
+             p = 0;
+             break;
+    }
+    return p;
+}
+
+
+
 
 double string_to_double(std::string strg){
     if(strg=="x"){
@@ -57,3 +124,6 @@ int main()
     return 0;
 
 }
+
+
+
