@@ -10,6 +10,7 @@ class Nodo_funcion_unaria: public Nodo
         void get_valor(double(*& funcion)(double));
         void set_valor(double(*& funcion)(double));
         double procesar();
+        void obtener_variables();
         virtual ~Nodo_funcion_unaria();
 
 

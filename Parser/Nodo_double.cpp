@@ -10,6 +10,23 @@ Nodo_double::~Nodo_double()
     //dtor
 }
 
+Nodo_double::Nodo_double(std::string a){
+    this->valor=new double();
+    es_variable=true;
+    nom_var=a;
+
+}
+
+void Nodo_double::obtener_variables(){
+
+    if(es_variable==true){
+
+        std::tuple<std::string, double*> temp{this->nom_var,this->valor};
+        variables->push_back(temp);
+    }
+
+}
+
 void Nodo_double::get_valor(double* a){
     *a=*valor;
 }

@@ -22,3 +22,8 @@ void Nodo_funcion_unaria::get_valor(double(*& funcion)(double)){
 double Nodo_funcion_unaria::procesar(){
     return ( (*valor)(this->der->procesar()) );
 }
+
+
+void Nodo_funcion_unaria::obtener_variables(){
+    this->der->obtener_variables();
+}

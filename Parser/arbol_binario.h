@@ -4,19 +4,27 @@
 #include <Nodo_double.h>
 #include <Nodo_funcion_binaria.h>
 #include <Nodo_funcion_unaria.h>
+#include <algorithm>
 
 class arbol_binario
 {
     public:
         arbol_binario();
-        arbol_binario(Nodo*a){raiz=a;};
+        arbol_binario(Nodo*a){raiz=a;a->variables=this->variables;};
+        void obtener_variables();
+        void cambiar_valor_de(std::string, double);
         virtual ~arbol_binario();
 
-    //// privado
 
+
+    //// privado
+        std::vector<std::tuple<std::string,double*>> * variables=new std::vector<std::tuple<std::string, double*>>;
         Nodo*raiz;
+
     protected:
     private:
+
+
 
 };
 

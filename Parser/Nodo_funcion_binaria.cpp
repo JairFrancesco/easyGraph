@@ -10,6 +10,12 @@ Nodo_funcion_binaria::~Nodo_funcion_binaria()
     //dtor
 }
 
+void Nodo_funcion_binaria::obtener_variables(){
+    this->izq->obtener_variables();
+    this->der->obtener_variables();
+}
+
+
 void Nodo_funcion_binaria::set_valor(double(*& funcion)(double, double)){
     this->valor=funcion;
 }
