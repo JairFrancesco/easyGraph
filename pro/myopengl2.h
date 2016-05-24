@@ -3,7 +3,8 @@
 
 #include <QWidget>
 #include <QOpenGLWidget>
-#include <QDebug>
+#include <QOpenGLFunctions>
+
 class Myopengl2 : public QOpenGLWidget
 {
     Q_OBJECT

@@ -45,6 +45,9 @@ UI_DIR = ../temp
 RESOURCES += \
     ../Resources/resources.qrc
 
-DISTFILES +=
+DISTFILES += \
+    ../Resources/shaders/vertexshader.vsh \
+    ../Resources/shaders/fragmentshader.fsh \
+    lll.frag
 
 

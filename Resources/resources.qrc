@@ -19,5 +19,7 @@
         <file>images/zoommore.png</file>
         <file>images/saveGraph.png</file>
         <file>images/facebook.ico</file>
+        <file>shaders/vertexshader.vsh</file>
+        <file>shaders/fragmentshader.fsh</file>
     </qresource>
 </RCC>
