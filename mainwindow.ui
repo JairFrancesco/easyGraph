@@ -283,7 +283,7 @@
               </size>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="tab2D">
               <attribute name="title">
@@ -291,7 +291,7 @@
               </attribute>
               <layout class="QVBoxLayout" name="verticalLayout_7">
                <item>
-                <widget class="Myopengl" name="myopenglw"/>
+                <widget class="QVTKWidget" name="qvtkWidget"/>
                </item>
               </layout>
              </widget>
@@ -299,11 +299,7 @@
               <attribute name="title">
                <string>3D</string>
               </attribute>
-              <layout class="QVBoxLayout" name="verticalLayout_8">
-               <item>
-                <widget class="Myopengl2" name="openGLWidget3D"/>
-               </item>
-              </layout>
+              <layout class="QVBoxLayout" name="verticalLayout_8"/>
              </widget>
             </widget>
            </item>
@@ -381,8 +377,8 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionNuevo"/>
    <addaction name="actionAbrir"/>
+   <addaction name="actionNuevo"/>
    <addaction name="actionGuardar"/>
    <addaction name="actionImprimir_como_imagen"/>
    <addaction name="separator"/>
@@ -405,8 +401,8 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNuevo">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/new.png</normaloff>:/Icons/icons/new.png</iconset>
    </property>
    <property name="text">
     <string>Nuevo</string>
@@ -416,10 +412,6 @@
    </property>
   </action>
   <action name="actionAbrir">
-   <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
-   </property>
    <property name="text">
     <string>Abrir</string>
    </property>
@@ -429,8 +421,8 @@
   </action>
   <action name="actionGuardar">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/save.png</normaloff>:/Icons/icons/save.png</iconset>
    </property>
    <property name="text">
     <string>Guardar...</string>
@@ -441,8 +433,8 @@
   </action>
   <action name="actionSaveAs">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/save.png</normaloff>:/Icons/icons/save.png</iconset>
    </property>
    <property name="text">
     <string>Guardar Como ...</string>
@@ -463,8 +455,8 @@
   </action>
   <action name="actionExportar_como_imagen">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/export.png</normaloff>:/Icons/icons/export.png</iconset>
    </property>
    <property name="text">
     <string>Exportar como imagen ...</string>
@@ -472,8 +464,8 @@
   </action>
   <action name="actionImprimir_como_imagen">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/print.ico</normaloff>:/images/print.ico</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/print.ico</normaloff>:/Icons/icons/print.ico</iconset>
    </property>
    <property name="text">
     <string>Imprimir como imagen ...</string>
@@ -565,8 +557,8 @@
   </action>
   <action name="actionCheckUncheck">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/check.png</normaloff>:/images/check.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/check.png</normaloff>:/Icons/icons/check.png</iconset>
    </property>
    <property name="text">
     <string>check/uncheck</string>
@@ -585,8 +577,8 @@
   </action>
   <action name="actionTable">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/table.png</normaloff>:/images/table.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/table.png</normaloff>:/Icons/icons/table.png</iconset>
    </property>
    <property name="text">
     <string>Tabla</string>
@@ -597,8 +589,8 @@
   </action>
   <action name="actionZoomAll">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/restorezoom.png</normaloff>:/images/restorezoom.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/restorezoom.png</normaloff>:/Icons/icons/restorezoom.png</iconset>
    </property>
    <property name="text">
     <string>zoomAll</string>
@@ -609,8 +601,8 @@
   </action>
   <action name="actionZoomMore">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/zoommore.png</normaloff>:/images/zoommore.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/zoommore.png</normaloff>:/Icons/icons/zoommore.png</iconset>
    </property>
    <property name="text">
     <string>zoomMore</string>
@@ -621,8 +613,8 @@
   </action>
   <action name="actionZoomLess">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/zoomless.png</normaloff>:/images/zoomless.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/zoomless.png</normaloff>:/Icons/icons/zoomless.png</iconset>
    </property>
    <property name="text">
     <string>zoomLess</string>
@@ -633,8 +625,8 @@
   </action>
   <action name="actionSaveGraph">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/saveGraph.png</normaloff>:/images/saveGraph.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/saveGraph.png</normaloff>:/Icons/icons/saveGraph.png</iconset>
    </property>
    <property name="text">
     <string>SaveGraph</string>
@@ -645,8 +637,8 @@
   </action>
   <action name="actionShareFacebook">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/facebook.ico</normaloff>:/images/facebook.ico</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/facebook.ico</normaloff>:/Icons/icons/facebook.ico</iconset>
    </property>
    <property name="text">
     <string>ShareFacebook</string>
@@ -657,8 +649,8 @@
   </action>
   <action name="actionCopyToClipboard">
    <property name="icon">
-    <iconset resource="../Resources/resources.qrc">
-     <normaloff>:/images/copyclipboard.png</normaloff>:/images/copyclipboard.png</iconset>
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Icons/icons/copyclipboard.png</normaloff>:/Icons/icons/copyclipboard.png</iconset>
    </property>
    <property name="text">
     <string>CopyToClipboard</string>
@@ -671,18 +663,13 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>Myopengl</class>
-   <extends>QOpenGLWidget</extends>
-   <header>myopengl.h</header>
-  </customwidget>
-  <customwidget>
-   <class>Myopengl2</class>
-   <extends>QOpenGLWidget</extends>
-   <header>myopengl2.h</header>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../Resources/resources.qrc"/>
+  <include location="Resources/res.qrc"/>
  </resources>
  <connections/>
 </ui>
