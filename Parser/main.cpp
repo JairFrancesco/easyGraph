@@ -2,12 +2,14 @@
 //#include <string>
 #include <sstream>
 #include <stdio.h>
-//#include "Nodo_double.h"
-//#include "Nodo_funcion_binaria.h"
-//#include "Nodo_funcion_unaria.h"
-//#include "arbol_binario.h"
-//#include "Nodo.h"
-//#include "funciones.h"
+#include "include/Nodo.h"
+#include "include/Nodo_double.h"
+#include "include/Nodo_funcion_binaria.h"
+#include "include/Nodo_funcion_unaria.h"
+#include "include/arbol_binario.h"
+#include "include/funciones.h"
+#include "include/procesador_de_arbol.h"
+
 
 using namespace std;
 
@@ -98,34 +100,37 @@ double string_to_double(std::string strg){
 
 int main()
 {
-/*
-    Nodo * a= new Nodo_double(32);
-    Nodo * b= new Nodo_double(21);
+    Nodo * a= new Nodo_double(5);
+    Nodo * b= new Nodo_double(2);
     Nodo * c= new Nodo_double(4);
-*/
+    Nodo * d= new Nodo_double(6);
 
-    /*
-    double (*fun1)(double, double);
-    double (*fun2)(double);
-    fun1=&suma;
-    fun2=&cuadrado;
-    Nodo * d=new Nodo_funcion_binaria(fun1);
-    Nodo * e=new Nodo_funcion_unaria(fun2);
 
-    */
+    Nodo * sum=new Nodo_funcion_binaria(suma);
+    Nodo * cuadrad=new Nodo_funcion_unaria(cuadrado);
+    Nodo * multi=new Nodo_funcion_binaria(multiplicacion);
 
-    /*
-    arbol_binario * tree= new arbol_binario(e);
-    tree->raiz->agregar_der(c);
-    tree->raiz->agregar_izq(d);
+    Nodo * variable= new Nodo_double("x");
+
+    arbol_binario * tree= new arbol_binario(sum);
+    tree->raiz->agregar_der(cuadrad);
+    tree->raiz->der->agregar_der(d);
+    tree->raiz->agregar_izq(multi);
     tree->raiz->izq->agregar_izq(a);
-    tree->raiz->izq->agregar_der(b);
-    */
+    tree->raiz->izq->agregar_der(variable);
+    tree->obtener_variables();
+
+    procesador_de_arbol * procesador= new procesador_de_arbol(tree);
+    procesador->set_dx(0.7);
+    procesador->set_limite_izq(150);
+    procesador->set_limite_der(1500);
+    auto coor =procesador->get_coordenadas();
+
+    for (int i=0; i<coor.size();i++){
+        std::cout<<  (std::get<0> (coor.at(i)) ) << " " << (std::get<1> (coor.at(i)) )<<endl ;
+    }
 
 
     return 0;
 
 }
-
-
-
