@@ -1,13 +1,13 @@
 #include <iostream>
-#include <string>
+//#include <string>
 #include <sstream>
 #include <stdio.h>
-#include "Nodo_double.h"
-#include "Nodo_funcion_binaria.h"
-#include "Nodo_funcion_unaria.h"
-#include "arbol_binario.h"
-#include "Nodo.h"
-#include "funciones.h"
+//#include "Nodo_double.h"
+//#include "Nodo_funcion_binaria.h"
+//#include "Nodo_funcion_unaria.h"
+//#include "arbol_binario.h"
+//#include "Nodo.h"
+//#include "funciones.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ string isOperator(string c){
         return "";
 }
 
-boolean precedence(string c1, string c2){
+bool precedence(string c1, string c2){
         int i1 = 0;
         int i2 = 0;
         if(c1.compare("+") == 0)
@@ -50,7 +50,7 @@ boolean precedence(string c1, string c2){
 }
 
 
-string isParenthesis(String c){
+string isParenthesis(string c){
         if(c.compare("(")==0)
             return "(";
         else if(c.compare(")")==0)
@@ -98,12 +98,13 @@ double string_to_double(std::string strg){
 
 int main()
 {
-
+/*
     Nodo * a= new Nodo_double(32);
     Nodo * b= new Nodo_double(21);
     Nodo * c= new Nodo_double(4);
+*/
 
-
+    /*
     double (*fun1)(double, double);
     double (*fun2)(double);
     fun1=&suma;
@@ -111,14 +112,15 @@ int main()
     Nodo * d=new Nodo_funcion_binaria(fun1);
     Nodo * e=new Nodo_funcion_unaria(fun2);
 
+    */
 
-
+    /*
     arbol_binario * tree= new arbol_binario(e);
     tree->raiz->agregar_der(c);
     tree->raiz->agregar_izq(d);
     tree->raiz->izq->agregar_izq(a);
     tree->raiz->izq->agregar_der(b);
-
+    */
 
 
     return 0;
