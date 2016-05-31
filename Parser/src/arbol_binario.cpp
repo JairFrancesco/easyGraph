@@ -1,4 +1,4 @@
-#include "arbol_binario.h"
+#include "../include/arbol_binario.h"
 
 arbol_binario::arbol_binario()
 {
