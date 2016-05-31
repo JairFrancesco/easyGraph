@@ -1,4 +1,4 @@
-#include "Nodo_funcion_binaria.h"
+#include "../include/Nodo_funcion_binaria.h"
 
 Nodo_funcion_binaria::Nodo_funcion_binaria()
 {

@@ -1,9 +1,9 @@
 #ifndef ARBOL_BINARIO_H
 #define ARBOL_BINARIO_H
-#include <Nodo.h>
-#include <Nodo_double.h>
-#include <Nodo_funcion_binaria.h>
-#include <Nodo_funcion_unaria.h>
+#include "Nodo.h"
+#include "Nodo_double.h"
+#include "Nodo_funcion_binaria.h"
+#include "Nodo_funcion_unaria.h"
 #include <algorithm>
 
 class arbol_binario
@@ -18,6 +18,8 @@ class arbol_binario
 
 
     //// privado
+
+
         std::vector<std::tuple<std::string,double*>> * variables=new std::vector<std::tuple<std::string, double*>>;
         Nodo*raiz;
 

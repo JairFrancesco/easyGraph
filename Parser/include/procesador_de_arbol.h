@@ -1,6 +1,6 @@
 #ifndef PROCESADOR_DE_ARBOL_H
 #define PROCESADOR_DE_ARBOL_H
-#include <arbol_binario.h>
+#include "arbol_binario.h"
 
 class procesador_de_arbol
 {
@@ -11,6 +11,7 @@ class procesador_de_arbol
         void set_limite_der(double);
         void set_dx(double);
         std::vector<std::tuple<double,double>> get_coordenadas();
+
         virtual ~procesador_de_arbol();
     protected:
     private:
@@ -21,4 +22,3 @@ class procesador_de_arbol
 };
 
 #endif // PROCESADOR_DE_ARBOL_H
-

@@ -1,4 +1,4 @@
-#include "procesador_de_arbol.h"
+#include "../include/procesador_de_arbol.h"
 
 procesador_de_arbol::procesador_de_arbol()
 {

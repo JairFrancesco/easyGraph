@@ -1,4 +1,4 @@
-#include "Nodo_funcion_unaria.h"
+#include "../include/Nodo_funcion_unaria.h"
 
 Nodo_funcion_unaria::Nodo_funcion_unaria()
 {

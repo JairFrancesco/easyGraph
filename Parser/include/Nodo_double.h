@@ -1,6 +1,6 @@
 #ifndef NODO_DOUBLE_H
 #define NODO_DOUBLE_H
-#include <Nodo.h>
+#include "Nodo.h"
 
 class Nodo_double:public Nodo
 {
