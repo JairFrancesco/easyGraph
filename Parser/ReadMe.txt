@@ -20,3 +20,52 @@ This class manages the binary tree correctly. It calculates the height and print
 (BTNode.java)
 -----------------------------------------------
 This class is the Node structure in the binary tree. It is basic and includes the left, right and data fields.
+
+Auxiliar Code
+
+
+string isOperator(string c){
+        if(c.compare("+")==0)
+            return "+";
+        else if(c.compare("-")==0)
+            return "-";
+        else if(c.compare("*")==0)
+            return "*";
+        else if(c.compare("/")==0)
+            return "/";
+        return "";
+}
+
+bool precedence(string c1, string c2){
+        int i1 = 0;
+        int i2 = 0;
+        if(c1.compare("+") == 0)
+            i1 = 1;
+        else if(c1.compare("-") == 0)
+            i1 = 2;
+        else if(c1.compare("*") == 0)
+            i1 = 3;
+        else if(c1.compare("/") == 0)
+            i1 = 4;
+        if(c2.compare("+") == 0)
+            i2 = 1;
+        else if(c2.compare("-") == 0)
+            i2 = 2;
+        else if(c2.compare("*") == 0)
+            i2 = 3;
+        else if(c2.compare("/") == 0)
+            i2 = 4;
+        if(i1 >= i2)
+            return true;
+        else
+            return false;
+}
+
+
+string isParenthesis(string c){
+        if(c.compare("(")==0)
+            return "(";
+        else if(c.compare(")")==0)
+            return ")";
+        return "";
+}

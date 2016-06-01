@@ -107,13 +107,7 @@ int main()
         string expresion;
         cin>>s;
         LinkedBinaryTree *BT = new LinkedBinaryTree<string>();
-		//FileInputStream fstream = new FileInputStream("expressions.txt");
-	    //DataInputStream in = new DataInputStream(fstream);
-	    //BufferedReader br = new BufferedReader(new InputStreamReader(in));
-	    //String strLine;
-		//String conv[] = new String[50];
 		string conv[50];
-		//LinkedBinaryTree<String> BT = new LinkedBinaryTree<String>();
 		int iConv = 0;
 		if (expresion!=NULL)
         {

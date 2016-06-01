@@ -96,11 +96,11 @@ template<class T>
 string BinaryExpressionTree<T>::traverse(BTNode<T>* t, int i){
     string ret = "";
 
-
+    cout<<"Enter to TRAVERSE";
     if(t!=NULL){
-        traverse(t.getLeft(), i++);
-        cout<<""+t.getData()<<endl;
-        traverse(t.getRight(), i++);
+        traverse(t->getLeft(), i++);
+        cout<<""+t->getData()<<endl;
+        traverse(t->getRight(), i++);
     }
     return ret;
 }
@@ -149,11 +149,12 @@ void BinaryExpressionTree<T>::printTree(BTNode<T>* st, int i, int lorr){
     if (st->getRight() != NULL)
     printTree(st->getRight(), i+1, 1);
 
-
-    if(lorr==1 && ((string)(*(st->getData()))).length() >0 && (i != getHeight()-1)){
+    string strNew = *(st->getData());
+    //cout<<"Value of StrNew:"<<strNew<<endl;
+    if(lorr==1 && strNew.length() >0 && (i != getHeight()-1)){
         printSpace(6 * (i+1));
         cout<<"/";
-    }else if(lorr == 0 && ((string)(*(st->getData()))).length() > 0)
+    }else if(lorr == 0 && (strNew).length() > 0)
     {
         printSpace(6 * i);
         cout<<"\\";
@@ -164,7 +165,7 @@ void BinaryExpressionTree<T>::printTree(BTNode<T>* st, int i, int lorr){
     {
         cout<<"\t";
     }
-    cout<<endl<<st->getData()<<endl;
+    cout<<endl<<strNew<<endl;
 
     if (st->getLeft() != NULL){
         printTree(st->getLeft(), i+1, 0);
