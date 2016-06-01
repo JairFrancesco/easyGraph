@@ -1,6 +1,10 @@
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
+#include <algorithm>
+#include <stack>
+#include <vector>
+#include "BinaryExpressionTree.h"
 
 using namespace std;
 
@@ -70,126 +74,72 @@ int p(char op)
     return p;
 }
 
-
-
-
-double string_to_double(std::string strg){
-    if(strg=="x"){
-        double x;
-        return x;
-    }
-    else{
-        double num;
-        std::stringstream stream;
-        stream << strg;
-        stream >> num;
-        return num;
-    }
-
-}
-
-
 int main()
 {
     try{
         string expresion;
-        cin>>s;
-        LinkedBinaryTree *BT = new LinkedBinaryTree<string>();
-		//FileInputStream fstream = new FileInputStream("expressions.txt");
-	    //DataInputStream in = new DataInputStream(fstream);
-	    //BufferedReader br = new BufferedReader(new InputStreamReader(in));
-	    //String strLine;
-		//String conv[] = new String[50];
+        cout<<"Enter a expression:"<<endl;
+        cin>>expresion;
+        BinaryExpressionTree<string> *BT = new BinaryExpressionTree<string>();
 		string conv[50];
-		//LinkedBinaryTree<String> BT = new LinkedBinaryTree<String>();
 		int iConv = 0;
-		if (expresion!=NULL)
+		if (!expresion.empty())
         {
             cout<<endl;
             conv[iConv] = "";
             /*Infix to Prefix*/
-            stack<String> s_1 = new stack<String>();
-	        stack<String> s_2 = new stack<String>();
-	        int len = expresion.length();
-	        for_each(expresion.begin(), expresion.end(), [](char &n){
-
-                  });
-        }
-	    while ((strLine = br.readLine()) != null)   {
-	    	System.out.print(strLine + "\n");
-	    	conv[iConv] = "";
-	    	/*Infix to Prefix*/
-
-	        stack<String> s_1 = new stack<String>();
-	        stack<String> s_2 = new stack<String>();
-	        char ar[] = strLine.toCharArray();
-	        int len = ar.length;
-	        for(int i = len - 1; i >= 0; i--)
+            stack<string> s_1;
+	        stack<string> s_2;
+	        vector<char> *expr = new vector<char>(expresion.begin(), expresion.end());
+	        for_each(expr->rbegin(),expr->rend(),[&s_1, &s_2](char n){
+                  //cout<<string(1,n)<<endl;
+                if (n==' '){
+                }
+                else if (n==')'){
+                    s_1.push(string(1,n));
+                }
+                else if (n=='('){
+                    while(!s_1.top().compare(")")==0){
+                        s_2.push(s_1.top());
+                        s_1.pop();
+                    }
+                    s_1.pop();
+                }
+                else if (n=='+' || n=='-' || n=='*' || n=='/'){
+                    if(s_1.size() == 0)
+	                		s_1.push(string(1,n));
+                    else{
+                        while(p(s_1.top().at(0)) > p(n))
+                        {
+                            s_2.push(s_1.top());
+                            s_1.pop();
+                        }
+                        s_1.push(string(1,n));
+                    }
+                }
+            });
+            while(!s_1.empty())
 	        {
-	        	if(ar[i] == ' ')
-	        		continue;
-	            switch(ar[i])
-	            {
-	                case ')':
-	                    s_1.push(String.valueOf(ar[i]));
-	                    break;
-	                case '(':
-	                {
-	                     while(!s_1.peek().equals(")"))
-	                     {
-	                         s_2.push(s_1.peek());
-	                         s_1.pop();
-	                     }
-	                     s_1.pop();
-	                     break;
-	                }
-	                case '+':  case '-':  case '*': case '/':
-	                {
-	                	if(s_1.size() == 0)
-	                		s_1.push(String.valueOf(ar[i]));
-	                	else{
-	                    while(p(s_1.peek().charAt(0)) > p(ar[i]))
-	                    {
-	                        s_2.push(s_1.peek());
-	                        s_1.pop();
-	                    }
-	                    s_1.push(String.valueOf(ar[i]));
-	                	}
-	                    break;
-	                }
-	                default:
-	                {
-	                    s_2.push(String.valueOf(ar[i]));
-	                    break;
-	                }
-	            }
-
-	        }
-	        while(!s_1.empty())
-	        {
-	            s_2.push(s_1.peek());
+	            s_2.push(s_1.top());
 	            s_1.pop();
 	        }
 	        while(!s_2.empty())
 	        {
-	            conv[iConv] += (s_2.peek());
+	            conv[iConv] += (s_2.top());
 	            s_2.pop();
 	        }
-
-	    	System.out.println("Prefix notation = " + conv[iConv]);
+            cout<<endl<<"Prefix notation = "<<conv[iConv];
 			for(int x = 0; x < conv[iConv].length(); x++){
-
-				BT.addNode(conv[iConv].substring(x, x+1));
+                string *node = new string(conv[iConv].substr(x, x+1));
+				BT->addNode(node);
 			}
-			System.out.print("Height = " + BT.getHeight() + "\n");
-
-			BT.BFS();
+			cout<<endl<<"Height= "<<BT->getHeight()<<endl;
+			BT->BFS();
 			iConv++;
-			BT.destruct();
+			BT->destruct();
 	    }
-
 	}catch (exception& e){
-	    cout<<"Error: " + e.what() << endl();
+	    cout<<"Error:"<<e.what() << endl;
 	}
     return 0;
 

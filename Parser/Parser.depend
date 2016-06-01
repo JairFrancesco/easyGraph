@@ -72,3 +72,21 @@
 1464663684 source:c:\users\jairfrancesco\documents\github\easygraph\parser\nodo_funcion_unaria.cpp
 	"Nodo_funcion_unaria.h"
 
+1464768433 source:c:\users\jairfrancesco\documents\github\easygraph\parser\mainparser.cpp
+	<iostream>
+	<sstream>
+	<stdio.h>
+	<algorithm>
+	<stack>
+	<vector>
+	"BinaryExpressionTree.h"
+
+1464768482 c:\users\jairfrancesco\documents\github\easygraph\parser\binaryexpressiontree.h
+	<iostream>
+	"BinaryTreeNode.h"
+	<string>
+
+1464767016 c:\users\jairfrancesco\documents\github\easygraph\parser\binarytreenode.h
+	<iostream>
+	<string>
+
