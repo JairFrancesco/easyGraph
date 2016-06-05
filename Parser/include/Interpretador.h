@@ -5,7 +5,6 @@
 #include <vector>
 #include <string>
 #include <sstream>
-#include <regex>
 #include <sstream>
 #include <algorithm>
 #include <ctype.h>
@@ -31,6 +30,7 @@ class Interpretador
         bool isAlpha(const string&);
         double string_to_double(string);
         void elim_parent(string&);
+        bool esta_en(string text, string ope);
 
         map<string,double(*)(double)>funciones_unarias;
         map<string,double(*)(double,double)>funciones_binarias;
