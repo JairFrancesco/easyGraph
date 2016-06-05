@@ -40,7 +40,8 @@ MainWindow::MainWindow(QWidget *parent) :
     for(unsigned int i = 0; i < 5; i++)
      {
        vtkLine * line = vtkLine::New();
-       line->GetPointIds()->SetId(i,i);
+       line->GetPointIds()->SetId(0,i);
+       line->GetPointIds()->SetId(1,i+1);
        lines->InsertNextCell(line);
     }
 
