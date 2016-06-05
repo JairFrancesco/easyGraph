@@ -1,0 +1,13 @@
+-I/usr/local/include/vtk-7.0
+-I/home/texs/easy_graph
+-I/home/texs/easy_graph/easyGraph
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-DvtkRenderingCore_AUTOINIT=3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/home/texs/easy_graph/easyGraph/moc_mainwindow.cxx
+/home/texs/easy_graph/easyGraph/mainwindow.h

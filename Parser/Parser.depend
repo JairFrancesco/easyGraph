@@ -90,3 +90,30 @@
 	<iostream>
 	<string>
 
+1464804368 source:/home/texs/easyGraph/Parser/mainParser.cpp
+	<iostream>
+	<sstream>
+	<stdio.h>
+	<algorithm>
+	<stack>
+	<vector>
+	"BinaryExpressionTree.h"
+
+1464804368 /home/texs/easyGraph/Parser/BinaryExpressionTree.h
+	<iostream>
+	"BinaryTreeNode.h"
+	<string>
+
+1464804368 /home/texs/easyGraph/Parser/BinaryTreeNode.h
+	<iostream>
+	<string>
+
+1464804368 source:/home/texs/easyGraph/Parser/main.cpp
+	<iostream>
+	<sstream>
+	<stdio.h>
+	<algorithm>
+	<stack>
+	<vector>
+	"BinaryExpressionTree.h"
+
