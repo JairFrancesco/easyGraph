@@ -2,9 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <vtkSmartPointer.h>
-
-
+#include "graficador.h"
 
 namespace Ui {
 class MainWindow;

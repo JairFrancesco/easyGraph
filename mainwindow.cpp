@@ -1,25 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <vtkVersion.h>
-#include <vtkSmartPointer.h>
-#include <vtkCellArray.h>
-#include <vtkCellData.h>
-#include <vtkDoubleArray.h>
-#include <vtkPoints.h>
-#include <vtkPolyLine.h>
-#include <vtkPolyData.h>
-#include <vtkPolyDataMapper.h>
-#include <vtkActor.h>
-#include <vtkRenderWindow.h>
-#include <vtkRenderer.h>
-#include <vtkRenderWindowInteractor.h>
-#include <vtkAxesActor.h>
-#include <vtkTransform.h>
+
 #include <iostream>
 #include <vector>
-#include <vtkAxesActor.h>
-
+#include "graficador.h"
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -28,70 +13,28 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-      // Create a vtkPoints object and store the points in it
-      vtkSmartPointer<vtkPoints> points = vtkSmartPointer<vtkPoints>::New();
-
-      for(double i=0.0; i<5; i+=0.1){
-          double origin[3] = {i, i*i, 0};
-          points->InsertNextPoint(origin);
-      }
-
-      int numberids = 50;
-      vtkSmartPointer<vtkPolyLine> polyLine = vtkSmartPointer<vtkPolyLine>::New();
-      polyLine->GetPointIds()->SetNumberOfIds(numberids);
-      for(unsigned int i = 0; i < numberids; i++)
-      {
-        polyLine->GetPointIds()->SetId(i,i);
-      }
-
-      // Create a cell array to store the lines in and add the lines to it
-      vtkSmartPointer<vtkCellArray> cells = vtkSmartPointer<vtkCellArray>::New();
-      cells->InsertNextCell(polyLine);
-
-      // Create a polydata to store everything in
-      vtkSmartPointer<vtkPolyData> polyData = vtkSmartPointer<vtkPolyData>::New();
-
-      // Add the points to the dataset
-      polyData->SetPoints(points);
-
-      // Add the lines to the dataset
-      polyData->SetLines(cells);
-
-      // Create two colors - one for each line
-      unsigned char red[3] = { 255, 0, 0 };
+    Graficador * g = new Graficador;
+    g->puntos2d();
+    g->crearpolilinea();
 
 
-        // Create a vtkUnsignedCharArray container and store the colors in it
-        vtkSmartPointer<vtkUnsignedCharArray> colors = vtkSmartPointer<vtkUnsignedCharArray>::New();
-        colors->SetNumberOfComponents(3);
-        colors->InsertNextTupleValue(red);
+    g->cells->InsertNextCell(g->polyLine);
 
-      polyData->GetCellData()->SetScalars(colors);
+    // Add the points to the dataset
+    g->polyData->SetPoints(g->points);
 
-      // Setup actor and mapper
-      vtkSmartPointer<vtkPolyDataMapper> mapper =  vtkSmartPointer<vtkPolyDataMapper>::New();
-      mapper->SetInputData(polyData);
+    // Add the lines to the dataset
+    g->polyData->SetLines(g->cells);
+    g->polyData->GetCellData()->SetScalars(g->colors);
 
+    // Setup actor and mapper
+    g->mapper->SetInputData(g->polyData);
+    g->actor->SetMapper(g->mapper);
 
-      vtkSmartPointer<vtkActor> actor =
-        vtkSmartPointer<vtkActor>::New();
-      actor->SetMapper(mapper);
-
-      // Setup render window, renderer, and interactor
-      vtkSmartPointer<vtkRenderer> renderer =
-        vtkSmartPointer<vtkRenderer>::New();
-
-      vtkSmartPointer<vtkTransform> transform =
-                 vtkSmartPointer<vtkTransform>::New();
-               transform->Translate(0.0, 0.0, 0.0);
-             vtkSmartPointer<vtkAxesActor> axes = vtkSmartPointer<vtkAxesActor>::New();
-          axes->SetUserTransform(transform);
-          axes->SetTotalLength(5,5,5);
-
-     renderer->AddActor(actor);
-     renderer->AddActor(axes);
-     this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
-     this->ui->qvtkWidget->GetRenderWindow()->Render();
+    // Setup render window, renderer, and interactor
+    g->renderer->AddActor(g->actor);
+    this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
+    this->ui->qvtkWidget->GetRenderWindow()->Render();
 
 }
 

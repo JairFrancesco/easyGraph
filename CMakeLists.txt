@@ -12,7 +12,7 @@ if(POLICY CMP0053)
   cmake_policy(SET CMP0053 NEW) # CMake 3.1
 endif()
 project(EasyGraph)
-
+add_compile_options(-std=c++11)
 find_package(VTK COMPONENTS
   vtkCommonCore
   vtkFiltersCore
@@ -33,9 +33,9 @@ include_directories(
 )
 
 # Set your files and resources here
-set( Srcs main.cpp mainwindow.cpp )
+set( Srcs main.cpp mainwindow.cpp graficador.cpp)
 
-set( Hdrs mainwindow.h )
+set( Hdrs mainwindow.h graficador.h)
 
 set( MOC_Hdrs mainwindow.h )
 
