@@ -17,6 +17,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     Ui::MainWindow *ui;
+     Graficador * g = new Graficador;
+
+public slots:
+    void color2();
+    void resetCamera();
+    void colorearfondo();
 
 private:
 

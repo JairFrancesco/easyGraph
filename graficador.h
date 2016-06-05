@@ -16,6 +16,7 @@
 #include <vtkAxesActor.h>
 #include <vtkTransform.h>
 #include <vtkAxesActor.h>
+#include "vtkCamera.h"
 
 class Graficador
 {
@@ -28,6 +29,9 @@ public:
 
     // Create a cell array to store the lines in and add the lines to it
     vtkSmartPointer<vtkCellArray> cells = vtkSmartPointer<vtkCellArray>::New();
+
+
+    vtkSmartPointer<vtkCamera> camera =    vtkSmartPointer<vtkCamera>::New();
 
 
     // Create a polydata to store everything in
