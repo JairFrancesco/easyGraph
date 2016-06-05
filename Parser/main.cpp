@@ -12,10 +12,10 @@ using namespace std;
 
 int main()
 {
-    /////////// por ahora funciona con +, - , *, /
+    /////////// por ahora funciona con +, - , *, /, ^, sin, tan
     //////////// aun hay un caso que no resuelvo con parentesis
     std::vector<string> v;
-    string ecuacion="(3*(1/2)+x/2-5)";
+    string ecuacion="(2^x)*(sin(30))";
 
     Interpretador * interp = new Interpretador();
     interp->transformar(ecuacion, v);
@@ -31,8 +31,6 @@ int main()
         std::cout << "x" << " " << "y" << std::endl;
         std::cout<<  (std::get<0> (coor.at(i)) ) << " " << (std::get<1> (coor.at(i)) )<<endl ;
     }
-
-
 
 
     return 0;

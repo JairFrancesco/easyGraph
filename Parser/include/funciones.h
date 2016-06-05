@@ -3,6 +3,8 @@
 
 ////////////////// funciones binarias
 
+#define PI 3.14159265
+
 double suma(double x, double y){
     return x+y;
 }
@@ -46,85 +48,85 @@ double v_absoluto(double x){
 
 
 double seno(double x){
-    return sin(x);
+    return sin(x*PI/180);
 }
 
 double coseno(double x){
-    return cos(x);
+    return cos(x*PI/180);
 }
 
 double cotangente(double x){
-    return (1/tan(x));
+    return (1/tan(x*PI/180));
 }
 
 double secante(double x){
-    return (1/(cos(x)));
+    return (1/(cos(x*PI/180)));
 }
 
 double cosecante(double x){
-    return (1/(sin(x)));
+    return (1/(sin(x*PI/180)));
 }
 
 double tangente(double x){
-    return tan(x);
+    return tan(x*PI/180);
 }
 
 double arco_seno(double x){
-    return asin(x);
+    return asin(x*PI/180);
 }
 
 double arco_coseno(double x){
-    return acos(x);
+    return acos(x*PI/180);
 }
 
 double arco_tangente(double x){
-    return atan(x);
+    return atan(x*PI/180);
 }
 
 double arco_secante(double x){
-    return acos(1/x);
+    return acos(1/(x*PI/180));
 }
 
 double arco_cosecante(double x){
-    return asin(1/x);
+    return asin(1/(x*PI/180));
 }
 
 double arco_cotangente(double x){
-    return atan(1/x);
+    return atan(1/(x*PI/180));
 }
 
 double coseno_hiperbolico(double x){
-    return cosh(x);
+    return cosh(x*PI/180);
 }
 
 double seno_hiperbolico(double x){
-    return sinh(x);
+    return sinh(x*PI/180);
 }
 
 double tangente_hiperbolico(double x){
-    return tanh(x);
+    return tanh(x*PI/180);
 }
 
 double arcocoseno_hiperbolico(double x){
-    return acosh(x);
+    return acosh(x*PI/180);
 }
 
 double arcoseno_hiperbolico(double x){
-    return asinh(x);
+    return asinh(x*PI/180);
 }
 
 double arcotangente_hiperbolico(double x){
-    return atanh(x);
+    return atanh(x*PI/180);
 }
 
 double arco_cosecante_hiperbolico(double x){
-    return asinh(1/x);
+    return asinh(1/(x*PI/180));
 }
 
 double arco_secante_hiperbolico(double x){
-    return acosh(1/x);
+    return acosh(1/(x*PI/180));
 }
 
 double arco_cotangente_hiperbolico(double x){
-    return atanh(1/x);
+    return atanh(1/(x*PI/180));
 }
