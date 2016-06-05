@@ -15,8 +15,11 @@
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkAxesActor.h>
+#include <vtkTransform.h>
 #include <iostream>
 #include <vector>
+#include <vtkAxesActor.h>
+
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -29,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
       vtkSmartPointer<vtkPoints> points = vtkSmartPointer<vtkPoints>::New();
 
       for(double i=0.0; i<5; i+=0.1){
-          double origin[3] = {0.0, i, i*i};
+          double origin[3] = {i, i*i, 0};
           points->InsertNextPoint(origin);
       }
 
@@ -78,9 +81,15 @@ MainWindow::MainWindow(QWidget *parent) :
       vtkSmartPointer<vtkRenderer> renderer =
         vtkSmartPointer<vtkRenderer>::New();
 
-
+      vtkSmartPointer<vtkTransform> transform =
+                 vtkSmartPointer<vtkTransform>::New();
+               transform->Translate(0.0, 0.0, 0.0);
+             vtkSmartPointer<vtkAxesActor> axes = vtkSmartPointer<vtkAxesActor>::New();
+          axes->SetUserTransform(transform);
+          axes->SetTotalLength(5,5,5);
 
      renderer->AddActor(actor);
+     renderer->AddActor(axes);
      this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(renderer);
      this->ui->qvtkWidget->GetRenderWindow()->Render();
 
