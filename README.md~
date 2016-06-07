@@ -39,7 +39,7 @@ Para compilar EasyGraph, necesitarás:
 2. Instalar CMake GUI
 	Por comodidad usaremos CMake GUI:
 	```
-	sudo apt-get install cmake-qt-gui
+	sudo apt-get install cmake-curses-gui
 	```
 	Fuente: [AskUbuntu.com](http://askubuntu.com/questions/121797/how-do-i-install-ccmake)
 	
