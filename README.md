@@ -12,17 +12,58 @@ Members
 Computer Science - Universidad Nacional San Agustín - Arequipa, Peru
 
 ***
-##Compilando y Ejecutando el proyecto
-Para compilar y ejecutar el proyecto:
-```
-bash build.sh
-1
-```
+##Requisitos
+Para compilar EasyGraph, necesitarás:
+* VTK 7
+* CMAKE 3
+* QT 5.6
 
-Para ejecutar, despues de una compilación previa
-```
-./easyGraph
-```
+##Instrucciones instalación requisitos
+1. Instalar CMake 3
+	```
+	sudo apt-get install software-properties-common
+	sudo add-apt-repository ppa:george-edison55/cmake-3.x
+	sudo apt-get update
+	```
+	When cmake is not yet installed:
+	```
+	sudo apt-get install cmake
+	```
+	
+	When cmake is already installed:
+	```
+	sudo apt-get upgrade
+	```	
+	Fuente: [AskUbuntu.com](http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04)
+	
+2. Instalar CMake GUI
+	Por comodidad usaremos CMake GUI:
+	```
+	sudo apt-get install cmake-curses-gui
+	```
+	Fuente: [AskUbuntu.com](http://askubuntu.com/questions/121797/how-do-i-install-ccmake)
+	
+3. Compilar e Instalar VTK
+	* Primero debemos descargar VTK 7 desde la [página oficial](http://www.vtk.org/download/).
+	* Abrimos CMake GUI 
+	```
+	cmake-gui
+	```
+	???
+	* Seleccionamos la carpeta donde esta el codigo fuente de VTK, y la carpeta de destino
+	* Consideramos que tienes instalado QT 5.6
+	* Search: qt ; y seleccionamos los modulos QT y VTK_Group_QT (Hacerles Check)
+	![alt tag](tutorial/qt_group.png)
+	* Configure
+	* Vamos a la carpeta donde se generaron los archivos de compilación; comprobaremos que se ha creado un Makefile
+	* Compilamos (-j4; para compilar en 4 hebras: Depende del numero de procesadores)
+	```
+	make -j4
+	```
+	* Instalamos VTK
+	```
+	sudo make install
+	```
 
 ## Getting Involved
 
