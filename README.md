@@ -36,11 +36,16 @@ Para compilar EasyGraph, necesitarás:
 	```	
 	Fuente: [AskUbuntu.com](http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04)
 	
-2. Instalar CMake GUI
+2. Instalar CMake GUI y libxt-dev 
 	Por comodidad usaremos CMake GUI:
 	```
 	sudo apt-get install cmake-qt-gui
 	```
+	libxt-dev	
+	```
+	sudo apt-get install libxt-dev
+	```
+	
 	Fuente: [AskUbuntu.com](http://askubuntu.com/questions/121797/how-do-i-install-ccmake)
 	
 3. Compilar e Instalar VTK
@@ -52,6 +57,8 @@ Para compilar EasyGraph, necesitarás:
 	???
 	* Seleccionamos la carpeta donde esta el codigo fuente de VTK, y la carpeta de destino
 	* Consideramos que tienes instalado QT 5.6
+	* Click en Configure, entonces especificamos el makefile generator, la configuración por defecto es "Unix Makefiles" en sistemas linux y en Windows deberia ser "MinGW" o "Visual Studio", eso depende de su preferencia, por ultimo click en finish.
+	* Esperamos un minuto para que cmake haga la primera configuración, para mostrar mas entradas check el "Advanced" checkbutton.
 	* Search: qt ; y seleccionamos los modulos QT y VTK_Group_QT (Hacerles Check)
 	![alt tag](tutorial/qt_group.png)
 	* Configure
