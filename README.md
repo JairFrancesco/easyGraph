@@ -52,7 +52,7 @@ Para compilar EasyGraph, necesitarás:
 	* Primero debemos descargar VTK 7 desde la [página oficial](http://www.vtk.org/download/).
 	* Abrimos CMake GUI 
 	```
-	cmake-gui
+	sudo cmake-gui
 	```
 	???
 	* Seleccionamos la carpeta donde esta el codigo fuente de VTK, y la carpeta de destino
@@ -62,10 +62,11 @@ Para compilar EasyGraph, necesitarás:
 	* Search: qt ; y seleccionamos los modulos QT y VTK_Group_QT (Hacerles Check)
 	![alt tag](tutorial/qt_group.png)
 	* Configure
+	* Generate
 	* Vamos a la carpeta donde se generaron los archivos de compilación; comprobaremos que se ha creado un Makefile
 	* Compilamos (-j4; para compilar en 4 hebras: Depende del numero de procesadores)
 	```
-	make -j4
+	sudo make -j4
 	```
 	* Instalamos VTK
 	```
@@ -82,6 +83,22 @@ If you're comfortable getting up and running from a `git clone`, this method is 
 
 The [master](https://github.com/JairFrancesco/easyGraph) branch which contains the latest release.
 
+## Solución a errores de compilación
+
+1. Error on cmake-gui.
+
+	CMake Error at /usr/share/cmake-3.2/Modules/FindQt4.cmake:1326 (message):
+	Found unsuitable Qt version "5.2.1" from /usr/bin/qmake, this code requires
+	Qt 4.x
+	Call Stack (most recent call first):
+	GUISupport/Qt/CMakeLists.txt:71 (find_package)
+
+	Solucion:
+	Entre los siguientes comandos en la terminal
+	```
+	sudo apt-get install libqt4-core libqt4 libqt4-gui-dev
+	sudo apt-get install qt4-dev-tools
+	```
 #### Quickstart:
 
 	##### Under Construction
