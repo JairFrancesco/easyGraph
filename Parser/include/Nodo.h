@@ -23,7 +23,7 @@ class Nodo
         virtual void set_valor(double(*& funcion)(double)){};
 
         virtual double procesar(){};
-
+        void verif_variables();
         ////privado
         Nodo * izq;
         Nodo * der;
@@ -33,5 +33,6 @@ class Nodo
     private:
 
 };
+
 
 #endif // NODO_H

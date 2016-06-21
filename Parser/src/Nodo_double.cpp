@@ -20,16 +20,20 @@ Nodo_double::Nodo_double(std::string a){
 void Nodo_double::obtener_variables(){
 
     if(es_variable==true){
-        if (variables->size()>=2)
-            return;
-        for (auto &i : *variables){
-            if (nom_var==std::get<0>(i)){
+
+        for (int j=0; j<variables->size()  ;j++){
+
+            if(this->nom_var==std::get<0> (variables->at(j) )){
+                this->valor=std::get<1> (variables->at(j) );
                 return;
             }
-        }
 
-        std::tuple<std::string, double*> temp{this->nom_var,this->valor};
-        variables->push_back(temp);
+
+        }
+        if (variables->size()<=2){
+            std::tuple<std::string, double*> temp{this->nom_var,this->valor};
+            variables->push_back(temp);
+        }
     }
 
 }

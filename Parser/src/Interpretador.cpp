@@ -1,25 +1,51 @@
 #include "../include/Interpretador.h"
 #include "../include/funciones.h"
+#include "../include/tipos de datos.h"
+
+string unir_vector(std::vector<string> v){
+  string temp="";
+  for (auto it : v){
+    temp+=it;
+  }
+  return temp;
+}
+
+
+
+bool isOper(std::map<str_interp,num_interp (*) (num_interp,num_interp)> func_b, std::map<str_interp,num_interp (*) (num_interp)> func_u, str_interp text){
+  for (auto it : func_b){
+    if (text == it.first){
+      return true;
+    }
+  }
+  for (auto ite : func_u){
+    if (text == ite.first){
+      return true;
+    }
+  }
+  return false;;
+}
+
 
 Interpretador::Interpretador()
 {
     this->tree=new arbol_binario();
   // ------------------func binarias
-    double (*suma_p)(double, double);
+    T_do (*suma_p)(num_interp, num_interp);
     suma_p =&suma;
-    double (*resta_p)(double, double);
+    T_do (*resta_p)(num_interp, num_interp);
     resta_p =&resta;
-    double (*multi_p)(double, double);
+    T_do (*multi_p)(num_interp, num_interp);
     multi_p =&multiplicacion;
-    double (*divi_p)(double, double);
+    T_do (*divi_p)(num_interp, num_interp);
     divi_p =&division;
-    double (*potencia_p)(double, double);
+    T_do (*potencia_p)(num_interp, num_interp);
     potencia_p =&potencia;
 
     //-----------------func unarias
-    double (*seno_p)(double);
+    T_do (*seno_p)(num_interp);
     seno_p =&seno;
-    double (*tangente_p)(double);
+    T_do (*tangente_p)(num_interp);
     tangente_p =&tangente;
 
 
@@ -58,7 +84,7 @@ void Interpretador::reverse_string(string& x){
 }
 
 
-bool Interpretador::buscar_ope(string text, string ope, std::vector<string>& list){
+booleano Interpretador::buscar_ope(str_interp text, str_interp ope, std::vector<string>& list){
 
   reverse_string(text);
   reverse_string(ope);
@@ -78,9 +104,9 @@ bool Interpretador::buscar_ope(string text, string ope, std::vector<string>& lis
   return false;
 }
 
-bool Interpretador::esta_en(string text, string ope){
+booleano Interpretador::esta_en(str_interp text, str_interp ope){
     if(text.size()>=ope.size()){
-        for (int i=0; i<ope.size();i++){
+        for (int_c i=0; i<ope.size();i++){
             if(ope[i]!=text[i]){
                 return false;
             }
@@ -90,19 +116,132 @@ bool Interpretador::esta_en(string text, string ope){
     return false;
 }
 
-double Interpretador::string_to_double(string text){
-  double f = 0.0;
+T_do Interpretador::string_to_double(str_interp text){
+  T_do f = 0.0;
   stringstream ss;
   ss << text;
   ss >> f;
   return f;
 }
 
-void Interpretador::separar_en_dos(std::vector<string>& v,string ope){
+string Interpretador::verif_sintaxis(std::string  text){
+  elim_parent(text);
+  int_c num_parent=0;
+  std::vector<string> v;
+
+  str_interp temp="";
+  str_interp oper_mayor_prio="";
+  int_c mayor_prio=0;
+  for (auto it : text){
+      temp+=it;
+      if (it=='('){
+        num_parent++;
+      }
+      else if (it==')'){
+        num_parent--;
+      }
+      if (num_parent==0){
+        for(auto i : funciones_binarias){
+            if(buscar_ope(temp, i.first, v) == true){
+                temp="";
+                if(prioridad_funciones[i.first]>mayor_prio){
+                  oper_mayor_prio=i.first;
+                  mayor_prio=prioridad_funciones[i.first];
+
+                }
+                break;
+            }
+        }
+        for(auto i : funciones_unarias){
+            if(buscar_ope(temp, i.first, v) == true){
+                temp="";
+                if(prioridad_funciones[i.first]>mayor_prio){
+                  oper_mayor_prio=i.first;
+                  mayor_prio=prioridad_funciones[i.first];
+
+                }
+                break;
+            }
+        }
+      }
+  }
+  v.push_back(temp);
+  elim_vacio(v);
+  string str_temp="";
+
+
+  if(v.at(0)=="-"){
+    v.at(0)="(0-"+v.at(1)+")";
+    v.erase(v.begin()+1);
+  }
+
+
+  if(v.size()==3){
+    if( isOper(funciones_binarias,funciones_unarias,v.at(1))){
+      if(v.at(0)=="-"){
+        v.at(0)="(0-"+v.at(1)+v.at(2)+")";
+        v.erase(v.begin()+1);
+        v.erase(v.begin()+2);
+      }
+    }
+  }
+
+  int tam_vec=v.size();
+  int i=1;
+  if(v.size()>3){
+    while(true){
+      if (isOper(funciones_binarias,funciones_unarias,v.at(i-1))==true & v.at(i)=="-" ){
+        if ( isOper(funciones_binarias,funciones_unarias,v.at(i+1))==true ){
+          if(i+2<v.size()-1){
+            v.at(i)="(0-"+v.at(i+1)+v.at(i+2)+")";
+            v.erase(v.begin()+i+1);
+            v.erase(v.begin()+i+2);
+          }
+
+        }
+        else{
+          v.at(i)="(0-"+v.at(i+1)+")";
+          v.erase(v.begin()+i+1);
+        }
+      }
+      i++;
+      if(i>v.size()-1){
+        break;
+      }
+    }
+  }
+/*
+  for(auto it : v){
+    if(it[0]=='(' & it[it.size()-1]==')'){
+      it=unir_vector()verif_sintaxis(it);
+    }
+  }
+  */
+
+
+
+  for (int i=0; i<v.size();i++){
+    if (v.at(i)[0]=='(' & v.at(i)[v.at(i).size()-1]==')'){
+      std::cout << "entro" << std::endl;
+      //elim_parent(v.at(i));
+      v.at(i)=  verif_sintaxis(v.at(i)) ;
+    }
+  }
+
+
+
+  string result=unir_vector(v);
+  return '('+ result + ')';
+}
+
+
+
+
+void Interpretador::separar_en_dos(std::vector<string>& v,str_interp ope){
 
   std::vector<string> temp;
-  string temp1="";
-  bool found = false;
+  str_interp temp1="";
+  booleano found = false;
   for (auto i : v){
 
     if (i==ope & found==false){
@@ -129,18 +268,19 @@ void Interpretador::elim_vacio(std::vector<string> & v){
   v=temp;
 }
 
-void Interpretador::transformar(string text,vector<string>& v){
+void Interpretador::transformar(str_interp text){
   elim_parent(text);
+  vector<string> v;
   if(is_number(text)){
     Nodo* raiz=new Nodo_double(string_to_double(text));
     this->tree=new arbol_binario(raiz);
     return;
   }
-  int num_parent=0;
-  bool func_bin = false;
-  string temp="";
-  string oper_mayor_prio="";
-  int mayor_prio=0;
+  int_c num_parent=0;
+  booleano func_bin = false;
+  str_interp temp="";
+  str_interp oper_mayor_prio="";
+  int_c mayor_prio=0;
   for (auto it : text){
       if (it=='('){
         num_parent++;
@@ -182,18 +322,18 @@ void Interpretador::transformar(string text,vector<string>& v){
       return;
     }
   }
-  std::cout << oper_mayor_prio<<"<--"<< std::endl;
-  std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
+  //std::cout << oper_mayor_prio<<"<--"<< std::endl;
+  //std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
   v.push_back(temp);
   separar_en_dos(v, oper_mayor_prio);
   elim_vacio(v);
   Nodo*raiz;
-  std::cout << func_bin << std::endl;
+  //std::cout << func_bin << std::endl;
   if(func_bin){
     raiz=new Nodo_funcion_binaria(*funciones_binarias[oper_mayor_prio]);
     this->tree=new arbol_binario(raiz);
     for (auto i : v){
-        cout<<i<<endl;
+
     }
     transformar(v.at(0), this->tree->raiz, false);
     transformar(v.at(1), this->tree->raiz, true);
@@ -209,7 +349,7 @@ void Interpretador::transformar(string text,vector<string>& v){
   std::cout << ((*funcion)(23,4)) << std::endl;
 */
 }
-bool Interpretador::isAlpha(const string &str){
+booleano Interpretador::isAlpha(const str_interp &str){
   for (auto i : str){
     if (isdigit(i)){
       return false;
@@ -218,30 +358,37 @@ bool Interpretador::isAlpha(const string &str){
   return true;
 }
 
-void Interpretador::elim_parent(string & a){
-  if (a[0]=='(' & a[a.size()-1]==')'){
-    int num_parent=0;
-    int temp=0;
-    for (auto i : a){
-      if(i=='('){
-        num_parent++;
+void Interpretador::elim_parent(str_interp & texto){
+  int temp=0;
+  int temp2=1;
+  int tam=texto.size();
+  if (tam>=3){
+      for (auto it : texto){
+          if (it=='('){
+              temp++;
+          }
+          else if(it==')'){
+              temp--;
+          }
+          if (temp==0){
+              if(temp2==tam){
+                  texto.erase(texto.begin(),texto.begin()+1);
+                  texto.erase(texto.end()-1,texto.end());
+                  elim_parent(texto);
+              }
+              else{
+                  return;
+              }
+          }
+          temp2++;
       }
-      else if(i==')'){
-        num_parent--;
-      }
-      if(num_parent==0){
-        temp++;
-      }
-    }
-    if(temp==1){
-      a.erase(a.begin(),a.begin()+1);
-      a.erase(a.end()-1,a.end());
-    }
   }
+
 }
 
-void Interpretador::transformar(string text, Nodo* padre, bool der){
+void Interpretador::transformar(str_interp text, Nodo* padre, booleano der){
   elim_parent(text);
+
   if(is_number(text)){
     Nodo* nodo=new Nodo_double(string_to_double(text));
     if(der){
@@ -252,12 +399,12 @@ void Interpretador::transformar(string text, Nodo* padre, bool der){
     }
     return;
   }
-  int num_parent=0;
+  int_c num_parent=0;
   std::vector<string> v;
-  bool func_bin = false;
-  string temp="";
-  string oper_mayor_prio="";
-  int mayor_prio=0;
+  booleano func_bin = false;
+  str_interp temp="";
+  str_interp oper_mayor_prio="";
+  int_c mayor_prio=0;
   for (auto it : text){
       temp+=it;
       if (it=='('){
@@ -305,8 +452,8 @@ void Interpretador::transformar(string text, Nodo* padre, bool der){
     }
   }
 
-  std::cout << oper_mayor_prio<<"<---------" << std::endl;
-  std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
+  //std::cout << oper_mayor_prio<<"<---------" << std::endl;
+  //std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
   v.push_back(temp);
   separar_en_dos(v, oper_mayor_prio);
   elim_vacio(v);

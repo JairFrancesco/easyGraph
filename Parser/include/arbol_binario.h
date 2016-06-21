@@ -12,6 +12,7 @@ class arbol_binario
         arbol_binario();
         arbol_binario(Nodo*a){raiz=a;a->variables=this->variables;};
         void obtener_variables();
+        void verif_variables();
         void cambiar_valor_de(std::string, double);
         virtual ~arbol_binario();
 
