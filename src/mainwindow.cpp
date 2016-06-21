@@ -84,10 +84,10 @@ void MainWindow::on_pushButton_3_clicked()
       this->interp->set_diferencial(0.1); // por defecto el diferencial es 1
        //por defecto los limites van de -10 a 10, por lo que podrias omitir las proximas 4 lineas
 
-       interp->set_limite_izq_var1(0);
-       interp->set_limite_der_var1(100);
-       //interp->set_limite_izq_var2(-100);
-       //interp->set_limite_der_var2(100);
+       interp->set_limite_izq_var1(-10);
+       interp->set_limite_der_var1(10);
+       interp->set_limite_izq_var2(-10);
+       interp->set_limite_der_var2(10);
 
 
 
@@ -110,11 +110,14 @@ void MainWindow::on_pushButton_3_clicked()
                this->model->setItem(counterRow, counterCol, new QStandardItem(QString::number(ite)));
                counterCol++;
            }
+           this->g->insertar_punto(this->coordenadas[counterRow][0], this->coordenadas[counterRow][1], this->coordenadas[counterRow][2]);
            counterCol=0;
            counterRow++;
+
        }
        this->ui->tableView->setModel(this->model);
 
+       /*
    for(int i=0;i<100;++i){
         for(int j=0;j<2;++j){
             cout << this->coordenadas[i][j] << " ";
@@ -124,13 +127,14 @@ void MainWindow::on_pushButton_3_clicked()
         this->g->insertar_punto(this->coordenadas[i][0],this->coordenadas[i][1],0);
 
     }
+    */
 
    //this->ui->tableView->setModel(this->model);
 
 
-    this->g->set_polilinea(100);
+    this->g->set_polilinea(200);
 
-   for(int i =0;i<100;++i){
+   for(int i =0;i<200;++i){
        this->g->insertar_polilinea(i);
    }
 
