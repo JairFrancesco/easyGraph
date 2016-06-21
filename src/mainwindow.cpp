@@ -70,10 +70,11 @@ void MainWindow::resetCamera(){
     this->ui->qvtkWidget->GetRenderWindow()->Render();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+
+void MainWindow::on_pushButton_3_clicked()
 {
     //string ecuacion = "((x+2*y)/sin(y)-12)";
-    this->ui->label_4->setText(this->ui->lineEdit->text());
+    this->ui->lblEquation->setText(this->ui->lineEdit->text());
     string ecuacion = this->ui->lineEdit->text().toUtf8().constData();
     std::cout << ecuacion << std::endl;
 
@@ -88,10 +89,8 @@ void MainWindow::on_pushButton_2_clicked()
        //interp->set_limite_izq_var2(-100);
        //interp->set_limite_der_var2(100);
 
-}
 
-void MainWindow::on_pushButton_3_clicked()
-{
+
     this->coordenadas =   interp->get_coordenadas();  // el metodo get_coordenadas es obvio
 
     this->model->setHorizontalHeaderItem(0, new QStandardItem(QString("X")));
@@ -100,6 +99,21 @@ void MainWindow::on_pushButton_3_clicked()
 
 
     this->g->clean();
+
+
+       int counterRow = 0;
+       int counterCol = 0;
+       for (auto it : coordenadas){
+           for (auto ite : it){
+               //string temp = stringify(ite);
+               //QString qstr = QString::fromStdString(temp);
+               this->model->setItem(counterRow, counterCol, new QStandardItem(QString::number(ite)));
+               counterCol++;
+           }
+           counterCol=0;
+           counterRow++;
+       }
+       this->ui->tableView->setModel(this->model);
 
    for(int i=0;i<100;++i){
         for(int j=0;j<2;++j){
@@ -111,7 +125,7 @@ void MainWindow::on_pushButton_3_clicked()
 
     }
 
-   this->ui->tableView->setModel(this->model);
+   //this->ui->tableView->setModel(this->model);
 
 
     this->g->set_polilinea(100);
