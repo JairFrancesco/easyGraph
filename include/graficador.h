@@ -48,6 +48,12 @@ public:
     void puntos2d();
     void crearpolilinea();
 
+    void insertar_punto(double,double,double);
+    void insertar_polilinea(int);
+    void set_polilinea(int);
+
+
+    void clean();
     double cuadrado(double);
 
 };

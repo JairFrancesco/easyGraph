@@ -25,6 +25,20 @@ void Graficador::puntos2d(){
     }
 }
 
+void Graficador::insertar_punto(double x ,double y ,double z){
+    double origin[3] = {x, y, z};
+    this->points->InsertNextPoint(origin);
+}
+
+void Graficador::set_polilinea(int n){
+       this->polyLine->GetPointIds()->SetNumberOfIds(n);
+}
+
+void Graficador::insertar_polilinea(int i){
+    //polyLine->GetPointIds()->SetNumberOfIds(numberids);
+    this->polyLine->GetPointIds()->SetId(i,i);
+}
+
 void Graficador::crearpolilinea(){
     int numberids = 50;
        polyLine->GetPointIds()->SetNumberOfIds(numberids);
@@ -36,4 +50,18 @@ void Graficador::crearpolilinea(){
 
 double Graficador::cuadrado(double x){
     return x*x;
+}
+
+void Graficador::clean(){
+    cells = vtkSmartPointer<vtkCellArray>::New();
+
+    // Create a polydata to store everything in
+     polyData = vtkSmartPointer<vtkPolyData>::New();
+    // polyLine = vtkSmartPointer<vtkPolyLine>::New();
+     //mapper =  vtkSmartPointer<vtkPolyDataMapper>::New();
+
+
+    // Create a vtkPoints object and store the points in it
+    points = vtkSmartPointer<vtkPoints>::New();
+
 }

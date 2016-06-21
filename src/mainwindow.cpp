@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+/*
     g->puntos2d();
     g->crearpolilinea();
 
@@ -30,16 +30,16 @@ MainWindow::MainWindow(QWidget *parent) :
     g->actor->SetMapper(g->mapper);
 
 
+*/
     g->camera->SetPosition(0, 0, 20);
     g->camera->SetFocalPoint(0, 0, 0);
 
     // Setup render window, renderer, and interactor
-    g->renderer->AddActor(g->actor);
+    //g->renderer->AddActor(g->actor);
     g->renderer->SetActiveCamera(g->camera);
 
     this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
     this->ui->qvtkWidget->GetRenderWindow()->Render();
-
 }
 
 MainWindow::~MainWindow()
@@ -80,11 +80,11 @@ void MainWindow::on_pushButton_2_clicked()
 
       this->interp -> set_ecuacion(ecuacion);
        this->interp -> crear_arbol();
-      this->interp->set_diferencial(1); // por defecto el diferencial es 1
+      this->interp->set_diferencial(0.1); // por defecto el diferencial es 1
        //por defecto los limites van de -10 a 10, por lo que podrias omitir las proximas 4 lineas
 
-       //interp->set_limite_izq_var1(-100);
-       //interp->set_limite_der_var1(100);
+       interp->set_limite_izq_var1(0);
+       interp->set_limite_der_var1(100);
        //interp->set_limite_izq_var2(-100);
        //interp->set_limite_der_var2(100);
 
@@ -99,15 +99,53 @@ void MainWindow::on_pushButton_3_clicked()
     this->model->setHorizontalHeaderItem(2, new QStandardItem(QString("Z")));
 
 
+    this->g->clean();
 
-   for(int i=0;i<20;++i){
+   for(int i=0;i<100;++i){
         for(int j=0;j<2;++j){
             cout << this->coordenadas[i][j] << " ";
             this->model->setItem(i,j,new QStandardItem(QString::number(this->coordenadas[i][j])));
         }
         cout << endl;
+        this->g->insertar_punto(this->coordenadas[i][0],this->coordenadas[i][1],0);
+
     }
 
-    this->ui->tableView->setModel(this->model);
+   this->ui->tableView->setModel(this->model);
+
+
+    this->g->set_polilinea(100);
+
+   for(int i =0;i<100;++i){
+       this->g->insertar_polilinea(i);
+   }
+
+
+   this->g->cells->InsertNextCell(this->g->polyLine);
+
+   // Add the points to the dataset
+   this->g->polyData->SetPoints(this->g->points);
+
+   // Add the lines to the dataset
+   this->g->polyData->SetLines(g->cells);
+   this->g->polyData->GetCellData()->SetScalars(g->colors);
+
+   // Setup actor and mapper
+   this->g->mapper->SetInputData(g->polyData);
+   this->g->actor->SetMapper(g->mapper);
+
+
+   g->camera->SetPosition(0, 0, 20);
+   g->camera->SetFocalPoint(0, 0, 0);
+
+   // Setup render window, renderer, and interactor
+   g->renderer->AddActor(g->actor);
+   g->renderer->SetActiveCamera(g->camera);
+
+   this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
+   this->ui->qvtkWidget->GetRenderWindow()->Render();
+
+
+
 
 }
