@@ -2,7 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QStandardItemModel>
+#include <QString>
 #include "graficador.h"
+#include "interprete.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,8 +27,15 @@ public slots:
     void resetCamera();
     void colorearfondo();
 
-private:
+private slots:
+    void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
+private:
+    interprete * interp = new interprete();
+    QStandardItemModel *model = new QStandardItemModel();
+    std::vector<std::vector<double>>coordenadas;
 
 };
 

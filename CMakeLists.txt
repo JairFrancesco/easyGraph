@@ -32,14 +32,43 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+include_directories(include Parser/include)
 # Set your files and resources here
-set( Srcs main.cpp mainwindow.cpp graficador.cpp)
+set( Srcs main.cpp
+    src/mainwindow.cpp
+    src/graficador.cpp
 
-set( Hdrs mainwindow.h graficador.h)
+    Parser/src/interprete.cpp
+    Parser/src/interprete.cpp
+    Parser/src/Nodo_double.cpp
+    Parser/src/arbol_binario.cpp
+    Parser/src/Nodo.cpp
+    Parser/src/Nodo_funcion_binaria.cpp
+    Parser/src/Nodo_funcion_unaria.cpp
+    Parser/src/procesador_de_arbol.cpp
+    Parser/src/Interpretador.cpp
+    )
 
-set( MOC_Hdrs mainwindow.h )
+set( Hdrs
+    include/mainwindow.h
+    include/graficador.h
 
-set( UIs mainwindow.ui )
+
+    Parser/include/interprete.h
+    Parser/include/interprete.h
+    Parser/include/interprete.h
+    Parser/include/Nodo_double.h
+    Parser/include/arbol_binario.h
+    Parser/include/Nodo.h
+    Parser/include/Nodo_funcion_binaria.h
+    Parser/include/Nodo_funcion_unaria.h
+    Parser/include/procesador_de_arbol.h
+    Parser/include/Interpretador.h
+    )
+
+set( MOC_Hdrs include/mainwindow.h)
+
+set( UIs ui/mainwindow.ui )
 
 set( QRCs Resources/res.qrc )
 

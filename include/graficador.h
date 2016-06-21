@@ -16,7 +16,7 @@
 #include <vtkAxesActor.h>
 #include <vtkTransform.h>
 #include <vtkAxesActor.h>
-#include "vtkCamera.h"
+#include <vtkCamera.h>
 
 class Graficador
 {

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>828</width>
-    <height>427</height>
+    <width>1252</width>
+    <height>557</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,31 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="maximumSize">
+       <size>
+        <width>260</width>
+        <height>362</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Tabla</string>
+      </property>
+      <widget class="QTableView" name="tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>241</width>
+         <height>321</height>
+        </rect>
+       </property>
+      </widget>
+      <zorder>tableView</zorder>
+      <zorder>groupBox_2</zorder>
+     </widget>
+    </item>
+    <item row="0" column="3">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
        <string>Lienzo</string>
@@ -25,18 +50,21 @@
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>391</width>
-         <height>311</height>
+         <width>541</width>
+         <height>321</height>
         </rect>
        </property>
       </widget>
-      <zorder>qvtkWidget</zorder>
-      <zorder>groupBox</zorder>
-      <zorder>groupBox</zorder>
      </widget>
     </item>
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox">
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="title">
        <string>Herramientas</string>
       </property>
@@ -44,9 +72,9 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>30</y>
+         <y>180</y>
          <width>381</width>
-         <height>121</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="title">
@@ -143,15 +171,77 @@
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>180</y>
+         <x>110</x>
+         <y>290</y>
          <width>171</width>
          <height>23</height>
         </rect>
        </property>
        <property name="text">
-        <string>Reetear Camera</string>
+        <string>Resetear Camera</string>
        </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>381</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Ecuación</string>
+       </property>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>80</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Interpretar</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>59</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>321</width>
+          <height>51</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>110</y>
+          <width>80</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Calcular</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -162,7 +252,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>828</width>
+     <width>1252</width>
      <height>20</height>
     </rect>
    </property>
@@ -245,7 +335,7 @@
   </widget>
   <action name="actionNuevo">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/new.png</normaloff>:/Icons/icons/new.png</iconset>
    </property>
    <property name="text">
@@ -265,7 +355,7 @@
   </action>
   <action name="actionGuardar">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/save.png</normaloff>:/Icons/icons/save.png</iconset>
    </property>
    <property name="text">
@@ -277,7 +367,7 @@
   </action>
   <action name="actionSaveAs">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/save.png</normaloff>:/Icons/icons/save.png</iconset>
    </property>
    <property name="text">
@@ -299,7 +389,7 @@
   </action>
   <action name="actionExportar_como_imagen">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/export.png</normaloff>:/Icons/icons/export.png</iconset>
    </property>
    <property name="text">
@@ -308,7 +398,7 @@
   </action>
   <action name="actionImprimir_como_imagen">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/print.ico</normaloff>:/Icons/icons/print.ico</iconset>
    </property>
    <property name="text">
@@ -401,7 +491,7 @@
   </action>
   <action name="actionCheckUncheck">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/check.png</normaloff>:/Icons/icons/check.png</iconset>
    </property>
    <property name="text">
@@ -421,7 +511,7 @@
   </action>
   <action name="actionTable">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/table.png</normaloff>:/Icons/icons/table.png</iconset>
    </property>
    <property name="text">
@@ -433,7 +523,7 @@
   </action>
   <action name="actionZoomAll">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/restorezoom.png</normaloff>:/Icons/icons/restorezoom.png</iconset>
    </property>
    <property name="text">
@@ -445,7 +535,7 @@
   </action>
   <action name="actionZoomMore">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/zoommore.png</normaloff>:/Icons/icons/zoommore.png</iconset>
    </property>
    <property name="text">
@@ -457,7 +547,7 @@
   </action>
   <action name="actionZoomLess">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/zoomless.png</normaloff>:/Icons/icons/zoomless.png</iconset>
    </property>
    <property name="text">
@@ -469,7 +559,7 @@
   </action>
   <action name="actionSaveGraph">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/saveGraph.png</normaloff>:/Icons/icons/saveGraph.png</iconset>
    </property>
    <property name="text">
@@ -481,7 +571,7 @@
   </action>
   <action name="actionShareFacebook">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/facebook.ico</normaloff>:/Icons/icons/facebook.ico</iconset>
    </property>
    <property name="text">
@@ -493,7 +583,7 @@
   </action>
   <action name="actionCopyToClipboard">
    <property name="icon">
-    <iconset resource="Resources/res.qrc">
+    <iconset resource="../Resources/res.qrc">
      <normaloff>:/Icons/icons/copyclipboard.png</normaloff>:/Icons/icons/copyclipboard.png</iconset>
    </property>
    <property name="text">
@@ -513,7 +603,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="Resources/res.qrc"/>
+  <include location="../Resources/res.qrc"/>
  </resources>
  <connections>
   <connection>
