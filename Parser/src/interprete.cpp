@@ -15,11 +15,17 @@ interprete::~interprete()
 
 }
 
+string interprete::delUnnecessary(string &str)
+{
+    str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+    return str;
+}
 
 void interprete::set_ecuacion(string text){
   delete this->interpretador;
   this->interpretador=new Interpretador();
-  this->ecuacion=text;
+  string newEquation = this->delUnnecessary(text);
+  this->ecuacion=newEquation;
 
 }
 

@@ -16,6 +16,7 @@ class interprete
         void set_limite_izq_var2(double);
         void set_limite_der_var2(double);
         std::vector<std::vector<double>> get_coordenadas();
+        string delUnnecessary(string &str);
         string ecuacion;
         int* cont_x;
         int* cont_y;
