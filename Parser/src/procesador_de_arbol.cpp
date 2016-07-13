@@ -66,6 +66,7 @@ std::vector<std::vector<double>> procesador_de_arbol::get_coordenadas(){
 
             i+=dx;
         }
+        this->cont_y=1;
     }
 
     else if(tree->variables->size()==2){
