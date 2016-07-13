@@ -10,10 +10,12 @@ class arbol_binario
 {
     public:
         arbol_binario();
+        arbol_binario(arbol_binario* otro);
         arbol_binario(Nodo*a){raiz=a;a->variables=this->variables;};
         void obtener_variables();
         void verif_variables();
         void cambiar_valor_de(std::string, double);
+        arbol_binario* clonar_arbol();
         virtual ~arbol_binario();
 
 

@@ -10,6 +10,9 @@ arbol_binario::~arbol_binario()
     //dtor
 }
 
+
+
+
 void arbol_binario::verif_variables(){
    for (int i=0; i<variables->size()  ;i++){
       for (int j=0; j<variables->size()  ;j++){

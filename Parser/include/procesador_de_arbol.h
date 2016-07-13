@@ -22,7 +22,7 @@ class procesador_de_arbol
     protected:
     private:
         arbol_binario * tree;
-        double dx=1;
+        double dx=0.1;
         double limite_izq_var1=-10;
         double limite_der_var1=10;
         double limite_izq_var2=-10;

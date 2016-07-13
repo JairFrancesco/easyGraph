@@ -17,7 +17,7 @@ interprete::~interprete()
 
 
 void interprete::set_ecuacion(string text){
-  //delete this->interpretador;
+  delete this->interpretador;
   this->interpretador=new Interpretador();
   this->ecuacion=text;
 

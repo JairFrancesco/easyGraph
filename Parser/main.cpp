@@ -1,4 +1,5 @@
 #include "include/interprete.h"
+#include "include/Interpretador.h"
 
 using namespace std;
 
@@ -19,6 +20,9 @@ int main()
     // set_limite_izq_var2  y  set_limite_izq_var2 solo se usan con dos variables, por defautl es -10 y 10
 
     // ejemplo con tres variables
+
+
+    /*
 
     string ecuacion = "((x+2*y)/sin(y)-12)";
     interprete * interp = new interprete();
@@ -42,7 +46,7 @@ int main()
 
     }
 
-
+*/
 
     //-----------------------------ejemplo con una variables
 
@@ -66,9 +70,8 @@ int main()
   */
 
 // --------------------------------esto es un bucle para ingresar probar ecuaciones
-/*
 
-
+    
     string ecuacion;
     interprete * interp=new interprete();  //Lo primero es crear un objeto de interprete
     while(true){
@@ -84,11 +87,58 @@ int main()
             std::cout << ite <<" " ;
           }
           std::cout << "" << std::endl;
-
       }
     }
 
+
+    /*
+    Interpretador* interp= new Interpretador();
+    string text;
+    std::vector<string> v;
+    int mayor_prio;
+    string oper_mayor_prio;
+    string text_verified;
+    while(true) {
+      cout<<"ecuacion"<<endl;
+      cin>>text;
+      cout<<"--------------------------"<<endl;
+      //interp->verif_sintaxis(text,v,mayor_prio,oper_mayor_prio);
+      text_verified = interp->verif_sintaxis(text);
+      
+    */
+      /*
+      for(auto it : v){
+        cout<<it<<",";
+      }
+
+
+      cout<<endl<<"--------------------------"<<endl;
+      cout<<"operador de mayor prioridad"<<endl;
+      cout<<oper_mayor_prio<<" "<<mayor_prio<<endl;
+      v.clear();
+      mayor_prio=0;
+      oper_mayor_prio="";
+      
+     cout<<text_verified<<endl;
+    }
+    */
+
+/*
+    std::vector<string> v;
+    string ope;
+    int prio;
+    string ecuacion="(x^3+5y*-sin(12))";
+
+    Interpretador * interp=new Interpretador();
+    interp->separar_string(ecuacion,v,prio,ope);
+
+    for(auto it : v){
+      std::cout << it << std::endl;
+
+    }
+    interp->fix_multi(v);
 */
+
     return 0;
 
 }
