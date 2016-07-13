@@ -41,12 +41,65 @@ Interpretador::Interpretador()
     divi_p =&division;
     T_do (*potencia_p)(num_interp, num_interp);
     potencia_p =&potencia;
+    
 
     //-----------------func unarias
+    T_do (*v_absoluto_p)(num_interp);
+    v_absoluto_p =&v_absoluto;
+
+    
     T_do (*seno_p)(num_interp);
     seno_p =&seno;
+    T_do (*coseno_p)(num_interp);
+    coseno_p =&coseno;
+    T_do (*secante_p)(num_interp);
+    secante_p =&secante;
+    T_do (*cosecante_p)(num_interp);
+    cosecante_p =&cosecante;
     T_do (*tangente_p)(num_interp);
     tangente_p =&tangente;
+    T_do (*cotangente_p)(num_interp);
+    cotangente_p =&cotangente;
+
+    T_do (*aseno_p)(num_interp);
+    aseno_p =&arco_seno;
+    T_do (*acoseno_p)(num_interp);
+    acoseno_p =&arco_coseno;
+    T_do (*asecante_p)(num_interp);
+    asecante_p =&arco_secante;
+    T_do (*acosecante_p)(num_interp);
+    acosecante_p =&arco_cosecante;
+    T_do (*atangente_p)(num_interp);
+    atangente_p =&arco_tangente;
+    T_do (*acotangente_p)(num_interp);
+    acotangente_p =&arco_cotangente;    
+
+
+    T_do (*senoh_p)(num_interp);
+    senoh_p =&seno_hiperbolico;
+    T_do (*cosenoh_p)(num_interp);
+    cosenoh_p =&coseno_hiperbolico;
+    T_do (*secanteh_p)(num_interp);
+    secanteh_p =&secante_hiperbolico;
+    T_do (*cosecanteh_p)(num_interp);
+    cosecanteh_p =&cosecante_hiperbolico;
+    T_do (*tangenteh_p)(num_interp);
+    tangenteh_p =&tangente_hiperbolico;
+    T_do (*cotangenteh_p)(num_interp);
+    cotangenteh_p =&cotangente_hiperbolico;
+
+    T_do (*asenoh_p)(num_interp);
+    asenoh_p =&arco_seno_hiperbolico;
+    T_do (*acosenoh_p)(num_interp);
+    acosenoh_p =&arco_coseno_hiperbolico;
+    T_do (*asecanteh_p)(num_interp);
+    asecanteh_p =&arco_secante_hiperbolico;
+    T_do (*acosecanteh_p)(num_interp);
+    acosecanteh_p =&arco_cosecante_hiperbolico;
+    T_do (*atangenteh_p)(num_interp);
+    atangenteh_p =&arco_tangente_hiperbolico;
+    T_do (*acotangenteh_p)(num_interp);
+    acotangenteh_p =&arco_cotangente_hiperbolico;
 
 
     //------------------map_binario
@@ -56,20 +109,73 @@ Interpretador::Interpretador()
     funciones_binarias["*"]=multi_p;
     funciones_binarias["/"]=divi_p;
     funciones_binarias["^"]=potencia_p;
+    
     //------------------map_unario
 
+    funciones_unarias["abs"]=v_absoluto_p;
+
     funciones_unarias["sin"]=seno_p;
+    funciones_unarias["cos"]=coseno_p;
+    funciones_unarias["sec"]=secante_p;
+    funciones_unarias["csc"]=cosecante_p;
     funciones_unarias["tan"]=tangente_p;
+    funciones_unarias["cot"]=cotangente_p;
+
+    funciones_unarias["asin"]=aseno_p;
+    funciones_unarias["acos"]=acoseno_p;
+    funciones_unarias["asec"]=asecante_p;
+    funciones_unarias["acsc"]=acosecante_p;
+    funciones_unarias["atan"]=atangente_p;
+    funciones_unarias["acot"]=acotangente_p;
+
+    funciones_unarias["hsin"]=senoh_p;
+    funciones_unarias["hcos"]=cosenoh_p;
+    funciones_unarias["hsec"]=secanteh_p;
+    funciones_unarias["hcsc"]=cosecanteh_p;
+    funciones_unarias["htan"]=tangenteh_p;
+    funciones_unarias["hcot"]=cotangenteh_p;
+
+    funciones_unarias["ahsin"]=asenoh_p;
+    funciones_unarias["ahcos"]=acosenoh_p;
+    funciones_unarias["ahsec"]=asecanteh_p;
+    funciones_unarias["ahcsc"]=acosecanteh_p;
+    funciones_unarias["ahtan"]=atangenteh_p;
+    funciones_unarias["ahcot"]=acotangenteh_p;
 
     //-----------------prioridad_funciones
+    //
 
     prioridad_funciones["+"]=4;
     prioridad_funciones["-"]=4;
     prioridad_funciones["*"]=3;
     prioridad_funciones["/"]=3;
     prioridad_funciones["sin"]=2;
+    prioridad_funciones["cos"]=2;
+    prioridad_funciones["sec"]=2;
+    prioridad_funciones["csc"]=2;
     prioridad_funciones["tan"]=2;
+    prioridad_funciones["cot"]=2;
+    prioridad_funciones["asin"]=2;
+    prioridad_funciones["acos"]=2;
+    prioridad_funciones["asec"]=2;
+    prioridad_funciones["acsc"]=2;
+    prioridad_funciones["atan"]=2;
+    prioridad_funciones["acot"]=2;
+    prioridad_funciones["hsin"]=2;
+    prioridad_funciones["hcos"]=2;
+    prioridad_funciones["hsec"]=2;
+    prioridad_funciones["hcsc"]=2;
+    prioridad_funciones["htan"]=2;
+    prioridad_funciones["hcot"]=2;
+    prioridad_funciones["ahsin"]=2;
+    prioridad_funciones["ahcos"]=2;
+    prioridad_funciones["ahsec"]=2;
+    prioridad_funciones["ahcsc"]=2;
+    prioridad_funciones["ahtan"]=2;
+    prioridad_funciones["ahcot"]=2;
     prioridad_funciones["^"]=1;
+    prioridad_funciones["abs"]=1;
+    
 
 
 }

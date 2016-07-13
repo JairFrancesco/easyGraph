@@ -50,85 +50,98 @@ double v_absoluto(double x){
 
 
 double seno(double x){
-    return sin(x*PI/180);
+    return sin(x);
 }
 
 double coseno(double x){
-    return cos(x*PI/180);
+    return cos(x);
 }
 
 double cotangente(double x){
-    return (1/tan(x*PI/180));
+    return (1/tan(x));
 }
 
 double secante(double x){
-    return (1/(cos(x*PI/180)));
+    return (1/(cos(x)));
 }
 
 double cosecante(double x){
-    return (1/(sin(x*PI/180)));
+    return (1/(sin(x)));
 }
 
 double tangente(double x){
-    return tan(x*PI/180);
+    return tan(x);
 }
 
 double arco_seno(double x){
-    return asin(x*PI/180);
+    return asin(x);
 }
 
 double arco_coseno(double x){
-    return acos(x*PI/180);
+    return acos(x);
 }
 
 double arco_tangente(double x){
-    return atan(x*PI/180);
+    return atan(x);
 }
 
 double arco_secante(double x){
-    return acos(1/(x*PI/180));
+    return acos(1/(x));
 }
 
 double arco_cosecante(double x){
-    return asin(1/(x*PI/180));
+    return asin(1/(x));
 }
 
 double arco_cotangente(double x){
-    return atan(1/(x*PI/180));
+    return atan(1/(x));
 }
 
+
 double coseno_hiperbolico(double x){
-    return cosh(x*PI/180);
+    return cosh(x);
 }
 
 double seno_hiperbolico(double x){
-    return sinh(x*PI/180);
+    return sinh(x);
 }
 
 double tangente_hiperbolico(double x){
-    return tanh(x*PI/180);
+    return tanh(x);
 }
 
-double arcocoseno_hiperbolico(double x){
-    return acosh(x*PI/180);
+double cosecante_hiperbolico(double x){
+    return sinh(1/(x));
 }
 
-double arcoseno_hiperbolico(double x){
-    return asinh(x*PI/180);
+double secante_hiperbolico(double x){
+    return cosh(1/(x));
 }
 
-double arcotangente_hiperbolico(double x){
-    return atanh(x*PI/180);
+double cotangente_hiperbolico(double x){
+    return tanh(1/(x));
+}
+
+double arco_coseno_hiperbolico(double x){
+    return acosh(x);
+}
+
+double arco_seno_hiperbolico(double x){
+    return asinh(x);
+}
+
+double arco_tangente_hiperbolico(double x){
+    return atanh(x);
 }
 
 double arco_cosecante_hiperbolico(double x){
-    return asinh(1/(x*PI/180));
+    return asinh(1/(x));
 }
 
 double arco_secante_hiperbolico(double x){
-    return acosh(1/(x*PI/180));
+    return acosh(1/(x));
 }
 
 double arco_cotangente_hiperbolico(double x){
-    return atanh(1/(x*PI/180));
+    return atanh(1/(x));
 }
