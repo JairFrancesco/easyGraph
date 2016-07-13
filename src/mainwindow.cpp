@@ -49,8 +49,7 @@ void MainWindow::resetCamera(){
      this->ui->qvtkWidget->GetRenderWindow()->Render();
 }
 
-
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_btnCalcular_clicked()
 {
 
     //string ecuacion = "((x+2*y)/sin(y)-12)";
@@ -82,6 +81,5 @@ void MainWindow::on_pushButton_3_clicked()
     g->renderizar();
     this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
     this->ui->qvtkWidget->GetRenderWindow()->Render();
-
 
 }

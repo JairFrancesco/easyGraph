@@ -28,7 +28,7 @@ public slots:
     void colorearfondo();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_btnCalcular_clicked();
 
 private:
 

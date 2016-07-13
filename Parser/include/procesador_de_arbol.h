@@ -9,7 +9,7 @@ class procesador_de_arbol
 {
     public:
         procesador_de_arbol();
-        procesador_de_arbol(arbol_binario* a){this->tree=a;};
+        procesador_de_arbol(arbol_binario* a){this->tree=a;}
         void set_limite_var(double, double ,std::string);
         void set_limite_izq_var1(double);
         void set_limite_der_var1(double);

@@ -165,13 +165,6 @@
          <string>Azul</string>
         </property>
        </widget>
-       <zorder>doubleSpinBox</zorder>
-       <zorder>doubleSpinBox_2</zorder>
-       <zorder>doubleSpinBox_3</zorder>
-       <zorder>label</zorder>
-       <zorder>label_2</zorder>
-       <zorder>label_3</zorder>
-       <zorder>groupBox_4</zorder>
       </widget>
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
@@ -226,7 +219,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="btnCalcular">
         <property name="geometry">
          <rect>
           <x>130</x>
