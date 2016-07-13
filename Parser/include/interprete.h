@@ -17,11 +17,16 @@ class interprete
         void set_limite_der_var2(double);
         std::vector<std::vector<double>> get_coordenadas();
         string ecuacion;
+        int* cont_x;
+        int* cont_y;
+        
+
         virtual ~interprete();
     protected:
     private:
         Interpretador * interpretador;
         procesador_de_arbol * procesador;
+        
 
 };
 

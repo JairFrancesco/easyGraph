@@ -46,6 +46,8 @@ void interprete::crear_arbol(){
   interpretador->tree->raiz->obtener_variables();
   interpretador->tree->verif_variables();
   this->procesador= new procesador_de_arbol(this->interpretador->tree);
+  this->cont_x=&procesador->cont_x;
+  this->cont_y=&procesador->cont_y;
 }
 
 std::vector<std::vector<double>> interprete::get_coordenadas(){

@@ -79,6 +79,10 @@ int main()
       std::cin>>ecuacion;
       interp->set_ecuacion(ecuacion); //Aqui ingresas tu ecuacion como string
       interp->crear_arbol();// luego de ingresar la ecuacion se crea el arbol con esta funcion
+      interp->set_limite_izq_var1(-10);
+      interp->set_limite_der_var1(10);
+      interp->set_limite_izq_var2(-5);
+      interp->set_limite_der_var2(5);
       std::vector<std::vector<double> > coor =  interp->get_coordenadas(); // y es con esta que se obtiene los puntos
 
       for (auto it : coor){
@@ -86,11 +90,14 @@ int main()
           for (auto ite : it){
             std::cout << ite <<" " ;
           }
-          std::cout << "" << std::endl;
+          std::cout << "" << std::endl;  
+      
+
+      
       }
-    }
-
-
+      std::cout<<"--------"<<*interp->cont_x<<"---"<<*interp->cont_y<<std::endl;
+  }
+    
     /*
     Interpretador* interp= new Interpretador();
     string text;
