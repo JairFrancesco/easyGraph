@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1252</width>
-    <height>557</height>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,12 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
      <widget class="QGroupBox" name="groupBox_5">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>500</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>260</width>
@@ -36,14 +42,23 @@
         </rect>
        </property>
       </widget>
+      <zorder>tableView</zorder>
+      <zorder>groupBox</zorder>
+      <zorder>groupBox</zorder>
      </widget>
     </item>
     <item row="0" column="3">
      <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>500</height>
+       </size>
+      </property>
       <property name="title">
        <string>Lienzo</string>
       </property>
-      <widget class="QVTKWidget" name="qvtkWidget" native="true">
+      <widget class="QVTKWidget" name="qvtkWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -57,6 +72,12 @@
     </item>
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>500</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>400</width>
@@ -169,8 +190,8 @@
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>330</y>
+         <x>130</x>
+         <y>370</y>
          <width>171</width>
          <height>23</height>
         </rect>
@@ -251,6 +272,158 @@
         </property>
        </widget>
       </widget>
+      <widget class="QDoubleSpinBox" name="spinDiferencial">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>310</y>
+         <width>66</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.500000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Diferncial</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>350</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Limites x</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="spinLimx1">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>340</y>
+         <width>51</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>-20.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>-10.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="spinLimx2">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>340</y>
+         <width>41</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <double>-20.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>10.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="spinLimy2">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>340</y>
+         <width>41</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <double>-20.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>10.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="spinLimy1">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>340</y>
+         <width>51</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>-20.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>-10.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>350</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Limites y</string>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -261,7 +434,7 @@
      <x>0</x>
      <y>0</y>
      <width>1252</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuEasyGraph_using_MVC">

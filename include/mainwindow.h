@@ -37,7 +37,7 @@ private:
     std::vector<std::vector<double>>coordenadas;
 
     void llenarTabla();
-    void graficar();
+    void graficar(int,int);
 
 
 };

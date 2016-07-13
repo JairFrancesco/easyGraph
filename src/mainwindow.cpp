@@ -69,9 +69,10 @@ void MainWindow::llenarTabla(){
     this->ui->tableView->setModel(this->model);
 }
 
-void MainWindow::graficar(){
+void MainWindow::graficar(int x,int y ){
     //Graficar
-    g->crear(coordenadas,21,21);
+    cout << "here " << x << "," << y<< endl;
+    g->crear(coordenadas,x,y);
     //g->crear(coordenadas,21,1); // Esto es para 2d ... ideas papus ?
     g->add_filtros();
     g->add_axes();
@@ -94,31 +95,22 @@ void MainWindow::on_btnCalcular_clicked()
 
     this->interp -> set_ecuacion(ecuacion);
     this->interp -> crear_arbol();
-    this->interp->set_diferencial(1); // por defecto el diferencial es 1
+    this->interp->set_diferencial(this->ui->spinDiferencial->value()); // por defecto el diferencial es 1
     //por defecto los limites van de -10 a 10, por lo que podrias omitir las proximas 4 lineas
 
-    interp->set_limite_izq_var1(-10);
-    interp->set_limite_der_var1(10);
-    interp->set_limite_izq_var2(-10);
-    interp->set_limite_der_var2(10);
+    interp->set_limite_izq_var1(this->ui->spinLimx1->value());
+    interp->set_limite_der_var1(this->ui->spinLimx2->value());
+    interp->set_limite_izq_var2(this->ui->spinLimy1->value());
+    interp->set_limite_der_var2(this->ui->spinLimy2->value());
 
-
-
-
-    //Obtener Cordeenadas
+   //Obtener Cordeenadas
     coordenadas = interp->get_coordenadas();
 
     //Llenar Tabla
     this->llenarTabla();
 
     //graficar
-    this->graficar();
-
-    //std::thread t1(MainWindow::llenarTabla,this);
-    //std::thread t2(MainWindow::graficar,this);
-    //Join the thread with the main thread
-    //t1.join();
-    //t2.join();
+    this->graficar(*interp->cont_x,*interp->cont_y);
 
     cout << *interp->cont_x << "/" << *interp->cont_y <<  endl;
 }
