@@ -29,8 +29,14 @@ void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
 
 
     this->print_grid(this->structuredGrid);
-    auto mapa = this->mapear(this->structuredGrid);
-    this->actores.push_back(mapa);
+    auto actor = this->mapear(this->structuredGrid);
+    actor->GetProperty()->SetInterpolationToFlat();
+
+    // Set the color for edges of the sphere
+    actor->GetProperty()->SetColor(0,255,0);
+    actor->GetProperty()->SetEdgeColor(1.0, 0.0, 0.0); //(R,G,B)
+    actor->GetProperty()->EdgeVisibilityOn();
+    this->actores.push_back(actor);
 
 }
 

@@ -49,6 +49,40 @@ void MainWindow::resetCamera(){
      this->ui->qvtkWidget->GetRenderWindow()->Render();
 }
 
+
+void MainWindow::llenarTabla(){
+
+    int counterRow = 0;
+    int counterCol = 0;
+    for (auto it : coordenadas){
+        for (auto ite : it){
+            //string temp = stringify(ite);
+            //QString qstr = QString::fromStdString(temp);
+            this->model->setItem(counterRow, counterCol, new QStandardItem(QString::number(ite)));
+            counterCol++;
+        }
+
+        counterCol=0;
+        counterRow++;
+
+    }
+    this->ui->tableView->setModel(this->model);
+}
+
+void MainWindow::graficar(){
+    //Graficar
+    g->crear(coordenadas,21,21);
+    //g->crear(coordenadas,21,1); // Esto es para 2d ... ideas papus ?
+    g->add_filtros();
+    g->add_axes();
+
+
+    g->renderizar();
+    this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
+    this->ui->qvtkWidget->GetRenderWindow()->Render();
+
+}
+
 void MainWindow::on_btnCalcular_clicked()
 {
 
@@ -68,18 +102,25 @@ void MainWindow::on_btnCalcular_clicked()
     interp->set_limite_izq_var2(-10);
     interp->set_limite_der_var2(10);
 
+
+
+
+    //Obtener Cordeenadas
     coordenadas = interp->get_coordenadas();
 
-    cout << coordenadas.size() << endl;
+    //Llenar Tabla
+    this->llenarTabla();
 
-    g->crear(coordenadas,21,21);
-    //g->crear(coordenadas,21,1); // Esto es para 2d ... ideas papus ?
-    g->add_filtros();
-    g->add_axes();
+    //graficar
+    this->graficar();
 
+    //std::thread t1(MainWindow::llenarTabla,this);
+    //std::thread t2(MainWindow::graficar,this);
+    //Join the thread with the main thread
+    //t1.join();
+    //t2.join();
 
-    g->renderizar();
-    this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
-    this->ui->qvtkWidget->GetRenderWindow()->Render();
-
+    cout << *interp->cont_x << "/" << *interp->cont_y <<  endl;
 }
+
+

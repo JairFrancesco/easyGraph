@@ -13,6 +13,7 @@ if(POLICY CMP0053)
 endif()
 project(EasyGraph)
 add_compile_options(-std=c++11)
+add_compile_options(-pthread)
 find_package(VTK COMPONENTS
   vtkCommonCore
   vtkFiltersCore

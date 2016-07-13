@@ -6,7 +6,7 @@
 #include <QString>
 #include "graficador.h"
 #include "interprete.h"
-
+ #include <thread>
 namespace Ui {
 class MainWindow;
 }
@@ -36,7 +36,8 @@ private:
     QStandardItemModel *model = new QStandardItemModel();
     std::vector<std::vector<double>>coordenadas;
 
-
+    void llenarTabla();
+    void graficar();
 
 
 };

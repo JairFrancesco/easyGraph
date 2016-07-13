@@ -37,7 +37,8 @@ vtkSmartPointer<vtkActor> Gpadre::filtro_puntos(vtkStructuredGrid * structuredGr
 
    vtkSmartPointer<vtkActor> actor =   vtkSmartPointer<vtkActor>::New();
    actor->SetMapper(mapper);
-   actor->GetProperty()->SetPointSize(3);
+   actor->GetProperty()->SetPointSize(4);
+   actor->GetProperty()->SetColor(0,0,255);
    return actor;
 
 
