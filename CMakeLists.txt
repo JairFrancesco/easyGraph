@@ -36,7 +36,9 @@ include_directories(include Parser/include)
 # Set your files and resources here
 set( Srcs main.cpp
     src/mainwindow.cpp
+
     src/graficador.cpp
+    src/gpadre.cpp
 
     Parser/src/interprete.cpp
     Parser/src/interprete.cpp
@@ -51,7 +53,9 @@ set( Srcs main.cpp
 
 set( Hdrs
     include/mainwindow.h
+
     include/graficador.h
+    include/gpadre.h
 
 
     Parser/include/interprete.h

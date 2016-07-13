@@ -2,66 +2,52 @@
 
 Graficador::Graficador()
 {
-    vtkSmartPointer<vtkTransform> transform = vtkSmartPointer<vtkTransform>::New();
-    transform->Translate(0.0, 0.0, 0.0);
-
-    axes->SetUserTransform(transform);
-    axes->SetTotalLength(5,5,5);
-    renderer->AddActor(axes);
+    this->camera->SetPosition(0, 0, 20);
+    this->camera->SetFocalPoint(0, 0, 0);
 
 
-    unsigned char red[3] = { 255, 0, 0 };
-    // Create a vtkUnsignedCharArray container and store the colors in it
-    colors->SetNumberOfComponents(3);
-    colors->InsertNextTupleValue(red);
+    // Setup render window, renderer, and interactor
+    //g->renderer->AddActor(g->actor);
+    this->renderer->SetActiveCamera(this->camera);
+    this->renderer->SetBackground(0.35,0.35,0.90);
 
 }
 
-void Graficador::puntos2d(){
+void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
+    vtkSmartPointer<vtkPoints> pointss = vtkSmartPointer<vtkPoints>::New();
 
-    for(double i=0.0; i<5; i+=0.1){
-        double origin[3] = {i, cuadrado(i), 0};
-        points->InsertNextPoint(origin);
+    for(auto i:vec){
+        std::cout <<i[0]<< " /" <<i[1]<< " /"<<i[2]<<"\n" ;
+        //Dos veces para que no explote, esto es por teoria no borrar please ..
+        this->next_point(i,pointss);
+        this->next_point(i,pointss);
     }
+
+
+    this->structuredGrid->SetDimensions(2, x, y);
+    this->structuredGrid->SetPoints(pointss);
+
+
+    this->print_grid(this->structuredGrid);
+    auto mapa = this->mapear(this->structuredGrid);
+    this->actores.push_back(mapa);
+
 }
 
-void Graficador::insertar_punto(double x ,double y ,double z){
-    double origin[3] = {x, y, z};
-    this->points->InsertNextPoint(origin);
+void Graficador::add_filtros(){
+
+    vtkSmartPointer<vtkActor> actor1 = this->filtro_lineas(this->structuredGrid);
+    this->actores.push_back(actor1);
+
+    vtkSmartPointer<vtkActor> actor2 = this->filtro_puntos(this->structuredGrid);
+    this->actores.push_back(actor2);
+
+}
+void Graficador::add_axes(){
+
+    renderer->AddActor(this->axes());
 }
 
-void Graficador::set_polilinea(int n){
-       this->polyLine->GetPointIds()->SetNumberOfIds(n);
-}
-
-void Graficador::insertar_polilinea(int i){
-    //polyLine->GetPointIds()->SetNumberOfIds(numberids);
-    this->polyLine->GetPointIds()->SetId(i,i);
-}
-
-void Graficador::crearpolilinea(){
-    int numberids = 50;
-       polyLine->GetPointIds()->SetNumberOfIds(numberids);
-      for(unsigned int i = 0; i < numberids; i++)
-      {
-        polyLine->GetPointIds()->SetId(i,i);
-      }
-}
-
-double Graficador::cuadrado(double x){
-    return x*x;
-}
-
-void Graficador::clean(){
-    cells = vtkSmartPointer<vtkCellArray>::New();
-
-    // Create a polydata to store everything in
-     polyData = vtkSmartPointer<vtkPolyData>::New();
-    // polyLine = vtkSmartPointer<vtkPolyLine>::New();
-     //mapper =  vtkSmartPointer<vtkPolyDataMapper>::New();
-
-
-    // Create a vtkPoints object and store the points in it
-    points = vtkSmartPointer<vtkPoints>::New();
-
+void Graficador::renderizar(bool mostrar){
+    this->render(this->actores,mostrar);
 }

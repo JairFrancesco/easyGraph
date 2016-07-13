@@ -31,9 +31,13 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
+
     interprete * interp = new interprete();
     QStandardItemModel *model = new QStandardItemModel();
     std::vector<std::vector<double>>coordenadas;
+
+
+
 
 };
 
