@@ -48,6 +48,11 @@ double v_absoluto(double x){
     return abs(x);
 }
 
+double log(double x)
+{
+    //std::cout<<"calculating log"<<std::endl;
+    return log2(x);
+}
 
 double seno(double x){
     return sin(x);
@@ -145,3 +150,5 @@ double arco_secante_hiperbolico(double x){
 double arco_cotangente_hiperbolico(double x){
     return atanh(1/(x));
 }
+
+

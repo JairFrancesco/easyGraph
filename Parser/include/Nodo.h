@@ -10,19 +10,19 @@ class Nodo
     public:
         Nodo();
         virtual ~Nodo();
-        virtual void set_valor(){};
+        virtual void set_valor(){}
         void agregar_der(Nodo*);
         void agregar_izq(Nodo*);
-        virtual void get_valor(double* a){};
-        virtual void set_valor(double){};
-        virtual void obtener_variables(){};
+        virtual void get_valor(double* a){}
+        virtual void set_valor(double){}
+        virtual void obtener_variables(){}
         ////privado
-        virtual void get_valor(double(*&funcion)(double, double)){};
-        virtual void set_valor(double(*& funcion)(double, double)){};
-        virtual void get_valor(double(*&funcion)(double)){};
-        virtual void set_valor(double(*& funcion)(double)){};
+        virtual void get_valor(double(*&funcion)(double, double)){}
+        virtual void set_valor(double(*& funcion)(double, double)){}
+        virtual void get_valor(double(*&funcion)(double)){}
+        virtual void set_valor(double(*& funcion)(double)){}
 
-        virtual double procesar(){};
+        virtual double procesar(){}
         void verif_variables();
         ////privado
         Nodo * izq;

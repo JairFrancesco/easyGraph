@@ -47,6 +47,8 @@ Interpretador::Interpretador()
     T_do (*v_absoluto_p)(num_interp);
     v_absoluto_p =&v_absoluto;
 
+    T_do (*log_p)(num_interp);
+    log_p =&log;
     
     T_do (*seno_p)(num_interp);
     seno_p =&seno;
@@ -114,7 +116,11 @@ Interpretador::Interpretador()
 
     funciones_unarias["abs"]=v_absoluto_p;
 
+    funciones_unarias["log"]=log_p;
+    funciones_unarias["lg"]=log_p;
+
     funciones_unarias["sin"]=seno_p;
+    funciones_unarias["sen"]=seno_p;
     funciones_unarias["cos"]=coseno_p;
     funciones_unarias["sec"]=secante_p;
     funciones_unarias["csc"]=cosecante_p;
@@ -149,7 +155,12 @@ Interpretador::Interpretador()
     prioridad_funciones["-"]=4;
     prioridad_funciones["*"]=3;
     prioridad_funciones["/"]=3;
+
+    prioridad_funciones["log"]=2;
+    prioridad_funciones["lg"]=2;
+
     prioridad_funciones["sin"]=2;
+    prioridad_funciones["sen"]=2;
     prioridad_funciones["cos"]=2;
     prioridad_funciones["sec"]=2;
     prioridad_funciones["csc"]=2;

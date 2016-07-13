@@ -1,4 +1,5 @@
 #include "../include/procesador_de_arbol.h"
+#include <exception>
 
 procesador_de_arbol::procesador_de_arbol()
 {
@@ -47,56 +48,62 @@ void procesador_de_arbol::set_dx(double a){
 }
 
 std::vector<std::vector<double>> procesador_de_arbol::get_coordenadas(){
-    this->cont_x=0;
-    this->cont_y=0;
-    bool b_cont_y=true;
-    std::vector<std::vector<double>> v_temp2;
-    if(tree->variables->size()==1){
-        for(double i=(this->limite_izq_var1);i<=this->limite_der_var1;){
-            this->cont_x++;
-
-            *(std::get<1>(tree->variables->at(0)))=i;
-            std::vector<double> v_temp1;
-            v_temp1.push_back(i);
-            v_temp1.push_back(tree->raiz->procesar());
-            v_temp2.push_back(v_temp1);
-
-
-
-
-            i+=dx;
-        }
-        this->cont_y=1;
-    }
-
-    else if(tree->variables->size()==2){
-        for(double i=(this->limite_izq_var1);i<=this->limite_der_var1;){
-            this->cont_x++;
-
-            *(std::get<1>(tree->variables->at(0)))=i;
-            for (double j=(this->limite_izq_var2);j<=this->limite_der_var2; ){
-                if(b_cont_y)
-                    this->cont_y++;
-
-                *(std::get<1>(tree->variables->at(1)))=j;
+    try{
+        this->cont_x=0;
+        this->cont_y=0;
+        bool b_cont_y=true;
+        std::vector<std::vector<double>> v_temp2;
+        if(tree->variables->size()==1){
+            std::cout<<"1 variable"<<std::endl;
+            for(double i=(this->limite_izq_var1);i<=this->limite_der_var1;){
+                this->cont_x++;
+                *(std::get<1>(tree->variables->at(0)))=i;
                 std::vector<double> v_temp1;
                 v_temp1.push_back(i);
-                v_temp1.push_back(j);
+                std::cout<<"Procesando.."<<std::endl;
+                v_temp1.push_back(tree->raiz->procesar());
+                std::cout<<"Finish Procesando.."<<std::endl;
+                v_temp2.push_back(v_temp1);
+                std::cout<<i<<std::endl;
+                i+=dx;
+            }
+            this->cont_y=1;
+        }
+
+        else if(tree->variables->size()==2){
+            std::cout<<"2 variable"<<std::endl;
+            for(double i=(this->limite_izq_var1);i<=this->limite_der_var1;){
+                this->cont_x++;
+
+                *(std::get<1>(tree->variables->at(0)))=i;
+                for (double j=(this->limite_izq_var2);j<=this->limite_der_var2; ){
+                    if(b_cont_y)
+                        this->cont_y++;
+
+                    *(std::get<1>(tree->variables->at(1)))=j;
+                    std::vector<double> v_temp1;
+                    v_temp1.push_back(i);
+                    v_temp1.push_back(j);
+                    v_temp1.push_back(tree->raiz->procesar());
+                    v_temp2.push_back(v_temp1);
+                    j+=dx;
+                }
+                b_cont_y=false;
+                i+=dx;
+            }
+        }
+        else if(tree->variables->size()==0){
+            std::cout<<"0 variable"<<std::endl;
+            for (double i= (this->limite_izq_var1);i<=this->limite_der_var1;i+=dx){
+                std::vector<double> v_temp1;
+                v_temp1.push_back(i);
                 v_temp1.push_back(tree->raiz->procesar());
                 v_temp2.push_back(v_temp1);
-                j+=dx;
             }
-            b_cont_y=false;
-            i+=dx;
         }
+        return v_temp2;
     }
-    else if(tree->variables->size()==0){
-        for (double i= (this->limite_izq_var1);i<=this->limite_der_var1;i+=dx){
-            std::vector<double> v_temp1;
-            v_temp1.push_back(i);
-            v_temp1.push_back(tree->raiz->procesar());
-            v_temp2.push_back(v_temp1);
-        }
+    catch(std::exception& e){
+        std::cout<< e.what()<<'\n';
     }
-    return v_temp2;
 }

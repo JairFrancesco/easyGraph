@@ -98,17 +98,21 @@ void MainWindow::on_btnCalcular_clicked()
     this->interp->set_diferencial(this->ui->spinDiferencial->value()); // por defecto el diferencial es 1
     //por defecto los limites van de -10 a 10, por lo que podrias omitir las proximas 4 lineas
 
+    cout<<"settings limits.."<<endl;
     interp->set_limite_izq_var1(this->ui->spinLimx1->value());
     interp->set_limite_der_var1(this->ui->spinLimx2->value());
     interp->set_limite_izq_var2(this->ui->spinLimy1->value());
     interp->set_limite_der_var2(this->ui->spinLimy2->value());
 
    //Obtener Cordeenadas
+    cout<<"Getting coords"<<endl;
     coordenadas = interp->get_coordenadas();
 
     //Llenar Tabla
+    cout<<"filling table"<<endl;
     this->llenarTabla();
 
+    cout<<"Graficando.."<<endl;
     //graficar
     this->graficar(*interp->cont_x,*interp->cont_y);
 

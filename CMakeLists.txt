@@ -65,6 +65,7 @@ set( Hdrs
     Parser/include/Nodo_double.h
     Parser/include/arbol_binario.h
     Parser/include/Nodo.h
+    Parser/include/funciones.h
     Parser/include/Nodo_funcion_binaria.h
     Parser/include/Nodo_funcion_unaria.h
     Parser/include/procesador_de_arbol.h

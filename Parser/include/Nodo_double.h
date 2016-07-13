@@ -7,7 +7,7 @@ class Nodo_double:public Nodo
     public:
         Nodo_double();
         
-        Nodo_double(double a){this->valor=new double(a);};
+        Nodo_double(double a){this->valor=new double(a);}
         Nodo_double(std::string a);
         virtual ~Nodo_double();
         void get_valor(double*);
