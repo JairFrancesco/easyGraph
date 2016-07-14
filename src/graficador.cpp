@@ -50,7 +50,35 @@ void Graficador::add_filtros(){
 
 }
 void Graficador::add_axes(){
+    vtkSmartPointer<vtkCubeAxesActor> cubeAxesActor =
+      vtkSmartPointer<vtkCubeAxesActor>::New();
 
+    cubeAxesActor->SetBounds(-10,10,-10,10,-40,40);
+    cubeAxesActor->SetCamera(renderer->GetActiveCamera());
+    cubeAxesActor->GetTitleTextProperty(0)->SetColor(1.0, 0.0, 0.0);
+    cubeAxesActor->GetLabelTextProperty(0)->SetColor(1.0, 0.0, 0.0);
+
+    cubeAxesActor->GetTitleTextProperty(1)->SetColor(0.0, 1.0, 0.0);
+    cubeAxesActor->GetLabelTextProperty(1)->SetColor(0.0, 1.0, 0.0);
+
+    cubeAxesActor->GetTitleTextProperty(2)->SetColor(0.0, 0.0, 1.0);
+    cubeAxesActor->GetLabelTextProperty(2)->SetColor(0.0, 0.0, 1.0);
+
+    cubeAxesActor->DrawXGridlinesOn();
+    cubeAxesActor->DrawYGridlinesOn();
+    cubeAxesActor->DrawZGridlinesOn();
+  #if VTK_MAJOR_VERSION == 6
+    cubeAxesActor->SetGridLineLocation(VTK_GRID_LINES_FURTHEST);
+  #endif
+  #if VTK_MAJOR_VERSION > 6
+    cubeAxesActor->SetGridLineLocation(2);
+  #endif
+
+    cubeAxesActor->XAxisMinorTickVisibilityOff();
+    cubeAxesActor->YAxisMinorTickVisibilityOff();
+    cubeAxesActor->ZAxisMinorTickVisibilityOff();
+
+    renderer->AddActor(cubeAxesActor);
     renderer->AddActor(this->axes());
 }
 

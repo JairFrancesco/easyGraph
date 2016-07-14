@@ -3,6 +3,8 @@
 
 #include "gpadre.h"
 #include <vtkCamera.h>
+#include <vtkCubeAxesActor.h>
+#include <vtkTextProperty.h>
 class Graficador : public Gpadre
 {
 
