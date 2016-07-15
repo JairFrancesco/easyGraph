@@ -1,6 +1,7 @@
 #include "include/mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 #include <vector>
 
@@ -152,3 +153,19 @@ void MainWindow::on_btnCalcular_clicked()
 }
 
 
+
+void MainWindow::on_actionExample_triggered()
+{
+    vector<string> examples;
+    examples.push_back("sen(x) + cos(y)");
+    examples.push_back("x^2+y^2");
+    examples.push_back("sqrt(x^2+y^2)");
+    examples.push_back("sen(x) + cos(y)");
+    examples.push_back("x^2-y^2");
+    examples.push_back("(sen(x)*cos(y))-log(x)");
+    examples.push_back("x^2-y");
+    srand(time(NULL));
+    int randNum = rand()%(examples.size());
+    QString tmp = QString::fromStdString(examples[randNum]);
+    this->ui->lineEdit->setText(tmp);
+}

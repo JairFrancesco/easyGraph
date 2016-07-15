@@ -33,6 +33,8 @@ public slots:
 private slots:
     void on_btnCalcular_clicked();
 
+    void on_actionExample_triggered();
+
 private:
     interprete * interp =  new interprete();
     QStandardItemModel *model = new QStandardItemModel();
