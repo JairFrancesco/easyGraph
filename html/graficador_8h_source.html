@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>easyGraph: Fichero Fuente include/graficador.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">easyGraph
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Graficadora 2D y 3D</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">graficador.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graficador_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAFICADOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAFICADOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gpadre_8h.html">gpadre.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vtkCamera.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vtkCubeAxesActor.h&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vtkTextProperty.h&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_graficador.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graficador.html">Graficador</a> : <span class="keyword">public</span> <a class="code" href="class_gpadre.html">Gpadre</a></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_graficador.html#a62158abce60f946c3fd7893f2689e138">Graficador</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_graficador.html#af324352821c6e39961ed6977e50e9582">   15</a></span>&#160;    std::vector&lt;vtkSmartPointer&lt;vtkActor&gt;&gt; <a class="code" href="class_graficador.html#af324352821c6e39961ed6977e50e9582">actores</a>;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_graficador.html#aeb8321dafc848939f900bea4721142da">   16</a></span>&#160;    vtkSmartPointer&lt;vtkStructuredGrid&gt; <a class="code" href="class_graficador.html#aeb8321dafc848939f900bea4721142da">structuredGrid</a> =  vtkSmartPointer&lt;vtkStructuredGrid&gt;::New();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador.html#a099289e888f91f94e377fd26d4cefaca">crear</a>(std::vector&lt;std::vector&lt;double&gt;&gt;,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador.html#a799d3f27e186e07c2841aa8edbbf641f">add_filtros</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador.html#a47a1e61b68a8e1d346c2b0d21ff11d01">add_axes</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador.html#a74fa4bf9dff4b44b521a04a1cc0200a5">renderizar</a>(<span class="keywordtype">bool</span> mostrar=<span class="keyword">true</span>);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_graficador.html#a70f37ffd12170c31155c44f2aea11b93">clean</a>();</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_graficador.html#aeb158420087549f052e29a6739ea2f75">   24</a></span>&#160;vtkSmartPointer&lt;vtkCamera&gt; <a class="code" href="class_graficador.html#aeb158420087549f052e29a6739ea2f75">camera</a> =    vtkSmartPointer&lt;vtkCamera&gt;::New();</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_graficador.html#a48b78d03ae2e04e5032ed685f8fd8643">   25</a></span>&#160;vtkSmartPointer&lt;vtkUnsignedCharArray&gt; <a class="code" href="class_graficador.html#a48b78d03ae2e04e5032ed685f8fd8643">colors</a> = vtkSmartPointer&lt;vtkUnsignedCharArray&gt;::New();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // GRAFICADOR_H</span></div><div class="ttc" id="class_graficador_html_aeb158420087549f052e29a6739ea2f75"><div class="ttname"><a href="class_graficador.html#aeb158420087549f052e29a6739ea2f75">Graficador::camera</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkCamera &gt; camera</div><div class="ttdef"><b>Definition:</b> graficador.h:24</div></div>
+<div class="ttc" id="class_graficador_html_a799d3f27e186e07c2841aa8edbbf641f"><div class="ttname"><a href="class_graficador.html#a799d3f27e186e07c2841aa8edbbf641f">Graficador::add_filtros</a></div><div class="ttdeci">void add_filtros()</div><div class="ttdef"><b>Definition:</b> graficador.cpp:43</div></div>
+<div class="ttc" id="class_graficador_html_aeb8321dafc848939f900bea4721142da"><div class="ttname"><a href="class_graficador.html#aeb8321dafc848939f900bea4721142da">Graficador::structuredGrid</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkStructuredGrid &gt; structuredGrid</div><div class="ttdef"><b>Definition:</b> graficador.h:16</div></div>
+<div class="ttc" id="class_graficador_html_a70f37ffd12170c31155c44f2aea11b93"><div class="ttname"><a href="class_graficador.html#a70f37ffd12170c31155c44f2aea11b93">Graficador::clean</a></div><div class="ttdeci">void clean()</div></div>
+<div class="ttc" id="class_graficador_html"><div class="ttname"><a href="class_graficador.html">Graficador</a></div><div class="ttdef"><b>Definition:</b> graficador.h:8</div></div>
+<div class="ttc" id="class_graficador_html_af324352821c6e39961ed6977e50e9582"><div class="ttname"><a href="class_graficador.html#af324352821c6e39961ed6977e50e9582">Graficador::actores</a></div><div class="ttdeci">std::vector&lt; vtkSmartPointer&lt; vtkActor &gt; &gt; actores</div><div class="ttdef"><b>Definition:</b> graficador.h:15</div></div>
+<div class="ttc" id="class_gpadre_html"><div class="ttname"><a href="class_gpadre.html">Gpadre</a></div><div class="ttdef"><b>Definition:</b> gpadre.h:24</div></div>
+<div class="ttc" id="class_graficador_html_a62158abce60f946c3fd7893f2689e138"><div class="ttname"><a href="class_graficador.html#a62158abce60f946c3fd7893f2689e138">Graficador::Graficador</a></div><div class="ttdeci">Graficador()</div><div class="ttdef"><b>Definition:</b> graficador.cpp:3</div></div>
+<div class="ttc" id="gpadre_8h_html"><div class="ttname"><a href="gpadre_8h.html">gpadre.h</a></div></div>
+<div class="ttc" id="class_graficador_html_a74fa4bf9dff4b44b521a04a1cc0200a5"><div class="ttname"><a href="class_graficador.html#a74fa4bf9dff4b44b521a04a1cc0200a5">Graficador::renderizar</a></div><div class="ttdeci">void renderizar(bool mostrar=true)</div><div class="ttdef"><b>Definition:</b> graficador.cpp:85</div></div>
+<div class="ttc" id="class_graficador_html_a099289e888f91f94e377fd26d4cefaca"><div class="ttname"><a href="class_graficador.html#a099289e888f91f94e377fd26d4cefaca">Graficador::crear</a></div><div class="ttdeci">void crear(std::vector&lt; std::vector&lt; double &gt;&gt;, int, int)</div><div class="ttdef"><b>Definition:</b> graficador.cpp:16</div></div>
+<div class="ttc" id="class_graficador_html_a48b78d03ae2e04e5032ed685f8fd8643"><div class="ttname"><a href="class_graficador.html#a48b78d03ae2e04e5032ed685f8fd8643">Graficador::colors</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkUnsignedCharArray &gt; colors</div><div class="ttdef"><b>Definition:</b> graficador.h:25</div></div>
+<div class="ttc" id="class_graficador_html_a47a1e61b68a8e1d346c2b0d21ff11d01"><div class="ttname"><a href="class_graficador.html#a47a1e61b68a8e1d346c2b0d21ff11d01">Graficador::add_axes</a></div><div class="ttdeci">void add_axes()</div><div class="ttdef"><b>Definition:</b> graficador.cpp:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

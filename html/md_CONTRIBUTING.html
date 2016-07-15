@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>easyGraph: Contributing to easyGraph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">easyGraph
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Graficadora 2D y 3D</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Contributing to easyGraph </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>So you're interested in giving us a hand? That's awesome! We've put together some brief guidelines that should help you get started quickly and easily.</p>
+<p>There are lots and lots of ways to get involved, this document covers:</p>
+<ul>
+<li><a href="#report-a-bug">raising issues</a><ul>
+<li><a href="#bug-reports">bug reports</a></li>
+<li><a href="#feature-requests">feature requests</a></li>
+<li><a href="#change-requests">change requests</a></li>
+</ul>
+</li>
+<li><a href="#working-on-popcorn-time-core">working on Popcorn Time core</a><ul>
+<li><a href="#submitting-pull-requests">submitting pull requests</a></li>
+</ul>
+</li>
+<li><a href="#translation">translation</a></li>
+</ul>
+<h2>Report a bug</h2>
+<p>If you're about to raise an issue because think you've found a problem with easyGraph, or you'd like to make a request for a new feature in the codebase, or any other reason… please read this first.</p>
+<p>The GitHub issue tracker is the preferred channel for <a href="#bug-reports">bug reports</a>, <a href="#feature-requests">feature requests</a>, <a href="#change-requests">change requests</a> and <a href="#submitting-pull-requests">submitting pull requests</a>, but please respect the following restrictions:</p>
+<ul>
+<li>Please <b>search for existing issues</b>. Help us keep duplicate issues to a minimum by checking to see if someone has already reported your problem or requested your idea.</li>
+<li>Please <b>do not</b> use the issue tracker for personal support requests (use <a href="https://github.com/JairFrancesco/easyGraph/issues">the github issues</a>.</li>
+<li>Please <b>do not</b> derail or troll issues. Keep the discussion on topic and respect the opinions of others.</li>
+</ul>
+<h3>Bug Reports</h3>
+<p>A bug is a <em>demonstrable problem</em> that is caused by the code in the repository. Good bug reports are extremely helpful - thank you!</p>
+<p>Guidelines for bug reports:</p>
+<ol type="1">
+<li><b>Use the GitHub issue search</b> &mdash; check if the issue has already been reported.</li>
+<li><b>Check if the issue has been fixed</b> &mdash; try to reproduce it using the latest <code>master</code> or look for <a href="https://github.com/JairFrancesco/easyGraph/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aclosed">closed issues</a>.</li>
+<li><b>Include a screencast if relevant</b> - Is your issue about a design or front end feature or bug? The most helpful thing in the world is if we can <em>see</em> what you're talking about. Use <a href="http://www.cockos.com/licecap/">LICEcap</a> to quickly and easily record a short screencast (24fps) and save it as an animated gif! Embed it directly into your GitHub issue. Kapow.</li>
+</ol>
+<ol type="1">
+<li>Use the Bug Report template below to start creating a bug report with the template automatically or <a href="http://bit.ly/1MhADoe">click here</a>.</li>
+</ol>
+<p>A good bug report shouldn't leave others needing to chase you up for more information. Be sure to include the details of your environment.</p>
+<p>Template Example : </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Short and descriptive example bug report summary (title)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;### Environment</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;The OS environment in which the issue occurs. </div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;### Steps to Reproduce</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;If suitable, include the steps required to reproduce the bug.</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;1. This is the first step</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;2. This is the second step</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;3. Further steps, etc.</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;Any other information you want to share that is relevant to the issue being reported. Especially, why do you consider this to be a bug? What do you expect to happen instead?</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;### Technical details:</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;* easyGraph Version: stable 0.3.7</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;* Downloaded from: easyGraph.io</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;* Connection: 10mbs</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;* OS: Red Hat</div></div><!-- fragment --><h2>Contributor License Agreement</h2>
+<p>By contributing your code to easyGraph you grant the easyGraph Project a non-exclusive, irrevocable, worldwide, royalty-free, sublicenseable, transferable license under all of Your relevant intellectual property rights (including copyright, patent, and any other rights), to use, copy, prepare derivative works of, distribute and publicly perform and display the Contributions on any licensing terms, including without limitation: (a) open source licenses like the MIT license; and (b) binary, proprietary, or commercial licenses. Except for the licenses granted herein, You reserve all right, title, and interest in and to the Contribution.</p>
+<p>You confirm that you are able to grant us these rights. You represent that You are legally entitled to grant the above license. If Your employer has rights to intellectual property that You create, You represent that You have received permission to make the Contributions on behalf of that employer, or that Your employer has waived such rights for the Contributions.</p>
+<p>You represent that the Contributions are Your original works of authorship, and to Your knowledge, no other person claims, or has the right to claim, any right in any invention or patent related to the Contributions. You also represent that You are not legally obligated, whether by entering into an agreement or otherwise, in any way that conflicts with the terms of this license.</p>
+<p>The easyGraph Project acknowledges that, except as explicitly described in this Agreement, any Contribution which you provide is on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

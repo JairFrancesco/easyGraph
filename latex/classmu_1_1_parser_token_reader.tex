@@ -1,0 +1,238 @@
+\hypertarget{classmu_1_1_parser_token_reader}{}\section{Referencia de la Clase mu\+:\+:Parser\+Token\+Reader}
+\label{classmu_1_1_parser_token_reader}\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+
+
+Token reader for the \hyperlink{classmu_1_1_parser_base}{Parser\+Base} class.  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser\+Token\+Reader.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_token_reader_a1e72a60fc0bfccf885a066ed0578922d}{Parser\+Token\+Reader} (\hyperlink{classmu_1_1_parser_base}{Parser\+Base} $\ast$a\+\_\+p\+Parent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token_reader}{Parser\+Token\+Reader} $\ast$ \hyperlink{classmu_1_1_parser_token_reader_ac5ed05f986cfd6ab28f802e22937f0b5}{Clone} (\hyperlink{classmu_1_1_parser_base}{Parser\+Base} $\ast$a\+\_\+p\+Parent) const 
+\begin{DoxyCompactList}\small\item\em Create instance of a \hyperlink{classmu_1_1_parser_token_reader}{Parser\+Token\+Reader} identical with this and return its pointer. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_token_reader_ae7c87757b4244e20b2c32c4173cc8284}{Add\+Val\+Ident} (\hyperlink{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}{identfun\+\_\+type} a\+\_\+p\+Callback)
+\item 
+void \hyperlink{classmu_1_1_parser_token_reader_a6275551cf90f88ee6e0b992cc8027fb2}{Set\+Var\+Creator} (\hyperlink{namespacemu_a97af5f5c39391d262dda72084788b83e}{facfun\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_af7bdd6658661ca9fa9e157a21f70d550}{a\+\_\+p\+Factory}, void $\ast$\hyperlink{mu_parser_d_l_l_8h_af2fe0b3322818bbb3e6f8b0457f1b802}{p\+User\+Data})
+\item 
+void \hyperlink{classmu_1_1_parser_token_reader_a73c2f7d995520961afe22c9f3f4113d7}{Set\+Formula} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Formula)
+\begin{DoxyCompactList}\small\item\em Initialize the token Reader. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_token_reader_a5c6df951c19e7cbbe381312a15ab3ddc}{Set\+Arg\+Sep} (\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_a76c4c148d54d5b7e5728ec911432a1c3}{c\+Arg\+Sep})
+\item 
+int \hyperlink{classmu_1_1_parser_token_reader_ac539d94917cbcb9ac1b0a9f62128ddba}{Get\+Pos} () const 
+\begin{DoxyCompactList}\small\item\em Return the current position of the token reader in the formula string. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \& \hyperlink{classmu_1_1_parser_token_reader_ad3bdb9f3912d8b044945a054951157fe}{Get\+Expr} () const 
+\begin{DoxyCompactList}\small\item\em Return a reference to the formula. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_ab57755354e948a664ad94d38546dbb10}{varmap\+\_\+type} \& \hyperlink{classmu_1_1_parser_token_reader_ae7076f6bda1d7ea11a89e9bc11b92aa4}{Get\+Used\+Var} ()
+\begin{DoxyCompactList}\small\item\em Return a map containing the used variables only. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} \hyperlink{classmu_1_1_parser_token_reader_afb492575894ccf474723397b56a80129}{Get\+Arg\+Sep} () const 
+\item 
+void \hyperlink{classmu_1_1_parser_token_reader_a62cd2361502098231dcb9893a09e9de0}{Ignore\+Undef\+Var} (bool b\+Ignore)
+\begin{DoxyCompactList}\small\item\em Set Flag that controls behaviour in case of undefined variables being found. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_token_reader_ac991cffd605b837020a732a026b009bc}{Re\+Init} ()
+\begin{DoxyCompactList}\small\item\em Reset the token reader to the start of the formula. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{token\+\_\+type} \hyperlink{classmu_1_1_parser_token_reader_a36861d4d08fc658b210c1a18e80052e5}{Read\+Next\+Token} ()
+\begin{DoxyCompactList}\small\item\em Read the next token from the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Token reader for the \hyperlink{classmu_1_1_parser_base}{Parser\+Base} class. 
+
+
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Parser\+Token\+Reader@{Parser\+Token\+Reader}}
+\index{Parser\+Token\+Reader@{Parser\+Token\+Reader}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Parser\+Token\+Reader(\+Parser\+Base $\ast$a\+\_\+p\+Parent)}{ParserTokenReader(ParserBase *a_pParent)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Token\+Reader\+::\+Parser\+Token\+Reader (
+\begin{DoxyParamCaption}
+\item[{{\bf Parser\+Base} $\ast$}]{a\+\_\+p\+Parent}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a1e72a60fc0bfccf885a066ed0578922d}{}\label{classmu_1_1_parser_token_reader_a1e72a60fc0bfccf885a066ed0578922d}
+
+
+Constructor. 
+
+Create a Token reader and bind it to a parser object.
+
+\begin{DoxyPrecond}{Precondición}
+\mbox{[}assert\mbox{]} a\+\_\+p\+Parser may not be N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\#m\+\_\+p\+Parser==a\+\_\+p\+Parser 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+p\+Parent} & Parent parser object of the token reader. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Add\+Val\+Ident@{Add\+Val\+Ident}}
+\index{Add\+Val\+Ident@{Add\+Val\+Ident}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Add\+Val\+Ident(identfun\+\_\+type a\+\_\+p\+Callback)}{AddValIdent(identfun_type a_pCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Add\+Val\+Ident (
+\begin{DoxyParamCaption}
+\item[{{\bf identfun\+\_\+type}}]{a\+\_\+p\+Callback}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_ae7c87757b4244e20b2c32c4173cc8284}{}\label{classmu_1_1_parser_token_reader_ae7c87757b4244e20b2c32c4173cc8284}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Clone@{Clone}}
+\index{Clone@{Clone}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Clone(\+Parser\+Base $\ast$a\+\_\+p\+Parent) const }{Clone(ParserBase *a_pParent) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Token\+Reader} $\ast$ mu\+::\+Parser\+Token\+Reader\+::\+Clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Parser\+Base} $\ast$}]{a\+\_\+p\+Parent}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_token_reader_ac5ed05f986cfd6ab28f802e22937f0b5}{}\label{classmu_1_1_parser_token_reader_ac5ed05f986cfd6ab28f802e22937f0b5}
+
+
+Create instance of a \hyperlink{classmu_1_1_parser_token_reader}{Parser\+Token\+Reader} identical with this and return its pointer. 
+
+This is a factory method the calling function must take care of the object destruction.
+
+\begin{DoxyReturn}{Devuelve}
+A new \hyperlink{classmu_1_1_parser_token_reader}{Parser\+Token\+Reader} object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Get\+Arg\+Sep@{Get\+Arg\+Sep}}
+\index{Get\+Arg\+Sep@{Get\+Arg\+Sep}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Arg\+Sep() const }{GetArgSep() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf char\+\_\+type} mu\+::\+Parser\+Token\+Reader\+::\+Get\+Arg\+Sep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_token_reader_afb492575894ccf474723397b56a80129}{}\label{classmu_1_1_parser_token_reader_afb492575894ccf474723397b56a80129}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Get\+Expr@{Get\+Expr}}
+\index{Get\+Expr@{Get\+Expr}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Expr() const }{GetExpr() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string\+\_\+type} \& mu\+::\+Parser\+Token\+Reader\+::\+Get\+Expr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_token_reader_ad3bdb9f3912d8b044945a054951157fe}{}\label{classmu_1_1_parser_token_reader_ad3bdb9f3912d8b044945a054951157fe}
+
+
+Return a reference to the formula. 
+
+\begin{DoxyReturn}{Devuelve}
+\#m\+\_\+str\+Formula 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Get\+Pos@{Get\+Pos}}
+\index{Get\+Pos@{Get\+Pos}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Pos() const }{GetPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+Parser\+Token\+Reader\+::\+Get\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_token_reader_ac539d94917cbcb9ac1b0a9f62128ddba}{}\label{classmu_1_1_parser_token_reader_ac539d94917cbcb9ac1b0a9f62128ddba}
+
+
+Return the current position of the token reader in the formula string. 
+
+\begin{DoxyReturn}{Devuelve}
+\#m\+\_\+i\+Pos 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Get\+Used\+Var@{Get\+Used\+Var}}
+\index{Get\+Used\+Var@{Get\+Used\+Var}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Get\+Used\+Var()}{GetUsedVar()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf varmap\+\_\+type} \& mu\+::\+Parser\+Token\+Reader\+::\+Get\+Used\+Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_ae7076f6bda1d7ea11a89e9bc11b92aa4}{}\label{classmu_1_1_parser_token_reader_ae7076f6bda1d7ea11a89e9bc11b92aa4}
+
+
+Return a map containing the used variables only. 
+
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Ignore\+Undef\+Var@{Ignore\+Undef\+Var}}
+\index{Ignore\+Undef\+Var@{Ignore\+Undef\+Var}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Ignore\+Undef\+Var(bool b\+Ignore)}{IgnoreUndefVar(bool bIgnore)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Ignore\+Undef\+Var (
+\begin{DoxyParamCaption}
+\item[{bool}]{b\+Ignore}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a62cd2361502098231dcb9893a09e9de0}{}\label{classmu_1_1_parser_token_reader_a62cd2361502098231dcb9893a09e9de0}
+
+
+Set Flag that controls behaviour in case of undefined variables being found. 
+
+If true, the parser does not throw an exception if an undefined variable is found. otherwise it does. This variable is used internally only! It suppresses a \char`\"{}undefined variable\char`\"{} exception in \hyperlink{classmu_1_1_parser_token_reader_ae7076f6bda1d7ea11a89e9bc11b92aa4}{Get\+Used\+Var()}. Those function should return a complete list of variables including those the are not defined by the time of it\textquotesingle{}s call. \index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Read\+Next\+Token@{Read\+Next\+Token}}
+\index{Read\+Next\+Token@{Read\+Next\+Token}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Read\+Next\+Token()}{ReadNextToken()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Token\+Reader\+::token\+\_\+type} mu\+::\+Parser\+Token\+Reader\+::\+Read\+Next\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a36861d4d08fc658b210c1a18e80052e5}{}\label{classmu_1_1_parser_token_reader_a36861d4d08fc658b210c1a18e80052e5}
+
+
+Read the next token from the string. 
+
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Re\+Init@{Re\+Init}}
+\index{Re\+Init@{Re\+Init}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Re\+Init()}{ReInit()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Re\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_ac991cffd605b837020a732a026b009bc}{}\label{classmu_1_1_parser_token_reader_ac991cffd605b837020a732a026b009bc}
+
+
+Reset the token reader to the start of the formula. 
+
+The syntax flags will be reset to a value appropriate for the start of a formula. \begin{DoxyPostcond}{Postcondición}
+\#m\+\_\+i\+Pos==0, \#m\+\_\+i\+Syn\+Flags = no\+O\+PT $\vert$ no\+BC $\vert$ no\+P\+O\+S\+T\+OP $\vert$ no\+S\+TR 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{Ver también}
+E\+Syn\+Codes 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Set\+Arg\+Sep@{Set\+Arg\+Sep}}
+\index{Set\+Arg\+Sep@{Set\+Arg\+Sep}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Set\+Arg\+Sep(char\+\_\+type c\+Arg\+Sep)}{SetArgSep(char_type cArgSep)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Set\+Arg\+Sep (
+\begin{DoxyParamCaption}
+\item[{{\bf char\+\_\+type}}]{c\+Arg\+Sep}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a5c6df951c19e7cbbe381312a15ab3ddc}{}\label{classmu_1_1_parser_token_reader_a5c6df951c19e7cbbe381312a15ab3ddc}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Set\+Formula@{Set\+Formula}}
+\index{Set\+Formula@{Set\+Formula}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Set\+Formula(const string\+\_\+type \&a\+\_\+str\+Formula)}{SetFormula(const string_type &a_strFormula)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Set\+Formula (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Formula}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a73c2f7d995520961afe22c9f3f4113d7}{}\label{classmu_1_1_parser_token_reader_a73c2f7d995520961afe22c9f3f4113d7}
+
+
+Initialize the token Reader. 
+
+Sets the formula position index to zero and set Syntax flags to default for initial formula parsing. \begin{DoxyPrecond}{Precondición}
+\mbox{[}assert\mbox{]} triggered if a\+\_\+sz\+Formula==0 
+\end{DoxyPrecond}
+\index{mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}!Set\+Var\+Creator@{Set\+Var\+Creator}}
+\index{Set\+Var\+Creator@{Set\+Var\+Creator}!mu\+::\+Parser\+Token\+Reader@{mu\+::\+Parser\+Token\+Reader}}
+\subsubsection[{\texorpdfstring{Set\+Var\+Creator(facfun\+\_\+type a\+\_\+p\+Factory, void $\ast$p\+User\+Data)}{SetVarCreator(facfun_type a_pFactory, void *pUserData)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Token\+Reader\+::\+Set\+Var\+Creator (
+\begin{DoxyParamCaption}
+\item[{{\bf facfun\+\_\+type}}]{a\+\_\+p\+Factory, }
+\item[{void $\ast$}]{p\+User\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_token_reader_a6275551cf90f88ee6e0b992cc8027fb2}{}\label{classmu_1_1_parser_token_reader_a6275551cf90f88ee6e0b992cc8027fb2}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_token_reader_8h}{mu\+Parser\+Token\+Reader.\+h}\item 
+Parser/\+Test/src/\hyperlink{mu_parser_token_reader_8cpp}{mu\+Parser\+Token\+Reader.\+cpp}\end{DoxyCompactItemize}

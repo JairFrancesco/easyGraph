@@ -1,0 +1,78 @@
+\hypertarget{structmu_1_1_s_token}{}\section{Referencia de la Estructura mu\+:\+:S\+Token}
+\label{structmu_1_1_s_token}\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+
+
+{\ttfamily \#include $<$mu\+Parser\+Bytecode.\+h$>$}
+
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} \hyperlink{structmu_1_1_s_token_ae65874515716fe53e71fcae813b8fc5f}{Cmd}
+\item 
+int \hyperlink{structmu_1_1_s_token_af371dc5e396be91862e1cd4b0a908512}{Stack\+Pos}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\_type} $\ast$ \hyperlink{structmu_1_1_s_token_a0e49777c76e20ba5856ed7d6a499691f}{ptr}\\
+\>\>\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\_type} \hyperlink{structmu_1_1_s_token_ac8a30600d0f3721e676d2fe706f4520b}{data}\\
+\>\>\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\_type} \hyperlink{structmu_1_1_s_token_aac6f7c4c29647a815a3ecdcf66f5ac06}{data2}\\
+\>\} \hyperlink{structmu_1_1_s_token_a6596797ebf4cedf041fc99316db70f59}{Val}\\
+\>struct \{\\
+\>\>\hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\_fun\_type} \hyperlink{structmu_1_1_s_token_a50235e1e981005a894fdf288657f8949}{ptr}\\
+\>\>int \hyperlink{structmu_1_1_s_token_a88e90c6610efb6d7b7a7a8c3461bbc00}{argc}\\
+\>\>int \hyperlink{structmu_1_1_s_token_a4bc527db03b2689a19cba6b5d679b2e4}{idx}\\
+\>\} \hyperlink{structmu_1_1_s_token_a055128947fc2cf50c812e19d989388c0}{Fun}\\
+\>struct \{\\
+\>\>\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\_type} $\ast$ \hyperlink{structmu_1_1_s_token_a0e49777c76e20ba5856ed7d6a499691f}{ptr}\\
+\>\>int \hyperlink{structmu_1_1_s_token_a404867cb6511e90c552a0be2ff011119}{offset}\\
+\>\} \hyperlink{structmu_1_1_s_token_a0bb06334fb4b3f6d7f0b9bb2e9aec09c}{Oprt}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de los datos miembro}
+\subsubsection[{\texorpdfstring{"@1}{@1}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }\hypertarget{structmu_1_1_s_token_a34231de7580ebb30fa11f93bef135ea8}{}\label{structmu_1_1_s_token_a34231de7580ebb30fa11f93bef135ea8}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!argc@{argc}}
+\index{argc@{argc}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{argc}{argc}}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+S\+Token\+::argc}\hypertarget{structmu_1_1_s_token_a88e90c6610efb6d7b7a7a8c3461bbc00}{}\label{structmu_1_1_s_token_a88e90c6610efb6d7b7a7a8c3461bbc00}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!Cmd@{Cmd}}
+\index{Cmd@{Cmd}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{Cmd}{Cmd}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+Cmd\+Code} mu\+::\+S\+Token\+::\+Cmd}\hypertarget{structmu_1_1_s_token_ae65874515716fe53e71fcae813b8fc5f}{}\label{structmu_1_1_s_token_ae65874515716fe53e71fcae813b8fc5f}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!data@{data}}
+\index{data@{data}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{data}{data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+S\+Token\+::data}\hypertarget{structmu_1_1_s_token_ac8a30600d0f3721e676d2fe706f4520b}{}\label{structmu_1_1_s_token_ac8a30600d0f3721e676d2fe706f4520b}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!data2@{data2}}
+\index{data2@{data2}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{data2}{data2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+S\+Token\+::data2}\hypertarget{structmu_1_1_s_token_aac6f7c4c29647a815a3ecdcf66f5ac06}{}\label{structmu_1_1_s_token_aac6f7c4c29647a815a3ecdcf66f5ac06}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!Fun@{Fun}}
+\index{Fun@{Fun}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{Fun}{Fun}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   mu\+::\+S\+Token\+::\+Fun}\hypertarget{structmu_1_1_s_token_a055128947fc2cf50c812e19d989388c0}{}\label{structmu_1_1_s_token_a055128947fc2cf50c812e19d989388c0}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!idx@{idx}}
+\index{idx@{idx}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{idx}{idx}}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+S\+Token\+::idx}\hypertarget{structmu_1_1_s_token_a4bc527db03b2689a19cba6b5d679b2e4}{}\label{structmu_1_1_s_token_a4bc527db03b2689a19cba6b5d679b2e4}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!offset@{offset}}
+\index{offset@{offset}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{offset}{offset}}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+S\+Token\+::offset}\hypertarget{structmu_1_1_s_token_a404867cb6511e90c552a0be2ff011119}{}\label{structmu_1_1_s_token_a404867cb6511e90c552a0be2ff011119}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!Oprt@{Oprt}}
+\index{Oprt@{Oprt}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{Oprt}{Oprt}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   mu\+::\+S\+Token\+::\+Oprt}\hypertarget{structmu_1_1_s_token_a0bb06334fb4b3f6d7f0b9bb2e9aec09c}{}\label{structmu_1_1_s_token_a0bb06334fb4b3f6d7f0b9bb2e9aec09c}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!ptr@{ptr}}
+\index{ptr@{ptr}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type}$\ast$ mu\+::\+S\+Token\+::ptr}\hypertarget{structmu_1_1_s_token_a0e49777c76e20ba5856ed7d6a499691f}{}\label{structmu_1_1_s_token_a0e49777c76e20ba5856ed7d6a499691f}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!ptr@{ptr}}
+\index{ptr@{ptr}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{ptr}{ptr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf generic\+\_\+fun\+\_\+type} mu\+::\+S\+Token\+::ptr}\hypertarget{structmu_1_1_s_token_a50235e1e981005a894fdf288657f8949}{}\label{structmu_1_1_s_token_a50235e1e981005a894fdf288657f8949}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!Stack\+Pos@{Stack\+Pos}}
+\index{Stack\+Pos@{Stack\+Pos}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{Stack\+Pos}{StackPos}}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+S\+Token\+::\+Stack\+Pos}\hypertarget{structmu_1_1_s_token_af371dc5e396be91862e1cd4b0a908512}{}\label{structmu_1_1_s_token_af371dc5e396be91862e1cd4b0a908512}
+\index{mu\+::\+S\+Token@{mu\+::\+S\+Token}!Val@{Val}}
+\index{Val@{Val}!mu\+::\+S\+Token@{mu\+::\+S\+Token}}
+\subsubsection[{\texorpdfstring{Val}{Val}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   mu\+::\+S\+Token\+::\+Val}\hypertarget{structmu_1_1_s_token_a6596797ebf4cedf041fc99316db70f59}{}\label{structmu_1_1_s_token_a6596797ebf4cedf041fc99316db70f59}
+
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_bytecode_8h}{mu\+Parser\+Bytecode.\+h}\end{DoxyCompactItemize}

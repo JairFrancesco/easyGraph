@@ -1,0 +1,1129 @@
+\hypertarget{classmu_1_1_parser_base}{}\section{Referencia de la Clase mu\+:\+:Parser\+Base}
+\label{classmu_1_1_parser_base}\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+
+
+Mathematical expressions parser (base parser engine).  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser\+Base.\+h$>$}
+
+Diagrama de herencias de mu\+:\+:Parser\+Base\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmu_1_1_parser_base}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmu_1_1_parser_base_1_1change__dec__sep}{change\+\_\+dec\+\_\+sep}
+\begin{DoxyCompactList}\small\item\em A facet class used to change decimal and thousands separator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classmu_1_1_parser_error}{Parser\+Error} \hyperlink{classmu_1_1_parser_base_ab385f37be00cee7d8a68c3c41f6a5b64}{exception\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type of the error class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_base_a41d13be909945b892777ee6773fa1f69}{Parser\+Base} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_base_a88d9367e1a71bc07fe587633060223a0}{Parser\+Base} (const \hyperlink{classmu_1_1_parser_base}{Parser\+Base} \&a\+\_\+\+Parser)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_base}{Parser\+Base} \& \hyperlink{classmu_1_1_parser_base_aca7cf1ea7f82dfb3066ada8427295a4c}{operator=} (const \hyperlink{classmu_1_1_parser_base}{Parser\+Base} \&a\+\_\+\+Parser)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmu_1_1_parser_base_a94ec173a26a5ffc96325287830a44caa}{$\sim$\+Parser\+Base} ()
+\item 
+\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_base_a9f91f5d3c0acd2e30225eb97867dc651}{Eval} () const 
+\begin{DoxyCompactList}\small\item\em Calculate the result. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$ \hyperlink{classmu_1_1_parser_base_a7d594b0e4c7b2540948357f0b2e31d98}{Eval} (int \&n\+Stack\+Size) const 
+\begin{DoxyCompactList}\small\item\em Evaluate an expression containing comma separated subexpressions. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a70748ac6fc87f2821b356e79ec4a81eb}{Eval} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$results, int n\+Bulk\+Size)
+\item 
+int \hyperlink{classmu_1_1_parser_base_abcb1a6813b474d936b37dfef3e041e9d}{Get\+Num\+Results} () const 
+\begin{DoxyCompactList}\small\item\em Return the number of results on the calculation stack. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_aed9d02dd04f8e163102f9a8e082c4b26}{Set\+Expr} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+s\+Expr)
+\begin{DoxyCompactList}\small\item\em Set the formula. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a713d8ddf5371c346942d22fdac5adda7}{Set\+Var\+Factory} (\hyperlink{namespacemu_a97af5f5c39391d262dda72084788b83e}{facfun\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_af7bdd6658661ca9fa9e157a21f70d550}{a\+\_\+p\+Factory}, void $\ast$\hyperlink{mu_parser_d_l_l_8h_af2fe0b3322818bbb3e6f8b0457f1b802}{p\+User\+Data}=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Set a function that can create variable pointer for unknown expression variables. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a1699841ae7a78b23f521f937f09fae21}{Set\+Dec\+Sep} (\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} c\+Dec\+Sep)
+\begin{DoxyCompactList}\small\item\em Set the decimal separator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_ab539db832b9af0e5940a0481201077e9}{Set\+Thousands\+Sep} (\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} c\+Thousands\+Sep=0)
+\begin{DoxyCompactList}\small\item\em Sets the thousands operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a389a2502aa52212975f4a959fad59a47}{Reset\+Locale} ()
+\begin{DoxyCompactList}\small\item\em Resets the locale. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a43221e10afd17efe8d32898707763cb4}{Enable\+Optimizer} (bool a\+\_\+b\+Is\+On=true)
+\begin{DoxyCompactList}\small\item\em Enable or disable the formula optimization feature. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_adf5cb2ffd21f51fac2633a4976fe1e2d}{Enable\+Built\+In\+Oprt} (bool a\+\_\+b\+Is\+On=true)
+\begin{DoxyCompactList}\small\item\em Enable or disable the built in binary operators. \end{DoxyCompactList}\item 
+bool \hyperlink{classmu_1_1_parser_base_ab1f44f5270153cefe9595f06581ffd29}{Has\+Built\+In\+Oprt} () const 
+\begin{DoxyCompactList}\small\item\em Query status of built in variables. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a0b49dbe051415f9d2a9d5564c38609e3}{Add\+Val\+Ident} (\hyperlink{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}{identfun\+\_\+type} a\+\_\+p\+Callback)
+\begin{DoxyCompactList}\small\item\em Add a value parsing function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classmu_1_1_parser_base_a19bff73a29e12bb1af90793ceb258059}{Define\+Fun} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Name, T \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}, bool a\+\_\+b\+Allow\+Opt=true)
+\begin{DoxyCompactList}\small\item\em Define a parser function without arguments. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a70483983b78f13d37e4f28962d86af34}{Define\+Oprt} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Name, \hyperlink{namespacemu_abd9aed5816d33116d687f5becd85b38f}{fun\+\_\+type2} \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}, unsigned a\+\_\+i\+Pri=0, \hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1}{E\+Oprt\+Associativity} a\+\_\+e\+Associativity=\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1a4b1875076b2c85879e9596a7a98af7a6}{oa\+L\+E\+FT}, bool a\+\_\+b\+Allow\+Opt=false)
+\begin{DoxyCompactList}\small\item\em Define a binary operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a8cbb0a5e193daeea647d80dc89f34c65}{Define\+Const} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+s\+Name, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{a\+\_\+f\+Val})
+\begin{DoxyCompactList}\small\item\em Add a user defined constant. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a64bc1de3b6db42140fe6f4860c30e40a}{Define\+Str\+Const} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+s\+Name, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Val)
+\begin{DoxyCompactList}\small\item\em Define a new string constant. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a8350970819c77352af8d79ce3110393e}{Define\+Var} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+s\+Name, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_a0b10cccae0b2da3678c7a7f0cd7fbc73}{a\+\_\+f\+Var})
+\begin{DoxyCompactList}\small\item\em Add a user defined variable. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_ae9fb4d2348213a0e42dc07a4589ac654}{Define\+Postfix\+Oprt} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Fun, \hyperlink{namespacemu_affeaec09801b502b9955d7248b7e2706}{fun\+\_\+type1} \hyperlink{mu_parser_d_l_l_8h_ae106b6975be89f5cf1d116ebca53cccc}{a\+\_\+p\+Oprt}, bool a\+\_\+b\+Allow\+Opt=true)
+\begin{DoxyCompactList}\small\item\em Add a user defined operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a5e26f06efc7564a85a5f5ab682ba5a23}{Define\+Infix\+Oprt} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Name, \hyperlink{namespacemu_affeaec09801b502b9955d7248b7e2706}{fun\+\_\+type1} \hyperlink{mu_parser_d_l_l_8h_ae106b6975be89f5cf1d116ebca53cccc}{a\+\_\+p\+Oprt}, int a\+\_\+i\+Prec=\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da50b576d79c0d155f703d409967ad3727}{pr\+I\+N\+F\+IX}, bool a\+\_\+b\+Allow\+Opt=true)
+\begin{DoxyCompactList}\small\item\em Add a user defined operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_add23e405d36de71de6b386bc0eb4b57c}{Clear\+Var} ()
+\begin{DoxyCompactList}\small\item\em Clear all user defined variables. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_abc296c44f8a9522b2cf12a9ad36071b2}{Clear\+Fun} ()
+\begin{DoxyCompactList}\small\item\em Clear all functions. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_adbc445632a056820ff722ca18c1331e9}{Clear\+Const} ()
+\begin{DoxyCompactList}\small\item\em Clear all user defined constants. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a7485eccf3281c879dad059966e3cbe22}{Clear\+Infix\+Oprt} ()
+\begin{DoxyCompactList}\small\item\em Clear the user defined Prefix operators. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_ab8a8356532f0047d8a33a46bc77f4bc5}{Clear\+Postfix\+Oprt} ()
+\begin{DoxyCompactList}\small\item\em Clear all user defined postfix operators. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_aa5fd05a7bb2b8bc9f9745c5377c0ebf3}{Clear\+Oprt} ()
+\begin{DoxyCompactList}\small\item\em Clear all user defined binary operators. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a8e5a54620200dfbd42ec084c29249d94}{Remove\+Var} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Var\+Name)
+\begin{DoxyCompactList}\small\item\em Remove a variable from internal storage. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ab57755354e948a664ad94d38546dbb10}{varmap\+\_\+type} \& \hyperlink{classmu_1_1_parser_base_a42cd9be355fea027e5c11acaf1c40767}{Get\+Used\+Var} () const 
+\begin{DoxyCompactList}\small\item\em Return a map containing the used variables only. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ab57755354e948a664ad94d38546dbb10}{varmap\+\_\+type} \& \hyperlink{classmu_1_1_parser_base_aaad6f7b4889b843111f18510f4f5253b}{Get\+Var} () const 
+\begin{DoxyCompactList}\small\item\em Return a map containing the used variables only. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_a5940d281286a01342cf773f74481843c}{valmap\+\_\+type} \& \hyperlink{classmu_1_1_parser_base_a0175999f0834125322a615f0b2926be6}{Get\+Const} () const 
+\begin{DoxyCompactList}\small\item\em Return a map containing all parser constants. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \& \hyperlink{classmu_1_1_parser_base_ac7fda9e26aaf03d06d5342a10e03d18c}{Get\+Expr} () const 
+\begin{DoxyCompactList}\small\item\em Retrieve the formula. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_aa38fb627ca71e44a49de0f2fe4d9031d}{funmap\+\_\+type} \& \hyperlink{classmu_1_1_parser_base_a326eaefb5a2c9c14aa8d34213690a22f}{Get\+Fun\+Def} () const 
+\begin{DoxyCompactList}\small\item\em Return prototypes of all parser functions. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \hyperlink{classmu_1_1_parser_base_a4b3eac1be699dad4425910eb1428c47b}{Get\+Version} (\hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789}{E\+Parser\+Version\+Info} e\+Info=\hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789a15f2fdade93277c8923e2384f184e1af}{pvi\+F\+U\+LL}) const 
+\begin{DoxyCompactList}\small\item\em Returns the version of muparser. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$$\ast$ \hyperlink{classmu_1_1_parser_base_a5d1973c228e5b51bb700fbe145cd678c}{Get\+Oprt\+Def} () const 
+\begin{DoxyCompactList}\small\item\em Get the default symbols used for the built in operators. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_adf259477bbaa85e8dd7cb69ef4aa0a7a}{Define\+Name\+Chars} (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}{a\+\_\+sz\+Charset})
+\begin{DoxyCompactList}\small\item\em Define the set of valid characters to be used in names of functions, variables, constants. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_aafd21c418397d5412a75e5b2c1d6db58}{Define\+Oprt\+Chars} (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}{a\+\_\+sz\+Charset})
+\begin{DoxyCompactList}\small\item\em Define the set of valid characters to be used in names of binary operators and postfix operators. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_ac76d0ceb4ee58babc4f1d0a9ca1e4240}{Define\+Infix\+Oprt\+Chars} (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}{a\+\_\+sz\+Charset})
+\begin{DoxyCompactList}\small\item\em Define the set of valid characters to be used in names of infix operators. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$ \hyperlink{classmu_1_1_parser_base_a0a6b593d97cb020ac2bd9c6a1a65d818}{Valid\+Name\+Chars} () const 
+\begin{DoxyCompactList}\small\item\em Virtual function that defines the characters allowed in name identifiers. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$ \hyperlink{classmu_1_1_parser_base_a633d799bd4434079eef4de486dde21bc}{Valid\+Oprt\+Chars} () const 
+\begin{DoxyCompactList}\small\item\em Virtual function that defines the characters allowed in operator definitions. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$ \hyperlink{classmu_1_1_parser_base_a0e8e9cca6ad084a1c55e38fcdd574d5c}{Valid\+Infix\+Oprt\+Chars} () const 
+\begin{DoxyCompactList}\small\item\em Virtual function that defines the characters allowed in infix operator definitions. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_ade4090449c9fd55759fffb933e0f92e3}{Set\+Arg\+Sep} (\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_a76c4c148d54d5b7e5728ec911432a1c3}{c\+Arg\+Sep})
+\begin{DoxyCompactList}\small\item\em Set argument separator. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} \hyperlink{classmu_1_1_parser_base_aa007f27faff0a254e9628d197dc98492}{Get\+Arg\+Sep} () const 
+\begin{DoxyCompactList}\small\item\em Get the argument separator character. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_base_a43bf7541771e918d32a1992e566394dc}{Error} (\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} a\+\_\+i\+Errc, int a\+\_\+i\+Pos=(int) mu\+::string\+\_\+type\+::npos, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Tok=\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}()) const 
+\begin{DoxyCompactList}\small\item\em Create an error containing the parse error position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classmu_1_1_parser_base_ae639f85175c67f67d461514f0c47fb73}{Enable\+Debug\+Dump} (bool b\+Dump\+Cmd, bool b\+Dump\+Stack)
+\begin{DoxyCompactList}\small\item\em Enable the dumping of bytecode and stack content on the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmu_1_1_parser_base_a2741c5cc27b9de19af04ab5627abed5f}{Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize user defined functions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_base_a3f5c53ef3cba6ab939261677dc2d9709}{Init\+Char\+Sets} ()=0
+\item 
+virtual void \hyperlink{classmu_1_1_parser_base_a1f94305e7b7e9abff6d41242dcf188ed}{Init\+Fun} ()=0
+\item 
+virtual void \hyperlink{classmu_1_1_parser_base_aad904fb3df8f28659f36d7ce7db4a28c}{Init\+Const} ()=0
+\item 
+virtual void \hyperlink{classmu_1_1_parser_base_a4df16813c9002ff08c96929ba8f0d32b}{Init\+Oprt} ()=0
+\item 
+virtual void \hyperlink{classmu_1_1_parser_base_aa8ec96622bf6777c1f20aecb16a84528}{On\+Detect\+Var} (\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} $\ast$p\+Expr, int \&n\+Start, int \&n\+End)
+\end{DoxyCompactItemize}
+\subsection*{Atributos protegidos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$ \hyperlink{classmu_1_1_parser_base_a0cb4d456e6a82da96786ec73044470ea}{c\+\_\+\+Default\+Oprt} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Identifiers for built in binary operators. \end{DoxyCompactList}\item 
+static std\+::locale \hyperlink{classmu_1_1_parser_base_ad594b199c33edf6962ba0e21010bc86e}{s\+\_\+locale} = std\+::locale(std\+::locale\+::classic(), new \hyperlink{classmu_1_1_parser_base_1_1change__dec__sep}{change\+\_\+dec\+\_\+sep}$<$\hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type}$>$(\textquotesingle{}.\textquotesingle{}))
+\begin{DoxyCompactList}\small\item\em The locale used by the parser. \end{DoxyCompactList}\item 
+static bool \hyperlink{classmu_1_1_parser_base_abe673a44e0ea620656422657cb3f6518}{g\+\_\+\+Dbg\+Dump\+Cmd\+Code} = false
+\item 
+static bool \hyperlink{classmu_1_1_parser_base_a35349445f839ab8bc2cfb54488c45267}{g\+\_\+\+Dbg\+Dump\+Stack} = false
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmu_1_1_parser_base_a4a4908a2dc2cc3723b45602a3e722f79}{Parser\+Token\+Reader}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Mathematical expressions parser (base parser engine). 
+
+\begin{DoxyAuthor}{Autor}
+(C) 2013 Ingo Berg
+\end{DoxyAuthor}
+This is the implementation of a bytecode based mathematical expressions parser. The formula will be parsed from string and converted into a bytecode. Future calculations will be done with the bytecode instead the formula string resulting in a significant performance increase. Complementary to a set of internally implemented functions the parser is able to handle user defined functions and variables. 
+
+\subsection{Documentación de los \textquotesingle{}Typedef\textquotesingle{} miembros de la clase}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!exception\+\_\+type@{exception\+\_\+type}}
+\index{exception\+\_\+type@{exception\+\_\+type}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{exception\+\_\+type}{exception_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Parser\+Error} {\bf mu\+::\+Parser\+Base\+::exception\+\_\+type}}\hypertarget{classmu_1_1_parser_base_ab385f37be00cee7d8a68c3c41f6a5b64}{}\label{classmu_1_1_parser_base_ab385f37be00cee7d8a68c3c41f6a5b64}
+
+
+Type of the error class. 
+
+Included for backwards compatibility. 
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Parser\+Base@{Parser\+Base}}
+\index{Parser\+Base@{Parser\+Base}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Parser\+Base()}{ParserBase()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Base\+::\+Parser\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a41d13be909945b892777ee6773fa1f69}{}\label{classmu_1_1_parser_base_a41d13be909945b892777ee6773fa1f69}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+sz\+Formula} & the formula to interpret. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parser\+Exception} & if a\+\_\+sz\+Formula is null. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Parser\+Base@{Parser\+Base}}
+\index{Parser\+Base@{Parser\+Base}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Parser\+Base(const Parser\+Base \&a\+\_\+\+Parser)}{ParserBase(const ParserBase &a_Parser)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Base\+::\+Parser\+Base (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Base} \&}]{a\+\_\+\+Parser}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a88d9367e1a71bc07fe587633060223a0}{}\label{classmu_1_1_parser_base_a88d9367e1a71bc07fe587633060223a0}
+
+
+Copy constructor. 
+
+The parser can be safely copy constructed but the bytecode is reset during copy construction. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!````~Parser\+Base@{$\sim$\+Parser\+Base}}
+\index{````~Parser\+Base@{$\sim$\+Parser\+Base}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{$\sim$\+Parser\+Base()}{~ParserBase()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Base\+::$\sim$\+Parser\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_base_a94ec173a26a5ffc96325287830a44caa}{}\label{classmu_1_1_parser_base_a94ec173a26a5ffc96325287830a44caa}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Add\+Val\+Ident@{Add\+Val\+Ident}}
+\index{Add\+Val\+Ident@{Add\+Val\+Ident}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Add\+Val\+Ident(identfun\+\_\+type a\+\_\+p\+Callback)}{AddValIdent(identfun_type a_pCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Add\+Val\+Ident (
+\begin{DoxyParamCaption}
+\item[{{\bf identfun\+\_\+type}}]{a\+\_\+p\+Callback}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a0b49dbe051415f9d2a9d5564c38609e3}{}\label{classmu_1_1_parser_base_a0b49dbe051415f9d2a9d5564c38609e3}
+
+
+Add a value parsing function. 
+
+When parsing an expression mu\+Parser tries to detect values in the expression string using different valident callbacks. Thus it\textquotesingle{}s possible to parse for hex values, binary values and floating point values. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Const@{Clear\+Const}}
+\index{Clear\+Const@{Clear\+Const}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Const()}{ClearConst()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_adbc445632a056820ff722ca18c1331e9}{}\label{classmu_1_1_parser_base_adbc445632a056820ff722ca18c1331e9}
+
+
+Clear all user defined constants. 
+
+Both numeric and string constants will be removed from the internal storage. \begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Fun@{Clear\+Fun}}
+\index{Clear\+Fun@{Clear\+Fun}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Fun()}{ClearFun()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Fun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_abc296c44f8a9522b2cf12a9ad36071b2}{}\label{classmu_1_1_parser_base_abc296c44f8a9522b2cf12a9ad36071b2}
+
+
+Clear all functions. 
+
+\begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Infix\+Oprt@{Clear\+Infix\+Oprt}}
+\index{Clear\+Infix\+Oprt@{Clear\+Infix\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Infix\+Oprt()}{ClearInfixOprt()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Infix\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a7485eccf3281c879dad059966e3cbe22}{}\label{classmu_1_1_parser_base_a7485eccf3281c879dad059966e3cbe22}
+
+
+Clear the user defined Prefix operators. 
+
+\begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parser mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Oprt@{Clear\+Oprt}}
+\index{Clear\+Oprt@{Clear\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Oprt()}{ClearOprt()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_aa5fd05a7bb2b8bc9f9745c5377c0ebf3}{}\label{classmu_1_1_parser_base_aa5fd05a7bb2b8bc9f9745c5377c0ebf3}
+
+
+Clear all user defined binary operators. 
+
+\begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Postfix\+Oprt@{Clear\+Postfix\+Oprt}}
+\index{Clear\+Postfix\+Oprt@{Clear\+Postfix\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Postfix\+Oprt()}{ClearPostfixOprt()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Postfix\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_ab8a8356532f0047d8a33a46bc77f4bc5}{}\label{classmu_1_1_parser_base_ab8a8356532f0047d8a33a46bc77f4bc5}
+
+
+Clear all user defined postfix operators. 
+
+\begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Clear\+Var@{Clear\+Var}}
+\index{Clear\+Var@{Clear\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Clear\+Var()}{ClearVar()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Clear\+Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_add23e405d36de71de6b386bc0eb4b57c}{}\label{classmu_1_1_parser_base_add23e405d36de71de6b386bc0eb4b57c}
+
+
+Clear all user defined variables. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & Resets the parser to string parsing mode by calling \#\+Re\+Init. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Const@{Define\+Const}}
+\index{Define\+Const@{Define\+Const}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Const(const string\+\_\+type \&a\+\_\+s\+Name, value\+\_\+type a\+\_\+f\+Val)}{DefineConst(const string_type &a_sName, value_type a_fVal)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Const (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Name, }
+\item[{{\bf value\+\_\+type}}]{a\+\_\+f\+Val}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a8cbb0a5e193daeea647d80dc89f34c65}{}\label{classmu_1_1_parser_base_a8cbb0a5e193daeea647d80dc89f34c65}
+
+
+Add a user defined constant. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+s\+Name} & The name of the constant. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+f\+Val} & the value of the constant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Will reset the \hyperlink{classmu_1_1_parser}{Parser} to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parser\+Exception} & in case the name contains invalid signs. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Fun@{Define\+Fun}}
+\index{Define\+Fun@{Define\+Fun}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Fun(const string\+\_\+type \&a\+\_\+str\+Name, T a\+\_\+p\+Fun, bool a\+\_\+b\+Allow\+Opt=true)}{DefineFun(const string_type &a_strName, T a_pFun, bool a_bAllowOpt=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void mu\+::\+Parser\+Base\+::\+Define\+Fun (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Name, }
+\item[{T}]{a\+\_\+p\+Fun, }
+\item[{bool}]{a\+\_\+b\+Allow\+Opt = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_base_a19bff73a29e12bb1af90793ceb258059}{}\label{classmu_1_1_parser_base_a19bff73a29e12bb1af90793ceb258059}
+
+
+Define a parser function without arguments. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+str\+Name} & Name of the function \\
+\hline
+{\em a\+\_\+p\+Fun} & Pointer to the callback function \\
+\hline
+{\em a\+\_\+b\+Allow\+Opt} & A flag indicating this function may be optimized \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Infix\+Oprt@{Define\+Infix\+Oprt}}
+\index{Define\+Infix\+Oprt@{Define\+Infix\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Infix\+Oprt(const string\+\_\+type \&a\+\_\+str\+Name, fun\+\_\+type1 a\+\_\+p\+Oprt, int a\+\_\+i\+Prec=pr\+I\+N\+F\+I\+X, bool a\+\_\+b\+Allow\+Opt=true)}{DefineInfixOprt(const string_type &a_strName, fun_type1 a_pOprt, int a_iPrec=prINFIX, bool a_bAllowOpt=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Infix\+Oprt (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Name, }
+\item[{{\bf fun\+\_\+type1}}]{a\+\_\+p\+Fun, }
+\item[{int}]{a\+\_\+i\+Prec = {\ttfamily {\bf pr\+I\+N\+F\+IX}}, }
+\item[{bool}]{a\+\_\+b\+Allow\+Opt = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a5e26f06efc7564a85a5f5ab682ba5a23}{}\label{classmu_1_1_parser_base_a5e26f06efc7564a85a5f5ab682ba5a23}
+
+
+Add a user defined operator. 
+
+\begin{DoxyPostcond}{Postcondición}
+Will reset the \hyperlink{classmu_1_1_parser}{Parser} to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+s\+Name} & operator Identifier \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+p\+Fun} & Operator callback function \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Prec} & Operator Precedence (default=pr\+S\+I\+GN) \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+b\+Allow\+Opt} & True if operator is volatile (default=false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+E\+Prec 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Infix\+Oprt\+Chars@{Define\+Infix\+Oprt\+Chars}}
+\index{Define\+Infix\+Oprt\+Chars@{Define\+Infix\+Oprt\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Infix\+Oprt\+Chars(const char\+\_\+type $\ast$a\+\_\+sz\+Charset)}{DefineInfixOprtChars(const char_type *a_szCharset)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Infix\+Oprt\+Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\+\_\+type} $\ast$}]{a\+\_\+sz\+Charset}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_ac76d0ceb4ee58babc4f1d0a9ca1e4240}{}\label{classmu_1_1_parser_base_ac76d0ceb4ee58babc4f1d0a9ca1e4240}
+
+
+Define the set of valid characters to be used in names of infix operators. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Name\+Chars@{Define\+Name\+Chars}}
+\index{Define\+Name\+Chars@{Define\+Name\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Name\+Chars(const char\+\_\+type $\ast$a\+\_\+sz\+Charset)}{DefineNameChars(const char_type *a_szCharset)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Name\+Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\+\_\+type} $\ast$}]{a\+\_\+sz\+Charset}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_adf259477bbaa85e8dd7cb69ef4aa0a7a}{}\label{classmu_1_1_parser_base_adf259477bbaa85e8dd7cb69ef4aa0a7a}
+
+
+Define the set of valid characters to be used in names of functions, variables, constants. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Oprt@{Define\+Oprt}}
+\index{Define\+Oprt@{Define\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Oprt(const string\+\_\+type \&a\+\_\+str\+Name, fun\+\_\+type2 a\+\_\+p\+Fun, unsigned a\+\_\+i\+Pri=0, E\+Oprt\+Associativity a\+\_\+e\+Associativity=oa\+L\+E\+F\+T, bool a\+\_\+b\+Allow\+Opt=false)}{DefineOprt(const string_type &a_strName, fun_type2 a_pFun, unsigned a_iPri=0, EOprtAssociativity a_eAssociativity=oaLEFT, bool a_bAllowOpt=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Oprt (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Name, }
+\item[{{\bf fun\+\_\+type2}}]{a\+\_\+p\+Fun, }
+\item[{unsigned}]{a\+\_\+i\+Prec = {\ttfamily 0}, }
+\item[{{\bf E\+Oprt\+Associativity}}]{a\+\_\+e\+Associativity = {\ttfamily {\bf oa\+L\+E\+FT}}, }
+\item[{bool}]{a\+\_\+b\+Allow\+Opt = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a70483983b78f13d37e4f28962d86af34}{}\label{classmu_1_1_parser_base_a70483983b78f13d37e4f28962d86af34}
+
+
+Define a binary operator. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+s\+Name} & The identifier of the operator. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+p\+Fun} & Pointer to the callback function. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Prec} & Precedence of the operator. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+e\+Associativity} & The associativity of the operator. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+b\+Allow\+Opt} & If this is true the operator may be optimized away.\\
+\hline
+\end{DoxyParams}
+Adds a new Binary operator the the parser instance. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Oprt\+Chars@{Define\+Oprt\+Chars}}
+\index{Define\+Oprt\+Chars@{Define\+Oprt\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Oprt\+Chars(const char\+\_\+type $\ast$a\+\_\+sz\+Charset)}{DefineOprtChars(const char_type *a_szCharset)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Oprt\+Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\+\_\+type} $\ast$}]{a\+\_\+sz\+Charset}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_aafd21c418397d5412a75e5b2c1d6db58}{}\label{classmu_1_1_parser_base_aafd21c418397d5412a75e5b2c1d6db58}
+
+
+Define the set of valid characters to be used in names of binary operators and postfix operators. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Postfix\+Oprt@{Define\+Postfix\+Oprt}}
+\index{Define\+Postfix\+Oprt@{Define\+Postfix\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Postfix\+Oprt(const string\+\_\+type \&a\+\_\+str\+Fun, fun\+\_\+type1 a\+\_\+p\+Oprt, bool a\+\_\+b\+Allow\+Opt=true)}{DefinePostfixOprt(const string_type &a_strFun, fun_type1 a_pOprt, bool a_bAllowOpt=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Postfix\+Oprt (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Name, }
+\item[{{\bf fun\+\_\+type1}}]{a\+\_\+p\+Fun, }
+\item[{bool}]{a\+\_\+b\+Allow\+Opt = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_ae9fb4d2348213a0e42dc07a4589ac654}{}\label{classmu_1_1_parser_base_ae9fb4d2348213a0e42dc07a4589ac654}
+
+
+Add a user defined operator. 
+
+\begin{DoxyPostcond}{Postcondición}
+Will reset the \hyperlink{classmu_1_1_parser}{Parser} to string parsing mode. 
+\end{DoxyPostcond}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Str\+Const@{Define\+Str\+Const}}
+\index{Define\+Str\+Const@{Define\+Str\+Const}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Str\+Const(const string\+\_\+type \&a\+\_\+s\+Name, const string\+\_\+type \&a\+\_\+str\+Val)}{DefineStrConst(const string_type &a_sName, const string_type &a_strVal)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Str\+Const (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Name, }
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Val}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a64bc1de3b6db42140fe6f4860c30e40a}{}\label{classmu_1_1_parser_base_a64bc1de3b6db42140fe6f4860c30e40a}
+
+
+Define a new string constant. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+str\+Name} & The name of the constant. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+str\+Val} & the value of the constant. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Define\+Var@{Define\+Var}}
+\index{Define\+Var@{Define\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Define\+Var(const string\+\_\+type \&a\+\_\+s\+Name, value\+\_\+type $\ast$a\+\_\+f\+Var)}{DefineVar(const string_type &a_sName, value_type *a_fVar)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Define\+Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Name, }
+\item[{{\bf value\+\_\+type} $\ast$}]{a\+\_\+p\+Var}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a8350970819c77352af8d79ce3110393e}{}\label{classmu_1_1_parser_base_a8350970819c77352af8d79ce3110393e}
+
+
+Add a user defined variable. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+s\+Name} & the variable name \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+p\+Var} & A pointer to the variable value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Will reset the \hyperlink{classmu_1_1_parser}{Parser} to string parsing mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parser\+Exception} & in case the name contains invalid signs or a\+\_\+p\+Var is N\+U\+LL. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Enable\+Built\+In\+Oprt@{Enable\+Built\+In\+Oprt}}
+\index{Enable\+Built\+In\+Oprt@{Enable\+Built\+In\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Enable\+Built\+In\+Oprt(bool a\+\_\+b\+Is\+On=true)}{EnableBuiltInOprt(bool a_bIsOn=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Enable\+Built\+In\+Oprt (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+b\+Is\+On = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_adf5cb2ffd21f51fac2633a4976fe1e2d}{}\label{classmu_1_1_parser_base_adf5cb2ffd21f51fac2633a4976fe1e2d}
+
+
+Enable or disable the built in binary operators. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{Ver también}
+m\+\_\+b\+Built\+In\+Op, Re\+Init()
+\end{DoxySeeAlso}
+If you disable the built in binary operators there will be no binary operators defined. Thus you must add them manually one by one. It is not possible to disable built in operators selectively. This function will Reinitialize the parser by calling Re\+Init(). \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Enable\+Debug\+Dump@{Enable\+Debug\+Dump}}
+\index{Enable\+Debug\+Dump@{Enable\+Debug\+Dump}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Enable\+Debug\+Dump(bool b\+Dump\+Cmd, bool b\+Dump\+Stack)}{EnableDebugDump(bool bDumpCmd, bool bDumpStack)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Enable\+Debug\+Dump (
+\begin{DoxyParamCaption}
+\item[{bool}]{b\+Dump\+Cmd, }
+\item[{bool}]{b\+Dump\+Stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classmu_1_1_parser_base_ae639f85175c67f67d461514f0c47fb73}{}\label{classmu_1_1_parser_base_ae639f85175c67f67d461514f0c47fb73}
+
+
+Enable the dumping of bytecode and stack content on the console. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em b\+Dump\+Cmd} & Flag to enable dumping of the current bytecode to the console. \\
+\hline
+{\em b\+Dump\+Stack} & Flag to enable dumping of the stack content is written to the console.\\
+\hline
+\end{DoxyParams}
+This function is for debug purposes only! \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Enable\+Optimizer@{Enable\+Optimizer}}
+\index{Enable\+Optimizer@{Enable\+Optimizer}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Enable\+Optimizer(bool a\+\_\+b\+Is\+On=true)}{EnableOptimizer(bool a_bIsOn=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Enable\+Optimizer (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+b\+Is\+On = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a43221e10afd17efe8d32898707763cb4}{}\label{classmu_1_1_parser_base_a43221e10afd17efe8d32898707763cb4}
+
+
+Enable or disable the formula optimization feature. 
+
+\begin{DoxyPostcond}{Postcondición}
+Resets the parser to string parser mode. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Error@{Error}}
+\index{Error@{Error}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Error(\+E\+Error\+Codes a\+\_\+i\+Errc, int a\+\_\+i\+Pos=(int) mu\+::string\+\_\+type\+::npos, const string\+\_\+type \&a\+\_\+str\+Tok=string\+\_\+type()) const }{Error(EErrorCodes a_iErrc, int a_iPos=(int) mu::string_type::npos, const string_type &a_strTok=string_type()) const }}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Error\+Codes}}]{a\+\_\+i\+Errc, }
+\item[{int}]{a\+\_\+i\+Pos = {\ttfamily (int)mu\+:\+:string\+\_\+type\+:\+:npos}, }
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Tok = {\ttfamily {\bf string\+\_\+type}()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a43bf7541771e918d32a1992e566394dc}{}\label{classmu_1_1_parser_base_a43bf7541771e918d32a1992e566394dc}
+
+
+Create an error containing the parse error position. 
+
+This function will create an \hyperlink{classmu_1_1_parser}{Parser} Exception object containing the error text and its position.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+i\+Errc} & \mbox{[}in\mbox{]} The error code of type \hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes}. \\
+\hline
+{\em a\+\_\+i\+Pos} & \mbox{[}in\mbox{]} The position where the error was detected. \\
+\hline
+{\em a\+\_\+str\+Tok} & \mbox{[}in\mbox{]} The token string representation associated with the error. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parser\+Exception} & always throws thats the only purpose of this function. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Eval@{Eval}}
+\index{Eval@{Eval}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Eval() const }{Eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+Base\+::\+Eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a9f91f5d3c0acd2e30225eb97867dc651}{}\label{classmu_1_1_parser_base_a9f91f5d3c0acd2e30225eb97867dc651}
+
+
+Calculate the result. 
+
+A note on const correctness\+: I consider it important that Calc is a const function. Due to caching operations Calc changes only the state of internal variables with one exception m\+\_\+\+Used\+Var this is reset during string parsing and accessible from the outside. Instead of making Calc non const Get\+Used\+Var is non const because it explicitly calls \hyperlink{classmu_1_1_parser_base_a9f91f5d3c0acd2e30225eb97867dc651}{Eval()} forcing this update.
+
+\begin{DoxyPrecond}{Precondición}
+A formula must be set. 
+
+Variables must have been set (if needed)
+\end{DoxyPrecond}
+\begin{DoxySeeAlso}{Ver también}
+\#m\+\_\+p\+Parse\+Formula 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Devuelve}
+The evaluation result 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parse\+Exception} & if no Formula is set or in case of any other error related to the formula. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Eval@{Eval}}
+\index{Eval@{Eval}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Eval(int \&n\+Stack\+Size) const }{Eval(int &nStackSize) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} $\ast$ mu\+::\+Parser\+Base\+::\+Eval (
+\begin{DoxyParamCaption}
+\item[{int \&}]{n\+Stack\+Size}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a7d594b0e4c7b2540948357f0b2e31d98}{}\label{classmu_1_1_parser_base_a7d594b0e4c7b2540948357f0b2e31d98}
+
+
+Evaluate an expression containing comma separated subexpressions. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt out}  & {\em n\+Stack\+Size} & The total number of results available \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Pointer to the array containing all expression results
+\end{DoxyReturn}
+This member function can be used to retrieve all results of an expression made up of multiple comma separated subexpressions (i.\+e. \char`\"{}x+y,sin(x),cos(y)\char`\"{}) \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Eval@{Eval}}
+\index{Eval@{Eval}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Eval(value\+\_\+type $\ast$results, int n\+Bulk\+Size)}{Eval(value_type *results, int nBulkSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Eval (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type} $\ast$}]{results, }
+\item[{int}]{n\+Bulk\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a70748ac6fc87f2821b356e79ec4a81eb}{}\label{classmu_1_1_parser_base_a70748ac6fc87f2821b356e79ec4a81eb}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Arg\+Sep@{Get\+Arg\+Sep}}
+\index{Get\+Arg\+Sep@{Get\+Arg\+Sep}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Arg\+Sep() const }{GetArgSep() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf char\+\_\+type} mu\+::\+Parser\+Base\+::\+Get\+Arg\+Sep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_aa007f27faff0a254e9628d197dc98492}{}\label{classmu_1_1_parser_base_aa007f27faff0a254e9628d197dc98492}
+
+
+Get the argument separator character. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Const@{Get\+Const}}
+\index{Get\+Const@{Get\+Const}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Const() const }{GetConst() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf valmap\+\_\+type} \& mu\+::\+Parser\+Base\+::\+Get\+Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a0175999f0834125322a615f0b2926be6}{}\label{classmu_1_1_parser_base_a0175999f0834125322a615f0b2926be6}
+
+
+Return a map containing all parser constants. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Expr@{Get\+Expr}}
+\index{Get\+Expr@{Get\+Expr}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Expr() const }{GetExpr() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string\+\_\+type} \& mu\+::\+Parser\+Base\+::\+Get\+Expr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_ac7fda9e26aaf03d06d5342a10e03d18c}{}\label{classmu_1_1_parser_base_ac7fda9e26aaf03d06d5342a10e03d18c}
+
+
+Retrieve the formula. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Fun\+Def@{Get\+Fun\+Def}}
+\index{Get\+Fun\+Def@{Get\+Fun\+Def}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Fun\+Def() const }{GetFunDef() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf funmap\+\_\+type} \& mu\+::\+Parser\+Base\+::\+Get\+Fun\+Def (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a326eaefb5a2c9c14aa8d34213690a22f}{}\label{classmu_1_1_parser_base_a326eaefb5a2c9c14aa8d34213690a22f}
+
+
+Return prototypes of all parser functions. 
+
+\begin{DoxyReturn}{Devuelve}
+\#m\+\_\+\+Fun\+Def 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Ver también}
+Fun\+Prot 
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & The return type is a map of the public type \hyperlink{namespacemu_aa38fb627ca71e44a49de0f2fe4d9031d}{funmap\+\_\+type} containing the prototype definitions for all numerical parser functions. String functions are not part of this map. The Prototype definition is encapsulated in objects of the class Fun\+Prot one per parser function each associated with function names via a map construct. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Num\+Results@{Get\+Num\+Results}}
+\index{Get\+Num\+Results@{Get\+Num\+Results}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Num\+Results() const }{GetNumResults() const }}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+Parser\+Base\+::\+Get\+Num\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_abcb1a6813b474d936b37dfef3e041e9d}{}\label{classmu_1_1_parser_base_abcb1a6813b474d936b37dfef3e041e9d}
+
+
+Return the number of results on the calculation stack. 
+
+If the expression contains comma separated subexpressions (i.\+e. \char`\"{}sin(y), x+y\char`\"{}). There may be more than one return value. This function returns the number of available results. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Oprt\+Def@{Get\+Oprt\+Def}}
+\index{Get\+Oprt\+Def@{Get\+Oprt\+Def}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Oprt\+Def() const }{GetOprtDef() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf char\+\_\+type} $\ast$$\ast$ mu\+::\+Parser\+Base\+::\+Get\+Oprt\+Def (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a5d1973c228e5b51bb700fbe145cd678c}{}\label{classmu_1_1_parser_base_a5d1973c228e5b51bb700fbe145cd678c}
+
+
+Get the default symbols used for the built in operators. 
+
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_a0cb4d456e6a82da96786ec73044470ea}{c\+\_\+\+Default\+Oprt} 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Used\+Var@{Get\+Used\+Var}}
+\index{Get\+Used\+Var@{Get\+Used\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Used\+Var() const }{GetUsedVar() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf varmap\+\_\+type} \& mu\+::\+Parser\+Base\+::\+Get\+Used\+Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a42cd9be355fea027e5c11acaf1c40767}{}\label{classmu_1_1_parser_base_a42cd9be355fea027e5c11acaf1c40767}
+
+
+Return a map containing the used variables only. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Var@{Get\+Var}}
+\index{Get\+Var@{Get\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Var() const }{GetVar() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf varmap\+\_\+type} \& mu\+::\+Parser\+Base\+::\+Get\+Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_aaad6f7b4889b843111f18510f4f5253b}{}\label{classmu_1_1_parser_base_aaad6f7b4889b843111f18510f4f5253b}
+
+
+Return a map containing the used variables only. 
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Get\+Version@{Get\+Version}}
+\index{Get\+Version@{Get\+Version}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Version(\+E\+Parser\+Version\+Info e\+Info=pvi\+F\+U\+L\+L) const }{GetVersion(EParserVersionInfo eInfo=pviFULL) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string\+\_\+type} mu\+::\+Parser\+Base\+::\+Get\+Version (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Parser\+Version\+Info}}]{e\+Info = {\ttfamily {\bf pvi\+F\+U\+LL}}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a4b3eac1be699dad4425910eb1428c47b}{}\label{classmu_1_1_parser_base_a4b3eac1be699dad4425910eb1428c47b}
+
+
+Returns the version of muparser. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em e\+Info} & A flag indicating whether the full version info should be returned or not.\\
+\hline
+\end{DoxyParams}
+Format is as follows\+: \char`\"{}\+M\+A\+J\+O\+R.\+M\+I\+N\+O\+R (\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+F\+L\+A\+G\+S)\char`\"{} The C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+F\+L\+A\+GS are returned only if e\+Info==pvi\+F\+U\+LL. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Has\+Built\+In\+Oprt@{Has\+Built\+In\+Oprt}}
+\index{Has\+Built\+In\+Oprt@{Has\+Built\+In\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Has\+Built\+In\+Oprt() const }{HasBuiltInOprt() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool mu\+::\+Parser\+Base\+::\+Has\+Built\+In\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_ab1f44f5270153cefe9595f06581ffd29}{}\label{classmu_1_1_parser_base_ab1f44f5270153cefe9595f06581ffd29}
+
+
+Query status of built in variables. 
+
+\begin{DoxyReturn}{Devuelve}
+\#m\+\_\+b\+Built\+In\+Op; true if built in operators are enabled. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Init@{Init}}
+\index{Init@{Init}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_base_a2741c5cc27b9de19af04ab5627abed5f}{}\label{classmu_1_1_parser_base_a2741c5cc27b9de19af04ab5627abed5f}
+
+
+Initialize user defined functions. 
+
+Calls the virtual functions \hyperlink{classmu_1_1_parser_base_a1f94305e7b7e9abff6d41242dcf188ed}{Init\+Fun()}, \hyperlink{classmu_1_1_parser_base_aad904fb3df8f28659f36d7ce7db4a28c}{Init\+Const()} and \hyperlink{classmu_1_1_parser_base_a4df16813c9002ff08c96929ba8f0d32b}{Init\+Oprt()}. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Init\+Char\+Sets@{Init\+Char\+Sets}}
+\index{Init\+Char\+Sets@{Init\+Char\+Sets}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Init\+Char\+Sets()=0}{InitCharSets()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void mu\+::\+Parser\+Base\+::\+Init\+Char\+Sets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classmu_1_1_parser_base_a3f5c53ef3cba6ab939261677dc2d9709}{}\label{classmu_1_1_parser_base_a3f5c53ef3cba6ab939261677dc2d9709}
+
+
+Implementado en \hyperlink{classmu_1_1_parser_int_aa9589acaa68c3341490ae51bca9b0e78}{mu\+::\+Parser\+Int} y \hyperlink{classmu_1_1_parser_a3279e2cf701ba8c2f850f5826a147f75}{mu\+::\+Parser}.
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Init\+Const@{Init\+Const}}
+\index{Init\+Const@{Init\+Const}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Init\+Const()=0}{InitConst()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void mu\+::\+Parser\+Base\+::\+Init\+Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classmu_1_1_parser_base_aad904fb3df8f28659f36d7ce7db4a28c}{}\label{classmu_1_1_parser_base_aad904fb3df8f28659f36d7ce7db4a28c}
+
+
+Implementado en \hyperlink{classmu_1_1_parser_int_a4c59df078eecbe6ac79749271463b400}{mu\+::\+Parser\+Int} y \hyperlink{classmu_1_1_parser_aefd1da7ba62d20d7276b1e70c8cb6a02}{mu\+::\+Parser}.
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Init\+Fun@{Init\+Fun}}
+\index{Init\+Fun@{Init\+Fun}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Init\+Fun()=0}{InitFun()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void mu\+::\+Parser\+Base\+::\+Init\+Fun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classmu_1_1_parser_base_a1f94305e7b7e9abff6d41242dcf188ed}{}\label{classmu_1_1_parser_base_a1f94305e7b7e9abff6d41242dcf188ed}
+
+
+Implementado en \hyperlink{classmu_1_1_parser_int_af7aa0bcbee6abf01676a3615206f14de}{mu\+::\+Parser\+Int} y \hyperlink{classmu_1_1_parser_a9da582fd5385acfd97ec99a8790f8c6d}{mu\+::\+Parser}.
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Init\+Oprt@{Init\+Oprt}}
+\index{Init\+Oprt@{Init\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Init\+Oprt()=0}{InitOprt()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void mu\+::\+Parser\+Base\+::\+Init\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classmu_1_1_parser_base_a4df16813c9002ff08c96929ba8f0d32b}{}\label{classmu_1_1_parser_base_a4df16813c9002ff08c96929ba8f0d32b}
+
+
+Implementado en \hyperlink{classmu_1_1_parser_int_a9bc5fc5f5be541a2329952138ad933e9}{mu\+::\+Parser\+Int} y \hyperlink{classmu_1_1_parser_a4ed9bdd0565bd57325bc49c12cf73e06}{mu\+::\+Parser}.
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!On\+Detect\+Var@{On\+Detect\+Var}}
+\index{On\+Detect\+Var@{On\+Detect\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{On\+Detect\+Var(string\+\_\+type $\ast$p\+Expr, int \&n\+Start, int \&n\+End)}{OnDetectVar(string_type *pExpr, int &nStart, int &nEnd)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+On\+Detect\+Var (
+\begin{DoxyParamCaption}
+\item[{{\bf string\+\_\+type} $\ast$}]{p\+Expr, }
+\item[{int \&}]{n\+Start, }
+\item[{int \&}]{n\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_base_aa8ec96622bf6777c1f20aecb16a84528}{}\label{classmu_1_1_parser_base_aa8ec96622bf6777c1f20aecb16a84528}
+
+
+Reimplementado en \hyperlink{classmu_1_1_parser_a8e5afdde87b9f8acabde693441d4798c}{mu\+::\+Parser}.
+
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!operator=@{operator=}}
+\index{operator=@{operator=}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{operator=(const Parser\+Base \&a\+\_\+\+Parser)}{operator=(const ParserBase &a_Parser)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Base} \& mu\+::\+Parser\+Base\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Base} \&}]{a\+\_\+\+Parser}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_aca7cf1ea7f82dfb3066ada8427295a4c}{}\label{classmu_1_1_parser_base_aca7cf1ea7f82dfb3066ada8427295a4c}
+
+
+Assignment operator. 
+
+Implemented by calling Assign(a\+\_\+\+Parser). Self assignment is suppressed. 
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+\+Parser} & Object to copy to this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$this 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Remove\+Var@{Remove\+Var}}
+\index{Remove\+Var@{Remove\+Var}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Remove\+Var(const string\+\_\+type \&a\+\_\+str\+Var\+Name)}{RemoveVar(const string_type &a_strVarName)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Remove\+Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Var\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a8e5a54620200dfbd42ec084c29249d94}{}\label{classmu_1_1_parser_base_a8e5a54620200dfbd42ec084c29249d94}
+
+
+Remove a variable from internal storage. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & Removes a variable if it exists. If the Variable does not exist nothing will be done. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Reset\+Locale@{Reset\+Locale}}
+\index{Reset\+Locale@{Reset\+Locale}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Reset\+Locale()}{ResetLocale()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Reset\+Locale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a389a2502aa52212975f4a959fad59a47}{}\label{classmu_1_1_parser_base_a389a2502aa52212975f4a959fad59a47}
+
+
+Resets the locale. 
+
+The default locale used \char`\"{}.\char`\"{} as decimal separator, no thousands separator and \char`\"{},\char`\"{} as function argument separator. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Set\+Arg\+Sep@{Set\+Arg\+Sep}}
+\index{Set\+Arg\+Sep@{Set\+Arg\+Sep}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Arg\+Sep(char\+\_\+type c\+Arg\+Sep)}{SetArgSep(char_type cArgSep)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Set\+Arg\+Sep (
+\begin{DoxyParamCaption}
+\item[{{\bf char\+\_\+type}}]{c\+Arg\+Sep}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_ade4090449c9fd55759fffb933e0f92e3}{}\label{classmu_1_1_parser_base_ade4090449c9fd55759fffb933e0f92e3}
+
+
+Set argument separator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c\+Arg\+Sep} & the argument separator character. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Set\+Dec\+Sep@{Set\+Dec\+Sep}}
+\index{Set\+Dec\+Sep@{Set\+Dec\+Sep}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Dec\+Sep(char\+\_\+type c\+Dec\+Sep)}{SetDecSep(char_type cDecSep)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Set\+Dec\+Sep (
+\begin{DoxyParamCaption}
+\item[{{\bf char\+\_\+type}}]{c\+Dec\+Sep}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a1699841ae7a78b23f521f937f09fae21}{}\label{classmu_1_1_parser_base_a1699841ae7a78b23f521f937f09fae21}
+
+
+Set the decimal separator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c\+Dec\+Sep} & Decimal separator as a character value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_ab539db832b9af0e5940a0481201077e9}{Set\+Thousands\+Sep}
+\end{DoxySeeAlso}
+By default muparser uses the \char`\"{}\+C\char`\"{} locale. The decimal separator of this locale is overwritten by the one provided here. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Set\+Expr@{Set\+Expr}}
+\index{Set\+Expr@{Set\+Expr}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Expr(const string\+\_\+type \&a\+\_\+s\+Expr)}{SetExpr(const string_type &a_sExpr)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Set\+Expr (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+s\+Expr}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_aed9d02dd04f8e163102f9a8e082c4b26}{}\label{classmu_1_1_parser_base_aed9d02dd04f8e163102f9a8e082c4b26}
+
+
+Set the formula. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+str\+Formula} & Formula as string\+\_\+type \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Parser\+Exception} & in case of syntax errors.\\
+\hline
+\end{DoxyExceptions}
+Triggers first time calculation thus the creation of the bytecode and scanning of used variables. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Set\+Thousands\+Sep@{Set\+Thousands\+Sep}}
+\index{Set\+Thousands\+Sep@{Set\+Thousands\+Sep}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Thousands\+Sep(char\+\_\+type c\+Thousands\+Sep=0)}{SetThousandsSep(char_type cThousandsSep=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Set\+Thousands\+Sep (
+\begin{DoxyParamCaption}
+\item[{{\bf char\+\_\+type}}]{c\+Thousands\+Sep = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_ab539db832b9af0e5940a0481201077e9}{}\label{classmu_1_1_parser_base_ab539db832b9af0e5940a0481201077e9}
+
+
+Sets the thousands operator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c\+Thousands\+Sep} & The thousands separator as a character \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_a1699841ae7a78b23f521f937f09fae21}{Set\+Dec\+Sep}
+\end{DoxySeeAlso}
+By default muparser uses the \char`\"{}\+C\char`\"{} locale. The thousands separator of this locale is overwritten by the one provided here. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Set\+Var\+Factory@{Set\+Var\+Factory}}
+\index{Set\+Var\+Factory@{Set\+Var\+Factory}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Var\+Factory(facfun\+\_\+type a\+\_\+p\+Factory, void $\ast$p\+User\+Data=\+N\+U\+L\+L)}{SetVarFactory(facfun_type a_pFactory, void *pUserData=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Base\+::\+Set\+Var\+Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf facfun\+\_\+type}}]{a\+\_\+p\+Factory, }
+\item[{void $\ast$}]{p\+User\+Data = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_base_a713d8ddf5371c346942d22fdac5adda7}{}\label{classmu_1_1_parser_base_a713d8ddf5371c346942d22fdac5adda7}
+
+
+Set a function that can create variable pointer for unknown expression variables. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+p\+Factory} & A pointer to the variable factory. \\
+\hline
+{\em p\+User\+Data} & A user defined context pointer. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Valid\+Infix\+Oprt\+Chars@{Valid\+Infix\+Oprt\+Chars}}
+\index{Valid\+Infix\+Oprt\+Chars@{Valid\+Infix\+Oprt\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Valid\+Infix\+Oprt\+Chars() const }{ValidInfixOprtChars() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf char\+\_\+type} $\ast$ mu\+::\+Parser\+Base\+::\+Valid\+Infix\+Oprt\+Chars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a0e8e9cca6ad084a1c55e38fcdd574d5c}{}\label{classmu_1_1_parser_base_a0e8e9cca6ad084a1c55e38fcdd574d5c}
+
+
+Virtual function that defines the characters allowed in infix operator definitions. 
+
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_a0a6b593d97cb020ac2bd9c6a1a65d818}{Valid\+Name\+Chars}, \hyperlink{classmu_1_1_parser_base_a633d799bd4434079eef4de486dde21bc}{Valid\+Oprt\+Chars} 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Valid\+Name\+Chars@{Valid\+Name\+Chars}}
+\index{Valid\+Name\+Chars@{Valid\+Name\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Valid\+Name\+Chars() const }{ValidNameChars() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf char\+\_\+type} $\ast$ mu\+::\+Parser\+Base\+::\+Valid\+Name\+Chars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a0a6b593d97cb020ac2bd9c6a1a65d818}{}\label{classmu_1_1_parser_base_a0a6b593d97cb020ac2bd9c6a1a65d818}
+
+
+Virtual function that defines the characters allowed in name identifiers. 
+
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_a633d799bd4434079eef4de486dde21bc}{Valid\+Oprt\+Chars}, \#\+Valid\+Prefix\+Oprt\+Chars 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Valid\+Oprt\+Chars@{Valid\+Oprt\+Chars}}
+\index{Valid\+Oprt\+Chars@{Valid\+Oprt\+Chars}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Valid\+Oprt\+Chars() const }{ValidOprtChars() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf char\+\_\+type} $\ast$ mu\+::\+Parser\+Base\+::\+Valid\+Oprt\+Chars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_base_a633d799bd4434079eef4de486dde21bc}{}\label{classmu_1_1_parser_base_a633d799bd4434079eef4de486dde21bc}
+
+
+Virtual function that defines the characters allowed in operator definitions. 
+
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_a0a6b593d97cb020ac2bd9c6a1a65d818}{Valid\+Name\+Chars}, \#\+Valid\+Prefix\+Oprt\+Chars 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentación de las funciones relacionadas y clases amigas}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!Parser\+Token\+Reader@{Parser\+Token\+Reader}}
+\index{Parser\+Token\+Reader@{Parser\+Token\+Reader}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{Parser\+Token\+Reader}{ParserTokenReader}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Parser\+Token\+Reader}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classmu_1_1_parser_base_a4a4908a2dc2cc3723b45602a3e722f79}{}\label{classmu_1_1_parser_base_a4a4908a2dc2cc3723b45602a3e722f79}
+
+
+\subsection{Documentación de los datos miembro}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!c\+\_\+\+Default\+Oprt@{c\+\_\+\+Default\+Oprt}}
+\index{c\+\_\+\+Default\+Oprt@{c\+\_\+\+Default\+Oprt}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{c\+\_\+\+Default\+Oprt}{c_DefaultOprt}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf char\+\_\+type} $\ast$ mu\+::\+Parser\+Base\+::c\+\_\+\+Default\+Oprt\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_base_a0cb4d456e6a82da96786ec73044470ea}{}\label{classmu_1_1_parser_base_a0cb4d456e6a82da96786ec73044470ea}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+= 
+  \{ 
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"<="}), \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{">="}),  \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"!="}), 
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"=="}), \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"<"}),   \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{">"}), 
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"+"}),  \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"-"}),   \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"*"}), 
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"/"}),  \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"^"}),   \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"&&"}), 
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"||"}), \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"="}),   \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"("}),  
+    \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{")"}),   \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{"?"}),  \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(\textcolor{stringliteral}{":"}), 0 
+  \}
+\end{DoxyCode}
+
+
+Identifiers for built in binary operators. 
+
+When defining custom binary operators with \#\+Add\+Oprt(...) make sure not to choose names conflicting with these definitions. \index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!g\+\_\+\+Dbg\+Dump\+Cmd\+Code@{g\+\_\+\+Dbg\+Dump\+Cmd\+Code}}
+\index{g\+\_\+\+Dbg\+Dump\+Cmd\+Code@{g\+\_\+\+Dbg\+Dump\+Cmd\+Code}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{g\+\_\+\+Dbg\+Dump\+Cmd\+Code}{g_DbgDumpCmdCode}}]{\setlength{\rightskip}{0pt plus 5cm}bool mu\+::\+Parser\+Base\+::g\+\_\+\+Dbg\+Dump\+Cmd\+Code = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_base_abe673a44e0ea620656422657cb3f6518}{}\label{classmu_1_1_parser_base_abe673a44e0ea620656422657cb3f6518}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!g\+\_\+\+Dbg\+Dump\+Stack@{g\+\_\+\+Dbg\+Dump\+Stack}}
+\index{g\+\_\+\+Dbg\+Dump\+Stack@{g\+\_\+\+Dbg\+Dump\+Stack}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{g\+\_\+\+Dbg\+Dump\+Stack}{g_DbgDumpStack}}]{\setlength{\rightskip}{0pt plus 5cm}bool mu\+::\+Parser\+Base\+::g\+\_\+\+Dbg\+Dump\+Stack = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_base_a35349445f839ab8bc2cfb54488c45267}{}\label{classmu_1_1_parser_base_a35349445f839ab8bc2cfb54488c45267}
+\index{mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}!s\+\_\+locale@{s\+\_\+locale}}
+\index{s\+\_\+locale@{s\+\_\+locale}!mu\+::\+Parser\+Base@{mu\+::\+Parser\+Base}}
+\subsubsection[{\texorpdfstring{s\+\_\+locale}{s_locale}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::locale mu\+::\+Parser\+Base\+::s\+\_\+locale = std\+::locale(std\+::locale\+::classic(), new {\bf change\+\_\+dec\+\_\+sep}$<${\bf char\+\_\+type}$>$(\textquotesingle{}.\textquotesingle{}))\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_base_ad594b199c33edf6962ba0e21010bc86e}{}\label{classmu_1_1_parser_base_ad594b199c33edf6962ba0e21010bc86e}
+
+
+The locale used by the parser. 
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_base_8h}{mu\+Parser\+Base.\+h}\item 
+Parser/\+Test/src/\hyperlink{mu_parser_base_8cpp}{mu\+Parser\+Base.\+cpp}\end{DoxyCompactItemize}

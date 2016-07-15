@@ -1,0 +1,281 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[spanish]{babel}
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large easy\+Graph \\[1ex]\large 1.\+0 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.8.11}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{Contributing to easy\+Graph}
+\label{md_CONTRIBUTING}
+\hypertarget{md_CONTRIBUTING}{}
+\input{md_CONTRIBUTING}
+\chapter{easy\+Graph -\/ A Grapher equations}
+\label{md_README}
+\hypertarget{md_README}{}
+\input{md_README}
+\chapter{Indice de namespaces}
+\input{namespaces}
+\chapter{Indice jerárquico}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de namespaces}
+\input{namespacemu}
+\input{namespacemu_1_1_test}
+\input{namespace_ui}
+\chapter{Documentación de las clases}
+\input{classarbol__binario}
+\input{classmu_1_1_parser_base_1_1change__dec__sep}
+\input{class_gpadre}
+\input{class_graficador}
+\input{class_graficador1}
+\input{class_interpretador}
+\input{classinterprete}
+\input{class_main_window}
+\input{class_ui_1_1_main_window}
+\input{structmu_1_1_math_impl}
+\input{class_nodo}
+\input{class_nodo__double}
+\input{class_nodo__funcion__binaria}
+\input{class_nodo__funcion__unaria}
+\input{classmu_1_1_parser}
+\input{classmu_1_1_parser_base}
+\input{classmu_1_1_parser_byte_code}
+\input{classmu_1_1_parser_callback}
+\input{classmu_1_1_parser_error}
+\input{classmu_1_1_parser_error_msg}
+\input{classmu_1_1_parser_int}
+\input{classmu_1_1_parser_stack}
+\input{classmu_1_1_test_1_1_parser_tester}
+\input{classmu_1_1_parser_token}
+\input{classmu_1_1_parser_token_reader}
+\input{classprocesador__de__arbol}
+\input{structqt__meta__stringdata___controller_____count_controller__t}
+\input{structqt__meta__stringdata___main_window__t}
+\input{structqt__meta__stringdata___myopengl2__t}
+\input{structqt__meta__stringdata___myopengl__t}
+\input{structqt__meta__stringdata___settings_dialog__t}
+\input{class_ui_1_1_settings_dialog}
+\input{structmu_1_1_s_token}
+\input{structmu_1_1_type_info}
+\input{structmu_1_1_type_info_3_01char_01_4}
+\input{structmu_1_1_type_info_3_01int_01_4}
+\input{structmu_1_1_type_info_3_01long_01_4}
+\input{structmu_1_1_type_info_3_01short_01_4}
+\input{structmu_1_1_type_info_3_01unsigned_01char_01_4}
+\input{structmu_1_1_type_info_3_01unsigned_01int_01_4}
+\input{structmu_1_1_type_info_3_01unsigned_01long_01_4}
+\input{structmu_1_1_type_info_3_01unsigned_01short_01_4}
+\input{class_ui___main_window}
+\input{class_ui___settings_dialog}
+\chapter{Documentación de archivos}
+\input{_c_o_n_t_r_i_b_u_t_i_n_g_8md}
+\input{gpadre_8h}
+\input{graficador_8h}
+\input{graficador1_8h}
+\input{mainwindow_8h}
+\input{include_2tipos_01de_01datos_8h}
+\input{_parser_2include_2tipos_01de_01datos_8h}
+\input{main_8cpp}
+\input{_parser_2main_8cpp}
+\input{arbol__binario_8h}
+\input{funciones_8h}
+\input{_interpretador_8h}
+\input{interprete_8h}
+\input{_nodo_8h}
+\input{_nodo__double_8h}
+\input{_nodo__funcion__binaria_8h}
+\input{_nodo__funcion__unaria_8h}
+\input{procesador__de__arbol_8h}
+\input{arbol__binario_8cpp}
+\input{_interpretador_8cpp}
+\input{interprete_8cpp}
+\input{_nodo_8cpp}
+\input{_nodo__double_8cpp}
+\input{_nodo__funcion__binaria_8cpp}
+\input{_nodo__funcion__unaria_8cpp}
+\input{procesador__de__arbol_8cpp}
+\input{mu_parser_8h}
+\input{mu_parser_base_8h}
+\input{mu_parser_bytecode_8h}
+\input{mu_parser_callback_8h}
+\input{mu_parser_def_8h}
+\input{mu_parser_d_l_l_8h}
+\input{mu_parser_error_8h}
+\input{mu_parser_fixes_8h}
+\input{mu_parser_int_8h}
+\input{mu_parser_stack_8h}
+\input{mu_parser_template_magic_8h}
+\input{mu_parser_test_8h}
+\input{mu_parser_token_8h}
+\input{mu_parser_token_reader_8h}
+\input{example1_8cpp}
+\input{example2_8c}
+\input{mu_parser_8cpp}
+\input{mu_parser_base_8cpp}
+\input{mu_parser_bytecode_8cpp}
+\input{mu_parser_callback_8cpp}
+\input{mu_parser_d_l_l_8cpp}
+\input{mu_parser_error_8cpp}
+\input{mu_parser_int_8cpp}
+\input{mu_parser_test_8cpp}
+\input{mu_parser_token_reader_8cpp}
+\input{_r_e_a_d_m_e_8md}
+\input{gpadre_8cpp}
+\input{graficador_8cpp}
+\input{graficador1_8cpp}
+\input{mainwindow_8cpp}
+\input{moc__countcontroller_8cpp}
+\input{moc__mainwindow_8cpp}
+\input{moc__myopengl_8cpp}
+\input{moc__myopengl2_8cpp}
+\input{moc__settingsdialog_8cpp}
+\input{ui__mainwindow_8h}
+\input{ui__settingsdialog_8h}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Índice}
+\printindex
+
+\end{document}

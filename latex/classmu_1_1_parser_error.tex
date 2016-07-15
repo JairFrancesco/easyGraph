@@ -1,0 +1,261 @@
+\hypertarget{classmu_1_1_parser_error}{}\section{Referencia de la Clase mu\+:\+:Parser\+Error}
+\label{classmu_1_1_parser_error}\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+
+
+Error class of the parser.  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser\+Error.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_error_ad7f1fb7501d606308cf41c3eeab49348}{Parser\+Error} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_a3f37c865f1c609337114f19525f4e625}{Parser\+Error} (\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} a\+\_\+i\+Errc)
+\begin{DoxyCompactList}\small\item\em This Constructor is used for internal exceptions only. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_a67297c47b34173e5a331b3ff964d1bfc}{Parser\+Error} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&s\+Msg)
+\begin{DoxyCompactList}\small\item\em Construct an error from a message text. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_a3edd0b1277dcb33238b55d0aead6a764}{Parser\+Error} (\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} a\+\_\+i\+Errc, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&s\+Tok, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&s\+Formula=\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}(), int a\+\_\+i\+Pos=-\/1)
+\begin{DoxyCompactList}\small\item\em Construct an error object. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_ab21ddceddd5ae816abc1060873a245b0}{Parser\+Error} (\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} a\+\_\+i\+Errc, int a\+\_\+i\+Pos, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&s\+Tok)
+\begin{DoxyCompactList}\small\item\em Construct an error object. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_ac4f83d23ad5875683d4100a85f0fbdfc}{Parser\+Error} (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$a\+\_\+sz\+Msg, int a\+\_\+i\+Pos=-\/1, const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&s\+Tok=\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Construct an error object. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_a0820d687ae9ed8eed5bad962b40d006c}{Parser\+Error} (const \hyperlink{classmu_1_1_parser_error}{Parser\+Error} \&a\+\_\+\+Obj)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error}{Parser\+Error} \& \hyperlink{classmu_1_1_parser_error_ae2c28377fa08e425a5f3df2cfa221b33}{operator=} (const \hyperlink{classmu_1_1_parser_error}{Parser\+Error} \&a\+\_\+\+Obj)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_error_aee52babeeffcf663365b551c3ea61e1f}{$\sim$\+Parser\+Error} ()
+\item 
+void \hyperlink{classmu_1_1_parser_error_a1b7b4b511525f13f728c9c2942983b19}{Set\+Formula} (const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \&a\+\_\+str\+Formula)
+\begin{DoxyCompactList}\small\item\em Set the expression related to this error. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \& \hyperlink{classmu_1_1_parser_error_a845ae0a3276f1f0326c6b9f4d946bcbf}{Get\+Expr} () const 
+\begin{DoxyCompactList}\small\item\em gets the expression related tp this error. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \& \hyperlink{classmu_1_1_parser_error_af03a4eb049e106be1dbc957ab4c90ee8}{Get\+Msg} () const 
+\begin{DoxyCompactList}\small\item\em Returns the message string for this error. \end{DoxyCompactList}\item 
+int \hyperlink{classmu_1_1_parser_error_a377d53b65214c5d9f7a1789cbf05512b}{Get\+Pos} () const 
+\begin{DoxyCompactList}\small\item\em Return the formula position related to the error. \end{DoxyCompactList}\item 
+const \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} \& \hyperlink{classmu_1_1_parser_error_a3ddb4de710a8b0485e1b4060ccc7f08f}{Get\+Token} () const 
+\begin{DoxyCompactList}\small\item\em Return string related with this token (if available). \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} \hyperlink{classmu_1_1_parser_error_aad82b1aeb00b5e64a56956490febd2ec}{Get\+Code} () const 
+\begin{DoxyCompactList}\small\item\em Return the error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Error class of the parser. 
+
+\begin{DoxyAuthor}{Autor}
+Ingo Berg
+\end{DoxyAuthor}
+Part of the math parser package. 
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error()}{ParserError()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_ad7f1fb7501d606308cf41c3eeab49348}{}\label{classmu_1_1_parser_error_ad7f1fb7501d606308cf41c3eeab49348}
+
+
+Default constructor. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(\+E\+Error\+Codes a\+\_\+i\+Errc)}{ParserError(EErrorCodes a_iErrc)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Error\+Codes}}]{a\+\_\+i\+Errc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmu_1_1_parser_error_a3f37c865f1c609337114f19525f4e625}{}\label{classmu_1_1_parser_error_a3f37c865f1c609337114f19525f4e625}
+
+
+This Constructor is used for internal exceptions only. 
+
+It does not contain any information but the error code. \index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(const string\+\_\+type \&s\+Msg)}{ParserError(const string_type &sMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{s\+Msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmu_1_1_parser_error_a67297c47b34173e5a331b3ff964d1bfc}{}\label{classmu_1_1_parser_error_a67297c47b34173e5a331b3ff964d1bfc}
+
+
+Construct an error from a message text. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(\+E\+Error\+Codes a\+\_\+i\+Errc, const string\+\_\+type \&s\+Tok, const string\+\_\+type \&s\+Formula=string\+\_\+type(), int a\+\_\+i\+Pos=-\/1)}{ParserError(EErrorCodes a_iErrc, const string_type &sTok, const string_type &sFormula=string_type(), int a_iPos=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Error\+Codes}}]{i\+Errc, }
+\item[{const {\bf string\+\_\+type} \&}]{s\+Tok, }
+\item[{const {\bf string\+\_\+type} \&}]{s\+Expr = {\ttfamily {\bf string\+\_\+type}()}, }
+\item[{int}]{i\+Pos = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_a3edd0b1277dcb33238b55d0aead6a764}{}\label{classmu_1_1_parser_error_a3edd0b1277dcb33238b55d0aead6a764}
+
+
+Construct an error object. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+i\+Errc} & the error code. \\
+\hline
+\mbox{\tt in}  & {\em s\+Tok} & The token string related to this error. \\
+\hline
+\mbox{\tt in}  & {\em s\+Expr} & The expression related to the error. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Pos} & the position in the expression where the error occurred. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(\+E\+Error\+Codes a\+\_\+i\+Errc, int a\+\_\+i\+Pos, const string\+\_\+type \&s\+Tok)}{ParserError(EErrorCodes a_iErrc, int a_iPos, const string_type &sTok)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Error\+Codes}}]{i\+Errc, }
+\item[{int}]{i\+Pos, }
+\item[{const {\bf string\+\_\+type} \&}]{s\+Tok}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_ab21ddceddd5ae816abc1060873a245b0}{}\label{classmu_1_1_parser_error_ab21ddceddd5ae816abc1060873a245b0}
+
+
+Construct an error object. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em i\+Errc} & the error code. \\
+\hline
+\mbox{\tt in}  & {\em i\+Pos} & the position in the expression where the error occurred. \\
+\hline
+\mbox{\tt in}  & {\em s\+Tok} & The token string related to this error. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(const char\+\_\+type $\ast$a\+\_\+sz\+Msg, int a\+\_\+i\+Pos=-\/1, const string\+\_\+type \&s\+Tok=string\+\_\+type())}{ParserError(const char_type *a_szMsg, int a_iPos=-1, const string_type &sTok=string_type())}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\+\_\+type} $\ast$}]{sz\+Msg, }
+\item[{int}]{i\+Pos = {\ttfamily -\/1}, }
+\item[{const {\bf string\+\_\+type} \&}]{s\+Tok = {\ttfamily {\bf string\+\_\+type}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_ac4f83d23ad5875683d4100a85f0fbdfc}{}\label{classmu_1_1_parser_error_ac4f83d23ad5875683d4100a85f0fbdfc}
+
+
+Construct an error object. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em sz\+Msg} & The error message text. \\
+\hline
+\mbox{\tt in}  & {\em i\+Pos} & the position related to the error. \\
+\hline
+\mbox{\tt in}  & {\em s\+Tok} & The token string related to this error. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Parser\+Error@{Parser\+Error}}
+\index{Parser\+Error@{Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Parser\+Error(const Parser\+Error \&a\+\_\+\+Obj)}{ParserError(const ParserError &a_Obj)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::\+Parser\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Error} \&}]{a\+\_\+\+Obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_a0820d687ae9ed8eed5bad962b40d006c}{}\label{classmu_1_1_parser_error_a0820d687ae9ed8eed5bad962b40d006c}
+
+
+Copy constructor. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!````~Parser\+Error@{$\sim$\+Parser\+Error}}
+\index{````~Parser\+Error@{$\sim$\+Parser\+Error}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{$\sim$\+Parser\+Error()}{~ParserError()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Error\+::$\sim$\+Parser\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_aee52babeeffcf663365b551c3ea61e1f}{}\label{classmu_1_1_parser_error_aee52babeeffcf663365b551c3ea61e1f}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Get\+Code@{Get\+Code}}
+\index{Get\+Code@{Get\+Code}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Get\+Code() const }{GetCode() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+Error\+Codes} mu\+::\+Parser\+Error\+::\+Get\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_error_aad82b1aeb00b5e64a56956490febd2ec}{}\label{classmu_1_1_parser_error_aad82b1aeb00b5e64a56956490febd2ec}
+
+
+Return the error code. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Get\+Expr@{Get\+Expr}}
+\index{Get\+Expr@{Get\+Expr}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Get\+Expr() const }{GetExpr() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string\+\_\+type} \& mu\+::\+Parser\+Error\+::\+Get\+Expr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_error_a845ae0a3276f1f0326c6b9f4d946bcbf}{}\label{classmu_1_1_parser_error_a845ae0a3276f1f0326c6b9f4d946bcbf}
+
+
+gets the expression related tp this error. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Get\+Msg@{Get\+Msg}}
+\index{Get\+Msg@{Get\+Msg}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Get\+Msg() const }{GetMsg() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string\+\_\+type} \& mu\+::\+Parser\+Error\+::\+Get\+Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_error_af03a4eb049e106be1dbc957ab4c90ee8}{}\label{classmu_1_1_parser_error_af03a4eb049e106be1dbc957ab4c90ee8}
+
+
+Returns the message string for this error. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Get\+Pos@{Get\+Pos}}
+\index{Get\+Pos@{Get\+Pos}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Get\+Pos() const }{GetPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+Parser\+Error\+::\+Get\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_error_a377d53b65214c5d9f7a1789cbf05512b}{}\label{classmu_1_1_parser_error_a377d53b65214c5d9f7a1789cbf05512b}
+
+
+Return the formula position related to the error. 
+
+If the error is not related to a distinct position this will return -\/1 \index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Get\+Token@{Get\+Token}}
+\index{Get\+Token@{Get\+Token}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Get\+Token() const }{GetToken() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf string\+\_\+type} \& mu\+::\+Parser\+Error\+::\+Get\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_error_a3ddb4de710a8b0485e1b4060ccc7f08f}{}\label{classmu_1_1_parser_error_a3ddb4de710a8b0485e1b4060ccc7f08f}
+
+
+Return string related with this token (if available). 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!operator=@{operator=}}
+\index{operator=@{operator=}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{operator=(const Parser\+Error \&a\+\_\+\+Obj)}{operator=(const ParserError &a_Obj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Error} \& mu\+::\+Parser\+Error\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Error} \&}]{a\+\_\+\+Obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_ae2c28377fa08e425a5f3df2cfa221b33}{}\label{classmu_1_1_parser_error_ae2c28377fa08e425a5f3df2cfa221b33}
+
+
+Assignment operator. 
+
+\index{mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}!Set\+Formula@{Set\+Formula}}
+\index{Set\+Formula@{Set\+Formula}!mu\+::\+Parser\+Error@{mu\+::\+Parser\+Error}}
+\subsubsection[{\texorpdfstring{Set\+Formula(const string\+\_\+type \&a\+\_\+str\+Formula)}{SetFormula(const string_type &a_strFormula)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Error\+::\+Set\+Formula (
+\begin{DoxyParamCaption}
+\item[{const {\bf string\+\_\+type} \&}]{a\+\_\+str\+Formula}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_error_a1b7b4b511525f13f728c9c2942983b19}{}\label{classmu_1_1_parser_error_a1b7b4b511525f13f728c9c2942983b19}
+
+
+Set the expression related to this error. 
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_error_8h}{mu\+Parser\+Error.\+h}\item 
+Parser/\+Test/src/\hyperlink{mu_parser_error_8cpp}{mu\+Parser\+Error.\+cpp}\end{DoxyCompactItemize}

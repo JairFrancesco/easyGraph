@@ -1,0 +1,423 @@
+\hypertarget{classmu_1_1_parser_token}{}\section{Referencia de la plantilla de la Clase mu\+:\+:Parser\+Token$<$ T\+Base, T\+String $>$}
+\label{classmu_1_1_parser_token}\index{mu\+::\+Parser\+Token$<$ T\+Base, T\+String $>$@{mu\+::\+Parser\+Token$<$ T\+Base, T\+String $>$}}
+
+
+Encapsulation of the data for a single formula token.  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser\+Token.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_token_a0ce34ca6a1833441e8fd9840b3cde140}{Parser\+Token} ()
+\begin{DoxyCompactList}\small\item\em Constructor (default). \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token_a17dfc71fe5750f61e9cdd5c2a3355ac0}{Parser\+Token} (const \hyperlink{classmu_1_1_parser_token}{Parser\+Token} \&a\+\_\+\+Tok)
+\begin{DoxyCompactList}\small\item\em Create token from another one. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_af9abe46bd0a5f2b4cbcc59beba68ca0e}{operator=} (const \hyperlink{classmu_1_1_parser_token}{Parser\+Token} \&a\+\_\+\+Tok)
+\begin{DoxyCompactList}\small\item\em Assignement operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_token_a40b7e717927c58d03a6665184ff5cc52}{Assign} (const \hyperlink{classmu_1_1_parser_token}{Parser\+Token} \&a\+\_\+\+Tok)
+\begin{DoxyCompactList}\small\item\em Copy token information from argument. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_ac4588ba38ccc660686956f7998ba74dc}{Set} (\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} a\+\_\+i\+Type, const T\+String \&a\+\_\+str\+Tok=T\+String())
+\begin{DoxyCompactList}\small\item\em Assign a token type. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_aa7c0c0e307b2064f1ab12cbf922c7e40}{Set} (const \hyperlink{classmu_1_1_parser_callback}{Parser\+Callback} \&a\+\_\+p\+Callback, const T\+String \&a\+\_\+s\+Tok)
+\begin{DoxyCompactList}\small\item\em Set Callback type. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_a68d4974b234ee9f109ef466cd04e1501}{Set\+Val} (T\+Base \hyperlink{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{a\+\_\+f\+Val}, const T\+String \&a\+\_\+str\+Tok=T\+String())
+\begin{DoxyCompactList}\small\item\em Make this token a value token. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_a86de84eb76900ca677c3ab93681ec7c5}{Set\+Var} (T\+Base $\ast$\hyperlink{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}{a\+\_\+p\+Var}, const T\+String \&a\+\_\+str\+Tok)
+\begin{DoxyCompactList}\small\item\em make this token a variable token. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_token}{Parser\+Token} \& \hyperlink{classmu_1_1_parser_token_ada40ff914f9c59f6891f6809991b3542}{Set\+String} (const T\+String \&a\+\_\+str\+Tok, std\+::size\+\_\+t a\+\_\+i\+Size)
+\begin{DoxyCompactList}\small\item\em Make this token a variable token. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_token_ac2e70ba039bc033722ea946342649881}{Set\+Idx} (int a\+\_\+i\+Idx)
+\begin{DoxyCompactList}\small\item\em Set an index associated with the token related data. \end{DoxyCompactList}\item 
+int \hyperlink{classmu_1_1_parser_token_a394d2f4c77548e20d6ea1d69ab583426}{Get\+Idx} () const 
+\begin{DoxyCompactList}\small\item\em Return Index associated with the token related data. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} \hyperlink{classmu_1_1_parser_token_a2aed855c2686a1a4f7696f373e79d2ba}{Get\+Code} () const 
+\begin{DoxyCompactList}\small\item\em Return the token type. \end{DoxyCompactList}\item 
+\hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302}{E\+Type\+Code} \hyperlink{classmu_1_1_parser_token_a8b53010c2405da2908ad3b889798f92a}{Get\+Type} () const 
+\item 
+int \hyperlink{classmu_1_1_parser_token_a5b032bb1b4b3f4bfc4908e96a33733bc}{Get\+Pri} () const 
+\item 
+\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1}{E\+Oprt\+Associativity} \hyperlink{classmu_1_1_parser_token_a9d782f32f8c553271627e55300dbc07a}{Get\+Associativity} () const 
+\item 
+\hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\+\_\+fun\+\_\+type} \hyperlink{classmu_1_1_parser_token_acd1dc5d9680562db1fcd5ca2bf6add85}{Get\+Func\+Addr} () const 
+\begin{DoxyCompactList}\small\item\em Return the address of the callback function assoziated with function and operator tokens. \end{DoxyCompactList}\item 
+T\+Base \hyperlink{classmu_1_1_parser_token_a92bdbe69e20244358ff7b8348cee4162}{Get\+Val} () const 
+\item 
+T\+Base $\ast$ \hyperlink{classmu_1_1_parser_token_ae3125d176cc8c5238ec2d650386f449c}{Get\+Var} () const 
+\begin{DoxyCompactList}\small\item\em Get address of a variable token. \end{DoxyCompactList}\item 
+int \hyperlink{classmu_1_1_parser_token_a0286c6356dbddebca69da1e5ebb5a888}{Get\+Arg\+Count} () const 
+\begin{DoxyCompactList}\small\item\em Return the number of function arguments. \end{DoxyCompactList}\item 
+const T\+String \& \hyperlink{classmu_1_1_parser_token_a667a6b2a30e58bc3332ef2358412c2eb}{Get\+As\+String} () const 
+\begin{DoxyCompactList}\small\item\em Return the token identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\subsubsection*{template$<$typename T\+Base, typename T\+String$>$\\*
+class mu\+::\+Parser\+Token$<$ T\+Base, T\+String $>$}
+
+Encapsulation of the data for a single formula token. 
+
+Formula token implementation. Part of the Math \hyperlink{classmu_1_1_parser}{Parser} Package. Formula tokens can be either one of the following\+: 
+\begin{DoxyItemize}
+\item value 
+\item variable 
+\item function with numerical arguments 
+\item functions with a string as argument 
+\item prefix operators 
+\item infix operators 
+\item binary operator 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Autor}
+(C) 2004-\/2013 Ingo Berg 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Parser\+Token@{Parser\+Token}}
+\index{Parser\+Token@{Parser\+Token}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Parser\+Token()}{ParserToken()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::{\bf Parser\+Token} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a0ce34ca6a1833441e8fd9840b3cde140}{}\label{classmu_1_1_parser_token_a0ce34ca6a1833441e8fd9840b3cde140}
+
+
+Constructor (default). 
+
+Sets token to an neutral state of type cm\+U\+N\+K\+N\+O\+WN. 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Parser\+Token@{Parser\+Token}}
+\index{Parser\+Token@{Parser\+Token}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Parser\+Token(const Parser\+Token \&a\+\_\+\+Tok)}{ParserToken(const ParserToken &a_Tok)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::{\bf Parser\+Token} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Token}$<$ T\+Base, T\+String $>$ \&}]{a\+\_\+\+Tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a17dfc71fe5750f61e9cdd5c2a3355ac0}{}\label{classmu_1_1_parser_token_a17dfc71fe5750f61e9cdd5c2a3355ac0}
+
+
+Create token from another one. 
+
+Implemented by calling Assign(...) 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPostcond}{Postcondición}
+m\+\_\+i\+Type==cm\+U\+N\+K\+N\+O\+WN 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_token_a40b7e717927c58d03a6665184ff5cc52}{Assign} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Assign@{Assign}}
+\index{Assign@{Assign}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Assign(const Parser\+Token \&a\+\_\+\+Tok)}{Assign(const ParserToken &a_Tok)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ void {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Token}$<$ T\+Base, T\+String $>$ \&}]{a\+\_\+\+Tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a40b7e717927c58d03a6665184ff5cc52}{}\label{classmu_1_1_parser_token_a40b7e717927c58d03a6665184ff5cc52}
+
+
+Copy token information from argument. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Arg\+Count@{Get\+Arg\+Count}}
+\index{Get\+Arg\+Count@{Get\+Arg\+Count}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Arg\+Count() const }{GetArgCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ int {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Arg\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a0286c6356dbddebca69da1e5ebb5a888}{}\label{classmu_1_1_parser_token_a0286c6356dbddebca69da1e5ebb5a888}
+
+
+Return the number of function arguments. 
+
+Valid only if m\+\_\+i\+Type==Cmd\+F\+U\+NC. \index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Associativity@{Get\+Associativity}}
+\index{Get\+Associativity@{Get\+Associativity}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Associativity() const }{GetAssociativity() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf E\+Oprt\+Associativity} {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Associativity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a9d782f32f8c553271627e55300dbc07a}{}\label{classmu_1_1_parser_token_a9d782f32f8c553271627e55300dbc07a}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+As\+String@{Get\+As\+String}}
+\index{Get\+As\+String@{Get\+As\+String}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+As\+String() const }{GetAsString() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ const T\+String\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+As\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a667a6b2a30e58bc3332ef2358412c2eb}{}\label{classmu_1_1_parser_token_a667a6b2a30e58bc3332ef2358412c2eb}
+
+
+Return the token identifier. 
+
+If \#m\+\_\+i\+Type is cm\+S\+T\+R\+I\+NG the token identifier is the value of the string argument for a string function. \begin{DoxyReturn}{Devuelve}
+\#m\+\_\+str\+Tok 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{Ver también}
+m\+\_\+str\+Tok 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Code@{Get\+Code}}
+\index{Get\+Code@{Get\+Code}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Code() const }{GetCode() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf E\+Cmd\+Code} {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a2aed855c2686a1a4f7696f373e79d2ba}{}\label{classmu_1_1_parser_token_a2aed855c2686a1a4f7696f373e79d2ba}
+
+
+Return the token type. 
+
+\begin{DoxyReturn}{Devuelve}
+\#m\+\_\+i\+Type 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Func\+Addr@{Get\+Func\+Addr}}
+\index{Get\+Func\+Addr@{Get\+Func\+Addr}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Func\+Addr() const }{GetFuncAddr() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf generic\+\_\+fun\+\_\+type} {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Func\+Addr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_acd1dc5d9680562db1fcd5ca2bf6add85}{}\label{classmu_1_1_parser_token_acd1dc5d9680562db1fcd5ca2bf6add85}
+
+
+Return the address of the callback function assoziated with function and operator tokens. 
+
+\begin{DoxyReturn}{Devuelve}
+The pointer stored in \#m\+\_\+p\+Tok. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em exception\+\_\+type} & if token type is non of\+: 
+\begin{DoxyItemize}
+\item cm\+F\+U\+NC 
+\item cm\+S\+T\+R\+F\+U\+NC 
+\item cm\+P\+O\+S\+T\+OP 
+\item cm\+I\+N\+F\+I\+X\+OP 
+\item cm\+O\+P\+R\+T\+\_\+\+B\+IN 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Idx@{Get\+Idx}}
+\index{Get\+Idx@{Get\+Idx}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Idx() const }{GetIdx() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ int {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Idx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a394d2f4c77548e20d6ea1d69ab583426}{}\label{classmu_1_1_parser_token_a394d2f4c77548e20d6ea1d69ab583426}
+
+
+Return Index associated with the token related data. 
+
+In cm\+S\+T\+R\+F\+U\+NC -\/ This is the index to a string table in the main parser.
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em exception\+\_\+type} & if \#m\+\_\+i\+Idx$<$0 or \#m\+\_\+i\+Type!=cm\+S\+T\+R\+I\+NG \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+The index the result will take in the Bytecode calculatin array (\#m\+\_\+i\+Idx). 
+\end{DoxyReturn}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Pri@{Get\+Pri}}
+\index{Get\+Pri@{Get\+Pri}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Pri() const }{GetPri() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ int {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Pri (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a5b032bb1b4b3f4bfc4908e96a33733bc}{}\label{classmu_1_1_parser_token_a5b032bb1b4b3f4bfc4908e96a33733bc}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Type() const }{GetType() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf E\+Type\+Code} {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a8b53010c2405da2908ad3b889798f92a}{}\label{classmu_1_1_parser_token_a8b53010c2405da2908ad3b889798f92a}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Val@{Get\+Val}}
+\index{Get\+Val@{Get\+Val}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Val() const }{GetVal() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ T\+Base {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a92bdbe69e20244358ff7b8348cee4162}{}\label{classmu_1_1_parser_token_a92bdbe69e20244358ff7b8348cee4162}
+Get value of the token.
+
+Only applicable to variable and value tokens. 
+\begin{DoxyExceptions}{Excepciones}
+{\em exception\+\_\+type} & if token is no value/variable token. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Get\+Var@{Get\+Var}}
+\index{Get\+Var@{Get\+Var}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Get\+Var() const }{GetVar() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ T\+Base$\ast$ {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Get\+Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_ae3125d176cc8c5238ec2d650386f449c}{}\label{classmu_1_1_parser_token_ae3125d176cc8c5238ec2d650386f449c}
+
+
+Get address of a variable token. 
+
+Valid only if m\+\_\+i\+Type==Cmd\+Var. 
+\begin{DoxyExceptions}{Excepciones}
+{\em exception\+\_\+type} & if token is no variable token. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!operator=@{operator=}}
+\index{operator=@{operator=}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{operator=(const Parser\+Token \&a\+\_\+\+Tok)}{operator=(const ParserToken &a_Tok)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Token}$<$ T\+Base, T\+String $>$ \&}]{a\+\_\+\+Tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_af9abe46bd0a5f2b4cbcc59beba68ca0e}{}\label{classmu_1_1_parser_token_af9abe46bd0a5f2b4cbcc59beba68ca0e}
+
+
+Assignement operator. 
+
+Copy token state from another token and return this. Implemented by calling Assign(...). 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set@{Set}}
+\index{Set@{Set}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set(\+E\+Cmd\+Code a\+\_\+i\+Type, const T\+String \&a\+\_\+str\+Tok=\+T\+String())}{Set(ECmdCode a_iType, const TString &a_strTok=TString())}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Cmd\+Code}}]{a\+\_\+i\+Type, }
+\item[{const T\+String \&}]{a\+\_\+str\+Tok = {\ttfamily TString()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_ac4588ba38ccc660686956f7998ba74dc}{}\label{classmu_1_1_parser_token_ac4588ba38ccc660686956f7998ba74dc}
+
+
+Assign a token type. 
+
+Token may not be of type value, variable or function. Those have seperate set functions.
+
+\begin{DoxyPrecond}{Precondición}
+\mbox{[}assert\mbox{]} a\+\_\+i\+Type!=cm\+V\+AR 
+
+\mbox{[}assert\mbox{]} a\+\_\+i\+Type!=cm\+V\+AL 
+
+\mbox{[}assert\mbox{]} a\+\_\+i\+Type!=cm\+F\+U\+NC 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+m\+\_\+f\+Val = 0 
+
+m\+\_\+p\+Tok = 0 
+\end{DoxyPostcond}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set@{Set}}
+\index{Set@{Set}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set(const Parser\+Callback \&a\+\_\+p\+Callback, const T\+String \&a\+\_\+s\+Tok)}{Set(const ParserCallback &a_pCallback, const TString &a_sTok)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Callback} \&}]{a\+\_\+p\+Callback, }
+\item[{const T\+String \&}]{a\+\_\+s\+Tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_aa7c0c0e307b2064f1ab12cbf922c7e40}{}\label{classmu_1_1_parser_token_aa7c0c0e307b2064f1ab12cbf922c7e40}
+
+
+Set Callback type. 
+
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set\+Idx@{Set\+Idx}}
+\index{Set\+Idx@{Set\+Idx}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set\+Idx(int a\+\_\+i\+Idx)}{SetIdx(int a_iIdx)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ void {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set\+Idx (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+i\+Idx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_ac2e70ba039bc033722ea946342649881}{}\label{classmu_1_1_parser_token_ac2e70ba039bc033722ea946342649881}
+
+
+Set an index associated with the token related data. 
+
+In cm\+S\+T\+R\+F\+U\+NC -\/ This is the index to a string table in the main parser. 
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+i\+Idx} & The index the string function result will take in the bytecode parser. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em exception\+\_\+type} & if \#a\+\_\+i\+Idx$<$0 or \#m\+\_\+i\+Type!=cm\+S\+T\+R\+I\+NG \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set\+String(const T\+String \&a\+\_\+str\+Tok, std\+::size\+\_\+t a\+\_\+i\+Size)}{SetString(const TString &a_strTok, std::size_t a_iSize)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set\+String (
+\begin{DoxyParamCaption}
+\item[{const T\+String \&}]{a\+\_\+str\+Tok, }
+\item[{std\+::size\+\_\+t}]{a\+\_\+i\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_ada40ff914f9c59f6891f6809991b3542}{}\label{classmu_1_1_parser_token_ada40ff914f9c59f6891f6809991b3542}
+
+
+Make this token a variable token. 
+
+Member variables not necessary for variable tokens will be invalidated. 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set\+Val@{Set\+Val}}
+\index{Set\+Val@{Set\+Val}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set\+Val(\+T\+Base a\+\_\+f\+Val, const T\+String \&a\+\_\+str\+Tok=\+T\+String())}{SetVal(TBase a_fVal, const TString &a_strTok=TString())}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set\+Val (
+\begin{DoxyParamCaption}
+\item[{T\+Base}]{a\+\_\+f\+Val, }
+\item[{const T\+String \&}]{a\+\_\+str\+Tok = {\ttfamily TString()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a68d4974b234ee9f109ef466cd04e1501}{}\label{classmu_1_1_parser_token_a68d4974b234ee9f109ef466cd04e1501}
+
+
+Make this token a value token. 
+
+Member variables not necessary for value tokens will be invalidated. 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}!Set\+Var@{Set\+Var}}
+\index{Set\+Var@{Set\+Var}!mu\+::\+Parser\+Token@{mu\+::\+Parser\+Token}}
+\subsubsection[{\texorpdfstring{Set\+Var(\+T\+Base $\ast$a\+\_\+p\+Var, const T\+String \&a\+\_\+str\+Tok)}{SetVar(TBase *a_pVar, const TString &a_strTok)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Base, typename T\+String$>$ {\bf Parser\+Token}\& {\bf mu\+::\+Parser\+Token}$<$ T\+Base, T\+String $>$\+::Set\+Var (
+\begin{DoxyParamCaption}
+\item[{T\+Base $\ast$}]{a\+\_\+p\+Var, }
+\item[{const T\+String \&}]{a\+\_\+str\+Tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmu_1_1_parser_token_a86de84eb76900ca677c3ab93681ec7c5}{}\label{classmu_1_1_parser_token_a86de84eb76900ca677c3ab93681ec7c5}
+
+
+make this token a variable token. 
+
+Member variables not necessary for variable tokens will be invalidated. 
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_token_8h}{mu\+Parser\+Token.\+h}\end{DoxyCompactItemize}

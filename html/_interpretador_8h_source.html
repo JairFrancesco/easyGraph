@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>easyGraph: Fichero Fuente Parser/include/Interpretador.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">easyGraph
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Graficadora 2D y 3D</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_df9c4130e7601915b63fc941466b92f8.html">Parser</a></li><li class="navelem"><a class="el" href="dir_5a15271d01a2b23ddb530d9612e8ebf0.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Interpretador.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_interpretador_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INTERPRETADOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INTERPRETADOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ctype.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="arbol__binario_8h.html">arbol_binario.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_interpretador.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_interpretador.html">Interpretador</a></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_interpretador.html">Interpretador</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_interpretador.html">Interpretador</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> elim_vacio(std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> separar_en_dos(std::vector&lt;string&gt;&amp;, <span class="keywordtype">string</span>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> reverse_string(<span class="keywordtype">string</span>&amp; );</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">bool</span> buscar_ope(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> transformar(<span class="keywordtype">string</span> text);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> transformar(<span class="keywordtype">string</span> text, <a class="code" href="class_nodo.html">Nodo</a>*, <span class="keywordtype">bool</span>);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> string_to_double(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> elim_parent(<span class="keywordtype">string</span>&amp;);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> esta_en(<span class="keywordtype">string</span> text, <span class="keywordtype">string</span> ope);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::string verif_sintaxis(std::string);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> fix_multi(std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;string&gt; string_to_vector(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> fix_multiplicaciones(std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> fix_negativos(std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> fix_operaciones_unarias(std::vector&lt;string&gt;&amp;);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">string</span> get_operador_mayor_prioridad(std::vector&lt;string&gt;);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//--------------metodos de apoyo--------------------------</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> get_operador_prioridad(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">bool</span> es_operador(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> is_number(<span class="keyword">const</span> std::string&amp;);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> isAlpha(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp;);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> es_operador_unario(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">bool</span> es_operador_binario(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">bool</span> es_expresion(<span class="keywordtype">string</span>);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_interpretador.html#a69b4c0a967ebb3300bdd1a0d768be777">   48</a></span>&#160;        map&lt;string,double(*)(double)&gt;<a class="code" href="class_interpretador.html#a69b4c0a967ebb3300bdd1a0d768be777">funciones_unarias</a>;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_interpretador.html#aae54d44f01e4c4b755ae133819b49d78">   49</a></span>&#160;        map&lt;string,double(*)(double,double)&gt;<a class="code" href="class_interpretador.html#aae54d44f01e4c4b755ae133819b49d78">funciones_binarias</a>;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_interpretador.html#a5ba0987e974f7eaba6376e0539466788">   50</a></span>&#160;        map&lt;string,int&gt;<a class="code" href="class_interpretador.html#a5ba0987e974f7eaba6376e0539466788">prioridad_funciones</a>;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_interpretador.html#a95ae1c37ba98e88aeffec2807eb3f332">   51</a></span>&#160;        <a class="code" href="classarbol__binario.html">arbol_binario</a> * <a class="code" href="class_interpretador.html#a95ae1c37ba98e88aeffec2807eb3f332">tree</a>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // INTERPRETADOR_H</span></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_interpretador_html_aae54d44f01e4c4b755ae133819b49d78"><div class="ttname"><a href="class_interpretador.html#aae54d44f01e4c4b755ae133819b49d78">Interpretador::funciones_binarias</a></div><div class="ttdeci">map&lt; string, double(*)(double, double)&gt; funciones_binarias</div><div class="ttdef"><b>Definition:</b> Interpretador.h:49</div></div>
+<div class="ttc" id="class_interpretador_html_a69b4c0a967ebb3300bdd1a0d768be777"><div class="ttname"><a href="class_interpretador.html#a69b4c0a967ebb3300bdd1a0d768be777">Interpretador::funciones_unarias</a></div><div class="ttdeci">map&lt; string, double(*)(double)&gt; funciones_unarias</div><div class="ttdef"><b>Definition:</b> Interpretador.h:48</div></div>
+<div class="ttc" id="class_interpretador_html_a95ae1c37ba98e88aeffec2807eb3f332"><div class="ttname"><a href="class_interpretador.html#a95ae1c37ba98e88aeffec2807eb3f332">Interpretador::tree</a></div><div class="ttdeci">arbol_binario * tree</div><div class="ttdef"><b>Definition:</b> Interpretador.h:51</div></div>
+<div class="ttc" id="class_nodo_html"><div class="ttname"><a href="class_nodo.html">Nodo</a></div><div class="ttdef"><b>Definition:</b> Nodo.h:8</div></div>
+<div class="ttc" id="class_interpretador_html"><div class="ttname"><a href="class_interpretador.html">Interpretador</a></div><div class="ttdef"><b>Definition:</b> Interpretador.h:16</div></div>
+<div class="ttc" id="arbol__binario_8h_html"><div class="ttname"><a href="arbol__binario_8h.html">arbol_binario.h</a></div></div>
+<div class="ttc" id="class_interpretador_html_a5ba0987e974f7eaba6376e0539466788"><div class="ttname"><a href="class_interpretador.html#a5ba0987e974f7eaba6376e0539466788">Interpretador::prioridad_funciones</a></div><div class="ttdeci">map&lt; string, int &gt; prioridad_funciones</div><div class="ttdef"><b>Definition:</b> Interpretador.h:50</div></div>
+<div class="ttc" id="classarbol__binario_html"><div class="ttname"><a href="classarbol__binario.html">arbol_binario</a></div><div class="ttdef"><b>Definition:</b> arbol_binario.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

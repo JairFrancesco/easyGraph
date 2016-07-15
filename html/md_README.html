@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>easyGraph: easyGraph - A Grapher equations</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">easyGraph
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Graficadora 2D y 3D</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">easyGraph - A Grapher equations </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Grapher equations in C++ with Qt library.</p>
+<hr/>
+<h2>Members </h2>
+<ul>
+<li><b>Jair Francesco Huaman Canqui.</b></li>
+<li><b>Luis Antonio Bernal Chahuayo.</b></li>
+<li><b>Aldo Alexis Mendoza villarroel.</b></li>
+</ul>
+<p>Computer Science - Universidad Nacional San Agustín - Arequipa, Peru</p>
+<hr/>
+ <h2>Requisitos</h2>
+<p>Para compilar EasyGraph, necesitarás:</p><ul>
+<li>VTK 7</li>
+<li>CMAKE 3</li>
+<li>QT 5.6</li>
+</ul>
+<h2>Instrucciones instalación requisitos</h2>
+<ol type="1">
+<li><p class="startli">Instalar CMake 3 ``` sudo apt-get install software-properties-common sudo add-apt-repository ppa:george-edison55/cmake-3.x sudo apt-get update ``` When cmake is not yet installed: ``` sudo apt-get install cmake ```</p>
+<p class="startli">When cmake is already installed: ``` sudo apt-get upgrade ``` Fuente: <a href="http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04">AskUbuntu.com</a></p>
+</li>
+<li><p class="startli">Instalar CMake GUI y libxt-dev Por comodidad usaremos CMake GUI: ``` sudo apt-get install cmake-qt-gui ``` libxt-dev ``` sudo apt-get install libxt-dev ```</p>
+<p class="startli">Fuente: <a href="http://askubuntu.com/questions/121797/how-do-i-install-ccmake">AskUbuntu.com</a></p>
+</li>
+<li>Compilar e Instalar VTK<ul>
+<li>Primero debemos descargar VTK 7 desde la <a href="http://www.vtk.org/download/">página oficial</a>.</li>
+<li>Abrimos CMake GUI ``` sudo cmake-gui ``` ???</li>
+<li>Seleccionamos la carpeta donde esta el codigo fuente de VTK, y la carpeta de destino</li>
+<li>Consideramos que tienes instalado QT 5.6</li>
+<li>Click en Configure, entonces especificamos el makefile generator, la configuración por defecto es "Unix Makefiles" en sistemas linux y en Windows deberia ser "MinGW" o "Visual Studio", eso depende de su preferencia, por ultimo click en finish.</li>
+<li>Esperamos un minuto para que cmake haga la primera configuración, para mostrar mas entradas check el "Advanced" checkbutton.</li>
+<li>Search: qt ; y seleccionamos los modulos QT y VTK_Group_QT (Hacerles Check) <div class="image">
+<img src="tutorial/qt_group.png"  alt="alt tag"/>
+</div>
+</li>
+<li>Configure</li>
+<li>Generate</li>
+<li>Vamos a la carpeta donde se generaron los archivos de compilación; comprobaremos que se ha creado un Makefile</li>
+<li>Compilamos (-j4; para compilar en 4 hebras: Depende del numero de procesadores) ``` sudo make -j4 ```</li>
+<li>Instalamos VTK ``` sudo make install ```</li>
+</ul>
+</li>
+</ol>
+<h2>Getting Involved</h2>
+<p>Want to report a bug, request a feature, contribute to easyGraph? Check out our in-depth guide to <a href="CONTRIBUTING.md#contributing-to-easyGraph">Contributing to easyGraph</a>. We need all the help we can get! You can also join our <a href="README.md#community">community</a> to keep up-to-date and meet other developers.</p>
+<h2>Getting Started</h2>
+<p>If you're comfortable getting up and running from a <code>git clone</code>, this method is for you.</p>
+<p>The <a href="https://github.com/JairFrancesco/easyGraph">master</a> branch which contains the latest release.</p>
+<h2>Solución a errores de compilación</h2>
+<ol type="1">
+<li><p class="startli">Error on cmake-gui.</p>
+<p class="startli">CMake Error at /usr/share/cmake-3.2/Modules/FindQt4.cmake:1326 (message): Found unsuitable Qt version "5.2.1" from /usr/bin/qmake, this code requires Qt 4.x Call Stack (most recent call first): GUISupport/Qt/CMakeLists.txt:71 (find_package)</p>
+<p class="startli">Solucion: Entre los siguientes comandos en la terminal ``` sudo apt-get install libqt4-core libqt4 libqt4-gui-dev sudo apt-get install qt4-dev-tools ``` </p><h4>Quickstart:</h4>
+<pre class="fragment">##### Under Construction
+</pre></li>
+</ol>
+<p>If you encounter trouble with the above method, you can try: </p><pre class="fragment">##### Under Construction
+</pre><p>Optionally, you may simply run <code>.sh</code> if you are on a linux or mac based operating system.</p>
+<p><a class="anchor" id="community"></a> </p><h2>Community</h2>
+<p>Keep track of easyGraph development and community activity.</p>
+<ul>
+<li>Follow easyGraph on [Twitter] (), [Facebook] () and [Google+]().</li>
+<li>Read and subscribe to [The Official easyGraph Blog]().</li>
+<li>Join in discussions on the <a href="https://reddit.com/r/easyGraph/">easyGraph Forum</a></li>
+<li>Connect with us on IRC at <code>#easyGraph</code> on freenode (<a href="http://webchat.freenode.net/?channels=easyGraph">web access</a>)</li>
+</ul>
+<h2>Screenshots</h2>
+<p>![easyGraph]() ![Debugging easyGraph]()</p>
+<h2>Versioning</h2>
+<p>For transparency and insight into our release cycle, and for striving to maintain backward compatibility, easyGraph will be maintained according to the <a href="http://semver.org/">Semantic Versioning</a> guidelines as much as possible.</p>
+<p>Releases will be numbered with the following format:</p>
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;build&gt;</code></p>
+<p>Constructed with the following guidelines:</p>
+<ul>
+<li>A new <em>major</em> release indicates a large change where backward compatibility is broken.</li>
+<li>A new <em>minor</em> release indicates a normal change that maintains backward compatibility.</li>
+<li>A new <em>patch</em> release indicates a bugfix or small change which does not affect compatibility.</li>
+<li>A new <em>build</em> release indicates this is a pre-release of the version.</li>
+</ul>
+<h2>License</h2>
+<p><a href="https://github.com/JairFrancesco/easyGraph">easyGraph</a> is released under <a href="https://github.com/JairFrancesco/easyGraph/blob/master/LICENSE">GNU GENERAL PUBLIC LICENSE</a> . Copyright (c) <a href="https://sites.google.com/site/jafrahuamancanqui/">Jair Huaman</a>. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

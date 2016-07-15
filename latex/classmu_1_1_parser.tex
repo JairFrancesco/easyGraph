@@ -1,0 +1,524 @@
+\hypertarget{classmu_1_1_parser}{}\section{Referencia de la Clase mu\+:\+:Parser}
+\label{classmu_1_1_parser}\index{mu\+::\+Parser@{mu\+::\+Parser}}
+
+
+Mathematical expressions parser.  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser.\+h$>$}
+
+Diagrama de herencias de mu\+:\+:Parser\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmu_1_1_parser}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_a76747bbf8c232e488e15f846e1b4ed34}{Parser} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_a3279e2cf701ba8c2f850f5826a147f75}{Init\+Char\+Sets} ()
+\begin{DoxyCompactList}\small\item\em Define the character sets. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_a9da582fd5385acfd97ec99a8790f8c6d}{Init\+Fun} ()
+\begin{DoxyCompactList}\small\item\em Initialize the default functions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_aefd1da7ba62d20d7276b1e70c8cb6a02}{Init\+Const} ()
+\begin{DoxyCompactList}\small\item\em Initialize constants. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_a4ed9bdd0565bd57325bc49c12cf73e06}{Init\+Oprt} ()
+\begin{DoxyCompactList}\small\item\em Initialize operators. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmu_1_1_parser_a8e5afdde87b9f8acabde693441d4798c}{On\+Detect\+Var} (\hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type} $\ast$p\+Expr, int \&n\+Start, int \&n\+End)
+\item 
+\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a46d01c86c2abc8d38674dce036e882a4}{Diff} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$a\+\_\+\+Var, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} a\+\_\+f\+Pos, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} a\+\_\+f\+Epsilon=0) const 
+\begin{DoxyCompactList}\small\item\em Numerically differentiate with regard to a variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_ae27b3c432464fb3a8ca29f5984b71736}{Sin} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a6d34c6c1abb14176ae968b193de0dca0}{Cos} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a71537707d5ed53a40197c845f279cec3}{Tan} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_aa6dccc95755b7934893ff68444806909}{Tan2} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_af8a0febff290dee8ace63011e00f9e87}{A\+Sin} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_ab6e70ade9c1db89dc2777aa988d8a38b}{A\+Cos} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a5f1f4d3d847fce0f07bb0c1dad15dab8}{A\+Tan} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a3d918fadda6d0286960fdb4deb48e8ea}{A\+Tan2} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a9d639b1e388f3ebd4cb72091b1b7c2f7}{Sinh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a704685ab4dc632b7de11818e34604cbf}{Cosh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_af5d01f61fd26b4b0be5f75458d53b638}{Tanh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a9021e2d4ba8e3a9f5b22a2f6f4732aae}{A\+Sinh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a476845b48bec245a7c4defdd6b12e370}{A\+Cosh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a4ce1a58460631732b81598ba3a609a85}{A\+Tanh} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a2b05894f3ecec088da432fce91e8d1e2}{Log2} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_adcc6ff400d5d3db54c9c8f7fa7fab662}{Log10} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_af3ddf43c4e0a50661d2e5c7a08f6573e}{Ln} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a3b4233e7a37d9b9da0de02e5efb026f9}{Exp} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_ad266fff14e9ef1c885b9d58707f63de3}{Abs} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a1c3274e9af9301c6cd2fcd2899cf8d0f}{Sqrt} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a51134e691339d1f0eba2ef1401af9627}{Rint} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a5e40197030815bec2ed18e2515e2c4b5}{Sign} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_abead8f768bebfaf07b4f7dc240f6b3e8}{Unary\+Minus} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback for the unary minus operator. \end{DoxyCompactList}\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a81a6e9b2085c3ccacb43f26f5c88931c}{Unary\+Plus} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback for the unary minus operator. \end{DoxyCompactList}\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_aee609940958bf761b4df615576e98d0a}{Sum} (const \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback for adding multiple values. \end{DoxyCompactList}\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a77643bd7509ba6e1bc67357b89e90b4e}{Avg} (const \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback for averaging multiple values. \end{DoxyCompactList}\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_a806abd5be29fd98c6cf1e7bf1a88a606}{Min} (const \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback for determining the minimum value out of a vector. \end{DoxyCompactList}\item 
+static \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{classmu_1_1_parser_ac396955a9fb9c60ef9c6d8276504f03a}{Max} (const \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback for determining the maximum value out of a vector. \end{DoxyCompactList}\item 
+static int \hyperlink{classmu_1_1_parser_aabcffb1cb1555f250e122ddaad2e458f}{Is\+Val} (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_a70627044ecb2b675fbd242e8bf1747b3}{a\+\_\+sz\+Expr}, int $\ast$a\+\_\+i\+Pos, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{a\+\_\+f\+Val})
+\begin{DoxyCompactList}\small\item\em Default value recognition callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Otros miembros heredados}
+
+
+\subsection{Descripción detallada}
+Mathematical expressions parser. 
+
+Standard implementation of the mathematical expressions parser. Can be used as a reference implementation for subclassing the parser.
+
+
+\footnotesize  (C) 2011 Ingo Berg~\newline
+ muparser(at)beltoforion.\+de 
+\normalsize  
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Parser()}{Parser()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+::\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_a76747bbf8c232e488e15f846e1b4ed34}{}\label{classmu_1_1_parser_a76747bbf8c232e488e15f846e1b4ed34}
+
+
+Constructor. 
+
+Call \hyperlink{classmu_1_1_parser_base}{Parser\+Base} class constructor and trigger Function, Operator and Constant initialization. 
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Abs@{Abs}}
+\index{Abs@{Abs}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Abs(value\+\_\+type)}{Abs(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Abs (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_ad266fff14e9ef1c885b9d58707f63de3}{}\label{classmu_1_1_parser_ad266fff14e9ef1c885b9d58707f63de3}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Cos@{A\+Cos}}
+\index{A\+Cos@{A\+Cos}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Cos(value\+\_\+type)}{ACos(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Cos (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_ab6e70ade9c1db89dc2777aa988d8a38b}{}\label{classmu_1_1_parser_ab6e70ade9c1db89dc2777aa988d8a38b}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Cosh@{A\+Cosh}}
+\index{A\+Cosh@{A\+Cosh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Cosh(value\+\_\+type)}{ACosh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Cosh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a476845b48bec245a7c4defdd6b12e370}{}\label{classmu_1_1_parser_a476845b48bec245a7c4defdd6b12e370}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Sin@{A\+Sin}}
+\index{A\+Sin@{A\+Sin}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Sin(value\+\_\+type)}{ASin(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Sin (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_af8a0febff290dee8ace63011e00f9e87}{}\label{classmu_1_1_parser_af8a0febff290dee8ace63011e00f9e87}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Sinh@{A\+Sinh}}
+\index{A\+Sinh@{A\+Sinh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Sinh(value\+\_\+type)}{ASinh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Sinh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a9021e2d4ba8e3a9f5b22a2f6f4732aae}{}\label{classmu_1_1_parser_a9021e2d4ba8e3a9f5b22a2f6f4732aae}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Tan@{A\+Tan}}
+\index{A\+Tan@{A\+Tan}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Tan(value\+\_\+type)}{ATan(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Tan (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a5f1f4d3d847fce0f07bb0c1dad15dab8}{}\label{classmu_1_1_parser_a5f1f4d3d847fce0f07bb0c1dad15dab8}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Tan2@{A\+Tan2}}
+\index{A\+Tan2@{A\+Tan2}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Tan2(value\+\_\+type, value\+\_\+type)}{ATan2(value_type, value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Tan2 (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v1, }
+\item[{{\bf value\+\_\+type}}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a3d918fadda6d0286960fdb4deb48e8ea}{}\label{classmu_1_1_parser_a3d918fadda6d0286960fdb4deb48e8ea}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!A\+Tanh@{A\+Tanh}}
+\index{A\+Tanh@{A\+Tanh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{A\+Tanh(value\+\_\+type)}{ATanh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+A\+Tanh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a4ce1a58460631732b81598ba3a609a85}{}\label{classmu_1_1_parser_a4ce1a58460631732b81598ba3a609a85}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Avg@{Avg}}
+\index{Avg@{Avg}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Avg(const value\+\_\+type $\ast$, int)}{Avg(const value_type *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Avg (
+\begin{DoxyParamCaption}
+\item[{const {\bf value\+\_\+type} $\ast$}]{a\+\_\+af\+Arg, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a77643bd7509ba6e1bc67357b89e90b4e}{}\label{classmu_1_1_parser_a77643bd7509ba6e1bc67357b89e90b4e}
+
+
+Callback for averaging multiple values. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+af\+Arg} & Vector with the function arguments \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Argc} & The size of a\+\_\+af\+Arg \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Cos@{Cos}}
+\index{Cos@{Cos}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Cos(value\+\_\+type)}{Cos(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Cos (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a6d34c6c1abb14176ae968b193de0dca0}{}\label{classmu_1_1_parser_a6d34c6c1abb14176ae968b193de0dca0}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Cosh@{Cosh}}
+\index{Cosh@{Cosh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Cosh(value\+\_\+type)}{Cosh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Cosh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a704685ab4dc632b7de11818e34604cbf}{}\label{classmu_1_1_parser_a704685ab4dc632b7de11818e34604cbf}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Diff@{Diff}}
+\index{Diff@{Diff}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Diff(value\+\_\+type $\ast$a\+\_\+\+Var, value\+\_\+type a\+\_\+f\+Pos, value\+\_\+type a\+\_\+f\+Epsilon=0) const }{Diff(value_type *a_Var, value_type a_fPos, value_type a_fEpsilon=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Diff (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type} $\ast$}]{a\+\_\+\+Var, }
+\item[{{\bf value\+\_\+type}}]{a\+\_\+f\+Pos, }
+\item[{{\bf value\+\_\+type}}]{a\+\_\+f\+Epsilon = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_a46d01c86c2abc8d38674dce036e882a4}{}\label{classmu_1_1_parser_a46d01c86c2abc8d38674dce036e882a4}
+
+
+Numerically differentiate with regard to a variable. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+\+Var} & Pointer to the differentiation variable. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+f\+Pos} & Position at which the differentiation should take place. \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+f\+Epsilon} & Epsilon used for the numerical differentiation.\\
+\hline
+\end{DoxyParams}
+Numerical differentiation uses a 5 point operator yielding a 4th order formula. The default value for epsilon is 0.\+00074 which is numeric\+\_\+limits$<$double$>$\+::epsilon() $^\wedge$ (1/5) as suggested in the muparser forum\+:
+
+\href{http://sourceforge.net/forum/forum.php?thread_id=1994611&forum_id=462843}{\tt http\+://sourceforge.\+net/forum/forum.\+php?thread\+\_\+id=1994611\&forum\+\_\+id=462843} \index{mu\+::\+Parser@{mu\+::\+Parser}!Exp@{Exp}}
+\index{Exp@{Exp}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Exp(value\+\_\+type)}{Exp(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Exp (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a3b4233e7a37d9b9da0de02e5efb026f9}{}\label{classmu_1_1_parser_a3b4233e7a37d9b9da0de02e5efb026f9}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Init\+Char\+Sets@{Init\+Char\+Sets}}
+\index{Init\+Char\+Sets@{Init\+Char\+Sets}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Init\+Char\+Sets()}{InitCharSets()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+::\+Init\+Char\+Sets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_a3279e2cf701ba8c2f850f5826a147f75}{}\label{classmu_1_1_parser_a3279e2cf701ba8c2f850f5826a147f75}
+
+
+Define the character sets. 
+
+\begin{DoxySeeAlso}{Ver también}
+\hyperlink{classmu_1_1_parser_base_adf259477bbaa85e8dd7cb69ef4aa0a7a}{Define\+Name\+Chars}, \hyperlink{classmu_1_1_parser_base_aafd21c418397d5412a75e5b2c1d6db58}{Define\+Oprt\+Chars}, \hyperlink{classmu_1_1_parser_base_ac76d0ceb4ee58babc4f1d0a9ca1e4240}{Define\+Infix\+Oprt\+Chars}
+\end{DoxySeeAlso}
+This function is used for initializing the default character sets that define the characters to be useable in function and variable names and operators. 
+
+Implementa \hyperlink{classmu_1_1_parser_base_a3f5c53ef3cba6ab939261677dc2d9709}{mu\+::\+Parser\+Base}.
+
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Init\+Const@{Init\+Const}}
+\index{Init\+Const@{Init\+Const}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Init\+Const()}{InitConst()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+::\+Init\+Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_aefd1da7ba62d20d7276b1e70c8cb6a02}{}\label{classmu_1_1_parser_aefd1da7ba62d20d7276b1e70c8cb6a02}
+
+
+Initialize constants. 
+
+By default the parser recognizes two constants. Pi (\char`\"{}pi\char`\"{}) and the Eulerian number (\char`\"{}\+\_\+e\char`\"{}). 
+
+Implementa \hyperlink{classmu_1_1_parser_base_aad904fb3df8f28659f36d7ce7db4a28c}{mu\+::\+Parser\+Base}.
+
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Init\+Fun@{Init\+Fun}}
+\index{Init\+Fun@{Init\+Fun}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Init\+Fun()}{InitFun()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+::\+Init\+Fun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_a9da582fd5385acfd97ec99a8790f8c6d}{}\label{classmu_1_1_parser_a9da582fd5385acfd97ec99a8790f8c6d}
+
+
+Initialize the default functions. 
+
+
+
+Implementa \hyperlink{classmu_1_1_parser_base_a1f94305e7b7e9abff6d41242dcf188ed}{mu\+::\+Parser\+Base}.
+
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Init\+Oprt@{Init\+Oprt}}
+\index{Init\+Oprt@{Init\+Oprt}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Init\+Oprt()}{InitOprt()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+::\+Init\+Oprt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_a4ed9bdd0565bd57325bc49c12cf73e06}{}\label{classmu_1_1_parser_a4ed9bdd0565bd57325bc49c12cf73e06}
+
+
+Initialize operators. 
+
+By default only the unary minus operator is added. 
+
+Implementa \hyperlink{classmu_1_1_parser_base_a4df16813c9002ff08c96929ba8f0d32b}{mu\+::\+Parser\+Base}.
+
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Is\+Val@{Is\+Val}}
+\index{Is\+Val@{Is\+Val}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Is\+Val(const char\+\_\+type $\ast$a\+\_\+sz\+Expr, int $\ast$a\+\_\+i\+Pos, value\+\_\+type $\ast$a\+\_\+f\+Val)}{IsVal(const char_type *a_szExpr, int *a_iPos, value_type *a_fVal)}}]{\setlength{\rightskip}{0pt plus 5cm}int mu\+::\+Parser\+::\+Is\+Val (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\+\_\+type} $\ast$}]{a\+\_\+sz\+Expr, }
+\item[{int $\ast$}]{a\+\_\+i\+Pos, }
+\item[{{\bf value\+\_\+type} $\ast$}]{a\+\_\+f\+Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_aabcffb1cb1555f250e122ddaad2e458f}{}\label{classmu_1_1_parser_aabcffb1cb1555f250e122ddaad2e458f}
+
+
+Default value recognition callback. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+sz\+Expr} & Pointer to the expression \\
+\hline
+\mbox{\tt in,out}  & {\em a\+\_\+i\+Pos} & Pointer to an index storing the current position within the expression \\
+\hline
+\mbox{\tt out}  & {\em a\+\_\+f\+Val} & Pointer where the value should be stored in case one is found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+1 if a value was found 0 otherwise. 
+\end{DoxyReturn}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Ln@{Ln}}
+\index{Ln@{Ln}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Ln(value\+\_\+type)}{Ln(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Ln (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_af3ddf43c4e0a50661d2e5c7a08f6573e}{}\label{classmu_1_1_parser_af3ddf43c4e0a50661d2e5c7a08f6573e}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Log10@{Log10}}
+\index{Log10@{Log10}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Log10(value\+\_\+type)}{Log10(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Log10 (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_adcc6ff400d5d3db54c9c8f7fa7fab662}{}\label{classmu_1_1_parser_adcc6ff400d5d3db54c9c8f7fa7fab662}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Log2@{Log2}}
+\index{Log2@{Log2}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Log2(value\+\_\+type)}{Log2(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Log2 (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a2b05894f3ecec088da432fce91e8d1e2}{}\label{classmu_1_1_parser_a2b05894f3ecec088da432fce91e8d1e2}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Max@{Max}}
+\index{Max@{Max}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Max(const value\+\_\+type $\ast$, int)}{Max(const value_type *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Max (
+\begin{DoxyParamCaption}
+\item[{const {\bf value\+\_\+type} $\ast$}]{a\+\_\+af\+Arg, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_ac396955a9fb9c60ef9c6d8276504f03a}{}\label{classmu_1_1_parser_ac396955a9fb9c60ef9c6d8276504f03a}
+
+
+Callback for determining the maximum value out of a vector. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+af\+Arg} & Vector with the function arguments \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Argc} & The size of a\+\_\+af\+Arg \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Min@{Min}}
+\index{Min@{Min}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Min(const value\+\_\+type $\ast$, int)}{Min(const value_type *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Min (
+\begin{DoxyParamCaption}
+\item[{const {\bf value\+\_\+type} $\ast$}]{a\+\_\+af\+Arg, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a806abd5be29fd98c6cf1e7bf1a88a606}{}\label{classmu_1_1_parser_a806abd5be29fd98c6cf1e7bf1a88a606}
+
+
+Callback for determining the minimum value out of a vector. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+af\+Arg} & Vector with the function arguments \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Argc} & The size of a\+\_\+af\+Arg \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!On\+Detect\+Var@{On\+Detect\+Var}}
+\index{On\+Detect\+Var@{On\+Detect\+Var}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{On\+Detect\+Var(string\+\_\+type $\ast$p\+Expr, int \&n\+Start, int \&n\+End)}{OnDetectVar(string_type *pExpr, int &nStart, int &nEnd)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+::\+On\+Detect\+Var (
+\begin{DoxyParamCaption}
+\item[{{\bf string\+\_\+type} $\ast$}]{p\+Expr, }
+\item[{int \&}]{n\+Start, }
+\item[{int \&}]{n\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmu_1_1_parser_a8e5afdde87b9f8acabde693441d4798c}{}\label{classmu_1_1_parser_a8e5afdde87b9f8acabde693441d4798c}
+
+
+Reimplementado de \hyperlink{classmu_1_1_parser_base_aa8ec96622bf6777c1f20aecb16a84528}{mu\+::\+Parser\+Base}.
+
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Rint@{Rint}}
+\index{Rint@{Rint}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Rint(value\+\_\+type)}{Rint(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Rint (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a51134e691339d1f0eba2ef1401af9627}{}\label{classmu_1_1_parser_a51134e691339d1f0eba2ef1401af9627}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Sign@{Sign}}
+\index{Sign@{Sign}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Sign(value\+\_\+type)}{Sign(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Sign (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a5e40197030815bec2ed18e2515e2c4b5}{}\label{classmu_1_1_parser_a5e40197030815bec2ed18e2515e2c4b5}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Sin@{Sin}}
+\index{Sin@{Sin}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Sin(value\+\_\+type)}{Sin(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Sin (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_ae27b3c432464fb3a8ca29f5984b71736}{}\label{classmu_1_1_parser_ae27b3c432464fb3a8ca29f5984b71736}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Sinh@{Sinh}}
+\index{Sinh@{Sinh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Sinh(value\+\_\+type)}{Sinh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Sinh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a9d639b1e388f3ebd4cb72091b1b7c2f7}{}\label{classmu_1_1_parser_a9d639b1e388f3ebd4cb72091b1b7c2f7}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Sqrt(value\+\_\+type)}{Sqrt(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Sqrt (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a1c3274e9af9301c6cd2fcd2899cf8d0f}{}\label{classmu_1_1_parser_a1c3274e9af9301c6cd2fcd2899cf8d0f}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Sum@{Sum}}
+\index{Sum@{Sum}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Sum(const value\+\_\+type $\ast$, int)}{Sum(const value_type *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Sum (
+\begin{DoxyParamCaption}
+\item[{const {\bf value\+\_\+type} $\ast$}]{a\+\_\+af\+Arg, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_aee609940958bf761b4df615576e98d0a}{}\label{classmu_1_1_parser_aee609940958bf761b4df615576e98d0a}
+
+
+Callback for adding multiple values. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em a\+\_\+af\+Arg} & Vector with the function arguments \\
+\hline
+\mbox{\tt in}  & {\em a\+\_\+i\+Argc} & The size of a\+\_\+af\+Arg \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Tan@{Tan}}
+\index{Tan@{Tan}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Tan(value\+\_\+type)}{Tan(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Tan (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a71537707d5ed53a40197c845f279cec3}{}\label{classmu_1_1_parser_a71537707d5ed53a40197c845f279cec3}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Tan2@{Tan2}}
+\index{Tan2@{Tan2}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Tan2(value\+\_\+type, value\+\_\+type)}{Tan2(value_type, value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf value\+\_\+type} mu\+::\+Parser\+::\+Tan2 (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{, }
+\item[{{\bf value\+\_\+type}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_aa6dccc95755b7934893ff68444806909}{}\label{classmu_1_1_parser_aa6dccc95755b7934893ff68444806909}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Tanh@{Tanh}}
+\index{Tanh@{Tanh}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Tanh(value\+\_\+type)}{Tanh(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Tanh (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_af5d01f61fd26b4b0be5f75458d53b638}{}\label{classmu_1_1_parser_af5d01f61fd26b4b0be5f75458d53b638}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Unary\+Minus@{Unary\+Minus}}
+\index{Unary\+Minus@{Unary\+Minus}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Unary\+Minus(value\+\_\+type)}{UnaryMinus(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Unary\+Minus (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_abead8f768bebfaf07b4f7dc240f6b3e8}{}\label{classmu_1_1_parser_abead8f768bebfaf07b4f7dc240f6b3e8}
+
+
+Callback for the unary minus operator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & The value to negate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+-\/v 
+\end{DoxyReturn}
+\index{mu\+::\+Parser@{mu\+::\+Parser}!Unary\+Plus@{Unary\+Plus}}
+\index{Unary\+Plus@{Unary\+Plus}!mu\+::\+Parser@{mu\+::\+Parser}}
+\subsubsection[{\texorpdfstring{Unary\+Plus(value\+\_\+type)}{UnaryPlus(value_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\+\_\+type} mu\+::\+Parser\+::\+Unary\+Plus (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classmu_1_1_parser_a81a6e9b2085c3ccacb43f26f5c88931c}{}\label{classmu_1_1_parser_a81a6e9b2085c3ccacb43f26f5c88931c}
+
+
+Callback for the unary minus operator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & The value to negate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+-\/v 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_8h}{mu\+Parser.\+h}\item 
+Parser/\+Test/src/\hyperlink{mu_parser_8cpp}{mu\+Parser.\+cpp}\end{DoxyCompactItemize}

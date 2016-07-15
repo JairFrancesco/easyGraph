@@ -1,0 +1,87 @@
+\hypertarget{mu_parser_test_8cpp}{}\section{Referencia del Archivo Parser/\+Test/src/mu\+Parser\+Test.cpp}
+\label{mu_parser_test_8cpp}\index{Parser/\+Test/src/mu\+Parser\+Test.\+cpp@{Parser/\+Test/src/mu\+Parser\+Test.\+cpp}}
+
+
+This file contains the implementation of parser test cases.  
+
+
+{\ttfamily \#include \char`\"{}mu\+Parser\+Test.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacemu}{mu}
+\begin{DoxyCompactList}\small\item\em Namespace for mathematical applications. \end{DoxyCompactList}\item 
+ \hyperlink{namespacemu_1_1_test}{mu\+::\+Test}
+\begin{DoxyCompactList}\small\item\em Namespace for test cases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mu_parser_test_8cpp_a63af9517c2e94ffd215fea964afb162c}{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI}~3.\+141592653589793238462643
+\item 
+\#define \hyperlink{mu_parser_test_8cpp_a4ab603294085c34e8c659fa4e84d7e8c}{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E}~2.\+718281828459045235360287
+\item 
+\#define \hyperlink{mu_parser_test_8cpp_a95d5533a83afb20e4994d936f88ca43c}{E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK}(E\+X\+PR,  R1,  R2,  R3,  R4,  P\+A\+SS)
+\item 
+\#define \hyperlink{mu_parser_test_8cpp_ae19b1bb38c280d8cd89fd8db1098ad87}{P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK}(D\+O\+M\+A\+IN,  F\+A\+IL,  E\+X\+PR,  A\+RG)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+This file contains the implementation of parser test cases. 
+
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\index{mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}!E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK@{E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK}}
+\index{E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK@{E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK}!mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}}
+\subsubsection[{\texorpdfstring{E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK}{EQN_TEST_BULK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+Q\+N\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+LK(
+\begin{DoxyParamCaption}
+\item[{}]{E\+X\+PR, }
+\item[{}]{R1, }
+\item[{}]{R2, }
+\item[{}]{R3, }
+\item[{}]{R4, }
+\item[{}]{P\+A\+SS}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_test_8cpp_a95d5533a83afb20e4994d936f88ca43c}{}\label{mu_parser_test_8cpp_a95d5533a83afb20e4994d936f88ca43c}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+          double res[] = \{ R1, R2, R3, R4 \}; \(\backslash\)
+          iStat += EqnTestBulk(\hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\_T}(EXPR), res, (PASS)); \(\backslash\)
+        \}
+\end{DoxyCode}
+\index{mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}!P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E@{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E}}
+\index{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E@{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E}!mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E}{PARSER_CONST_E}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+E~2.\+718281828459045235360287}\hypertarget{mu_parser_test_8cpp_a4ab603294085c34e8c659fa4e84d7e8c}{}\label{mu_parser_test_8cpp_a4ab603294085c34e8c659fa4e84d7e8c}
+\index{mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}!P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI@{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI}}
+\index{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI@{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI}!mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI}{PARSER_CONST_PI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+R\+S\+E\+R\+\_\+\+C\+O\+N\+S\+T\+\_\+\+PI~3.\+141592653589793238462643}\hypertarget{mu_parser_test_8cpp_a63af9517c2e94ffd215fea964afb162c}{}\label{mu_parser_test_8cpp_a63af9517c2e94ffd215fea964afb162c}
+\index{mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}!P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK@{P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK}}
+\index{P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK@{P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK}!mu\+Parser\+Test.\+cpp@{mu\+Parser\+Test.\+cpp}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK}{PARSER_THROWCHECK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+R\+S\+E\+R\+\_\+\+T\+H\+R\+O\+W\+C\+H\+E\+CK(
+\begin{DoxyParamCaption}
+\item[{}]{D\+O\+M\+A\+IN, }
+\item[{}]{F\+A\+IL, }
+\item[{}]{E\+X\+PR, }
+\item[{}]{A\+RG}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_test_8cpp_ae19b1bb38c280d8cd89fd8db1098ad87}{}\label{mu_parser_test_8cpp_ae19b1bb38c280d8cd89fd8db1098ad87}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+iErr = 0;                                      \(\backslash\)
+      ParserTester::c\_iCount++;                      \(\backslash\)
+      try                                            \(\backslash\)
+      \{                                              \(\backslash\)
+        p.Define##DOMAIN(EXPR, ARG);                 \(\backslash\)
+      \}                                              \(\backslash\)
+      catch(Parser::exception\_type&)                 \(\backslash\)
+      \{                                              \(\backslash\)
+        iErr = (FAIL==\textcolor{keyword}{false}) ? 0 : 1;                \(\backslash\)
+      \}                                              \(\backslash\)
+      iStat += iErr;
+\end{DoxyCode}

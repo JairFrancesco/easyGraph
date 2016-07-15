@@ -1,0 +1,248 @@
+\hypertarget{classinterprete}{}\section{Referencia de la Clase interprete}
+\label{classinterprete}\index{interprete@{interprete}}
+
+
+{\ttfamily \#include $<$interprete.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinterprete_ad2550863832396241b4204a2e241b103}{interprete} ()
+\item 
+\hyperlink{classinterprete_abbbd7bd94d2767f7060ed549639ce8bc}{interprete} (string)
+\item 
+void \hyperlink{classinterprete_ab765b1c2d06041dce0f7504783ce5cf5}{set\+\_\+ecuacion} (string \hyperlink{classinterprete_ab268b0d71f72cd82f186376c17444543}{ecuacion})
+\begin{DoxyCompactList}\small\item\em set\+\_\+ecuacion Establece la ecuación que usara el interpretador. \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_a7e769b650b97490605a3773d0d26f2c5}{crear\+\_\+arbol} ()
+\begin{DoxyCompactList}\small\item\em crear\+\_\+arbol Crea el arbol de expresiones \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_ab88c3854e225bd308c2f00810072aba7}{set\+\_\+diferencial} (double dx)
+\begin{DoxyCompactList}\small\item\em set\+\_\+diferencial Establece el diferencial \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_af31ffc60b4d5d31f04eb846a4caa6697}{set\+\_\+limite\+\_\+izq\+\_\+var1} (double lim\+Iz\+Var1)
+\begin{DoxyCompactList}\small\item\em set\+\_\+limite\+\_\+izq\+\_\+var1 establece el limite de x por la izquierda \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_a3bb4261f5515b6c65910c2c674965019}{set\+\_\+limite\+\_\+der\+\_\+var1} (double lim\+Der\+Var1)
+\begin{DoxyCompactList}\small\item\em establece el limite de x por la derecha \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_ac32fc5f28fa505c5dcd90984cbd89a9f}{set\+\_\+limite\+\_\+izq\+\_\+var2} (double lim\+Iz\+Var2)
+\begin{DoxyCompactList}\small\item\em establece el limite de y por la izquierda \end{DoxyCompactList}\item 
+void \hyperlink{classinterprete_a0e0a9920dd96b8fdab67bf373978bec8}{set\+\_\+limite\+\_\+der\+\_\+var2} (double lim\+Der\+Var2)
+\begin{DoxyCompactList}\small\item\em establece el limite de y por la derecha \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{classinterprete_a7192cffb926a47a22526d0ba3a6d661c}{get\+\_\+coordenadas} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las coordenadas. \end{DoxyCompactList}\item 
+string \hyperlink{classinterprete_a41c011e8adcc3f7cf0348b29f273d343}{del\+Unnecessary} (string \&str)
+\item 
+virtual \hyperlink{classinterprete_ad1a7e4167394a6e408742cf7336714f2}{$\sim$interprete} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classinterprete_ab268b0d71f72cd82f186376c17444543}{ecuacion}
+\item 
+int $\ast$ \hyperlink{classinterprete_a1a2c9c848bc7d438ada181325b9bd109}{cont\+\_\+x}
+\item 
+int $\ast$ \hyperlink{classinterprete_a034d92459f0a0466cc717c08faaab481}{cont\+\_\+y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase para Obtener las coordenadas graficas de una ecuación
+
+\begin{DoxyAuthor}{Autor}
+Alexis Mendoza 
+
+Jair Huaman 
+
+Luis Bernal 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{interprete@{interprete}!interprete@{interprete}}
+\index{interprete@{interprete}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{interprete()}{interprete()}}]{\setlength{\rightskip}{0pt plus 5cm}interprete\+::interprete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_ad2550863832396241b4204a2e241b103}{}\label{classinterprete_ad2550863832396241b4204a2e241b103}
+\index{interprete@{interprete}!interprete@{interprete}}
+\index{interprete@{interprete}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{interprete(string)}{interprete(string)}}]{\setlength{\rightskip}{0pt plus 5cm}interprete\+::interprete (
+\begin{DoxyParamCaption}
+\item[{string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_abbbd7bd94d2767f7060ed549639ce8bc}{}\label{classinterprete_abbbd7bd94d2767f7060ed549639ce8bc}
+El Constructor que inicializa con una ecuacion \index{interprete@{interprete}!````~interprete@{$\sim$interprete}}
+\index{````~interprete@{$\sim$interprete}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{$\sim$interprete()}{~interprete()}}]{\setlength{\rightskip}{0pt plus 5cm}interprete\+::$\sim$interprete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classinterprete_ad1a7e4167394a6e408742cf7336714f2}{}\label{classinterprete_ad1a7e4167394a6e408742cf7336714f2}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{interprete@{interprete}!crear\+\_\+arbol@{crear\+\_\+arbol}}
+\index{crear\+\_\+arbol@{crear\+\_\+arbol}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{crear\+\_\+arbol()}{crear_arbol()}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::crear\+\_\+arbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_a7e769b650b97490605a3773d0d26f2c5}{}\label{classinterprete_a7e769b650b97490605a3773d0d26f2c5}
+
+
+crear\+\_\+arbol Crea el arbol de expresiones 
+
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!del\+Unnecessary@{del\+Unnecessary}}
+\index{del\+Unnecessary@{del\+Unnecessary}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{del\+Unnecessary(string \&str)}{delUnnecessary(string &str)}}]{\setlength{\rightskip}{0pt plus 5cm}string interprete\+::del\+Unnecessary (
+\begin{DoxyParamCaption}
+\item[{string \&}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_a41c011e8adcc3f7cf0348b29f273d343}{}\label{classinterprete_a41c011e8adcc3f7cf0348b29f273d343}
+\index{interprete@{interprete}!get\+\_\+coordenadas@{get\+\_\+coordenadas}}
+\index{get\+\_\+coordenadas@{get\+\_\+coordenadas}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{get\+\_\+coordenadas()}{get_coordenadas()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ double $>$ $>$ interprete\+::get\+\_\+coordenadas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_a7192cffb926a47a22526d0ba3a6d661c}{}\label{classinterprete_a7192cffb926a47a22526d0ba3a6d661c}
+
+
+Obtiene todas las coordenadas. 
+
+\begin{DoxyReturn}{Devuelve}
+Un Vector bidimensional de tipo Double con todas las coordenadas 
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+diferencial@{set\+\_\+diferencial}}
+\index{set\+\_\+diferencial@{set\+\_\+diferencial}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+diferencial(double dx)}{set_diferencial(double dx)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+diferencial (
+\begin{DoxyParamCaption}
+\item[{double}]{dx}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_ab88c3854e225bd308c2f00810072aba7}{}\label{classinterprete_ab88c3854e225bd308c2f00810072aba7}
+
+
+set\+\_\+diferencial Establece el diferencial 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dx} & Indica el diferencial que usara el interpretador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+ecuacion@{set\+\_\+ecuacion}}
+\index{set\+\_\+ecuacion@{set\+\_\+ecuacion}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+ecuacion(string ecuacion)}{set_ecuacion(string ecuacion)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+ecuacion (
+\begin{DoxyParamCaption}
+\item[{string}]{ecuacion}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_ab765b1c2d06041dce0f7504783ce5cf5}{}\label{classinterprete_ab765b1c2d06041dce0f7504783ce5cf5}
+
+
+set\+\_\+ecuacion Establece la ecuación que usara el interpretador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ecuacion} & Cadena para establecer el valor de la ecuacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+limite\+\_\+der\+\_\+var1@{set\+\_\+limite\+\_\+der\+\_\+var1}}
+\index{set\+\_\+limite\+\_\+der\+\_\+var1@{set\+\_\+limite\+\_\+der\+\_\+var1}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+limite\+\_\+der\+\_\+var1(double lim\+Der\+Var1)}{set_limite_der_var1(double limDerVar1)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+limite\+\_\+der\+\_\+var1 (
+\begin{DoxyParamCaption}
+\item[{double}]{lim\+Der\+Var1}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_a3bb4261f5515b6c65910c2c674965019}{}\label{classinterprete_a3bb4261f5515b6c65910c2c674965019}
+
+
+establece el limite de x por la derecha 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lim\+Der\+Var1} & Indica el limite por la derecha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+limite\+\_\+der\+\_\+var2@{set\+\_\+limite\+\_\+der\+\_\+var2}}
+\index{set\+\_\+limite\+\_\+der\+\_\+var2@{set\+\_\+limite\+\_\+der\+\_\+var2}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+limite\+\_\+der\+\_\+var2(double lim\+Der\+Var2)}{set_limite_der_var2(double limDerVar2)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+limite\+\_\+der\+\_\+var2 (
+\begin{DoxyParamCaption}
+\item[{double}]{lim\+Der\+Var2}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_a0e0a9920dd96b8fdab67bf373978bec8}{}\label{classinterprete_a0e0a9920dd96b8fdab67bf373978bec8}
+
+
+establece el limite de y por la derecha 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lim\+Der\+Var2} & Indica el limite por la derecha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+limite\+\_\+izq\+\_\+var1@{set\+\_\+limite\+\_\+izq\+\_\+var1}}
+\index{set\+\_\+limite\+\_\+izq\+\_\+var1@{set\+\_\+limite\+\_\+izq\+\_\+var1}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+limite\+\_\+izq\+\_\+var1(double lim\+Iz\+Var1)}{set_limite_izq_var1(double limIzVar1)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+limite\+\_\+izq\+\_\+var1 (
+\begin{DoxyParamCaption}
+\item[{double}]{lim\+Iz\+Var1}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_af31ffc60b4d5d31f04eb846a4caa6697}{}\label{classinterprete_af31ffc60b4d5d31f04eb846a4caa6697}
+
+
+set\+\_\+limite\+\_\+izq\+\_\+var1 establece el limite de x por la izquierda 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lim\+Iz\+Var1} & Indica el limite por la izquierda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{interprete@{interprete}!set\+\_\+limite\+\_\+izq\+\_\+var2@{set\+\_\+limite\+\_\+izq\+\_\+var2}}
+\index{set\+\_\+limite\+\_\+izq\+\_\+var2@{set\+\_\+limite\+\_\+izq\+\_\+var2}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{set\+\_\+limite\+\_\+izq\+\_\+var2(double lim\+Iz\+Var2)}{set_limite_izq_var2(double limIzVar2)}}]{\setlength{\rightskip}{0pt plus 5cm}void interprete\+::set\+\_\+limite\+\_\+izq\+\_\+var2 (
+\begin{DoxyParamCaption}
+\item[{double}]{lim\+Iz\+Var2}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterprete_ac32fc5f28fa505c5dcd90984cbd89a9f}{}\label{classinterprete_ac32fc5f28fa505c5dcd90984cbd89a9f}
+
+
+establece el limite de y por la izquierda 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lim\+Iz\+Var2} & Indica el limite por la derecha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{interprete@{interprete}!cont\+\_\+x@{cont\+\_\+x}}
+\index{cont\+\_\+x@{cont\+\_\+x}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{cont\+\_\+x}{cont_x}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ interprete\+::cont\+\_\+x}\hypertarget{classinterprete_a1a2c9c848bc7d438ada181325b9bd109}{}\label{classinterprete_a1a2c9c848bc7d438ada181325b9bd109}
+\index{interprete@{interprete}!cont\+\_\+y@{cont\+\_\+y}}
+\index{cont\+\_\+y@{cont\+\_\+y}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{cont\+\_\+y}{cont_y}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ interprete\+::cont\+\_\+y}\hypertarget{classinterprete_a034d92459f0a0466cc717c08faaab481}{}\label{classinterprete_a034d92459f0a0466cc717c08faaab481}
+\index{interprete@{interprete}!ecuacion@{ecuacion}}
+\index{ecuacion@{ecuacion}!interprete@{interprete}}
+\subsubsection[{\texorpdfstring{ecuacion}{ecuacion}}]{\setlength{\rightskip}{0pt plus 5cm}string interprete\+::ecuacion}\hypertarget{classinterprete_ab268b0d71f72cd82f186376c17444543}{}\label{classinterprete_ab268b0d71f72cd82f186376c17444543}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/include/\hyperlink{interprete_8h}{interprete.\+h}\item 
+Parser/src/\hyperlink{interprete_8cpp}{interprete.\+cpp}\end{DoxyCompactItemize}

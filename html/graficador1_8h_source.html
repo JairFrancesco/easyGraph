@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>easyGraph: Fichero Fuente include/graficador1.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">easyGraph
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Graficadora 2D y 3D</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">graficador1.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graficador1_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAFICADOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAFICADOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vtkCellArray.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vtkCellData.h&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vtkDoubleArray.h&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vtkPoints.h&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vtkPolyLine.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vtkPolyData.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vtkPolyDataMapper.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vtkActor.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vtkRenderWindow.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vtkRenderer.h&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vtkRenderWindowInteractor.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vtkAxesActor.h&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vtkTransform.h&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vtkAxesActor.h&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vtkCamera.h&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_graficador1.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graficador1.html">Graficador1</a></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_graficador1.html#aad669b9e0784dd67bf7aadf65a657608">Graficador1</a>();</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_graficador1.html#a8ae74354def8d4b9cf9a5888a3d5f7f6">   25</a></span>&#160;    vtkSmartPointer&lt;vtkActor&gt; <a class="code" href="class_graficador1.html#a8ae74354def8d4b9cf9a5888a3d5f7f6">actor</a> = vtkSmartPointer&lt;vtkActor&gt;::New();</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_graficador1.html#a37f34d5e7cc90e5ce119de4b3c5e99a5">   26</a></span>&#160;    vtkSmartPointer&lt;vtkRenderer&gt; <a class="code" href="class_graficador1.html#a37f34d5e7cc90e5ce119de4b3c5e99a5">renderer</a> =  vtkSmartPointer&lt;vtkRenderer&gt;::New();</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_graficador1.html#a2e21aceca117ab118ac832fab7069222">   27</a></span>&#160;    vtkSmartPointer&lt;vtkAxesActor&gt; <a class="code" href="class_graficador1.html#a2e21aceca117ab118ac832fab7069222">axes</a> = vtkSmartPointer&lt;vtkAxesActor&gt;::New();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Create a cell array to store the lines in and add the lines to it</span></div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_graficador1.html#a0cfb1ed1aa24256300eba63ec3961be8">   31</a></span>&#160;    vtkSmartPointer&lt;vtkCellArray&gt; <a class="code" href="class_graficador1.html#a0cfb1ed1aa24256300eba63ec3961be8">cells</a> = vtkSmartPointer&lt;vtkCellArray&gt;::New();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_graficador1.html#a84c019e93c84cebb467b96fe51f7e00f">   34</a></span>&#160;    vtkSmartPointer&lt;vtkCamera&gt; <a class="code" href="class_graficador1.html#a84c019e93c84cebb467b96fe51f7e00f">camera</a> =    vtkSmartPointer&lt;vtkCamera&gt;::New();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Create a polydata to store everything in</span></div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_graficador1.html#a4a2f54d79982b0df5f89bc8ccc94f2ac">   38</a></span>&#160;    vtkSmartPointer&lt;vtkPolyData&gt; <a class="code" href="class_graficador1.html#a4a2f54d79982b0df5f89bc8ccc94f2ac">polyData</a> = vtkSmartPointer&lt;vtkPolyData&gt;::New();</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_graficador1.html#a8104c16db84a43865caad8ee2a3956b9">   39</a></span>&#160;    vtkSmartPointer&lt;vtkPolyLine&gt; <a class="code" href="class_graficador1.html#a8104c16db84a43865caad8ee2a3956b9">polyLine</a> = vtkSmartPointer&lt;vtkPolyLine&gt;::New();</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_graficador1.html#a1cf22b3f22afd3b46c4e7c2e2d24c5e7">   40</a></span>&#160;    vtkSmartPointer&lt;vtkPolyDataMapper&gt; <a class="code" href="class_graficador1.html#a1cf22b3f22afd3b46c4e7c2e2d24c5e7">mapper</a> =  vtkSmartPointer&lt;vtkPolyDataMapper&gt;::New();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_graficador1.html#a13a6fb8216c7abf42e3e0ce8a39df1b8">   43</a></span>&#160;    vtkSmartPointer&lt;vtkUnsignedCharArray&gt; <a class="code" href="class_graficador1.html#a13a6fb8216c7abf42e3e0ce8a39df1b8">colors</a> = vtkSmartPointer&lt;vtkUnsignedCharArray&gt;::New();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Create a vtkPoints object and store the points in it</span></div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_graficador1.html#a27673da414293c9c86dffc22f8d18b60">   46</a></span>&#160;    vtkSmartPointer&lt;vtkPoints&gt; <a class="code" href="class_graficador1.html#a27673da414293c9c86dffc22f8d18b60">points</a> = vtkSmartPointer&lt;vtkPoints&gt;::New();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#a5b79063a4630ab7d01cb6e4f9e7b7a1f">puntos2d</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#aa2af594975f59373167af2de434ad665">crearpolilinea</a>();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#afa15e469dd3579558eae1b303180e7bd">insertar_punto</a>(<span class="keywordtype">double</span>,<span class="keywordtype">double</span>,<span class="keywordtype">double</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#a400a046298f47f30a350d9da3f60c541">insertar_polilinea</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#ae8416d64e9889d4eef20a53bf0251831">set_polilinea</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador1.html#a66e079687b749600be62080387a4049c">clean</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_graficador1.html#a61617b0f3755ffbb05c07d94515b6185">cuadrado</a>(<span class="keywordtype">double</span>);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // GRAFICADOR_H</span></div><div class="ttc" id="class_graficador1_html_a61617b0f3755ffbb05c07d94515b6185"><div class="ttname"><a href="class_graficador1.html#a61617b0f3755ffbb05c07d94515b6185">Graficador1::cuadrado</a></div><div class="ttdeci">double cuadrado(double)</div></div>
+<div class="ttc" id="class_graficador1_html_a4a2f54d79982b0df5f89bc8ccc94f2ac"><div class="ttname"><a href="class_graficador1.html#a4a2f54d79982b0df5f89bc8ccc94f2ac">Graficador1::polyData</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkPolyData &gt; polyData</div><div class="ttdef"><b>Definition:</b> graficador1.h:38</div></div>
+<div class="ttc" id="class_graficador1_html_a2e21aceca117ab118ac832fab7069222"><div class="ttname"><a href="class_graficador1.html#a2e21aceca117ab118ac832fab7069222">Graficador1::axes</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkAxesActor &gt; axes</div><div class="ttdef"><b>Definition:</b> graficador1.h:27</div></div>
+<div class="ttc" id="class_graficador1_html_a84c019e93c84cebb467b96fe51f7e00f"><div class="ttname"><a href="class_graficador1.html#a84c019e93c84cebb467b96fe51f7e00f">Graficador1::camera</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkCamera &gt; camera</div><div class="ttdef"><b>Definition:</b> graficador1.h:34</div></div>
+<div class="ttc" id="class_graficador1_html_aa2af594975f59373167af2de434ad665"><div class="ttname"><a href="class_graficador1.html#aa2af594975f59373167af2de434ad665">Graficador1::crearpolilinea</a></div><div class="ttdeci">void crearpolilinea()</div></div>
+<div class="ttc" id="class_graficador1_html_ae8416d64e9889d4eef20a53bf0251831"><div class="ttname"><a href="class_graficador1.html#ae8416d64e9889d4eef20a53bf0251831">Graficador1::set_polilinea</a></div><div class="ttdeci">void set_polilinea(int)</div></div>
+<div class="ttc" id="class_graficador1_html_a27673da414293c9c86dffc22f8d18b60"><div class="ttname"><a href="class_graficador1.html#a27673da414293c9c86dffc22f8d18b60">Graficador1::points</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkPoints &gt; points</div><div class="ttdef"><b>Definition:</b> graficador1.h:46</div></div>
+<div class="ttc" id="class_graficador1_html_a400a046298f47f30a350d9da3f60c541"><div class="ttname"><a href="class_graficador1.html#a400a046298f47f30a350d9da3f60c541">Graficador1::insertar_polilinea</a></div><div class="ttdeci">void insertar_polilinea(int)</div></div>
+<div class="ttc" id="class_graficador1_html_a8104c16db84a43865caad8ee2a3956b9"><div class="ttname"><a href="class_graficador1.html#a8104c16db84a43865caad8ee2a3956b9">Graficador1::polyLine</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkPolyLine &gt; polyLine</div><div class="ttdef"><b>Definition:</b> graficador1.h:39</div></div>
+<div class="ttc" id="class_graficador1_html_a8ae74354def8d4b9cf9a5888a3d5f7f6"><div class="ttname"><a href="class_graficador1.html#a8ae74354def8d4b9cf9a5888a3d5f7f6">Graficador1::actor</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkActor &gt; actor</div><div class="ttdef"><b>Definition:</b> graficador1.h:25</div></div>
+<div class="ttc" id="class_graficador1_html_a5b79063a4630ab7d01cb6e4f9e7b7a1f"><div class="ttname"><a href="class_graficador1.html#a5b79063a4630ab7d01cb6e4f9e7b7a1f">Graficador1::puntos2d</a></div><div class="ttdeci">void puntos2d()</div></div>
+<div class="ttc" id="class_graficador1_html_aad669b9e0784dd67bf7aadf65a657608"><div class="ttname"><a href="class_graficador1.html#aad669b9e0784dd67bf7aadf65a657608">Graficador1::Graficador1</a></div><div class="ttdeci">Graficador1()</div><div class="ttdef"><b>Definition:</b> graficador1.cpp:3</div></div>
+<div class="ttc" id="class_graficador1_html_a13a6fb8216c7abf42e3e0ce8a39df1b8"><div class="ttname"><a href="class_graficador1.html#a13a6fb8216c7abf42e3e0ce8a39df1b8">Graficador1::colors</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkUnsignedCharArray &gt; colors</div><div class="ttdef"><b>Definition:</b> graficador1.h:43</div></div>
+<div class="ttc" id="class_graficador1_html_a66e079687b749600be62080387a4049c"><div class="ttname"><a href="class_graficador1.html#a66e079687b749600be62080387a4049c">Graficador1::clean</a></div><div class="ttdeci">void clean()</div><div class="ttdef"><b>Definition:</b> graficador1.cpp:16</div></div>
+<div class="ttc" id="class_graficador1_html_a0cfb1ed1aa24256300eba63ec3961be8"><div class="ttname"><a href="class_graficador1.html#a0cfb1ed1aa24256300eba63ec3961be8">Graficador1::cells</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkCellArray &gt; cells</div><div class="ttdef"><b>Definition:</b> graficador1.h:31</div></div>
+<div class="ttc" id="class_graficador1_html_a37f34d5e7cc90e5ce119de4b3c5e99a5"><div class="ttname"><a href="class_graficador1.html#a37f34d5e7cc90e5ce119de4b3c5e99a5">Graficador1::renderer</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkRenderer &gt; renderer</div><div class="ttdef"><b>Definition:</b> graficador1.h:26</div></div>
+<div class="ttc" id="class_graficador1_html"><div class="ttname"><a href="class_graficador1.html">Graficador1</a></div><div class="ttdef"><b>Definition:</b> graficador1.h:21</div></div>
+<div class="ttc" id="class_graficador1_html_a1cf22b3f22afd3b46c4e7c2e2d24c5e7"><div class="ttname"><a href="class_graficador1.html#a1cf22b3f22afd3b46c4e7c2e2d24c5e7">Graficador1::mapper</a></div><div class="ttdeci">vtkSmartPointer&lt; vtkPolyDataMapper &gt; mapper</div><div class="ttdef"><b>Definition:</b> graficador1.h:40</div></div>
+<div class="ttc" id="class_graficador1_html_afa15e469dd3579558eae1b303180e7bd"><div class="ttname"><a href="class_graficador1.html#afa15e469dd3579558eae1b303180e7bd">Graficador1::insertar_punto</a></div><div class="ttdeci">void insertar_punto(double, double, double)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

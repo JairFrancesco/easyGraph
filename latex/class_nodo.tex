@@ -1,0 +1,206 @@
+\hypertarget{class_nodo}{}\section{Referencia de la Clase Nodo}
+\label{class_nodo}\index{Nodo@{Nodo}}
+
+
+{\ttfamily \#include $<$Nodo.\+h$>$}
+
+Diagrama de herencias de Nodo\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nodo}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_nodo_ac30bd1bed827ef8784fd3cebd032e9a4}{Nodo} ()
+\item 
+virtual \hyperlink{class_nodo_a8a1dd01c95ff7bcb1182318498e834f9}{$\sim$\+Nodo} ()
+\item 
+virtual void \hyperlink{class_nodo_aaec6b546849827a198f8f9cfb785ddae}{set\+\_\+valor} ()
+\item 
+void \hyperlink{class_nodo_a1fdafb332912a0627e38f49e48c6c7a8}{agregar\+\_\+der} (\hyperlink{class_nodo}{Nodo} $\ast$)
+\item 
+void \hyperlink{class_nodo_ac40bf9aeb6268154ae64ba30808aead0}{agregar\+\_\+izq} (\hyperlink{class_nodo}{Nodo} $\ast$)
+\item 
+virtual void \hyperlink{class_nodo_af1d46c59678aad7bd2d772b0cea8d0b6}{get\+\_\+valor} (double $\ast$a)
+\item 
+virtual void \hyperlink{class_nodo_a391f7fb5f14e8c1ac8c0a54c158cf0db}{set\+\_\+valor} (double)
+\item 
+virtual void \hyperlink{class_nodo_a6b4c640c1cb52203a259321b4bb5ad17}{obtener\+\_\+variables} ()
+\item 
+virtual void \hyperlink{class_nodo_a0c4cf8fa55c25f9a4a9a68a0b07d9108}{get\+\_\+valor} (double($\ast$\&funcion)(double, double))
+\item 
+virtual void \hyperlink{class_nodo_af7b0ec4fc3a0a3ef46dc31eca99fdbd6}{set\+\_\+valor} (double($\ast$\&funcion)(double, double))
+\item 
+virtual void \hyperlink{class_nodo_a4bd234bb2194e7708e71f25d125b9934}{get\+\_\+valor} (double($\ast$\&funcion)(double))
+\item 
+virtual void \hyperlink{class_nodo_a134a6a0ca143bfa73bc6e8184bb9f69d}{set\+\_\+valor} (double($\ast$\&funcion)(double))
+\item 
+virtual double \hyperlink{class_nodo_a3f06904e422717bbc621acc054590755}{procesar} ()
+\item 
+void \hyperlink{class_nodo_aca274320e1051fe43ff5543140be2721}{verif\+\_\+variables} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_nodo}{Nodo} $\ast$ \hyperlink{class_nodo_a8e0d3bbd637491daad3716d8731881f7}{izq}
+\item 
+\hyperlink{class_nodo}{Nodo} $\ast$ \hyperlink{class_nodo_a9df44a5e283816852c24c43ebc1868dc}{der}
+\item 
+std\+::vector$<$ std\+::tuple$<$ std\+::string, double $\ast$ $>$ $>$ $\ast$ \hyperlink{class_nodo_afbf8312c82ff9a5b6194a6a252a1abae}{variables}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Nodo@{Nodo}!Nodo@{Nodo}}
+\index{Nodo@{Nodo}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{Nodo()}{Nodo()}}]{\setlength{\rightskip}{0pt plus 5cm}Nodo\+::\+Nodo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nodo_ac30bd1bed827ef8784fd3cebd032e9a4}{}\label{class_nodo_ac30bd1bed827ef8784fd3cebd032e9a4}
+\index{Nodo@{Nodo}!````~Nodo@{$\sim$\+Nodo}}
+\index{````~Nodo@{$\sim$\+Nodo}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{$\sim$\+Nodo()}{~Nodo()}}]{\setlength{\rightskip}{0pt plus 5cm}Nodo\+::$\sim$\+Nodo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_nodo_a8a1dd01c95ff7bcb1182318498e834f9}{}\label{class_nodo_a8a1dd01c95ff7bcb1182318498e834f9}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Nodo@{Nodo}!agregar\+\_\+der@{agregar\+\_\+der}}
+\index{agregar\+\_\+der@{agregar\+\_\+der}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{agregar\+\_\+der(\+Nodo $\ast$)}{agregar_der(Nodo *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodo\+::agregar\+\_\+der (
+\begin{DoxyParamCaption}
+\item[{{\bf Nodo} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nodo_a1fdafb332912a0627e38f49e48c6c7a8}{}\label{class_nodo_a1fdafb332912a0627e38f49e48c6c7a8}
+\index{Nodo@{Nodo}!agregar\+\_\+izq@{agregar\+\_\+izq}}
+\index{agregar\+\_\+izq@{agregar\+\_\+izq}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{agregar\+\_\+izq(\+Nodo $\ast$)}{agregar_izq(Nodo *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodo\+::agregar\+\_\+izq (
+\begin{DoxyParamCaption}
+\item[{{\bf Nodo} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nodo_ac40bf9aeb6268154ae64ba30808aead0}{}\label{class_nodo_ac40bf9aeb6268154ae64ba30808aead0}
+\index{Nodo@{Nodo}!get\+\_\+valor@{get\+\_\+valor}}
+\index{get\+\_\+valor@{get\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{get\+\_\+valor(double $\ast$a)}{get_valor(double *a)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::get\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_af1d46c59678aad7bd2d772b0cea8d0b6}{}\label{class_nodo_af1d46c59678aad7bd2d772b0cea8d0b6}
+
+
+Reimplementado en \hyperlink{class_nodo__double_a4eb67c264f37c66d101d832ec981717b}{Nodo\+\_\+double}.
+
+\index{Nodo@{Nodo}!get\+\_\+valor@{get\+\_\+valor}}
+\index{get\+\_\+valor@{get\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{get\+\_\+valor(double($\ast$\&funcion)(double, double))}{get_valor(double(*&funcion)(double, double))}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::get\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double($\ast$\&)(double, double)}]{funcion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a0c4cf8fa55c25f9a4a9a68a0b07d9108}{}\label{class_nodo_a0c4cf8fa55c25f9a4a9a68a0b07d9108}
+
+
+Reimplementado en \hyperlink{class_nodo__funcion__binaria_ada34095260c6d6b9f8279edb6595db38}{Nodo\+\_\+funcion\+\_\+binaria}.
+
+\index{Nodo@{Nodo}!get\+\_\+valor@{get\+\_\+valor}}
+\index{get\+\_\+valor@{get\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{get\+\_\+valor(double($\ast$\&funcion)(double))}{get_valor(double(*&funcion)(double))}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::get\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double($\ast$\&)(double)}]{funcion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a4bd234bb2194e7708e71f25d125b9934}{}\label{class_nodo_a4bd234bb2194e7708e71f25d125b9934}
+
+
+Reimplementado en \hyperlink{class_nodo__funcion__unaria_ada80a2928510b76650aa2c336f9db8fa}{Nodo\+\_\+funcion\+\_\+unaria}.
+
+\index{Nodo@{Nodo}!obtener\+\_\+variables@{obtener\+\_\+variables}}
+\index{obtener\+\_\+variables@{obtener\+\_\+variables}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{obtener\+\_\+variables()}{obtener_variables()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::obtener\+\_\+variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a6b4c640c1cb52203a259321b4bb5ad17}{}\label{class_nodo_a6b4c640c1cb52203a259321b4bb5ad17}
+
+
+Reimplementado en \hyperlink{class_nodo__double_a92a96c692af58eb4197ae64e085beb41}{Nodo\+\_\+double}, \hyperlink{class_nodo__funcion__binaria_a25ca9388d98b6ddbc950c2b9a2894645}{Nodo\+\_\+funcion\+\_\+binaria} y \hyperlink{class_nodo__funcion__unaria_a12bf4ec6430f11f4ffb4421a2f4af6f0}{Nodo\+\_\+funcion\+\_\+unaria}.
+
+\index{Nodo@{Nodo}!procesar@{procesar}}
+\index{procesar@{procesar}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{procesar()}{procesar()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Nodo\+::procesar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a3f06904e422717bbc621acc054590755}{}\label{class_nodo_a3f06904e422717bbc621acc054590755}
+
+
+Reimplementado en \hyperlink{class_nodo__funcion__binaria_a5637c538189912ddeb2b5f86a6855c0d}{Nodo\+\_\+funcion\+\_\+binaria}, \hyperlink{class_nodo__double_ac1062fd8a1c495f32b10be1a1e371748}{Nodo\+\_\+double} y \hyperlink{class_nodo__funcion__unaria_a1d6be00c52fad541beccf20bcf1a9122}{Nodo\+\_\+funcion\+\_\+unaria}.
+
+\index{Nodo@{Nodo}!set\+\_\+valor@{set\+\_\+valor}}
+\index{set\+\_\+valor@{set\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{set\+\_\+valor()}{set_valor()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::set\+\_\+valor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_aaec6b546849827a198f8f9cfb785ddae}{}\label{class_nodo_aaec6b546849827a198f8f9cfb785ddae}
+\index{Nodo@{Nodo}!set\+\_\+valor@{set\+\_\+valor}}
+\index{set\+\_\+valor@{set\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{set\+\_\+valor(double)}{set_valor(double)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::set\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a391f7fb5f14e8c1ac8c0a54c158cf0db}{}\label{class_nodo_a391f7fb5f14e8c1ac8c0a54c158cf0db}
+
+
+Reimplementado en \hyperlink{class_nodo__double_a46f39301fcb3971e1d452be7bdf6f35a}{Nodo\+\_\+double}.
+
+\index{Nodo@{Nodo}!set\+\_\+valor@{set\+\_\+valor}}
+\index{set\+\_\+valor@{set\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{set\+\_\+valor(double($\ast$\&funcion)(double, double))}{set_valor(double(*&funcion)(double, double))}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::set\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double($\ast$\&)(double, double)}]{funcion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_af7b0ec4fc3a0a3ef46dc31eca99fdbd6}{}\label{class_nodo_af7b0ec4fc3a0a3ef46dc31eca99fdbd6}
+
+
+Reimplementado en \hyperlink{class_nodo__funcion__binaria_a07a097c0b959884106aed5b54d885c65}{Nodo\+\_\+funcion\+\_\+binaria}.
+
+\index{Nodo@{Nodo}!set\+\_\+valor@{set\+\_\+valor}}
+\index{set\+\_\+valor@{set\+\_\+valor}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{set\+\_\+valor(double($\ast$\&funcion)(double))}{set_valor(double(*&funcion)(double))}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Nodo\+::set\+\_\+valor (
+\begin{DoxyParamCaption}
+\item[{double($\ast$\&)(double)}]{funcion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_nodo_a134a6a0ca143bfa73bc6e8184bb9f69d}{}\label{class_nodo_a134a6a0ca143bfa73bc6e8184bb9f69d}
+
+
+Reimplementado en \hyperlink{class_nodo__funcion__unaria_a4634ffcf664c11c2cd5d4546c429476c}{Nodo\+\_\+funcion\+\_\+unaria}.
+
+\index{Nodo@{Nodo}!verif\+\_\+variables@{verif\+\_\+variables}}
+\index{verif\+\_\+variables@{verif\+\_\+variables}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{verif\+\_\+variables()}{verif_variables()}}]{\setlength{\rightskip}{0pt plus 5cm}void Nodo\+::verif\+\_\+variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_nodo_aca274320e1051fe43ff5543140be2721}{}\label{class_nodo_aca274320e1051fe43ff5543140be2721}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Nodo@{Nodo}!der@{der}}
+\index{der@{der}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{der}{der}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nodo}$\ast$ Nodo\+::der}\hypertarget{class_nodo_a9df44a5e283816852c24c43ebc1868dc}{}\label{class_nodo_a9df44a5e283816852c24c43ebc1868dc}
+\index{Nodo@{Nodo}!izq@{izq}}
+\index{izq@{izq}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{izq}{izq}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nodo}$\ast$ Nodo\+::izq}\hypertarget{class_nodo_a8e0d3bbd637491daad3716d8731881f7}{}\label{class_nodo_a8e0d3bbd637491daad3716d8731881f7}
+\index{Nodo@{Nodo}!variables@{variables}}
+\index{variables@{variables}!Nodo@{Nodo}}
+\subsubsection[{\texorpdfstring{variables}{variables}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::tuple$<$std\+::string,double$\ast$$>$ $>$$\ast$ Nodo\+::variables}\hypertarget{class_nodo_afbf8312c82ff9a5b6194a6a252a1abae}{}\label{class_nodo_afbf8312c82ff9a5b6194a6a252a1abae}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/include/\hyperlink{_nodo_8h}{Nodo.\+h}\item 
+Parser/src/\hyperlink{_nodo_8cpp}{Nodo.\+cpp}\end{DoxyCompactItemize}

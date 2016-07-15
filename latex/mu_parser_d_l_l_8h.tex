@@ -1,0 +1,374 @@
+\hypertarget{mu_parser_d_l_l_8h}{}\section{Referencia del Archivo Parser/\+Test/include/mu\+Parser\+D\+LL.h}
+\label{mu_parser_d_l_l_8h}\index{Parser/\+Test/include/mu\+Parser\+D\+L\+L.\+h@{Parser/\+Test/include/mu\+Parser\+D\+L\+L.\+h}}
+
+
+This file contains the D\+LL interface of muparser.  
+
+
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mu_parser_d_l_l_8h_a00ce4d246411be6671a65d76a1af91bf}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}(T\+Y\+PE)~T\+Y\+PE
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t}
+\item 
+typedef char \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t}
+\item 
+typedef int \hyperlink{mu_parser_d_l_l_8h_ae54c5a96cb3847738d1fcee95a397094}{mu\+Bool\+\_\+t}
+\item 
+typedef int \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t}
+\item 
+typedef double \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_aa39915f0a25ff49833eb12c433712059}{mu\+Fun0\+\_\+t}) ()
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_aacfc156ee872dc79bc290097a2202edd}{mu\+Fun1\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a324231999f64f449d209b12759c3ae94}{mu\+Fun2\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_aa923fbc0683c7d05fa130690327a0404}{mu\+Fun3\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_afef4f72973600163a9606e863bec67fe}{mu\+Fun4\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_ac02edd51057c759c6b8c44e3af356617}{mu\+Fun5\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_ae133e5a9fbd044768319002e5e518efe}{mu\+Fun6\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a84ff4b939d9df9ab21c99f1b66de8e2e}{mu\+Fun7\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a8ed4188a9b32fd8094d5d43494c19d7a}{mu\+Fun8\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_af6614db1a53ef41d64c2744c46241d83}{mu\+Fun9\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_ad63c2d745fde2072ee2f79f019bdad65}{mu\+Fun10\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a629ff8e34a9f6744296229c74a527047}{mu\+Bulk\+Fun0\+\_\+t}) (int, int)
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a1b77af43b75fb11526c8828da88b1e7e}{mu\+Bulk\+Fun1\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a1531659c901ee56c0607c6032afd2156}{mu\+Bulk\+Fun2\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a8c17d6702b1cb78c5c2c3f564320e6d6}{mu\+Bulk\+Fun3\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_aaba6643890614f58a5050916b3d5012f}{mu\+Bulk\+Fun4\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a9c6d8ae396c3916cef528c433a62e475}{mu\+Bulk\+Fun5\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_ab769f4f161617c54fab923480dc3a7f7}{mu\+Bulk\+Fun6\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a17cd22bdd7b22a56150d784a07451042}{mu\+Bulk\+Fun7\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a6ae8eef51b4ef1463412bdae861d8154}{mu\+Bulk\+Fun8\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a7aae33e5d0e481baed647187b83fa587}{mu\+Bulk\+Fun9\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a53418388935ee6a8aff6046493a417b2}{mu\+Bulk\+Fun10\+\_\+t}) (int, int, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_accb0ffd5b845884de8a2e79a597a25d2}{mu\+Mult\+Fun\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$, \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a6c0241dfeb12e47f479f8500d76f1966}{mu\+Str\+Fun1\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$)
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a5819b5113e88034b7b95d215ddb70ef9}{mu\+Str\+Fun2\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a0fb78ecc46808698c3825d8589ba3cea}{mu\+Str\+Fun3\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t})
+\item 
+typedef void($\ast$ \hyperlink{mu_parser_d_l_l_8h_aa7751cac7929862ef465ed0a08daf638}{mu\+Error\+Handler\+\_\+t}) (\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$($\ast$ \hyperlink{mu_parser_d_l_l_8h_aee84c0387b204cbe8cd6c05e35870ac4}{mu\+Fac\+Fun\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$, void $\ast$)
+\item 
+typedef \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t}($\ast$ \hyperlink{mu_parser_d_l_l_8h_a55fd67175b34718a5b056b89f8bee18b}{mu\+Ident\+Fun\+\_\+t}) (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$, \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t} $\ast$, \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a23d52ebb18facb489ec8425f148549a2}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t}) mup\+Create(int n\+Base\+Type)
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a38d3c7c2b531e72d9b7fd6985a6c176b}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (void) mup\+Release(\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)
+\item 
+\hyperlink{mu_parser_d_l_l_8h_ac7f7d5ed6e71a21f4981721f606282b4}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$) mup\+Get\+Expr(\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a07fd2d7da20cd814d522ae583261e0f4}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t}) mup\+Eval(\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a1b4abd0acc75f45b9efc038a81e41172}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$) mup\+Eval\+Multi(\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a34154418377e6de7a60e6424d3b50780}{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT} (int) mup\+Get\+Expr\+Var\+Num(\hyperlink{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_a70627044ecb2b675fbd242e8bf1747b3}{a\+\_\+sz\+Expr}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_aee84c0387b204cbe8cd6c05e35870ac4}{mu\+Fac\+Fun\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_af7bdd6658661ca9fa9e157a21f70d550}{a\+\_\+p\+Factory}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_aee84c0387b204cbe8cd6c05e35870ac4}{mu\+Fac\+Fun\+\_\+t} void $\ast$ \hyperlink{mu_parser_d_l_l_8h_af2fe0b3322818bbb3e6f8b0457f1b802}{p\+User\+Data}
+\item 
+int $\ast$ \hyperlink{mu_parser_d_l_l_8h_a414d80453eba1954ae1300dc3c988229}{n\+Num}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_a11266539756b56c4d489ed3d2a614b8e}{a\+\_\+f\+Result}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} int \hyperlink{mu_parser_d_l_l_8h_af738afe1aa7c19e596796e9957c2d12d}{n\+Size}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_a64bc01627fb53ac9bd824ade2e8cb99d}{a\+\_\+sz\+Name}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_aa39915f0a25ff49833eb12c433712059}{mu\+Fun0\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_aa39915f0a25ff49833eb12c433712059}{mu\+Fun0\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_ae54c5a96cb3847738d1fcee95a397094}{mu\+Bool\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a9475bebe4725f2edd386fff9db72f3ea}{a\+\_\+b\+Optimize}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a324231999f64f449d209b12759c3ae94}{mu\+Fun2\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a7beacbf8b135305cb7a11a9731de4b0d}{a\+\_\+n\+Prec}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a324231999f64f449d209b12759c3ae94}{mu\+Fun2\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{mu\+Int\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_ad6d2c1604ab605b1ddbe5e54874cc282}{a\+\_\+n\+Oprt\+Asct}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{a\+\_\+f\+Val}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_ab0408457b4645fcfce7c0b08d936f162}{a\+\_\+s\+Val}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_a0b10cccae0b2da3678c7a7f0cd7fbc73}{a\+\_\+f\+Var}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_aacfc156ee872dc79bc290097a2202edd}{mu\+Fun1\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_ae106b6975be89f5cf1d116ebca53cccc}{a\+\_\+p\+Oprt}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$ \hyperlink{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}{a\+\_\+sz\+Charset}
+\item 
+unsigned \hyperlink{mu_parser_d_l_l_8h_af04cfefeaec07ac513734d08cfa2ad0a}{a\+\_\+i\+Var}
+\item 
+unsigned const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} $\ast$$\ast$ \hyperlink{mu_parser_d_l_l_8h_a9702acb48b4561c9a4ed7d7c538d8516}{a\+\_\+psz\+Name}
+\item 
+unsigned const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{mu\+Float\+\_\+t} $\ast$$\ast$ \hyperlink{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}{a\+\_\+p\+Var}
+\item 
+const \hyperlink{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{mu\+Char\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a76c4c148d54d5b7e5728ec911432a1c3}{c\+Arg\+Sep}
+\item 
+\hyperlink{mu_parser_d_l_l_8h_aa7751cac7929862ef465ed0a08daf638}{mu\+Error\+Handler\+\_\+t} \hyperlink{mu_parser_d_l_l_8h_a992b8e2f461d50b05baccd4f91a81e9b}{a\+\_\+p\+Err\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+This file contains the D\+LL interface of muparser. 
+
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}{API_EXPORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+P\+I\+\_\+\+E\+X\+P\+O\+RT(
+\begin{DoxyParamCaption}
+\item[{}]{T\+Y\+PE}
+\end{DoxyParamCaption}
+)~T\+Y\+PE}\hypertarget{mu_parser_d_l_l_8h_a00ce4d246411be6671a65d76a1af91bf}{}\label{mu_parser_d_l_l_8h_a00ce4d246411be6671a65d76a1af91bf}
+
+
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bool\+\_\+t@{mu\+Bool\+\_\+t}}
+\index{mu\+Bool\+\_\+t@{mu\+Bool\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bool\+\_\+t}{muBool_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf mu\+Bool\+\_\+t}}\hypertarget{mu_parser_d_l_l_8h_ae54c5a96cb3847738d1fcee95a397094}{}\label{mu_parser_d_l_l_8h_ae54c5a96cb3847738d1fcee95a397094}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun0\+\_\+t@{mu\+Bulk\+Fun0\+\_\+t}}
+\index{mu\+Bulk\+Fun0\+\_\+t@{mu\+Bulk\+Fun0\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun0\+\_\+t}{muBulkFun0_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun0\+\_\+t) (int, int)}\hypertarget{mu_parser_d_l_l_8h_a629ff8e34a9f6744296229c74a527047}{}\label{mu_parser_d_l_l_8h_a629ff8e34a9f6744296229c74a527047}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun10\+\_\+t@{mu\+Bulk\+Fun10\+\_\+t}}
+\index{mu\+Bulk\+Fun10\+\_\+t@{mu\+Bulk\+Fun10\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun10\+\_\+t}{muBulkFun10_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun10\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a53418388935ee6a8aff6046493a417b2}{}\label{mu_parser_d_l_l_8h_a53418388935ee6a8aff6046493a417b2}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun1\+\_\+t@{mu\+Bulk\+Fun1\+\_\+t}}
+\index{mu\+Bulk\+Fun1\+\_\+t@{mu\+Bulk\+Fun1\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun1\+\_\+t}{muBulkFun1_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun1\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a1b77af43b75fb11526c8828da88b1e7e}{}\label{mu_parser_d_l_l_8h_a1b77af43b75fb11526c8828da88b1e7e}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun2\+\_\+t@{mu\+Bulk\+Fun2\+\_\+t}}
+\index{mu\+Bulk\+Fun2\+\_\+t@{mu\+Bulk\+Fun2\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun2\+\_\+t}{muBulkFun2_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun2\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a1531659c901ee56c0607c6032afd2156}{}\label{mu_parser_d_l_l_8h_a1531659c901ee56c0607c6032afd2156}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun3\+\_\+t@{mu\+Bulk\+Fun3\+\_\+t}}
+\index{mu\+Bulk\+Fun3\+\_\+t@{mu\+Bulk\+Fun3\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun3\+\_\+t}{muBulkFun3_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun3\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a8c17d6702b1cb78c5c2c3f564320e6d6}{}\label{mu_parser_d_l_l_8h_a8c17d6702b1cb78c5c2c3f564320e6d6}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun4\+\_\+t@{mu\+Bulk\+Fun4\+\_\+t}}
+\index{mu\+Bulk\+Fun4\+\_\+t@{mu\+Bulk\+Fun4\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun4\+\_\+t}{muBulkFun4_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun4\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_aaba6643890614f58a5050916b3d5012f}{}\label{mu_parser_d_l_l_8h_aaba6643890614f58a5050916b3d5012f}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun5\+\_\+t@{mu\+Bulk\+Fun5\+\_\+t}}
+\index{mu\+Bulk\+Fun5\+\_\+t@{mu\+Bulk\+Fun5\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun5\+\_\+t}{muBulkFun5_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun5\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a9c6d8ae396c3916cef528c433a62e475}{}\label{mu_parser_d_l_l_8h_a9c6d8ae396c3916cef528c433a62e475}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun6\+\_\+t@{mu\+Bulk\+Fun6\+\_\+t}}
+\index{mu\+Bulk\+Fun6\+\_\+t@{mu\+Bulk\+Fun6\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun6\+\_\+t}{muBulkFun6_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun6\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_ab769f4f161617c54fab923480dc3a7f7}{}\label{mu_parser_d_l_l_8h_ab769f4f161617c54fab923480dc3a7f7}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun7\+\_\+t@{mu\+Bulk\+Fun7\+\_\+t}}
+\index{mu\+Bulk\+Fun7\+\_\+t@{mu\+Bulk\+Fun7\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun7\+\_\+t}{muBulkFun7_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun7\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a17cd22bdd7b22a56150d784a07451042}{}\label{mu_parser_d_l_l_8h_a17cd22bdd7b22a56150d784a07451042}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun8\+\_\+t@{mu\+Bulk\+Fun8\+\_\+t}}
+\index{mu\+Bulk\+Fun8\+\_\+t@{mu\+Bulk\+Fun8\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun8\+\_\+t}{muBulkFun8_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun8\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a6ae8eef51b4ef1463412bdae861d8154}{}\label{mu_parser_d_l_l_8h_a6ae8eef51b4ef1463412bdae861d8154}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Bulk\+Fun9\+\_\+t@{mu\+Bulk\+Fun9\+\_\+t}}
+\index{mu\+Bulk\+Fun9\+\_\+t@{mu\+Bulk\+Fun9\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Bulk\+Fun9\+\_\+t}{muBulkFun9_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Bulk\+Fun9\+\_\+t) (int, int, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a7aae33e5d0e481baed647187b83fa587}{}\label{mu_parser_d_l_l_8h_a7aae33e5d0e481baed647187b83fa587}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Char\+\_\+t@{mu\+Char\+\_\+t}}
+\index{mu\+Char\+\_\+t@{mu\+Char\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Char\+\_\+t}{muChar_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf mu\+Char\+\_\+t}}\hypertarget{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}{}\label{mu_parser_d_l_l_8h_a2fbf7a38a77995d88c5ac2d159471a01}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Error\+Handler\+\_\+t@{mu\+Error\+Handler\+\_\+t}}
+\index{mu\+Error\+Handler\+\_\+t@{mu\+Error\+Handler\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Error\+Handler\+\_\+t}{muErrorHandler_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ mu\+Error\+Handler\+\_\+t) ({\bf mu\+Parser\+Handle\+\_\+t} a\+\_\+h\+Parser)}\hypertarget{mu_parser_d_l_l_8h_aa7751cac7929862ef465ed0a08daf638}{}\label{mu_parser_d_l_l_8h_aa7751cac7929862ef465ed0a08daf638}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fac\+Fun\+\_\+t@{mu\+Fac\+Fun\+\_\+t}}
+\index{mu\+Fac\+Fun\+\_\+t@{mu\+Fac\+Fun\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fac\+Fun\+\_\+t}{muFacFun_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}$\ast$($\ast$ mu\+Fac\+Fun\+\_\+t) (const {\bf mu\+Char\+\_\+t} $\ast$, void $\ast$)}\hypertarget{mu_parser_d_l_l_8h_aee84c0387b204cbe8cd6c05e35870ac4}{}\label{mu_parser_d_l_l_8h_aee84c0387b204cbe8cd6c05e35870ac4}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Float\+\_\+t@{mu\+Float\+\_\+t}}
+\index{mu\+Float\+\_\+t@{mu\+Float\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Float\+\_\+t}{muFloat_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf mu\+Float\+\_\+t}}\hypertarget{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}{}\label{mu_parser_d_l_l_8h_a72bc4a725eaca58daa5aa4fa22cc4e93}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun0\+\_\+t@{mu\+Fun0\+\_\+t}}
+\index{mu\+Fun0\+\_\+t@{mu\+Fun0\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun0\+\_\+t}{muFun0_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun0\+\_\+t) ()}\hypertarget{mu_parser_d_l_l_8h_aa39915f0a25ff49833eb12c433712059}{}\label{mu_parser_d_l_l_8h_aa39915f0a25ff49833eb12c433712059}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun10\+\_\+t@{mu\+Fun10\+\_\+t}}
+\index{mu\+Fun10\+\_\+t@{mu\+Fun10\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun10\+\_\+t}{muFun10_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun10\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_ad63c2d745fde2072ee2f79f019bdad65}{}\label{mu_parser_d_l_l_8h_ad63c2d745fde2072ee2f79f019bdad65}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun1\+\_\+t@{mu\+Fun1\+\_\+t}}
+\index{mu\+Fun1\+\_\+t@{mu\+Fun1\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun1\+\_\+t}{muFun1_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun1\+\_\+t) ({\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_aacfc156ee872dc79bc290097a2202edd}{}\label{mu_parser_d_l_l_8h_aacfc156ee872dc79bc290097a2202edd}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun2\+\_\+t@{mu\+Fun2\+\_\+t}}
+\index{mu\+Fun2\+\_\+t@{mu\+Fun2\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun2\+\_\+t}{muFun2_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun2\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a324231999f64f449d209b12759c3ae94}{}\label{mu_parser_d_l_l_8h_a324231999f64f449d209b12759c3ae94}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun3\+\_\+t@{mu\+Fun3\+\_\+t}}
+\index{mu\+Fun3\+\_\+t@{mu\+Fun3\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun3\+\_\+t}{muFun3_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun3\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_aa923fbc0683c7d05fa130690327a0404}{}\label{mu_parser_d_l_l_8h_aa923fbc0683c7d05fa130690327a0404}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun4\+\_\+t@{mu\+Fun4\+\_\+t}}
+\index{mu\+Fun4\+\_\+t@{mu\+Fun4\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun4\+\_\+t}{muFun4_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun4\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_afef4f72973600163a9606e863bec67fe}{}\label{mu_parser_d_l_l_8h_afef4f72973600163a9606e863bec67fe}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun5\+\_\+t@{mu\+Fun5\+\_\+t}}
+\index{mu\+Fun5\+\_\+t@{mu\+Fun5\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun5\+\_\+t}{muFun5_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun5\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_ac02edd51057c759c6b8c44e3af356617}{}\label{mu_parser_d_l_l_8h_ac02edd51057c759c6b8c44e3af356617}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun6\+\_\+t@{mu\+Fun6\+\_\+t}}
+\index{mu\+Fun6\+\_\+t@{mu\+Fun6\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun6\+\_\+t}{muFun6_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun6\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_ae133e5a9fbd044768319002e5e518efe}{}\label{mu_parser_d_l_l_8h_ae133e5a9fbd044768319002e5e518efe}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun7\+\_\+t@{mu\+Fun7\+\_\+t}}
+\index{mu\+Fun7\+\_\+t@{mu\+Fun7\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun7\+\_\+t}{muFun7_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun7\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a84ff4b939d9df9ab21c99f1b66de8e2e}{}\label{mu_parser_d_l_l_8h_a84ff4b939d9df9ab21c99f1b66de8e2e}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun8\+\_\+t@{mu\+Fun8\+\_\+t}}
+\index{mu\+Fun8\+\_\+t@{mu\+Fun8\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun8\+\_\+t}{muFun8_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun8\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a8ed4188a9b32fd8094d5d43494c19d7a}{}\label{mu_parser_d_l_l_8h_a8ed4188a9b32fd8094d5d43494c19d7a}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Fun9\+\_\+t@{mu\+Fun9\+\_\+t}}
+\index{mu\+Fun9\+\_\+t@{mu\+Fun9\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Fun9\+\_\+t}{muFun9_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Fun9\+\_\+t) ({\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_af6614db1a53ef41d64c2744c46241d83}{}\label{mu_parser_d_l_l_8h_af6614db1a53ef41d64c2744c46241d83}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Ident\+Fun\+\_\+t@{mu\+Ident\+Fun\+\_\+t}}
+\index{mu\+Ident\+Fun\+\_\+t@{mu\+Ident\+Fun\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Ident\+Fun\+\_\+t}{muIdentFun_t}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+Ident\+Fun\+\_\+t}\hypertarget{mu_parser_d_l_l_8h_a55fd67175b34718a5b056b89f8bee18b}{}\label{mu_parser_d_l_l_8h_a55fd67175b34718a5b056b89f8bee18b}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Int\+\_\+t@{mu\+Int\+\_\+t}}
+\index{mu\+Int\+\_\+t@{mu\+Int\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Int\+\_\+t}{muInt_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf mu\+Int\+\_\+t}}\hypertarget{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}{}\label{mu_parser_d_l_l_8h_a912a67144820522d9931ce3a16a4dfef}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Mult\+Fun\+\_\+t@{mu\+Mult\+Fun\+\_\+t}}
+\index{mu\+Mult\+Fun\+\_\+t@{mu\+Mult\+Fun\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Mult\+Fun\+\_\+t}{muMultFun_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Mult\+Fun\+\_\+t) (const {\bf mu\+Float\+\_\+t} $\ast$, {\bf mu\+Int\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_accb0ffd5b845884de8a2e79a597a25d2}{}\label{mu_parser_d_l_l_8h_accb0ffd5b845884de8a2e79a597a25d2}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Parser\+Handle\+\_\+t@{mu\+Parser\+Handle\+\_\+t}}
+\index{mu\+Parser\+Handle\+\_\+t@{mu\+Parser\+Handle\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Parser\+Handle\+\_\+t}{muParserHandle_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf mu\+Parser\+Handle\+\_\+t}}\hypertarget{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}{}\label{mu_parser_d_l_l_8h_a0080665019ff2aa78a98bc03679a412b}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Str\+Fun1\+\_\+t@{mu\+Str\+Fun1\+\_\+t}}
+\index{mu\+Str\+Fun1\+\_\+t@{mu\+Str\+Fun1\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Str\+Fun1\+\_\+t}{muStrFun1_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Str\+Fun1\+\_\+t) (const {\bf mu\+Char\+\_\+t} $\ast$)}\hypertarget{mu_parser_d_l_l_8h_a6c0241dfeb12e47f479f8500d76f1966}{}\label{mu_parser_d_l_l_8h_a6c0241dfeb12e47f479f8500d76f1966}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Str\+Fun2\+\_\+t@{mu\+Str\+Fun2\+\_\+t}}
+\index{mu\+Str\+Fun2\+\_\+t@{mu\+Str\+Fun2\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Str\+Fun2\+\_\+t}{muStrFun2_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Str\+Fun2\+\_\+t) (const {\bf mu\+Char\+\_\+t} $\ast$, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a5819b5113e88034b7b95d215ddb70ef9}{}\label{mu_parser_d_l_l_8h_a5819b5113e88034b7b95d215ddb70ef9}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!mu\+Str\+Fun3\+\_\+t@{mu\+Str\+Fun3\+\_\+t}}
+\index{mu\+Str\+Fun3\+\_\+t@{mu\+Str\+Fun3\+\_\+t}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{mu\+Str\+Fun3\+\_\+t}{muStrFun3_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf mu\+Float\+\_\+t}($\ast$ mu\+Str\+Fun3\+\_\+t) (const {\bf mu\+Char\+\_\+t} $\ast$, {\bf mu\+Float\+\_\+t}, {\bf mu\+Float\+\_\+t})}\hypertarget{mu_parser_d_l_l_8h_a0fb78ecc46808698c3825d8589ba3cea}{}\label{mu_parser_d_l_l_8h_a0fb78ecc46808698c3825d8589ba3cea}
+
+
+\subsection{Documentación de las funciones}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(mu\+Parser\+Handle\+\_\+t) mup\+Create(int n\+Base\+Type)}{API_EXPORT(muParserHandle_t) mupCreate(int nBaseType)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{{\bf mu\+Parser\+Handle\+\_\+t}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_a23d52ebb18facb489ec8425f148549a2}{}\label{mu_parser_d_l_l_8h_a23d52ebb18facb489ec8425f148549a2}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(void) mup\+Release(mu\+Parser\+Handle\+\_\+t a\+\_\+h\+Parser)}{API_EXPORT(void) mupRelease(muParserHandle_t a_hParser)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_a38d3c7c2b531e72d9b7fd6985a6c176b}{}\label{mu_parser_d_l_l_8h_a38d3c7c2b531e72d9b7fd6985a6c176b}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(const mu\+Char\+\_\+t $\ast$) mup\+Get\+Expr(mu\+Parser\+Handle\+\_\+t a\+\_\+h\+Parser)}{API_EXPORT(const muChar_t *) mupGetExpr(muParserHandle_t a_hParser)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{const {\bf mu\+Char\+\_\+t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_ac7f7d5ed6e71a21f4981721f606282b4}{}\label{mu_parser_d_l_l_8h_ac7f7d5ed6e71a21f4981721f606282b4}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(mu\+Float\+\_\+t) mup\+Eval(mu\+Parser\+Handle\+\_\+t a\+\_\+h\+Parser)}{API_EXPORT(muFloat_t) mupEval(muParserHandle_t a_hParser)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{{\bf mu\+Float\+\_\+t}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_a07fd2d7da20cd814d522ae583261e0f4}{}\label{mu_parser_d_l_l_8h_a07fd2d7da20cd814d522ae583261e0f4}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(mu\+Float\+\_\+t $\ast$) mup\+Eval\+Multi(mu\+Parser\+Handle\+\_\+t a\+\_\+h\+Parser}{API_EXPORT(muFloat_t *) mupEvalMulti(muParserHandle_t a_hParser}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{{\bf mu\+Float\+\_\+t} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_a1b4abd0acc75f45b9efc038a81e41172}{}\label{mu_parser_d_l_l_8h_a1b4abd0acc75f45b9efc038a81e41172}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT@{A\+P\+I\+\_\+\+E\+X\+P\+O\+RT}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+O\+R\+T(int) mup\+Get\+Expr\+Var\+Num(mu\+Parser\+Handle\+\_\+t a\+\_\+h\+Parser)}{API_EXPORT(int) mupGetExprVarNum(muParserHandle_t a_hParser)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+\_\+\+E\+X\+P\+O\+RT (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_d_l_l_8h_a34154418377e6de7a60e6424d3b50780}{}\label{mu_parser_d_l_l_8h_a34154418377e6de7a60e6424d3b50780}
+
+
+\subsection{Documentación de las variables}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+b\+Optimize@{a\+\_\+b\+Optimize}}
+\index{a\+\_\+b\+Optimize@{a\+\_\+b\+Optimize}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+b\+Optimize}{a_bOptimize}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Fun1\+\_\+t} {\bf mu\+Bool\+\_\+t} a\+\_\+b\+Optimize}\hypertarget{mu_parser_d_l_l_8h_a9475bebe4725f2edd386fff9db72f3ea}{}\label{mu_parser_d_l_l_8h_a9475bebe4725f2edd386fff9db72f3ea}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+f\+Result@{a\+\_\+f\+Result}}
+\index{a\+\_\+f\+Result@{a\+\_\+f\+Result}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+f\+Result}{a_fResult}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mu\+Float\+\_\+t}$\ast$ a\+\_\+f\+Result}\hypertarget{mu_parser_d_l_l_8h_a11266539756b56c4d489ed3d2a614b8e}{}\label{mu_parser_d_l_l_8h_a11266539756b56c4d489ed3d2a614b8e}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+f\+Val@{a\+\_\+f\+Val}}
+\index{a\+\_\+f\+Val@{a\+\_\+f\+Val}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+f\+Val}{a_fVal}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Float\+\_\+t} a\+\_\+f\+Val}\hypertarget{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{}\label{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+f\+Var@{a\+\_\+f\+Var}}
+\index{a\+\_\+f\+Var@{a\+\_\+f\+Var}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+f\+Var}{a_fVar}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Float\+\_\+t} $\ast$ a\+\_\+f\+Var}\hypertarget{mu_parser_d_l_l_8h_a0b10cccae0b2da3678c7a7f0cd7fbc73}{}\label{mu_parser_d_l_l_8h_a0b10cccae0b2da3678c7a7f0cd7fbc73}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+i\+Var@{a\+\_\+i\+Var}}
+\index{a\+\_\+i\+Var@{a\+\_\+i\+Var}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+i\+Var}{a_iVar}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned a\+\_\+i\+Var}\hypertarget{mu_parser_d_l_l_8h_af04cfefeaec07ac513734d08cfa2ad0a}{}\label{mu_parser_d_l_l_8h_af04cfefeaec07ac513734d08cfa2ad0a}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+n\+Oprt\+Asct@{a\+\_\+n\+Oprt\+Asct}}
+\index{a\+\_\+n\+Oprt\+Asct@{a\+\_\+n\+Oprt\+Asct}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+n\+Oprt\+Asct}{a_nOprtAsct}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Fun2\+\_\+t} {\bf mu\+Int\+\_\+t} {\bf mu\+Int\+\_\+t} a\+\_\+n\+Oprt\+Asct}\hypertarget{mu_parser_d_l_l_8h_ad6d2c1604ab605b1ddbe5e54874cc282}{}\label{mu_parser_d_l_l_8h_ad6d2c1604ab605b1ddbe5e54874cc282}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+n\+Prec@{a\+\_\+n\+Prec}}
+\index{a\+\_\+n\+Prec@{a\+\_\+n\+Prec}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+n\+Prec}{a_nPrec}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Fun2\+\_\+t} {\bf mu\+Int\+\_\+t} a\+\_\+n\+Prec}\hypertarget{mu_parser_d_l_l_8h_a7beacbf8b135305cb7a11a9731de4b0d}{}\label{mu_parser_d_l_l_8h_a7beacbf8b135305cb7a11a9731de4b0d}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+p\+Err\+Handler@{a\+\_\+p\+Err\+Handler}}
+\index{a\+\_\+p\+Err\+Handler@{a\+\_\+p\+Err\+Handler}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+p\+Err\+Handler}{a_pErrHandler}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mu\+Error\+Handler\+\_\+t} a\+\_\+p\+Err\+Handler}\hypertarget{mu_parser_d_l_l_8h_a992b8e2f461d50b05baccd4f91a81e9b}{}\label{mu_parser_d_l_l_8h_a992b8e2f461d50b05baccd4f91a81e9b}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+p\+Factory@{a\+\_\+p\+Factory}}
+\index{a\+\_\+p\+Factory@{a\+\_\+p\+Factory}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+p\+Factory}{a_pFactory}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mu\+Fac\+Fun\+\_\+t} a\+\_\+p\+Factory}\hypertarget{mu_parser_d_l_l_8h_af7bdd6658661ca9fa9e157a21f70d550}{}\label{mu_parser_d_l_l_8h_af7bdd6658661ca9fa9e157a21f70d550}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+p\+Fun@{a\+\_\+p\+Fun}}
+\index{a\+\_\+p\+Fun@{a\+\_\+p\+Fun}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+p\+Fun}{a_pFun}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Fun2\+\_\+t} a\+\_\+p\+Fun}\hypertarget{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{}\label{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+p\+Oprt@{a\+\_\+p\+Oprt}}
+\index{a\+\_\+p\+Oprt@{a\+\_\+p\+Oprt}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+p\+Oprt}{a_pOprt}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} {\bf mu\+Fun1\+\_\+t} a\+\_\+p\+Oprt}\hypertarget{mu_parser_d_l_l_8h_ae106b6975be89f5cf1d116ebca53cccc}{}\label{mu_parser_d_l_l_8h_ae106b6975be89f5cf1d116ebca53cccc}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+psz\+Name@{a\+\_\+psz\+Name}}
+\index{a\+\_\+psz\+Name@{a\+\_\+psz\+Name}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+psz\+Name}{a_pszName}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned const {\bf mu\+Char\+\_\+t} $\ast$$\ast$ a\+\_\+psz\+Name}\hypertarget{mu_parser_d_l_l_8h_a9702acb48b4561c9a4ed7d7c538d8516}{}\label{mu_parser_d_l_l_8h_a9702acb48b4561c9a4ed7d7c538d8516}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+p\+Var@{a\+\_\+p\+Var}}
+\index{a\+\_\+p\+Var@{a\+\_\+p\+Var}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+p\+Var}{a_pVar}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned const {\bf mu\+Char\+\_\+t} {\bf mu\+Float\+\_\+t} $\ast$ a\+\_\+p\+Var}\hypertarget{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}{}\label{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+s\+Val@{a\+\_\+s\+Val}}
+\index{a\+\_\+s\+Val@{a\+\_\+s\+Val}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+s\+Val}{a_sVal}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} const {\bf mu\+Char\+\_\+t}$\ast$ a\+\_\+s\+Val}\hypertarget{mu_parser_d_l_l_8h_ab0408457b4645fcfce7c0b08d936f162}{}\label{mu_parser_d_l_l_8h_ab0408457b4645fcfce7c0b08d936f162}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+sz\+Charset@{a\+\_\+sz\+Charset}}
+\index{a\+\_\+sz\+Charset@{a\+\_\+sz\+Charset}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+sz\+Charset}{a_szCharset}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} $\ast$ a\+\_\+sz\+Charset}\hypertarget{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}{}\label{mu_parser_d_l_l_8h_af2a0f2aed8dce1692e103c958ae233d3}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+sz\+Expr@{a\+\_\+sz\+Expr}}
+\index{a\+\_\+sz\+Expr@{a\+\_\+sz\+Expr}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+sz\+Expr}{a_szExpr}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t}$\ast$ a\+\_\+sz\+Expr}\hypertarget{mu_parser_d_l_l_8h_a70627044ecb2b675fbd242e8bf1747b3}{}\label{mu_parser_d_l_l_8h_a70627044ecb2b675fbd242e8bf1747b3}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!a\+\_\+sz\+Name@{a\+\_\+sz\+Name}}
+\index{a\+\_\+sz\+Name@{a\+\_\+sz\+Name}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{a\+\_\+sz\+Name}{a_szName}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} $\ast$ a\+\_\+sz\+Name}\hypertarget{mu_parser_d_l_l_8h_a64bc01627fb53ac9bd824ade2e8cb99d}{}\label{mu_parser_d_l_l_8h_a64bc01627fb53ac9bd824ade2e8cb99d}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!c\+Arg\+Sep@{c\+Arg\+Sep}}
+\index{c\+Arg\+Sep@{c\+Arg\+Sep}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{c\+Arg\+Sep}{cArgSep}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mu\+Char\+\_\+t} c\+Arg\+Sep}\hypertarget{mu_parser_d_l_l_8h_a76c4c148d54d5b7e5728ec911432a1c3}{}\label{mu_parser_d_l_l_8h_a76c4c148d54d5b7e5728ec911432a1c3}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!n\+Num@{n\+Num}}
+\index{n\+Num@{n\+Num}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{n\+Num}{nNum}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ n\+Num}\hypertarget{mu_parser_d_l_l_8h_a414d80453eba1954ae1300dc3c988229}{}\label{mu_parser_d_l_l_8h_a414d80453eba1954ae1300dc3c988229}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!n\+Size@{n\+Size}}
+\index{n\+Size@{n\+Size}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{n\+Size}{nSize}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mu\+Float\+\_\+t} int n\+Size}\hypertarget{mu_parser_d_l_l_8h_af738afe1aa7c19e596796e9957c2d12d}{}\label{mu_parser_d_l_l_8h_af738afe1aa7c19e596796e9957c2d12d}
+\index{mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}!p\+User\+Data@{p\+User\+Data}}
+\index{p\+User\+Data@{p\+User\+Data}!mu\+Parser\+D\+L\+L.\+h@{mu\+Parser\+D\+L\+L.\+h}}
+\subsubsection[{\texorpdfstring{p\+User\+Data}{pUserData}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mu\+Fac\+Fun\+\_\+t} void$\ast$ p\+User\+Data}\hypertarget{mu_parser_d_l_l_8h_af2fe0b3322818bbb3e6f8b0457f1b802}{}\label{mu_parser_d_l_l_8h_af2fe0b3322818bbb3e6f8b0457f1b802}

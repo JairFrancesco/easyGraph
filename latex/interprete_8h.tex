@@ -1,0 +1,47 @@
+\hypertarget{interprete_8h}{}\section{Referencia del Archivo Parser/include/interprete.h}
+\label{interprete_8h}\index{Parser/include/interprete.\+h@{Parser/include/interprete.\+h}}
+
+
+Clase para obtener coordenadas de una ecuación.  
+
+
+{\ttfamily \#include \char`\"{}Interpretador.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}procesador\+\_\+de\+\_\+arbol.\+h\char`\"{}}\\*
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classinterprete}{interprete}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase para obtener coordenadas de una ecuación. 
+
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+14/07/2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Autor}
+Alexis Mendoza 
+
+Jair Huaman 
+
+Luis Bernal  Clase Interprete 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} ()\{
+    \textcolor{keywordtype}{string} ecuacion = \textcolor{stringliteral}{"((x+2*y)/sin(y)-12)"};
+    \hyperlink{classinterprete}{interprete} * interp = \textcolor{keyword}{new} \hyperlink{classinterprete}{interprete}();
+    interp -> set\_ecuacion(ecuacion);
+    interp -> crear\_arbol();
+    interp->\hyperlink{classinterprete_ab88c3854e225bd308c2f00810072aba7}{set\_diferencial}(1);
+    interp->\hyperlink{classinterprete_af31ffc60b4d5d31f04eb846a4caa6697}{set\_limite\_izq\_var1}(-100);
+    interp->\hyperlink{classinterprete_a3bb4261f5515b6c65910c2c674965019}{set\_limite\_der\_var1}(100);
+    interp->\hyperlink{classinterprete_ac32fc5f28fa505c5dcd90984cbd89a9f}{set\_limite\_izq\_var2}(-100);
+    interp->\hyperlink{classinterprete_a0e0a9920dd96b8fdab67bf373978bec8}{set\_limite\_der\_var2}(100);
+    std::vector<std::vector<double>>coordenadas=   interp->\hyperlink{classinterprete_a7192cffb926a47a22526d0ba3a6d661c}{get\_coordenadas}();
+\}
+\end{DoxyCode}
+ 
+\end{DoxyAuthor}

@@ -1,0 +1,254 @@
+\hypertarget{mu_parser_def_8h}{}\section{Referencia del Archivo Parser/\+Test/include/mu\+Parser\+Def.h}
+\label{mu_parser_def_8h}\index{Parser/\+Test/include/mu\+Parser\+Def.\+h@{Parser/\+Test/include/mu\+Parser\+Def.\+h}}
+
+
+This file contains standard definitions used by the parser.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include \char`\"{}mu\+Parser\+Fixes.\+h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacemu}{mu}
+\begin{DoxyCompactList}\small\item\em Namespace for mathematical applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mu_parser_def_8h_a1efeb1be1314e9e3959a618141a4d687}{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON}~\hyperlink{example2_8c_ae936e4c15227768f7da4e0951def89c8}{\+\_\+T}(\char`\"{}2.\+2.\+5\char`\"{})
+\item 
+\#define \hyperlink{mu_parser_def_8h_a11f48f302c6364bf8cf5d6f93ec1c526}{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}~\hyperlink{example2_8c_ae936e4c15227768f7da4e0951def89c8}{\+\_\+T}(\char`\"{}20150427; GC\char`\"{})
+\item 
+\#define \hyperlink{mu_parser_def_8h_afafbcd9a9787e6e474506995a3cc7282}{M\+U\+P\+\_\+\+C\+H\+A\+RS}~\hyperlink{example2_8c_ae936e4c15227768f7da4e0951def89c8}{\+\_\+T}(\char`\"{}abcdefghijklmnopqrstuvwxyz\+A\+B\+C\+D\+E\+F\+G\+H\+I\+J\+K\+L\+M\+N\+O\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+YZ\char`\"{})
+\item 
+\#define \hyperlink{mu_parser_def_8h_a5a22a812cf29b119506daad01152f93a}{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE}~double
+\begin{DoxyCompactList}\small\item\em If this macro is defined mathematical exceptions (div by zero) will be thrown as exceptions. \end{DoxyCompactList}\item 
+\#define \hyperlink{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{\+\_\+T}(x)~x
+\begin{DoxyCompactList}\small\item\em Activate this option in order to compile with Open\+MP support. \end{DoxyCompactList}\item 
+\#define \hyperlink{mu_parser_def_8h_a1fc7b0394571c5a372932693798ba658}{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}~std\+::string
+\begin{DoxyCompactList}\small\item\em Definition of the basic parser string type. \end{DoxyCompactList}\item 
+\#define \hyperlink{mu_parser_def_8h_ab8ab5fe61e39cd4e7e6449ca4361a442}{M\+U\+P\+\_\+\+F\+A\+IL}(M\+SG)
+\item 
+\#define \hyperlink{mu_parser_def_8h_a12c08d62c4a278b4e2ca3aad8e7af5e5}{M\+U\+P\+\_\+\+A\+S\+S\+E\+RT}(C\+O\+ND)
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{mu_parser_def_8h_a5a22a812cf29b119506daad01152f93a}{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE} \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{mu\+::value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The numeric datatype used by the parser. \end{DoxyCompactList}\item 
+typedef \hyperlink{mu_parser_def_8h_a1fc7b0394571c5a372932693798ba658}{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE} \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{mu\+::string\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The stringtype used by the parser. \end{DoxyCompactList}\item 
+typedef string\+\_\+type\+::value\+\_\+type \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{mu\+::char\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The character type used by the parser. \end{DoxyCompactList}\item 
+typedef std\+::basic\+\_\+stringstream$<$ char\+\_\+type, std\+::char\+\_\+traits$<$ char\+\_\+type $>$, std\+::allocator$<$ char\+\_\+type $>$ $>$ \hyperlink{namespacemu_ab3b60f8311eb24cf437182a8d5125774}{mu\+::stringstream\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Typedef for easily using stringstream that respect the parser stringtype. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ string\+\_\+type, value\+\_\+type $\ast$ $>$ \hyperlink{namespacemu_ab57755354e948a664ad94d38546dbb10}{mu\+::varmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type used for storing variables. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ string\+\_\+type, value\+\_\+type $>$ \hyperlink{namespacemu_a5940d281286a01342cf773f74481843c}{mu\+::valmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type used for storing constants. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ string\+\_\+type, std\+::size\+\_\+t $>$ \hyperlink{namespacemu_aea1c20093e51d3dc13de10f3c17ae5b1}{mu\+::strmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type for assigning a string name to an index in the internal string table. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{mu\+::generic\+\_\+fun\+\_\+type}) ()
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_af74b1b05cca11b94eb7a478c6c1f8200}{mu\+::fun\+\_\+type0}) ()
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_affeaec09801b502b9955d7248b7e2706}{mu\+::fun\+\_\+type1}) (value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a single arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_abd9aed5816d33116d687f5becd85b38f}{mu\+::fun\+\_\+type2}) (value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with two arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_ac89cbeb049bfe0ac38464d9420bf3201}{mu\+::fun\+\_\+type3}) (value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with three arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_ada318070796bde216079092cfdcf6fe1}{mu\+::fun\+\_\+type4}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with four arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a7a01724f9caaf71f99e46b49e75b3bc3}{mu\+::fun\+\_\+type5}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a575003f957a2a77d757e24fd04139001}{mu\+::fun\+\_\+type6}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_aa03550a6f05b1270e1e27214a63301ee}{mu\+::fun\+\_\+type7}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a17cfcdc39e8d1d95c1418e117eb923b8}{mu\+::fun\+\_\+type8}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a04c92810aa2e6098af69f47474388d71}{mu\+::fun\+\_\+type9}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a9d79a17c5171e8928f8c91964979e56c}{mu\+::fun\+\_\+type10}) (value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_aff9adf757e90a2398326a3cb10585cf1}{mu\+::bulkfun\+\_\+type0}) (int, int)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a2bd588710432e6e34eae3e2af4ba3862}{mu\+::bulkfun\+\_\+type1}) (int, int, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a single arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a9faa755ea34c6e8de3895013e649a713}{mu\+::bulkfun\+\_\+type2}) (int, int, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with two arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a441194d09cb0e9331dbfdaf74f59efd3}{mu\+::bulkfun\+\_\+type3}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with three arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a6b7ce6e1f888b02222d2765d1f521507}{mu\+::bulkfun\+\_\+type4}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with four arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a9343ce135e0a53897a67c6098d07a7b3}{mu\+::bulkfun\+\_\+type5}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a1259e71ee6f8b9e3985ef0cda16dd433}{mu\+::bulkfun\+\_\+type6}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a9726be97f12bc3b336884d462623ca8c}{mu\+::bulkfun\+\_\+type7}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_aa4e562060c2c2377266ec1cf274856fe}{mu\+::bulkfun\+\_\+type8}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a51c71d5698d29b40688feaa8e968efc9}{mu\+::bulkfun\+\_\+type9}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_aebd99bafbd17761a9e13b8a7366ae1ce}{mu\+::bulkfun\+\_\+type10}) (int, int, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a004a9a10d015a8e2e17604cb632cd6c1}{mu\+::multfun\+\_\+type}) (const value\+\_\+type $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a variable argument list. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a578b844842f577e78da3f520f9ee2f9a}{mu\+::strfun\+\_\+type1}) (const char\+\_\+type $\ast$)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string as an argument. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a14b9af8ec1e328b685221ca23fc9f765}{mu\+::strfun\+\_\+type2}) (const char\+\_\+type $\ast$, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string and a value as arguments. \end{DoxyCompactList}\item 
+typedef value\+\_\+type($\ast$ \hyperlink{namespacemu_a1ce7a16b2a2b87f662819b7ee1d87bc0}{mu\+::strfun\+\_\+type3}) (const char\+\_\+type $\ast$, value\+\_\+type, value\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string and two values as arguments. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}{mu\+::identfun\+\_\+type}) (const char\+\_\+type $\ast$s\+Expr, int $\ast$n\+Pos, value\+\_\+type $\ast$f\+Val)
+\begin{DoxyCompactList}\small\item\em Callback used for functions that identify values in a string. \end{DoxyCompactList}\item 
+typedef value\+\_\+type $\ast$($\ast$ \hyperlink{namespacemu_a97af5f5c39391d262dda72084788b83e}{mu\+::facfun\+\_\+type}) (const char\+\_\+type $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em Callback used for variable creation factory functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{mu\+::\+E\+Cmd\+Code} \{ \\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea62da784138e45f161918ddc845ea4420}{mu\+::cm\+LE} = 0, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea188c6fd8324762d1513f28ef359408d7}{mu\+::cm\+GE} = 1, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac34e5f492d8b0f4f2f46d7c261a02e4c}{mu\+::cm\+N\+EQ} = 2, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eacedcb20eed5d83ea723cb47bb2c1cc0d}{mu\+::cm\+EQ} = 3, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea1f455ded43de3f52ce0a39f9dde843e5}{mu\+::cm\+LT} = 4, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac9cbc41a04d7b4dece063211d31ec5b3}{mu\+::cm\+GT} = 5, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea127712855b500aff2b37a35c6767451a}{mu\+::cm\+A\+DD} = 6, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eadad0cd5d67567c1ad976e7d332537a9d}{mu\+::cm\+S\+UB} = 7, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea703cb484ede1e3e4926c0a1fb3845679}{mu\+::cm\+M\+UL} = 8, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8923e5bebd1eb60c1436fa64a32492a0}{mu\+::cm\+D\+IV} = 9, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea3fad2e00b3026f83d90b135fd55ba7e3}{mu\+::cm\+P\+OW} = 10, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea502db65bd1b664c889bf8223c596cfd6}{mu\+::cm\+L\+A\+ND} = 11, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8a136030771033042e8bdd8273746ae8}{mu\+::cm\+L\+OR} = 12, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea471a75e04daaa2a387be5235484a3e01}{mu\+::cm\+A\+S\+S\+I\+GN} = 13, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea677298c34553334aa70bfb87a58b7f0a}{mu\+::cm\+BO} = 14, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacee8e4f918f65e180f8734f7e310aa1}{mu\+::cm\+BC} = 15, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab9e28b93b1f434a7660559728a749eda}{mu\+::cm\+IF} = 16, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf8f2c4094f7d220bd850f789f6622526}{mu\+::cm\+E\+L\+SE} = 17, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea9115a14061048e465cc8c1b0132d6311}{mu\+::cm\+E\+N\+D\+IF} = 18, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea554881ce7928a56e6e97f8f1149b9d50}{mu\+::cm\+A\+R\+G\+\_\+\+S\+EP} = 19, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eafa2a28b5022d2454768c74e15d5ae377}{mu\+::cm\+V\+AR} = 20, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab1cf4ef5d34d815bb016fef14c331622}{mu\+::cm\+V\+AL} = 21, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0484abbbb36506cac6748b6fa42285c9}{mu\+::cm\+V\+A\+R\+P\+O\+W2}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae5e22685bf485df5b9f3be0e9a658501}{mu\+::cm\+V\+A\+R\+P\+O\+W3}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaed4b4e62d5decffbac8b811d055c5b97}{mu\+::cm\+V\+A\+R\+P\+O\+W4}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0383b2c00c33bdae17502b1f2f4a07fc}{mu\+::cm\+V\+A\+R\+M\+UL}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea40c19d16d6030d0979f1a84a7d006abc}{mu\+::cm\+P\+O\+W2}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaeacb1b1bb9859e8bc6147887a787feca}{mu\+::cm\+F\+U\+NC}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae8ed179475f79bed80d66d389007717a}{mu\+::cm\+F\+U\+N\+C\+\_\+\+S\+TR}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea052e0188c92157ef66581a31accfcab1}{mu\+::cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea85db5789f85577dd5bcc21aea5b3244f}{mu\+::cm\+S\+T\+R\+I\+NG}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacf35df01fc3b643b134e9d1ce3cc4e2}{mu\+::cm\+O\+P\+R\+T\+\_\+\+B\+IN}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf866a95309b7573574b6e656045e4a2f}{mu\+::cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea961fe96555e0f036e52496126f70c404}{mu\+::cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea76086ac235dadbe9ad8a184190b21c8b}{mu\+::cm\+E\+ND}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eabd8cbb2e08ff6806578535408feef0c3}{mu\+::cm\+U\+N\+K\+N\+O\+WN}
+ \}\begin{DoxyCompactList}\small\item\em Bytecode values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302}{mu\+::\+E\+Type\+Code} \{ \hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302ac02584cb1ca179714a5ac8a951653ad4}{mu\+::tp\+S\+TR} = 0, 
+\hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a38692f5e59ea960113e0de77ed9a9428}{mu\+::tp\+D\+BL} = 1, 
+\hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a2a6b3ae75a0e6a44a992a87d222b4481}{mu\+::tp\+V\+O\+ID} = 2
+ \}\begin{DoxyCompactList}\small\item\em Types internally used by the parser. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789}{mu\+::\+E\+Parser\+Version\+Info} \{ \hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789a344ba8a4705909938708d365484ca563}{mu\+::pvi\+B\+R\+I\+EF}, 
+\hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789a15f2fdade93277c8923e2384f184e1af}{mu\+::pvi\+F\+U\+LL}
+ \}
+\item 
+enum \hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1}{mu\+::\+E\+Oprt\+Associativity} \{ \hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1a4b1875076b2c85879e9596a7a98af7a6}{mu\+::oa\+L\+E\+FT} = 0, 
+\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1ae10ad97402ffc0c524f5fd3919e4bbfa}{mu\+::oa\+R\+I\+G\+HT} = 1, 
+\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1a91ec8ef41d1b2308e7fcd096bf9a7162}{mu\+::oa\+N\+O\+NE} = 2
+ \}\begin{DoxyCompactList}\small\item\em Parser operator precedence values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3d}{mu\+::\+E\+Oprt\+Precedence} \{ \\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da2ef641de328c60277d2d1cb8e4e542b0}{mu\+::pr\+L\+OR} = 1, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3dafc5dd83c0caa263db1637b4b075b1a7d}{mu\+::pr\+L\+A\+ND} = 2, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da5a921789427276e8c641653459da2302}{mu\+::pr\+L\+O\+G\+IC} = 3, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da570966afb3a2a2e7c12bf0f0aff47d56}{mu\+::pr\+C\+MP} = 4, 
+\\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3dac287fcda15dc853e73e3000f7da24c2a}{mu\+::pr\+A\+D\+D\+\_\+\+S\+UB} = 5, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3daf90e37568d297c82df0f908e6b0852e0}{mu\+::pr\+M\+U\+L\+\_\+\+D\+IV} = 6, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da706c8deebfec7a93ee879ab575b478c0}{mu\+::pr\+P\+OW} = 7, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da50b576d79c0d155f703d409967ad3727}{mu\+::pr\+I\+N\+F\+IX} = 6, 
+\\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da1df5768036a033427841dfabe126e016}{mu\+::pr\+P\+O\+S\+T\+F\+IX} = 6
+ \}\begin{DoxyCompactList}\small\item\em Parser operator precedence values. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespacemu_a0346964f0b93f6c904a9964387522d97}{mu\+::console} ()
+\begin{DoxyCompactList}\small\item\em Encapsulate cout. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{namespacemu_a4bcc4027b54951ec8c490fb8d0f68a1d}{mu\+::console\+\_\+in} ()
+\begin{DoxyCompactList}\small\item\em Encapsulate cin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+This file contains standard definitions used by the parser. 
+
+
+
+\subsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!\+\_\+T@{\+\_\+T}}
+\index{\+\_\+T@{\+\_\+T}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+T}{_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~x}\hypertarget{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}{}\label{mu_parser_def_8h_ae936e4c15227768f7da4e0951def89c8}
+
+
+Activate this option in order to compile with Open\+MP support. 
+
+Open\+MP is used only in the bulk mode it may increase the performance a bit. \index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+A\+S\+S\+E\+RT@{M\+U\+P\+\_\+\+A\+S\+S\+E\+RT}}
+\index{M\+U\+P\+\_\+\+A\+S\+S\+E\+RT@{M\+U\+P\+\_\+\+A\+S\+S\+E\+RT}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+A\+S\+S\+E\+RT}{MUP_ASSERT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+A\+S\+S\+E\+RT(
+\begin{DoxyParamCaption}
+\item[{}]{C\+O\+ND}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_def_8h_a12c08d62c4a278b4e2ca3aad8e7af5e5}{}\label{mu_parser_def_8h_a12c08d62c4a278b4e2ca3aad8e7af5e5}
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE@{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE}}
+\index{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE@{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE}{MUP_BASETYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE~double}\hypertarget{mu_parser_def_8h_a5a22a812cf29b119506daad01152f93a}{}\label{mu_parser_def_8h_a5a22a812cf29b119506daad01152f93a}
+
+
+If this macro is defined mathematical exceptions (div by zero) will be thrown as exceptions. 
+
+Define the base datatype for values.
+
+This datatype must be a built in value type. You can not use custom classes. It should be working with all types except \char`\"{}int\char`\"{}! \index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+C\+H\+A\+RS@{M\+U\+P\+\_\+\+C\+H\+A\+RS}}
+\index{M\+U\+P\+\_\+\+C\+H\+A\+RS@{M\+U\+P\+\_\+\+C\+H\+A\+RS}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+C\+H\+A\+RS}{MUP_CHARS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+C\+H\+A\+RS~{\bf \+\_\+T}(\char`\"{}abcdefghijklmnopqrstuvwxyz\+A\+B\+C\+D\+E\+F\+G\+H\+I\+J\+K\+L\+M\+N\+O\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+YZ\char`\"{})}\hypertarget{mu_parser_def_8h_afafbcd9a9787e6e474506995a3cc7282}{}\label{mu_parser_def_8h_afafbcd9a9787e6e474506995a3cc7282}
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+F\+A\+IL@{M\+U\+P\+\_\+\+F\+A\+IL}}
+\index{M\+U\+P\+\_\+\+F\+A\+IL@{M\+U\+P\+\_\+\+F\+A\+IL}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+F\+A\+IL}{MUP_FAIL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+F\+A\+IL(
+\begin{DoxyParamCaption}
+\item[{}]{M\+SG}
+\end{DoxyParamCaption}
+)}\hypertarget{mu_parser_def_8h_ab8ab5fe61e39cd4e7e6449ca4361a442}{}\label{mu_parser_def_8h_ab8ab5fe61e39cd4e7e6449ca4361a442}
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE@{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}}
+\index{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE@{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}{MUP_STRING_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE~std\+::string}\hypertarget{mu_parser_def_8h_a1fc7b0394571c5a372932693798ba658}{}\label{mu_parser_def_8h_a1fc7b0394571c5a372932693798ba658}
+
+
+Definition of the basic parser string type. 
+
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON}{MUP_VERSION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+ON~{\bf \+\_\+T}(\char`\"{}2.\+2.\+5\char`\"{})}\hypertarget{mu_parser_def_8h_a1efeb1be1314e9e3959a618141a4d687}{}\label{mu_parser_def_8h_a1efeb1be1314e9e3959a618141a4d687}
+\index{mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}!M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE@{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}}
+\index{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE@{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}!mu\+Parser\+Def.\+h@{mu\+Parser\+Def.\+h}}
+\subsubsection[{\texorpdfstring{M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}{MUP_VERSION_DATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE~{\bf \+\_\+T}(\char`\"{}20150427; GC\char`\"{})}\hypertarget{mu_parser_def_8h_a11f48f302c6364bf8cf5d6f93ec1c526}{}\label{mu_parser_def_8h_a11f48f302c6364bf8cf5d6f93ec1c526}

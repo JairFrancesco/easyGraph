@@ -1,0 +1,110 @@
+\hypertarget{class_graficador}{}\section{Referencia de la Clase Graficador}
+\label{class_graficador}\index{Graficador@{Graficador}}
+
+
+{\ttfamily \#include $<$graficador.\+h$>$}
+
+Diagrama de herencias de Graficador\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graficador}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graficador_a62158abce60f946c3fd7893f2689e138}{Graficador} ()
+\item 
+void \hyperlink{class_graficador_a099289e888f91f94e377fd26d4cefaca}{crear} (std\+::vector$<$ std\+::vector$<$ double $>$$>$, int, int)
+\item 
+void \hyperlink{class_graficador_a799d3f27e186e07c2841aa8edbbf641f}{add\+\_\+filtros} ()
+\item 
+void \hyperlink{class_graficador_a47a1e61b68a8e1d346c2b0d21ff11d01}{add\+\_\+axes} ()
+\item 
+void \hyperlink{class_graficador_a74fa4bf9dff4b44b521a04a1cc0200a5}{renderizar} (bool mostrar=true)
+\item 
+void \hyperlink{class_graficador_a70f37ffd12170c31155c44f2aea11b93}{clean} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ $>$ \hyperlink{class_graficador_af324352821c6e39961ed6977e50e9582}{actores}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Structured\+Grid $>$ \hyperlink{class_graficador_aeb8321dafc848939f900bea4721142da}{structured\+Grid} = vtk\+Smart\+Pointer$<$vtk\+Structured\+Grid$>$\+::New()
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Camera $>$ \hyperlink{class_graficador_aeb158420087549f052e29a6739ea2f75}{camera} = vtk\+Smart\+Pointer$<$vtk\+Camera$>$\+::New()
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \hyperlink{class_graficador_a48b78d03ae2e04e5032ed685f8fd8643}{colors} = vtk\+Smart\+Pointer$<$vtk\+Unsigned\+Char\+Array$>$\+::New()
+\end{DoxyCompactItemize}
+\subsection*{Otros miembros heredados}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Graficador@{Graficador}!Graficador@{Graficador}}
+\index{Graficador@{Graficador}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{Graficador()}{Graficador()}}]{\setlength{\rightskip}{0pt plus 5cm}Graficador\+::\+Graficador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a62158abce60f946c3fd7893f2689e138}{}\label{class_graficador_a62158abce60f946c3fd7893f2689e138}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Graficador@{Graficador}!add\+\_\+axes@{add\+\_\+axes}}
+\index{add\+\_\+axes@{add\+\_\+axes}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{add\+\_\+axes()}{add_axes()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graficador\+::add\+\_\+axes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a47a1e61b68a8e1d346c2b0d21ff11d01}{}\label{class_graficador_a47a1e61b68a8e1d346c2b0d21ff11d01}
+\index{Graficador@{Graficador}!add\+\_\+filtros@{add\+\_\+filtros}}
+\index{add\+\_\+filtros@{add\+\_\+filtros}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{add\+\_\+filtros()}{add_filtros()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graficador\+::add\+\_\+filtros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a799d3f27e186e07c2841aa8edbbf641f}{}\label{class_graficador_a799d3f27e186e07c2841aa8edbbf641f}
+\index{Graficador@{Graficador}!clean@{clean}}
+\index{clean@{clean}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{clean()}{clean()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graficador\+::clean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a70f37ffd12170c31155c44f2aea11b93}{}\label{class_graficador_a70f37ffd12170c31155c44f2aea11b93}
+\index{Graficador@{Graficador}!crear@{crear}}
+\index{crear@{crear}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{crear(std\+::vector$<$ std\+::vector$<$ double $>$$>$, int, int)}{crear(std::vector< std::vector< double >>, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graficador\+::crear (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{vec, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a099289e888f91f94e377fd26d4cefaca}{}\label{class_graficador_a099289e888f91f94e377fd26d4cefaca}
+\index{Graficador@{Graficador}!renderizar@{renderizar}}
+\index{renderizar@{renderizar}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{renderizar(bool mostrar=true)}{renderizar(bool mostrar=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graficador\+::renderizar (
+\begin{DoxyParamCaption}
+\item[{bool}]{mostrar = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graficador_a74fa4bf9dff4b44b521a04a1cc0200a5}{}\label{class_graficador_a74fa4bf9dff4b44b521a04a1cc0200a5}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Graficador@{Graficador}!actores@{actores}}
+\index{actores@{actores}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{actores}{actores}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$vtk\+Smart\+Pointer$<$vtk\+Actor$>$ $>$ Graficador\+::actores}\hypertarget{class_graficador_af324352821c6e39961ed6977e50e9582}{}\label{class_graficador_af324352821c6e39961ed6977e50e9582}
+\index{Graficador@{Graficador}!camera@{camera}}
+\index{camera@{camera}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{camera}{camera}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Camera$>$ Graficador\+::camera = vtk\+Smart\+Pointer$<$vtk\+Camera$>$\+::New()}\hypertarget{class_graficador_aeb158420087549f052e29a6739ea2f75}{}\label{class_graficador_aeb158420087549f052e29a6739ea2f75}
+\index{Graficador@{Graficador}!colors@{colors}}
+\index{colors@{colors}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{colors}{colors}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Unsigned\+Char\+Array$>$ Graficador\+::colors = vtk\+Smart\+Pointer$<$vtk\+Unsigned\+Char\+Array$>$\+::New()}\hypertarget{class_graficador_a48b78d03ae2e04e5032ed685f8fd8643}{}\label{class_graficador_a48b78d03ae2e04e5032ed685f8fd8643}
+\index{Graficador@{Graficador}!structured\+Grid@{structured\+Grid}}
+\index{structured\+Grid@{structured\+Grid}!Graficador@{Graficador}}
+\subsubsection[{\texorpdfstring{structured\+Grid}{structuredGrid}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Structured\+Grid$>$ Graficador\+::structured\+Grid = vtk\+Smart\+Pointer$<$vtk\+Structured\+Grid$>$\+::New()}\hypertarget{class_graficador_aeb8321dafc848939f900bea4721142da}{}\label{class_graficador_aeb8321dafc848939f900bea4721142da}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{graficador_8h}{graficador.\+h}\item 
+src/\hyperlink{graficador_8cpp}{graficador.\+cpp}\end{DoxyCompactItemize}

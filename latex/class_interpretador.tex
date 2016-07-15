@@ -1,0 +1,278 @@
+\hypertarget{class_interpretador}{}\section{Referencia de la Clase Interpretador}
+\label{class_interpretador}\index{Interpretador@{Interpretador}}
+
+
+{\ttfamily \#include $<$Interpretador.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}{Interpretador} ()
+\item 
+virtual \hyperlink{class_interpretador_a7a3a27d4a51d961df2ad0dc5c9c67efd}{$\sim$\+Interpretador} ()
+\item 
+void \hyperlink{class_interpretador_a5fe0e48acd59f9e30f9a6d0b6fdc8fa2}{elim\+\_\+vacio} (std\+::vector$<$ string $>$ \&)
+\item 
+void \hyperlink{class_interpretador_a14fe65c1d966925c56248551d8e41d5d}{separar\+\_\+en\+\_\+dos} (std\+::vector$<$ string $>$ \&, string)
+\item 
+void \hyperlink{class_interpretador_ac3dba52e23ccd5f66e372562db17a0a6}{reverse\+\_\+string} (string \&)
+\item 
+bool \hyperlink{class_interpretador_a94fa9d2449766953dbb3806f9f8cff00}{buscar\+\_\+ope} (string, string, std\+::vector$<$ string $>$ \&)
+\item 
+void \hyperlink{class_interpretador_a5ad45a7156035ca33ed3cc30603c83e8}{transformar} (string text)
+\item 
+void \hyperlink{class_interpretador_ac096061ccb53d31d3e167994ff482992}{transformar} (string text, \hyperlink{class_nodo}{Nodo} $\ast$, bool)
+\item 
+double \hyperlink{class_interpretador_ac3b1cd0b89441d2f08ab721a5eb43143}{string\+\_\+to\+\_\+double} (string)
+\item 
+void \hyperlink{class_interpretador_a2d4e10b621a47802ba4e29eb0abd18c2}{elim\+\_\+parent} (string \&)
+\item 
+bool \hyperlink{class_interpretador_a70361935b6fd4bc539ed23e81b98dc4d}{esta\+\_\+en} (string text, string ope)
+\item 
+std\+::string \hyperlink{class_interpretador_ae91263671ef360654289dbf0e1e340ee}{verif\+\_\+sintaxis} (std\+::string)
+\item 
+void \hyperlink{class_interpretador_a50bdb39c90e92e8f92be71443339774c}{fix\+\_\+multi} (std\+::vector$<$ string $>$ \&)
+\item 
+std\+::vector$<$ string $>$ \hyperlink{class_interpretador_a131a8526e7eca0c2ebd36d5fd9f116df}{string\+\_\+to\+\_\+vector} (string)
+\item 
+void \hyperlink{class_interpretador_a56b129ed3210f94fafed102eeb68f633}{fix\+\_\+multiplicaciones} (std\+::vector$<$ string $>$ \&)
+\item 
+void \hyperlink{class_interpretador_aa89bcf45e7c07b712ca0d63e32ef098b}{fix\+\_\+negativos} (std\+::vector$<$ string $>$ \&)
+\item 
+void \hyperlink{class_interpretador_aa95dd4e2fe49213ff6d445f3fb69881d}{fix\+\_\+operaciones\+\_\+unarias} (std\+::vector$<$ string $>$ \&)
+\item 
+string \hyperlink{class_interpretador_a87e389afc6775a51deaea1c5730e9ecc}{get\+\_\+operador\+\_\+mayor\+\_\+prioridad} (std\+::vector$<$ string $>$)
+\item 
+int \hyperlink{class_interpretador_a2032902283b06008db2cad20050ecced}{get\+\_\+operador\+\_\+prioridad} (string)
+\item 
+bool \hyperlink{class_interpretador_a99c39d578dc93c193c7d5de164985e35}{es\+\_\+operador} (string)
+\item 
+bool \hyperlink{class_interpretador_a54276960e2c38150c3f337447414b2f0}{is\+\_\+number} (const std\+::string \&)
+\item 
+bool \hyperlink{class_interpretador_a7029c0ad73ed9ab55de3033073b169db}{is\+Alpha} (const string \&)
+\item 
+bool \hyperlink{class_interpretador_a2c47cecd7282c404a4fc858a303d9230}{es\+\_\+operador\+\_\+unario} (string)
+\item 
+bool \hyperlink{class_interpretador_aa376909fd2d36b41124af047055e5f34}{es\+\_\+operador\+\_\+binario} (string)
+\item 
+bool \hyperlink{class_interpretador_a256caa85f2333b3d5f98b50755fde5c8}{es\+\_\+expresion} (string)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, double($\ast$)(double)$>$ \hyperlink{class_interpretador_a69b4c0a967ebb3300bdd1a0d768be777}{funciones\+\_\+unarias}
+\item 
+map$<$ string, double($\ast$)(double, double)$>$ \hyperlink{class_interpretador_aae54d44f01e4c4b755ae133819b49d78}{funciones\+\_\+binarias}
+\item 
+map$<$ string, int $>$ \hyperlink{class_interpretador_a5ba0987e974f7eaba6376e0539466788}{prioridad\+\_\+funciones}
+\item 
+\hyperlink{classarbol__binario}{arbol\+\_\+binario} $\ast$ \hyperlink{class_interpretador_a95ae1c37ba98e88aeffec2807eb3f332}{tree}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Interpretador@{Interpretador}!Interpretador@{Interpretador}}
+\index{Interpretador@{Interpretador}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{Interpretador()}{Interpretador()}}]{\setlength{\rightskip}{0pt plus 5cm}Interpretador\+::\+Interpretador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}{}\label{class_interpretador_a12d844a7ab8d634e96b57971c9aedd9e}
+\index{Interpretador@{Interpretador}!````~Interpretador@{$\sim$\+Interpretador}}
+\index{````~Interpretador@{$\sim$\+Interpretador}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{$\sim$\+Interpretador()}{~Interpretador()}}]{\setlength{\rightskip}{0pt plus 5cm}Interpretador\+::$\sim$\+Interpretador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_interpretador_a7a3a27d4a51d961df2ad0dc5c9c67efd}{}\label{class_interpretador_a7a3a27d4a51d961df2ad0dc5c9c67efd}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Interpretador@{Interpretador}!buscar\+\_\+ope@{buscar\+\_\+ope}}
+\index{buscar\+\_\+ope@{buscar\+\_\+ope}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{buscar\+\_\+ope(string, string, std\+::vector$<$ string $>$ \&)}{buscar_ope(string, string, std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleano} Interpretador\+::buscar\+\_\+ope (
+\begin{DoxyParamCaption}
+\item[{string}]{, }
+\item[{string}]{, }
+\item[{std\+::vector$<$ string $>$ \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a94fa9d2449766953dbb3806f9f8cff00}{}\label{class_interpretador_a94fa9d2449766953dbb3806f9f8cff00}
+\index{Interpretador@{Interpretador}!elim\+\_\+parent@{elim\+\_\+parent}}
+\index{elim\+\_\+parent@{elim\+\_\+parent}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{elim\+\_\+parent(string \&)}{elim_parent(string &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::elim\+\_\+parent (
+\begin{DoxyParamCaption}
+\item[{string \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a2d4e10b621a47802ba4e29eb0abd18c2}{}\label{class_interpretador_a2d4e10b621a47802ba4e29eb0abd18c2}
+\index{Interpretador@{Interpretador}!elim\+\_\+vacio@{elim\+\_\+vacio}}
+\index{elim\+\_\+vacio@{elim\+\_\+vacio}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{elim\+\_\+vacio(std\+::vector$<$ string $>$ \&)}{elim_vacio(std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::elim\+\_\+vacio (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a5fe0e48acd59f9e30f9a6d0b6fdc8fa2}{}\label{class_interpretador_a5fe0e48acd59f9e30f9a6d0b6fdc8fa2}
+\index{Interpretador@{Interpretador}!es\+\_\+expresion@{es\+\_\+expresion}}
+\index{es\+\_\+expresion@{es\+\_\+expresion}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{es\+\_\+expresion(string)}{es_expresion(string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpretador\+::es\+\_\+expresion (
+\begin{DoxyParamCaption}
+\item[{string}]{texto}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a256caa85f2333b3d5f98b50755fde5c8}{}\label{class_interpretador_a256caa85f2333b3d5f98b50755fde5c8}
+\index{Interpretador@{Interpretador}!es\+\_\+operador@{es\+\_\+operador}}
+\index{es\+\_\+operador@{es\+\_\+operador}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{es\+\_\+operador(string)}{es_operador(string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpretador\+::es\+\_\+operador (
+\begin{DoxyParamCaption}
+\item[{string}]{oper}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a99c39d578dc93c193c7d5de164985e35}{}\label{class_interpretador_a99c39d578dc93c193c7d5de164985e35}
+\index{Interpretador@{Interpretador}!es\+\_\+operador\+\_\+binario@{es\+\_\+operador\+\_\+binario}}
+\index{es\+\_\+operador\+\_\+binario@{es\+\_\+operador\+\_\+binario}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{es\+\_\+operador\+\_\+binario(string)}{es_operador_binario(string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpretador\+::es\+\_\+operador\+\_\+binario (
+\begin{DoxyParamCaption}
+\item[{string}]{oper}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_aa376909fd2d36b41124af047055e5f34}{}\label{class_interpretador_aa376909fd2d36b41124af047055e5f34}
+\index{Interpretador@{Interpretador}!es\+\_\+operador\+\_\+unario@{es\+\_\+operador\+\_\+unario}}
+\index{es\+\_\+operador\+\_\+unario@{es\+\_\+operador\+\_\+unario}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{es\+\_\+operador\+\_\+unario(string)}{es_operador_unario(string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpretador\+::es\+\_\+operador\+\_\+unario (
+\begin{DoxyParamCaption}
+\item[{string}]{oper}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a2c47cecd7282c404a4fc858a303d9230}{}\label{class_interpretador_a2c47cecd7282c404a4fc858a303d9230}
+\index{Interpretador@{Interpretador}!esta\+\_\+en@{esta\+\_\+en}}
+\index{esta\+\_\+en@{esta\+\_\+en}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{esta\+\_\+en(string text, string ope)}{esta_en(string text, string ope)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleano} Interpretador\+::esta\+\_\+en (
+\begin{DoxyParamCaption}
+\item[{string}]{text, }
+\item[{string}]{ope}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a70361935b6fd4bc539ed23e81b98dc4d}{}\label{class_interpretador_a70361935b6fd4bc539ed23e81b98dc4d}
+\index{Interpretador@{Interpretador}!fix\+\_\+multi@{fix\+\_\+multi}}
+\index{fix\+\_\+multi@{fix\+\_\+multi}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{fix\+\_\+multi(std\+::vector$<$ string $>$ \&)}{fix_multi(std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::fix\+\_\+multi (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a50bdb39c90e92e8f92be71443339774c}{}\label{class_interpretador_a50bdb39c90e92e8f92be71443339774c}
+\index{Interpretador@{Interpretador}!fix\+\_\+multiplicaciones@{fix\+\_\+multiplicaciones}}
+\index{fix\+\_\+multiplicaciones@{fix\+\_\+multiplicaciones}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{fix\+\_\+multiplicaciones(std\+::vector$<$ string $>$ \&)}{fix_multiplicaciones(std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::fix\+\_\+multiplicaciones (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a56b129ed3210f94fafed102eeb68f633}{}\label{class_interpretador_a56b129ed3210f94fafed102eeb68f633}
+\index{Interpretador@{Interpretador}!fix\+\_\+negativos@{fix\+\_\+negativos}}
+\index{fix\+\_\+negativos@{fix\+\_\+negativos}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{fix\+\_\+negativos(std\+::vector$<$ string $>$ \&)}{fix_negativos(std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::fix\+\_\+negativos (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_aa89bcf45e7c07b712ca0d63e32ef098b}{}\label{class_interpretador_aa89bcf45e7c07b712ca0d63e32ef098b}
+\index{Interpretador@{Interpretador}!fix\+\_\+operaciones\+\_\+unarias@{fix\+\_\+operaciones\+\_\+unarias}}
+\index{fix\+\_\+operaciones\+\_\+unarias@{fix\+\_\+operaciones\+\_\+unarias}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{fix\+\_\+operaciones\+\_\+unarias(std\+::vector$<$ string $>$ \&)}{fix_operaciones_unarias(std::vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::fix\+\_\+operaciones\+\_\+unarias (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_aa95dd4e2fe49213ff6d445f3fb69881d}{}\label{class_interpretador_aa95dd4e2fe49213ff6d445f3fb69881d}
+\index{Interpretador@{Interpretador}!get\+\_\+operador\+\_\+mayor\+\_\+prioridad@{get\+\_\+operador\+\_\+mayor\+\_\+prioridad}}
+\index{get\+\_\+operador\+\_\+mayor\+\_\+prioridad@{get\+\_\+operador\+\_\+mayor\+\_\+prioridad}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{get\+\_\+operador\+\_\+mayor\+\_\+prioridad(std\+::vector$<$ string $>$)}{get_operador_mayor_prioridad(std::vector< string >)}}]{\setlength{\rightskip}{0pt plus 5cm}string Interpretador\+::get\+\_\+operador\+\_\+mayor\+\_\+prioridad (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a87e389afc6775a51deaea1c5730e9ecc}{}\label{class_interpretador_a87e389afc6775a51deaea1c5730e9ecc}
+\index{Interpretador@{Interpretador}!get\+\_\+operador\+\_\+prioridad@{get\+\_\+operador\+\_\+prioridad}}
+\index{get\+\_\+operador\+\_\+prioridad@{get\+\_\+operador\+\_\+prioridad}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{get\+\_\+operador\+\_\+prioridad(string)}{get_operador_prioridad(string)}}]{\setlength{\rightskip}{0pt plus 5cm}int Interpretador\+::get\+\_\+operador\+\_\+prioridad (
+\begin{DoxyParamCaption}
+\item[{string}]{oper}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a2032902283b06008db2cad20050ecced}{}\label{class_interpretador_a2032902283b06008db2cad20050ecced}
+\index{Interpretador@{Interpretador}!is\+\_\+number@{is\+\_\+number}}
+\index{is\+\_\+number@{is\+\_\+number}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{is\+\_\+number(const std\+::string \&)}{is_number(const std::string &)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpretador\+::is\+\_\+number (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a54276960e2c38150c3f337447414b2f0}{}\label{class_interpretador_a54276960e2c38150c3f337447414b2f0}
+\index{Interpretador@{Interpretador}!is\+Alpha@{is\+Alpha}}
+\index{is\+Alpha@{is\+Alpha}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{is\+Alpha(const string \&)}{isAlpha(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf booleano} Interpretador\+::is\+Alpha (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a7029c0ad73ed9ab55de3033073b169db}{}\label{class_interpretador_a7029c0ad73ed9ab55de3033073b169db}
+\index{Interpretador@{Interpretador}!reverse\+\_\+string@{reverse\+\_\+string}}
+\index{reverse\+\_\+string@{reverse\+\_\+string}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{reverse\+\_\+string(string \&)}{reverse_string(string &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::reverse\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{string \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_ac3dba52e23ccd5f66e372562db17a0a6}{}\label{class_interpretador_ac3dba52e23ccd5f66e372562db17a0a6}
+\index{Interpretador@{Interpretador}!separar\+\_\+en\+\_\+dos@{separar\+\_\+en\+\_\+dos}}
+\index{separar\+\_\+en\+\_\+dos@{separar\+\_\+en\+\_\+dos}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{separar\+\_\+en\+\_\+dos(std\+::vector$<$ string $>$ \&, string)}{separar_en_dos(std::vector< string > &, string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::separar\+\_\+en\+\_\+dos (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ string $>$ \&}]{, }
+\item[{string}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a14fe65c1d966925c56248551d8e41d5d}{}\label{class_interpretador_a14fe65c1d966925c56248551d8e41d5d}
+\index{Interpretador@{Interpretador}!string\+\_\+to\+\_\+double@{string\+\_\+to\+\_\+double}}
+\index{string\+\_\+to\+\_\+double@{string\+\_\+to\+\_\+double}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{string\+\_\+to\+\_\+double(string)}{string_to_double(string)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+\_\+do} Interpretador\+::string\+\_\+to\+\_\+double (
+\begin{DoxyParamCaption}
+\item[{string}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_ac3b1cd0b89441d2f08ab721a5eb43143}{}\label{class_interpretador_ac3b1cd0b89441d2f08ab721a5eb43143}
+\index{Interpretador@{Interpretador}!string\+\_\+to\+\_\+vector@{string\+\_\+to\+\_\+vector}}
+\index{string\+\_\+to\+\_\+vector@{string\+\_\+to\+\_\+vector}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{string\+\_\+to\+\_\+vector(string)}{string_to_vector(string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ string $>$ Interpretador\+::string\+\_\+to\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a131a8526e7eca0c2ebd36d5fd9f116df}{}\label{class_interpretador_a131a8526e7eca0c2ebd36d5fd9f116df}
+\index{Interpretador@{Interpretador}!transformar@{transformar}}
+\index{transformar@{transformar}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{transformar(string text)}{transformar(string text)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::transformar (
+\begin{DoxyParamCaption}
+\item[{string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_a5ad45a7156035ca33ed3cc30603c83e8}{}\label{class_interpretador_a5ad45a7156035ca33ed3cc30603c83e8}
+\index{Interpretador@{Interpretador}!transformar@{transformar}}
+\index{transformar@{transformar}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{transformar(string text, Nodo $\ast$, bool)}{transformar(string text, Nodo *, bool)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpretador\+::transformar (
+\begin{DoxyParamCaption}
+\item[{string}]{text, }
+\item[{{\bf Nodo} $\ast$}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_ac096061ccb53d31d3e167994ff482992}{}\label{class_interpretador_ac096061ccb53d31d3e167994ff482992}
+\index{Interpretador@{Interpretador}!verif\+\_\+sintaxis@{verif\+\_\+sintaxis}}
+\index{verif\+\_\+sintaxis@{verif\+\_\+sintaxis}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{verif\+\_\+sintaxis(std\+::string)}{verif_sintaxis(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}string Interpretador\+::verif\+\_\+sintaxis (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{class_interpretador_ae91263671ef360654289dbf0e1e340ee}{}\label{class_interpretador_ae91263671ef360654289dbf0e1e340ee}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Interpretador@{Interpretador}!funciones\+\_\+binarias@{funciones\+\_\+binarias}}
+\index{funciones\+\_\+binarias@{funciones\+\_\+binarias}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{funciones\+\_\+binarias}{funciones_binarias}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string,double($\ast$)(double,double)$>$ Interpretador\+::funciones\+\_\+binarias}\hypertarget{class_interpretador_aae54d44f01e4c4b755ae133819b49d78}{}\label{class_interpretador_aae54d44f01e4c4b755ae133819b49d78}
+\index{Interpretador@{Interpretador}!funciones\+\_\+unarias@{funciones\+\_\+unarias}}
+\index{funciones\+\_\+unarias@{funciones\+\_\+unarias}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{funciones\+\_\+unarias}{funciones_unarias}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string,double($\ast$)(double)$>$ Interpretador\+::funciones\+\_\+unarias}\hypertarget{class_interpretador_a69b4c0a967ebb3300bdd1a0d768be777}{}\label{class_interpretador_a69b4c0a967ebb3300bdd1a0d768be777}
+\index{Interpretador@{Interpretador}!prioridad\+\_\+funciones@{prioridad\+\_\+funciones}}
+\index{prioridad\+\_\+funciones@{prioridad\+\_\+funciones}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{prioridad\+\_\+funciones}{prioridad_funciones}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string,int$>$ Interpretador\+::prioridad\+\_\+funciones}\hypertarget{class_interpretador_a5ba0987e974f7eaba6376e0539466788}{}\label{class_interpretador_a5ba0987e974f7eaba6376e0539466788}
+\index{Interpretador@{Interpretador}!tree@{tree}}
+\index{tree@{tree}!Interpretador@{Interpretador}}
+\subsubsection[{\texorpdfstring{tree}{tree}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arbol\+\_\+binario}$\ast$ Interpretador\+::tree}\hypertarget{class_interpretador_a95ae1c37ba98e88aeffec2807eb3f332}{}\label{class_interpretador_a95ae1c37ba98e88aeffec2807eb3f332}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/include/\hyperlink{_interpretador_8h}{Interpretador.\+h}\item 
+Parser/src/\hyperlink{_interpretador_8cpp}{Interpretador.\+cpp}\end{DoxyCompactItemize}

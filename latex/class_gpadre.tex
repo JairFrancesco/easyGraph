@@ -1,0 +1,140 @@
+\hypertarget{class_gpadre}{}\section{Referencia de la Clase Gpadre}
+\label{class_gpadre}\index{Gpadre@{Gpadre}}
+
+
+{\ttfamily \#include $<$gpadre.\+h$>$}
+
+Diagrama de herencias de Gpadre\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gpadre}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gpadre_a0f32f7f4711cac9c26f68e3facd4cfa6}{Gpadre} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Renderer $>$ \hyperlink{class_gpadre_acb2bafea1132fdda5e023edc5067c673}{renderer} = vtk\+Smart\+Pointer$<$vtk\+Renderer$>$\+::New()
+\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_gpadre_a7f14881edc7efd75801b1734dd919126}{next\+\_\+point} (std\+::vector$<$ double $>$, vtk\+Smart\+Pointer$<$ vtk\+Points $>$)
+\item 
+vtk\+Structured\+Grid $\ast$ \hyperlink{class_gpadre_a9dd73d0f23f1217b6ce4b48bb3fb1a16}{set\+\_\+points} (vtk\+Points $\ast$, int, int, int)
+\item 
+void \hyperlink{class_gpadre_a083d739f47fa034916366e714ddf6737}{print\+\_\+grid} (vtk\+Structured\+Grid $\ast$)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ \hyperlink{class_gpadre_ae4adbdbc81a5121ba96d93c884c0196e}{filtro\+\_\+puntos} (vtk\+Structured\+Grid $\ast$)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ \hyperlink{class_gpadre_ad22a3d28e46be883935b638c35c0a9dd}{filtro\+\_\+lineas} (vtk\+Structured\+Grid $\ast$)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ \hyperlink{class_gpadre_af108d3defe91516b543dd08cfc1f4c5c}{mapear} (vtk\+Smart\+Pointer$<$ vtk\+Structured\+Grid $>$)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Axes\+Actor $>$ \hyperlink{class_gpadre_a165bbe5dcd20c4d77b0c4277f41f3b0e}{axes} ()
+\item 
+void \hyperlink{class_gpadre_a33060a2381e76b38f3883619cbb7b73f}{render} (std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ $>$, bool)
+\end{DoxyCompactItemize}
+\subsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Render\+Window $>$ \hyperlink{class_gpadre_af512cc11dc03408872e033cec640d8ba}{render\+Window} = vtk\+Smart\+Pointer$<$vtk\+Render\+Window$>$\+::New()
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Render\+Window\+Interactor $>$ \hyperlink{class_gpadre_a31b647d46719088a5cb59688cdb2fe8a}{render\+Window\+Interactor} = vtk\+Smart\+Pointer$<$vtk\+Render\+Window\+Interactor$>$\+::New()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Gpadre@{Gpadre}!Gpadre@{Gpadre}}
+\index{Gpadre@{Gpadre}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{Gpadre()}{Gpadre()}}]{\setlength{\rightskip}{0pt plus 5cm}Gpadre\+::\+Gpadre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gpadre_a0f32f7f4711cac9c26f68e3facd4cfa6}{}\label{class_gpadre_a0f32f7f4711cac9c26f68e3facd4cfa6}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Gpadre@{Gpadre}!axes@{axes}}
+\index{axes@{axes}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{axes()}{axes()}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$ vtk\+Axes\+Actor $>$ Gpadre\+::axes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a165bbe5dcd20c4d77b0c4277f41f3b0e}{}\label{class_gpadre_a165bbe5dcd20c4d77b0c4277f41f3b0e}
+\index{Gpadre@{Gpadre}!filtro\+\_\+lineas@{filtro\+\_\+lineas}}
+\index{filtro\+\_\+lineas@{filtro\+\_\+lineas}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{filtro\+\_\+lineas(vtk\+Structured\+Grid $\ast$)}{filtro_lineas(vtkStructuredGrid *)}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ Gpadre\+::filtro\+\_\+lineas (
+\begin{DoxyParamCaption}
+\item[{vtk\+Structured\+Grid $\ast$}]{structured\+Grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_ad22a3d28e46be883935b638c35c0a9dd}{}\label{class_gpadre_ad22a3d28e46be883935b638c35c0a9dd}
+\index{Gpadre@{Gpadre}!filtro\+\_\+puntos@{filtro\+\_\+puntos}}
+\index{filtro\+\_\+puntos@{filtro\+\_\+puntos}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{filtro\+\_\+puntos(vtk\+Structured\+Grid $\ast$)}{filtro_puntos(vtkStructuredGrid *)}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ Gpadre\+::filtro\+\_\+puntos (
+\begin{DoxyParamCaption}
+\item[{vtk\+Structured\+Grid $\ast$}]{structured\+Grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_ae4adbdbc81a5121ba96d93c884c0196e}{}\label{class_gpadre_ae4adbdbc81a5121ba96d93c884c0196e}
+\index{Gpadre@{Gpadre}!mapear@{mapear}}
+\index{mapear@{mapear}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{mapear(vtk\+Smart\+Pointer$<$ vtk\+Structured\+Grid $>$)}{mapear(vtkSmartPointer< vtkStructuredGrid >)}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ Gpadre\+::mapear (
+\begin{DoxyParamCaption}
+\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Grid $>$}]{grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_af108d3defe91516b543dd08cfc1f4c5c}{}\label{class_gpadre_af108d3defe91516b543dd08cfc1f4c5c}
+\index{Gpadre@{Gpadre}!next\+\_\+point@{next\+\_\+point}}
+\index{next\+\_\+point@{next\+\_\+point}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{next\+\_\+point(std\+::vector$<$ double $>$, vtk\+Smart\+Pointer$<$ vtk\+Points $>$)}{next_point(std::vector< double >, vtkSmartPointer< vtkPoints >)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gpadre\+::next\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ double $>$}]{vec, }
+\item[{vtk\+Smart\+Pointer$<$ vtk\+Points $>$}]{pointss}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a7f14881edc7efd75801b1734dd919126}{}\label{class_gpadre_a7f14881edc7efd75801b1734dd919126}
+\index{Gpadre@{Gpadre}!print\+\_\+grid@{print\+\_\+grid}}
+\index{print\+\_\+grid@{print\+\_\+grid}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{print\+\_\+grid(vtk\+Structured\+Grid $\ast$)}{print_grid(vtkStructuredGrid *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gpadre\+::print\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{vtk\+Structured\+Grid $\ast$}]{structured\+Grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a083d739f47fa034916366e714ddf6737}{}\label{class_gpadre_a083d739f47fa034916366e714ddf6737}
+\index{Gpadre@{Gpadre}!render@{render}}
+\index{render@{render}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{render(std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ $>$, bool)}{render(std::vector< vtkSmartPointer< vtkActor > >, bool)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gpadre\+::render (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Actor $>$ $>$}]{actors, }
+\item[{bool}]{mostrar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a33060a2381e76b38f3883619cbb7b73f}{}\label{class_gpadre_a33060a2381e76b38f3883619cbb7b73f}
+\index{Gpadre@{Gpadre}!set\+\_\+points@{set\+\_\+points}}
+\index{set\+\_\+points@{set\+\_\+points}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{set\+\_\+points(vtk\+Points $\ast$, int, int, int)}{set_points(vtkPoints *, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Structured\+Grid $\ast$ Gpadre\+::set\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{vtk\+Points $\ast$}]{points, }
+\item[{int}]{numi, }
+\item[{int}]{numj, }
+\item[{int}]{numk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a9dd73d0f23f1217b6ce4b48bb3fb1a16}{}\label{class_gpadre_a9dd73d0f23f1217b6ce4b48bb3fb1a16}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Gpadre@{Gpadre}!renderer@{renderer}}
+\index{renderer@{renderer}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{renderer}{renderer}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Renderer$>$ Gpadre\+::renderer = vtk\+Smart\+Pointer$<$vtk\+Renderer$>$\+::New()}\hypertarget{class_gpadre_acb2bafea1132fdda5e023edc5067c673}{}\label{class_gpadre_acb2bafea1132fdda5e023edc5067c673}
+\index{Gpadre@{Gpadre}!render\+Window@{render\+Window}}
+\index{render\+Window@{render\+Window}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{render\+Window}{renderWindow}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Render\+Window$>$ Gpadre\+::render\+Window = vtk\+Smart\+Pointer$<$vtk\+Render\+Window$>$\+::New()\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_af512cc11dc03408872e033cec640d8ba}{}\label{class_gpadre_af512cc11dc03408872e033cec640d8ba}
+\index{Gpadre@{Gpadre}!render\+Window\+Interactor@{render\+Window\+Interactor}}
+\index{render\+Window\+Interactor@{render\+Window\+Interactor}!Gpadre@{Gpadre}}
+\subsubsection[{\texorpdfstring{render\+Window\+Interactor}{renderWindowInteractor}}]{\setlength{\rightskip}{0pt plus 5cm}vtk\+Smart\+Pointer$<$vtk\+Render\+Window\+Interactor$>$ Gpadre\+::render\+Window\+Interactor = vtk\+Smart\+Pointer$<$vtk\+Render\+Window\+Interactor$>$\+::New()\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_gpadre_a31b647d46719088a5cb59688cdb2fe8a}{}\label{class_gpadre_a31b647d46719088a5cb59688cdb2fe8a}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{gpadre_8h}{gpadre.\+h}\item 
+src/\hyperlink{gpadre_8cpp}{gpadre.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+Grapher equations in C++ with Qt library.
+
+
+
+
+
+\subsection*{Members }
+
+
+\begin{DoxyItemize}
+\item {\bfseries Jair Francesco Huaman Canqui.}
+\item {\bfseries Luis Antonio Bernal Chahuayo.}
+\item {\bfseries Aldo Alexis Mendoza villarroel.}
+\end{DoxyItemize}
+
+Computer Science -\/ Universidad Nacional San Agustín -\/ Arequipa, Peru
+
+
+
+ \subsection*{Requisitos}
+
+Para compilar Easy\+Graph, necesitarás\+:
+\begin{DoxyItemize}
+\item V\+TK 7
+\item C\+M\+A\+KE 3
+\item QT 5.\+6
+\end{DoxyItemize}
+
+\subsection*{Instrucciones instalación requisitos}
+
+
+\begin{DoxyEnumerate}
+\item Instalar C\+Make 3 ``` sudo apt-\/get install software-\/properties-\/common sudo add-\/apt-\/repository ppa\+:george-\/edison55/cmake-\/3.\+x sudo apt-\/get update ``` When cmake is not yet installed\+: ``` sudo apt-\/get install cmake ```
+
+When cmake is already installed\+: ``` sudo apt-\/get upgrade ``` Fuente\+: \href{http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04}{\tt Ask\+Ubuntu.\+com}
+\item Instalar C\+Make G\+UI y libxt-\/dev Por comodidad usaremos C\+Make G\+UI\+: ``` sudo apt-\/get install cmake-\/qt-\/gui ``` libxt-\/dev ``` sudo apt-\/get install libxt-\/dev ```
+
+Fuente\+: \href{http://askubuntu.com/questions/121797/how-do-i-install-ccmake}{\tt Ask\+Ubuntu.\+com}
+\item Compilar e Instalar V\+TK
+\begin{DoxyItemize}
+\item Primero debemos descargar V\+TK 7 desde la \href{http://www.vtk.org/download/}{\tt página oficial}.
+\item Abrimos C\+Make G\+UI ``` sudo cmake-\/gui ``` ???
+\item Seleccionamos la carpeta donde esta el codigo fuente de V\+TK, y la carpeta de destino
+\item Consideramos que tienes instalado QT 5.\+6
+\item Click en Configure, entonces especificamos el makefile generator, la configuración por defecto es \char`\"{}\+Unix Makefiles\char`\"{} en sistemas linux y en Windows deberia ser \char`\"{}\+Min\+G\+W\char`\"{} o \char`\"{}\+Visual Studio\char`\"{}, eso depende de su preferencia, por ultimo click en finish.
+\item Esperamos un minuto para que cmake haga la primera configuración, para mostrar mas entradas check el \char`\"{}\+Advanced\char`\"{} checkbutton.
+\item Search\+: qt ; y seleccionamos los modulos QT y V\+T\+K\+\_\+\+Group\+\_\+\+QT (Hacerles Check) 
+\item Configure
+\item Generate
+\item Vamos a la carpeta donde se generaron los archivos de compilación; comprobaremos que se ha creado un Makefile
+\item Compilamos (-\/j4; para compilar en 4 hebras\+: Depende del numero de procesadores) ``` sudo make -\/j4 ```
+\item Instalamos V\+TK ``` sudo make install ```
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\subsection*{Getting Involved}
+
+Want to report a bug, request a feature, contribute to easy\+Graph? Check out our in-\/depth guide to \href{CONTRIBUTING.md#contributing-to-easyGraph}{\tt Contributing to easy\+Graph}. We need all the help we can get! You can also join our \href{README.md#community}{\tt community} to keep up-\/to-\/date and meet other developers.
+
+\subsection*{Getting Started}
+
+If you\textquotesingle{}re comfortable getting up and running from a {\ttfamily git clone}, this method is for you.
+
+The \href{https://github.com/JairFrancesco/easyGraph}{\tt master} branch which contains the latest release.
+
+\subsection*{Solución a errores de compilación}
+
+
+\begin{DoxyEnumerate}
+\item Error on cmake-\/gui.
+
+C\+Make Error at /usr/share/cmake-\/3.2/\+Modules/\+Find\+Qt4.\+cmake\+:1326 (message)\+: Found unsuitable Qt version \char`\"{}5.\+2.\+1\char`\"{} from /usr/bin/qmake, this code requires Qt 4.\+x Call Stack (most recent call first)\+: G\+U\+I\+Support/\+Qt/\+C\+Make\+Lists.\+txt\+:71 (find\+\_\+package)
+
+Solucion\+: Entre los siguientes comandos en la terminal ``` sudo apt-\/get install libqt4-\/core libqt4 libqt4-\/gui-\/dev sudo apt-\/get install qt4-\/dev-\/tools ``` \paragraph*{Quickstart\+:}
+
+\begin{DoxyVerb}##### Under Construction
+\end{DoxyVerb}
+
+\end{DoxyEnumerate}
+
+If you encounter trouble with the above method, you can try\+: \begin{DoxyVerb}##### Under Construction
+\end{DoxyVerb}
+
+
+Optionally, you may simply run {\ttfamily .sh} if you are on a linux or mac based operating system.
+
+\label{_community}%
+ \subsection*{Community}
+
+Keep track of easy\+Graph development and community activity.
+
+
+\begin{DoxyItemize}
+\item Follow easy\+Graph on \mbox{[}Twitter\mbox{]} (), \mbox{[}Facebook\mbox{]} () and \mbox{[}Google+\mbox{]}().
+\item Read and subscribe to \mbox{[}The Official easy\+Graph Blog\mbox{]}().
+\item Join in discussions on the \href{https://reddit.com/r/easyGraph/}{\tt easy\+Graph Forum}
+\item Connect with us on I\+RC at {\ttfamily \#easy\+Graph} on freenode (\href{http://webchat.freenode.net/?channels=easyGraph}{\tt web access})
+\end{DoxyItemize}
+
+\subsection*{Screenshots}
+
+!\mbox{[}easy\+Graph\mbox{]}() !\mbox{[}Debugging easy\+Graph\mbox{]}()
+
+\subsection*{Versioning}
+
+For transparency and insight into our release cycle, and for striving to maintain backward compatibility, easy\+Graph will be maintained according to the \href{http://semver.org/}{\tt Semantic Versioning} guidelines as much as possible.
+
+Releases will be numbered with the following format\+:
+
+{\ttfamily $<$major$>$.$<$minor$>$.$<$patch$>$-\/$<$build$>$}
+
+Constructed with the following guidelines\+:
+
+
+\begin{DoxyItemize}
+\item A new {\itshape major} release indicates a large change where backward compatibility is broken.
+\item A new {\itshape minor} release indicates a normal change that maintains backward compatibility.
+\item A new {\itshape patch} release indicates a bugfix or small change which does not affect compatibility.
+\item A new {\itshape build} release indicates this is a pre-\/release of the version.
+\end{DoxyItemize}
+
+\subsection*{License}
+
+\href{https://github.com/JairFrancesco/easyGraph}{\tt easy\+Graph} is released under \href{https://github.com/JairFrancesco/easyGraph/blob/master/LICENSE}{\tt G\+NU G\+E\+N\+E\+R\+AL P\+U\+B\+L\+IC L\+I\+C\+E\+N\+SE} . Copyright (c) \href{https://sites.google.com/site/jafrahuamancanqui/}{\tt Jair Huaman}. 

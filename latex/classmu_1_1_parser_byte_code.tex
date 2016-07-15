@@ -1,0 +1,350 @@
+\hypertarget{classmu_1_1_parser_byte_code}{}\section{Referencia de la Clase mu\+:\+:Parser\+Byte\+Code}
+\label{classmu_1_1_parser_byte_code}\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+
+
+Bytecode implementation of the Math \hyperlink{classmu_1_1_parser}{Parser}.  
+
+
+
+
+{\ttfamily \#include $<$mu\+Parser\+Bytecode.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmu_1_1_parser_byte_code_a9b03ff607c429dcad0a4d01eb155cb55}{Parser\+Byte\+Code} ()
+\begin{DoxyCompactList}\small\item\em Bytecode default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_byte_code_ac95bc49b5a31cfe2647f2bfc8b05b4c9}{Parser\+Byte\+Code} (const \hyperlink{classmu_1_1_parser_byte_code}{Parser\+Byte\+Code} \&a\+\_\+\+Byte\+Code)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmu_1_1_parser_byte_code}{Parser\+Byte\+Code} \& \hyperlink{classmu_1_1_parser_byte_code_a10f20b14b190f65fbf854761308fabae}{operator=} (const \hyperlink{classmu_1_1_parser_byte_code}{Parser\+Byte\+Code} \&a\+\_\+\+Byte\+Code)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a8331da2289733a302233439e48e59bc7}{Assign} (const \hyperlink{classmu_1_1_parser_byte_code}{Parser\+Byte\+Code} \&a\+\_\+\+Byte\+Code)
+\begin{DoxyCompactList}\small\item\em Copy state of another object to this. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_aca82e62831e3f62b1b0086b64622938b}{Add\+Var} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}{a\+\_\+p\+Var})
+\begin{DoxyCompactList}\small\item\em Add a Variable pointer to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a8d24daef40331ddb1b69d3fe631181b0}{Add\+Val} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_a8ed6c2f8e84831a06620ad0546609ae6}{a\+\_\+f\+Val})
+\begin{DoxyCompactList}\small\item\em Add a Variable pointer to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a28c5a8c3be833f6fbb5e8036b1504ad6}{Add\+Op} (\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} a\+\_\+\+Oprt)
+\begin{DoxyCompactList}\small\item\em Add an operator identifier to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_afb9d010d603e0300737a50e1148049d8}{Add\+If\+Else} (\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} a\+\_\+\+Oprt)
+\item 
+void \hyperlink{classmu_1_1_parser_byte_code_af9e447fca3942ee5b145415dae78a821}{Add\+Assign\+Op} (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$\hyperlink{mu_parser_d_l_l_8h_a3712e893ac2c28322464f6eebc1a0862}{a\+\_\+p\+Var})
+\begin{DoxyCompactList}\small\item\em Add an assignment operator. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a57c6b293b779228f389dcedeff6262f6}{Add\+Fun} (\hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\+\_\+fun\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}, int a\+\_\+i\+Argc)
+\begin{DoxyCompactList}\small\item\em Add function to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a91e2de996576ca0b75cca98e3c383a24}{Add\+Bulk\+Fun} (\hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\+\_\+fun\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}, int a\+\_\+i\+Argc)
+\begin{DoxyCompactList}\small\item\em Add a bulk function to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a0118e777231376e8db0af4b001c8830c}{Add\+Str\+Fun} (\hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\+\_\+fun\+\_\+type} \hyperlink{mu_parser_d_l_l_8h_ab3a3ed85edf393f2b8ad69081fe538e8}{a\+\_\+p\+Fun}, int a\+\_\+i\+Argc, int a\+\_\+i\+Idx)
+\begin{DoxyCompactList}\small\item\em Add Strung function entry to the parser bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a1f852b418b0bdd0296bdcf2304d3c795}{Enable\+Optimizer} (bool b\+Stat)
+\item 
+void \hyperlink{classmu_1_1_parser_byte_code_af68af4cb08ebaf3b12559574319dbb1c}{Finalize} ()
+\begin{DoxyCompactList}\small\item\em Add end marker to bytecode. \end{DoxyCompactList}\item 
+void \hyperlink{classmu_1_1_parser_byte_code_a9cec7c19c5ebbc1eac31d3b93edae1e4}{clear} ()
+\begin{DoxyCompactList}\small\item\em Delete the bytecode. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \hyperlink{classmu_1_1_parser_byte_code_a13d074c938245523f57acf07c94e7774}{Get\+Max\+Stack\+Size} () const 
+\item 
+std\+::size\+\_\+t \hyperlink{classmu_1_1_parser_byte_code_a7e0a3381b52926cad69793310bd00634}{Get\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the number of entries in the bytecode. \end{DoxyCompactList}\item 
+const \hyperlink{structmu_1_1_s_token}{S\+Token} $\ast$ \hyperlink{classmu_1_1_parser_byte_code_a22f29a79ec97317c61a3be78420cdb70}{Get\+Base} () const 
+\item 
+void \hyperlink{classmu_1_1_parser_byte_code_abe87dce6ba88f5ed87cfff70dfd6d035}{Ascii\+Dump} ()
+\begin{DoxyCompactList}\small\item\em Dump bytecode (for debugging only!). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Bytecode implementation of the Math \hyperlink{classmu_1_1_parser}{Parser}. 
+
+The bytecode contains the formula converted to revers polish notation stored in a continious memory area. Associated with this data are operator codes, variable pointers, constant values and function pointers. Those are necessary in order to calculate the result. All those data items will be casted to the underlying datatype of the bytecode.
+
+\begin{DoxyAuthor}{Autor}
+(C) 2004-\/2013 Ingo Berg 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Parser\+Byte\+Code@{Parser\+Byte\+Code}}
+\index{Parser\+Byte\+Code@{Parser\+Byte\+Code}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Parser\+Byte\+Code()}{ParserByteCode()}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Byte\+Code\+::\+Parser\+Byte\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a9b03ff607c429dcad0a4d01eb155cb55}{}\label{classmu_1_1_parser_byte_code_a9b03ff607c429dcad0a4d01eb155cb55}
+
+
+Bytecode default constructor. 
+
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Parser\+Byte\+Code@{Parser\+Byte\+Code}}
+\index{Parser\+Byte\+Code@{Parser\+Byte\+Code}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Parser\+Byte\+Code(const Parser\+Byte\+Code \&a\+\_\+\+Byte\+Code)}{ParserByteCode(const ParserByteCode &a_ByteCode)}}]{\setlength{\rightskip}{0pt plus 5cm}mu\+::\+Parser\+Byte\+Code\+::\+Parser\+Byte\+Code (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Byte\+Code} \&}]{a\+\_\+\+Byte\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_ac95bc49b5a31cfe2647f2bfc8b05b4c9}{}\label{classmu_1_1_parser_byte_code_ac95bc49b5a31cfe2647f2bfc8b05b4c9}
+
+
+Copy constructor. 
+
+Implemented in Terms of \hyperlink{classmu_1_1_parser_byte_code_a8331da2289733a302233439e48e59bc7}{Assign(const Parser\+Byte\+Code \&a\+\_\+\+Byte\+Code)} 
+
+\subsection{Documentación de las funciones miembro}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Assign\+Op@{Add\+Assign\+Op}}
+\index{Add\+Assign\+Op@{Add\+Assign\+Op}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Assign\+Op(value\+\_\+type $\ast$a\+\_\+p\+Var)}{AddAssignOp(value_type *a_pVar)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Assign\+Op (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type} $\ast$}]{a\+\_\+p\+Var}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_af9e447fca3942ee5b145415dae78a821}{}\label{classmu_1_1_parser_byte_code_af9e447fca3942ee5b145415dae78a821}
+
+
+Add an assignment operator. 
+
+Operator entries in byte code consist of\+: 
+\begin{DoxyItemize}
+\item cm\+A\+S\+S\+I\+GN code 
+\item the pointer of the destination variable 
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{Ver también}
+Parser\+Token\+::\+E\+Cmd\+Code 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Bulk\+Fun@{Add\+Bulk\+Fun}}
+\index{Add\+Bulk\+Fun@{Add\+Bulk\+Fun}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Bulk\+Fun(generic\+\_\+fun\+\_\+type a\+\_\+p\+Fun, int a\+\_\+i\+Argc)}{AddBulkFun(generic_fun_type a_pFun, int a_iArgc)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Bulk\+Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf generic\+\_\+fun\+\_\+type}}]{a\+\_\+p\+Fun, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a91e2de996576ca0b75cca98e3c383a24}{}\label{classmu_1_1_parser_byte_code_a91e2de996576ca0b75cca98e3c383a24}
+
+
+Add a bulk function to bytecode. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+i\+Argc} & Number of arguments, negative numbers indicate multiarg functions. \\
+\hline
+{\em a\+\_\+p\+Fun} & Pointer to function callback. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Fun@{Add\+Fun}}
+\index{Add\+Fun@{Add\+Fun}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Fun(generic\+\_\+fun\+\_\+type a\+\_\+p\+Fun, int a\+\_\+i\+Argc)}{AddFun(generic_fun_type a_pFun, int a_iArgc)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf generic\+\_\+fun\+\_\+type}}]{a\+\_\+p\+Fun, }
+\item[{int}]{a\+\_\+i\+Argc}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a57c6b293b779228f389dcedeff6262f6}{}\label{classmu_1_1_parser_byte_code_a57c6b293b779228f389dcedeff6262f6}
+
+
+Add function to bytecode. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+i\+Argc} & Number of arguments, negative numbers indicate multiarg functions. \\
+\hline
+{\em a\+\_\+p\+Fun} & Pointer to function callback. \\
+\hline
+\end{DoxyParams}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+If\+Else@{Add\+If\+Else}}
+\index{Add\+If\+Else@{Add\+If\+Else}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+If\+Else(\+E\+Cmd\+Code a\+\_\+\+Oprt)}{AddIfElse(ECmdCode a_Oprt)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+If\+Else (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Cmd\+Code}}]{a\+\_\+\+Oprt}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_afb9d010d603e0300737a50e1148049d8}{}\label{classmu_1_1_parser_byte_code_afb9d010d603e0300737a50e1148049d8}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Op@{Add\+Op}}
+\index{Add\+Op@{Add\+Op}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Op(\+E\+Cmd\+Code a\+\_\+\+Oprt)}{AddOp(ECmdCode a_Oprt)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Op (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Cmd\+Code}}]{a\+\_\+\+Oprt}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a28c5a8c3be833f6fbb5e8036b1504ad6}{}\label{classmu_1_1_parser_byte_code_a28c5a8c3be833f6fbb5e8036b1504ad6}
+
+
+Add an operator identifier to bytecode. 
+
+Operator entries in byte code consist of\+: 
+\begin{DoxyItemize}
+\item value array position of the result 
+\item the operator code according to Parser\+Token\+::\+E\+Cmd\+Code 
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{Ver también}
+Parser\+Token\+::\+E\+Cmd\+Code 
+\end{DoxySeeAlso}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Str\+Fun@{Add\+Str\+Fun}}
+\index{Add\+Str\+Fun@{Add\+Str\+Fun}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Str\+Fun(generic\+\_\+fun\+\_\+type a\+\_\+p\+Fun, int a\+\_\+i\+Argc, int a\+\_\+i\+Idx)}{AddStrFun(generic_fun_type a_pFun, int a_iArgc, int a_iIdx)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Str\+Fun (
+\begin{DoxyParamCaption}
+\item[{{\bf generic\+\_\+fun\+\_\+type}}]{a\+\_\+p\+Fun, }
+\item[{int}]{a\+\_\+i\+Argc, }
+\item[{int}]{a\+\_\+i\+Idx}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a0118e777231376e8db0af4b001c8830c}{}\label{classmu_1_1_parser_byte_code_a0118e777231376e8db0af4b001c8830c}
+
+
+Add Strung function entry to the parser bytecode. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & A string function entry consists of the stack position of the return value, followed by a cm\+S\+T\+R\+F\+U\+NC code, the function pointer and an index into the string buffer maintained by the parser. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Val@{Add\+Val}}
+\index{Add\+Val@{Add\+Val}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Val(value\+\_\+type a\+\_\+f\+Val)}{AddVal(value_type a_fVal)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type}}]{a\+\_\+f\+Val}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a8d24daef40331ddb1b69d3fe631181b0}{}\label{classmu_1_1_parser_byte_code_a8d24daef40331ddb1b69d3fe631181b0}
+
+
+Add a Variable pointer to bytecode. 
+
+Value entries in byte code consist of\+: 
+\begin{DoxyItemize}
+\item value array position of the value 
+\item the operator code according to Parser\+Token\+::cm\+V\+AL 
+\item the value stored in \#mc\+\_\+i\+Size\+Val number of bytecode entries. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+p\+Val} & Value to be added. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Add\+Var@{Add\+Var}}
+\index{Add\+Var@{Add\+Var}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Add\+Var(value\+\_\+type $\ast$a\+\_\+p\+Var)}{AddVar(value_type *a_pVar)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Add\+Var (
+\begin{DoxyParamCaption}
+\item[{{\bf value\+\_\+type} $\ast$}]{a\+\_\+p\+Var}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_aca82e62831e3f62b1b0086b64622938b}{}\label{classmu_1_1_parser_byte_code_aca82e62831e3f62b1b0086b64622938b}
+
+
+Add a Variable pointer to bytecode. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+p\+Var} & Pointer to be added. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Ascii\+Dump@{Ascii\+Dump}}
+\index{Ascii\+Dump@{Ascii\+Dump}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Ascii\+Dump()}{AsciiDump()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Ascii\+Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_abe87dce6ba88f5ed87cfff70dfd6d035}{}\label{classmu_1_1_parser_byte_code_abe87dce6ba88f5ed87cfff70dfd6d035}
+
+
+Dump bytecode (for debugging only!). 
+
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Assign@{Assign}}
+\index{Assign@{Assign}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Assign(const Parser\+Byte\+Code \&a\+\_\+\+Byte\+Code)}{Assign(const ParserByteCode &a_ByteCode)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Byte\+Code} \&}]{a\+\_\+\+Byte\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a8331da2289733a302233439e48e59bc7}{}\label{classmu_1_1_parser_byte_code_a8331da2289733a302233439e48e59bc7}
+
+
+Copy state of another object to this. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nowthrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!clear@{clear}}
+\index{clear@{clear}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a9cec7c19c5ebbc1eac31d3b93edae1e4}{}\label{classmu_1_1_parser_byte_code_a9cec7c19c5ebbc1eac31d3b93edae1e4}
+
+
+Delete the bytecode. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & The name of this function is a violation of my own coding guidelines but this way it\textquotesingle{}s more in line with the S\+TL functions thus more intuitive. \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Enable\+Optimizer@{Enable\+Optimizer}}
+\index{Enable\+Optimizer@{Enable\+Optimizer}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Enable\+Optimizer(bool b\+Stat)}{EnableOptimizer(bool bStat)}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Enable\+Optimizer (
+\begin{DoxyParamCaption}
+\item[{bool}]{b\+Stat}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a1f852b418b0bdd0296bdcf2304d3c795}{}\label{classmu_1_1_parser_byte_code_a1f852b418b0bdd0296bdcf2304d3c795}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Finalize()}{Finalize()}}]{\setlength{\rightskip}{0pt plus 5cm}void mu\+::\+Parser\+Byte\+Code\+::\+Finalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_af68af4cb08ebaf3b12559574319dbb1c}{}\label{classmu_1_1_parser_byte_code_af68af4cb08ebaf3b12559574319dbb1c}
+
+
+Add end marker to bytecode. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em nothrow} & \\
+\hline
+\end{DoxyExceptions}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Get\+Base@{Get\+Base}}
+\index{Get\+Base@{Get\+Base}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Base() const }{GetBase() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+Token} $\ast$ mu\+::\+Parser\+Byte\+Code\+::\+Get\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_byte_code_a22f29a79ec97317c61a3be78420cdb70}{}\label{classmu_1_1_parser_byte_code_a22f29a79ec97317c61a3be78420cdb70}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Get\+Max\+Stack\+Size@{Get\+Max\+Stack\+Size}}
+\index{Get\+Max\+Stack\+Size@{Get\+Max\+Stack\+Size}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Max\+Stack\+Size() const }{GetMaxStackSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t mu\+::\+Parser\+Byte\+Code\+::\+Get\+Max\+Stack\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_byte_code_a13d074c938245523f57acf07c94e7774}{}\label{classmu_1_1_parser_byte_code_a13d074c938245523f57acf07c94e7774}
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Size() const }{GetSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t mu\+::\+Parser\+Byte\+Code\+::\+Get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmu_1_1_parser_byte_code_a7e0a3381b52926cad69793310bd00634}{}\label{classmu_1_1_parser_byte_code_a7e0a3381b52926cad69793310bd00634}
+
+
+Returns the number of entries in the bytecode. 
+
+\index{mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}!operator=@{operator=}}
+\index{operator=@{operator=}!mu\+::\+Parser\+Byte\+Code@{mu\+::\+Parser\+Byte\+Code}}
+\subsubsection[{\texorpdfstring{operator=(const Parser\+Byte\+Code \&a\+\_\+\+Byte\+Code)}{operator=(const ParserByteCode &a_ByteCode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser\+Byte\+Code} \& mu\+::\+Parser\+Byte\+Code\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser\+Byte\+Code} \&}]{a\+\_\+\+Byte\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{classmu_1_1_parser_byte_code_a10f20b14b190f65fbf854761308fabae}{}\label{classmu_1_1_parser_byte_code_a10f20b14b190f65fbf854761308fabae}
+
+
+Assignment operator. 
+
+Implemented in Terms of \hyperlink{classmu_1_1_parser_byte_code_a8331da2289733a302233439e48e59bc7}{Assign(const Parser\+Byte\+Code \&a\+\_\+\+Byte\+Code)} 
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Parser/\+Test/include/\hyperlink{mu_parser_bytecode_8h}{mu\+Parser\+Bytecode.\+h}\item 
+Parser/\+Test/src/\hyperlink{mu_parser_bytecode_8cpp}{mu\+Parser\+Bytecode.\+cpp}\end{DoxyCompactItemize}

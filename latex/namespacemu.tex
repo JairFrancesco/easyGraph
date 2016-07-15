@@ -1,0 +1,819 @@
+\hypertarget{namespacemu}{}\section{Referencia del Namespace mu}
+\label{namespacemu}\index{mu@{mu}}
+
+
+Namespace for mathematical applications.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacemu_1_1_test}{Test}
+\begin{DoxyCompactList}\small\item\em Namespace for test cases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmu_1_1_math_impl}{Math\+Impl}
+\begin{DoxyCompactList}\small\item\em A template class for providing wrappers for essential math functions. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser}{Parser}
+\begin{DoxyCompactList}\small\item\em Mathematical expressions parser. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_base}{Parser\+Base}
+\begin{DoxyCompactList}\small\item\em Mathematical expressions parser (base parser engine). \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_byte_code}{Parser\+Byte\+Code}
+\begin{DoxyCompactList}\small\item\em Bytecode implementation of the Math \hyperlink{classmu_1_1_parser}{Parser}. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_callback}{Parser\+Callback}
+\begin{DoxyCompactList}\small\item\em Encapsulation of prototypes for a numerical parser function. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_error}{Parser\+Error}
+\begin{DoxyCompactList}\small\item\em Error class of the parser. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_error_msg}{Parser\+Error\+Msg}
+\begin{DoxyCompactList}\small\item\em A class that handles the error messages. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_int}{Parser\+Int}
+\begin{DoxyCompactList}\small\item\em Mathematical expressions parser. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_stack}{Parser\+Stack}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmu_1_1_parser}{Parser} stack implementation. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_token}{Parser\+Token}
+\begin{DoxyCompactList}\small\item\em Encapsulation of the data for a single formula token. \end{DoxyCompactList}\item 
+class \hyperlink{classmu_1_1_parser_token_reader}{Parser\+Token\+Reader}
+\begin{DoxyCompactList}\small\item\em Token reader for the \hyperlink{classmu_1_1_parser_base}{Parser\+Base} class. \end{DoxyCompactList}\item 
+struct \hyperlink{structmu_1_1_s_token}{S\+Token}
+\item 
+struct \hyperlink{structmu_1_1_type_info}{Type\+Info}
+\begin{DoxyCompactList}\small\item\em A class singling out integer types at compile time using template meta programming. \end{DoxyCompactList}\item 
+struct \hyperlink{structmu_1_1_type_info_3_01char_01_4}{Type\+Info$<$ char $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01int_01_4}{Type\+Info$<$ int $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01long_01_4}{Type\+Info$<$ long $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01short_01_4}{Type\+Info$<$ short $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01unsigned_01char_01_4}{Type\+Info$<$ unsigned char $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01unsigned_01int_01_4}{Type\+Info$<$ unsigned int $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01unsigned_01long_01_4}{Type\+Info$<$ unsigned long $>$}
+\item 
+struct \hyperlink{structmu_1_1_type_info_3_01unsigned_01short_01_4}{Type\+Info$<$ unsigned short $>$}
+\end{DoxyCompactItemize}
+\subsection*{\textquotesingle{}typedefs\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}, \hyperlink{classmu_1_1_parser_callback}{Parser\+Callback} $>$ \hyperlink{namespacemu_aa38fb627ca71e44a49de0f2fe4d9031d}{funmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Container for Callback objects. \end{DoxyCompactList}\item 
+typedef \hyperlink{mu_parser_def_8h_a5a22a812cf29b119506daad01152f93a}{M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE} \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The numeric datatype used by the parser. \end{DoxyCompactList}\item 
+typedef \hyperlink{mu_parser_def_8h_a1fc7b0394571c5a372932693798ba658}{M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE} \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The stringtype used by the parser. \end{DoxyCompactList}\item 
+typedef string\+\_\+type\+::value\+\_\+type \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The character type used by the parser. \end{DoxyCompactList}\item 
+typedef std\+::basic\+\_\+stringstream$<$ \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type}, std\+::char\+\_\+traits$<$ \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $>$, std\+::allocator$<$ \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $>$ $>$ \hyperlink{namespacemu_ab3b60f8311eb24cf437182a8d5125774}{stringstream\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Typedef for easily using stringstream that respect the parser stringtype. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$ $>$ \hyperlink{namespacemu_ab57755354e948a664ad94d38546dbb10}{varmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type used for storing variables. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $>$ \hyperlink{namespacemu_a5940d281286a01342cf773f74481843c}{valmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type used for storing constants. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \hyperlink{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{string\+\_\+type}, std\+::size\+\_\+t $>$ \hyperlink{namespacemu_aea1c20093e51d3dc13de10f3c17ae5b1}{strmap\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type for assigning a string name to an index in the internal string table. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_ae289766395042975b51dda382cccc907}{generic\+\_\+fun\+\_\+type}) ()
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_af74b1b05cca11b94eb7a478c6c1f8200}{fun\+\_\+type0}) ()
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_affeaec09801b502b9955d7248b7e2706}{fun\+\_\+type1}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a single arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_abd9aed5816d33116d687f5becd85b38f}{fun\+\_\+type2}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with two arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_ac89cbeb049bfe0ac38464d9420bf3201}{fun\+\_\+type3}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with three arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_ada318070796bde216079092cfdcf6fe1}{fun\+\_\+type4}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with four arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a7a01724f9caaf71f99e46b49e75b3bc3}{fun\+\_\+type5}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a575003f957a2a77d757e24fd04139001}{fun\+\_\+type6}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_aa03550a6f05b1270e1e27214a63301ee}{fun\+\_\+type7}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a17cfcdc39e8d1d95c1418e117eb923b8}{fun\+\_\+type8}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a04c92810aa2e6098af69f47474388d71}{fun\+\_\+type9}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a9d79a17c5171e8928f8c91964979e56c}{fun\+\_\+type10}) (\hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_aff9adf757e90a2398326a3cb10585cf1}{bulkfun\+\_\+type0}) (int, int)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions without arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a2bd588710432e6e34eae3e2af4ba3862}{bulkfun\+\_\+type1}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a single arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a9faa755ea34c6e8de3895013e649a713}{bulkfun\+\_\+type2}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with two arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a441194d09cb0e9331dbfdaf74f59efd3}{bulkfun\+\_\+type3}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with three arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a6b7ce6e1f888b02222d2765d1f521507}{bulkfun\+\_\+type4}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with four arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a9343ce135e0a53897a67c6098d07a7b3}{bulkfun\+\_\+type5}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a1259e71ee6f8b9e3985ef0cda16dd433}{bulkfun\+\_\+type6}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a9726be97f12bc3b336884d462623ca8c}{bulkfun\+\_\+type7}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_aa4e562060c2c2377266ec1cf274856fe}{bulkfun\+\_\+type8}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a51c71d5698d29b40688feaa8e968efc9}{bulkfun\+\_\+type9}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_aebd99bafbd17761a9e13b8a7366ae1ce}{bulkfun\+\_\+type10}) (int, int, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with five arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a004a9a10d015a8e2e17604cb632cd6c1}{multfun\+\_\+type}) (const \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions with a variable argument list. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a578b844842f577e78da3f520f9ee2f9a}{strfun\+\_\+type1}) (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$)
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string as an argument. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a14b9af8ec1e328b685221ca23fc9f765}{strfun\+\_\+type2}) (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string and a value as arguments. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}($\ast$ \hyperlink{namespacemu_a1ce7a16b2a2b87f662819b7ee1d87bc0}{strfun\+\_\+type3}) (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type}, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Callback type used for functions taking a string and two values as arguments. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}{identfun\+\_\+type}) (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$s\+Expr, int $\ast$n\+Pos, \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$f\+Val)
+\begin{DoxyCompactList}\small\item\em Callback used for functions that identify values in a string. \end{DoxyCompactList}\item 
+typedef \hyperlink{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{value\+\_\+type} $\ast$($\ast$ \hyperlink{namespacemu_a97af5f5c39391d262dda72084788b83e}{facfun\+\_\+type}) (const \hyperlink{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{char\+\_\+type} $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em Callback used for variable creation factory functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{E\+Cmd\+Code} \{ \\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea62da784138e45f161918ddc845ea4420}{cm\+LE} = 0, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea188c6fd8324762d1513f28ef359408d7}{cm\+GE} = 1, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac34e5f492d8b0f4f2f46d7c261a02e4c}{cm\+N\+EQ} = 2, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eacedcb20eed5d83ea723cb47bb2c1cc0d}{cm\+EQ} = 3, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea1f455ded43de3f52ce0a39f9dde843e5}{cm\+LT} = 4, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac9cbc41a04d7b4dece063211d31ec5b3}{cm\+GT} = 5, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea127712855b500aff2b37a35c6767451a}{cm\+A\+DD} = 6, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eadad0cd5d67567c1ad976e7d332537a9d}{cm\+S\+UB} = 7, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea703cb484ede1e3e4926c0a1fb3845679}{cm\+M\+UL} = 8, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8923e5bebd1eb60c1436fa64a32492a0}{cm\+D\+IV} = 9, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea3fad2e00b3026f83d90b135fd55ba7e3}{cm\+P\+OW} = 10, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea502db65bd1b664c889bf8223c596cfd6}{cm\+L\+A\+ND} = 11, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8a136030771033042e8bdd8273746ae8}{cm\+L\+OR} = 12, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea471a75e04daaa2a387be5235484a3e01}{cm\+A\+S\+S\+I\+GN} = 13, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea677298c34553334aa70bfb87a58b7f0a}{cm\+BO} = 14, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacee8e4f918f65e180f8734f7e310aa1}{cm\+BC} = 15, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab9e28b93b1f434a7660559728a749eda}{cm\+IF} = 16, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf8f2c4094f7d220bd850f789f6622526}{cm\+E\+L\+SE} = 17, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea9115a14061048e465cc8c1b0132d6311}{cm\+E\+N\+D\+IF} = 18, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea554881ce7928a56e6e97f8f1149b9d50}{cm\+A\+R\+G\+\_\+\+S\+EP} = 19, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eafa2a28b5022d2454768c74e15d5ae377}{cm\+V\+AR} = 20, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab1cf4ef5d34d815bb016fef14c331622}{cm\+V\+AL} = 21, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0484abbbb36506cac6748b6fa42285c9}{cm\+V\+A\+R\+P\+O\+W2}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae5e22685bf485df5b9f3be0e9a658501}{cm\+V\+A\+R\+P\+O\+W3}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaed4b4e62d5decffbac8b811d055c5b97}{cm\+V\+A\+R\+P\+O\+W4}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0383b2c00c33bdae17502b1f2f4a07fc}{cm\+V\+A\+R\+M\+UL}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea40c19d16d6030d0979f1a84a7d006abc}{cm\+P\+O\+W2}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaeacb1b1bb9859e8bc6147887a787feca}{cm\+F\+U\+NC}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae8ed179475f79bed80d66d389007717a}{cm\+F\+U\+N\+C\+\_\+\+S\+TR}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea052e0188c92157ef66581a31accfcab1}{cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea85db5789f85577dd5bcc21aea5b3244f}{cm\+S\+T\+R\+I\+NG}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacf35df01fc3b643b134e9d1ce3cc4e2}{cm\+O\+P\+R\+T\+\_\+\+B\+IN}, 
+\\*
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf866a95309b7573574b6e656045e4a2f}{cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea961fe96555e0f036e52496126f70c404}{cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea76086ac235dadbe9ad8a184190b21c8b}{cm\+E\+ND}, 
+\hyperlink{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eabd8cbb2e08ff6806578535408feef0c3}{cm\+U\+N\+K\+N\+O\+WN}
+ \}\begin{DoxyCompactList}\small\item\em Bytecode values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302}{E\+Type\+Code} \{ \hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302ac02584cb1ca179714a5ac8a951653ad4}{tp\+S\+TR} = 0, 
+\hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a38692f5e59ea960113e0de77ed9a9428}{tp\+D\+BL} = 1, 
+\hyperlink{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a2a6b3ae75a0e6a44a992a87d222b4481}{tp\+V\+O\+ID} = 2
+ \}\begin{DoxyCompactList}\small\item\em Types internally used by the parser. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789}{E\+Parser\+Version\+Info} \{ \hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789a344ba8a4705909938708d365484ca563}{pvi\+B\+R\+I\+EF}, 
+\hyperlink{namespacemu_abc734ff078c5336d2a379d87537a5789a15f2fdade93277c8923e2384f184e1af}{pvi\+F\+U\+LL}
+ \}
+\item 
+enum \hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1}{E\+Oprt\+Associativity} \{ \hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1a4b1875076b2c85879e9596a7a98af7a6}{oa\+L\+E\+FT} = 0, 
+\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1ae10ad97402ffc0c524f5fd3919e4bbfa}{oa\+R\+I\+G\+HT} = 1, 
+\hyperlink{namespacemu_aff435b0c277f66041374f93a3803e1f1a91ec8ef41d1b2308e7fcd096bf9a7162}{oa\+N\+O\+NE} = 2
+ \}\begin{DoxyCompactList}\small\item\em Parser operator precedence values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3d}{E\+Oprt\+Precedence} \{ \\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da2ef641de328c60277d2d1cb8e4e542b0}{pr\+L\+OR} = 1, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3dafc5dd83c0caa263db1637b4b075b1a7d}{pr\+L\+A\+ND} = 2, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da5a921789427276e8c641653459da2302}{pr\+L\+O\+G\+IC} = 3, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da570966afb3a2a2e7c12bf0f0aff47d56}{pr\+C\+MP} = 4, 
+\\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3dac287fcda15dc853e73e3000f7da24c2a}{pr\+A\+D\+D\+\_\+\+S\+UB} = 5, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3daf90e37568d297c82df0f908e6b0852e0}{pr\+M\+U\+L\+\_\+\+D\+IV} = 6, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da706c8deebfec7a93ee879ab575b478c0}{pr\+P\+OW} = 7, 
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da50b576d79c0d155f703d409967ad3727}{pr\+I\+N\+F\+IX} = 6, 
+\\*
+\hyperlink{namespacemu_af05119698ed9c62239c0b31ac9861d3da1df5768036a033427841dfabe126e016}{pr\+P\+O\+S\+T\+F\+IX} = 6
+ \}\begin{DoxyCompactList}\small\item\em Parser operator precedence values. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{E\+Error\+Codes} \{ \\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7154513fd624589812610c190497bb0a}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR} = 0, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa2c29f854b65e380ae4fcb4d4e00aaa22}{ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN} = 1, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3995c6500fc04f8b203817a5d3443219}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF} = 2, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa010c6130e7cf45723740cff95757737}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP} = 3, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa64b2880f566f8b44050142c94a0207fb}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG} = 4, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaf832f767e3f1c50a024da57221a2416f}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL} = 5, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3de33dffb8946c3c4373aa3de3627759}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR} = 6, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8c823a3bef7facd0d99cbfb4d2cd06e1}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS} = 7, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8a98a29c35c9b7744f4987476b0c3ca9}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR} = 8, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4446abbd60038e6a7f1d4aced202ad05}{ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED} = 9, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4e872315cffbc12a39947b60f9367088}{ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED} = 10, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34679c30e955b4c9c04ed36db8a288d0}{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS} = 11, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa5132a541c023ecefe71e17fce886860e}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN} = 12, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaaf787ce3edd65d5f086ad298e158a4bf}{ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG} = 13, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4560405f6d8f871084a57e8e4633d496}{ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS} = 14, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aac7b48aee91620edca3bb0ccbaaf31772}{ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS} = 15, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa73e9671ee2b553affeb628a40ae745d1}{ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT} = 16, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa62f472030efcf7fda692e12a2da90338}{ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT} = 17, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa125e953e3a9ab50e564cde8e981f56e9}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME} = 18, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa1fd2c3dfe53727a267d386f57ea37af1}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT} = 19, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa723bd3d892e5fe4817f8acd71636a59f}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT} = 20, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad05cd43211abc3b9972ac2c9ffab2eed}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT} = 21, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34807cf30e3bb8ca4b348bd7742fa0a7}{ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD} = 22, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab3f728ed3fbe1e49ff37fc78bff68355}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR} = 23, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa9d815bf7cb3eafa3887e0ed7c2eaf85f}{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR} = 24, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad4ce9d26ad46c057b12100b16d6d26ae}{ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON} = 25, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa40ffbd6629bb0ab70bbcbc5b15384274}{ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT} = 26, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaad1847fc9b493d4cda79ea26ad09eb5a}{ec\+O\+P\+T\+\_\+\+P\+RI} = 27, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa971535886e930176428166ab78778619}{ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR} = 28, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaff779580d171527466424d4ecf75a1a8}{ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO} = 29, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaece22de75a7be641a196123e7e9c322f}{ec\+G\+E\+N\+E\+R\+IC} = 30, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7f2b93cc8c3de8e45b1d7489f2693804}{ec\+L\+O\+C\+A\+LE} = 31, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab38d12e1a8995c136661f18b0e259df3}{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL} = 32, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa95a743178c27386926fdcb435ffab90}{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE} = 33, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa282864ddfeeb0846e6b79523dbbc3c38}{ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON} = 34, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa482dd716c466b0cd1fda24d628c5c85b}{ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS} = 35, 
+\\*
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa91b338cf5e35059bb452f783aeb88a5f}{ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR} = 36, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad0077acc7594040e4dd7fe5de229b455}{ec\+C\+O\+U\+NT}, 
+\hyperlink{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa49ba8c4fa03b5e822bc4573f84d44062}{ec\+U\+N\+D\+E\+F\+I\+N\+ED} = -\/1
+ \}\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespacemu_a0346964f0b93f6c904a9964387522d97}{console} ()
+\begin{DoxyCompactList}\small\item\em Encapsulate cout. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{namespacemu_a4bcc4027b54951ec8c490fb8d0f68a1d}{console\+\_\+in} ()
+\begin{DoxyCompactList}\small\item\em Encapsulate cin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Namespace for mathematical applications. 
+
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
+\index{mu@{mu}!bulkfun\+\_\+type0@{bulkfun\+\_\+type0}}
+\index{bulkfun\+\_\+type0@{bulkfun\+\_\+type0}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type0}{bulkfun_type0}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type0) (int, int)}\hypertarget{namespacemu_aff9adf757e90a2398326a3cb10585cf1}{}\label{namespacemu_aff9adf757e90a2398326a3cb10585cf1}
+
+
+Callback type used for functions without arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type1@{bulkfun\+\_\+type1}}
+\index{bulkfun\+\_\+type1@{bulkfun\+\_\+type1}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type1}{bulkfun_type1}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type1) (int, int, {\bf value\+\_\+type})}\hypertarget{namespacemu_a2bd588710432e6e34eae3e2af4ba3862}{}\label{namespacemu_a2bd588710432e6e34eae3e2af4ba3862}
+
+
+Callback type used for functions with a single arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type10@{bulkfun\+\_\+type10}}
+\index{bulkfun\+\_\+type10@{bulkfun\+\_\+type10}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type10}{bulkfun_type10}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type10) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_aebd99bafbd17761a9e13b8a7366ae1ce}{}\label{namespacemu_aebd99bafbd17761a9e13b8a7366ae1ce}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type2@{bulkfun\+\_\+type2}}
+\index{bulkfun\+\_\+type2@{bulkfun\+\_\+type2}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type2}{bulkfun_type2}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type2) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a9faa755ea34c6e8de3895013e649a713}{}\label{namespacemu_a9faa755ea34c6e8de3895013e649a713}
+
+
+Callback type used for functions with two arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type3@{bulkfun\+\_\+type3}}
+\index{bulkfun\+\_\+type3@{bulkfun\+\_\+type3}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type3}{bulkfun_type3}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type3) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a441194d09cb0e9331dbfdaf74f59efd3}{}\label{namespacemu_a441194d09cb0e9331dbfdaf74f59efd3}
+
+
+Callback type used for functions with three arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type4@{bulkfun\+\_\+type4}}
+\index{bulkfun\+\_\+type4@{bulkfun\+\_\+type4}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type4}{bulkfun_type4}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type4) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a6b7ce6e1f888b02222d2765d1f521507}{}\label{namespacemu_a6b7ce6e1f888b02222d2765d1f521507}
+
+
+Callback type used for functions with four arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type5@{bulkfun\+\_\+type5}}
+\index{bulkfun\+\_\+type5@{bulkfun\+\_\+type5}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type5}{bulkfun_type5}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type5) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a9343ce135e0a53897a67c6098d07a7b3}{}\label{namespacemu_a9343ce135e0a53897a67c6098d07a7b3}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type6@{bulkfun\+\_\+type6}}
+\index{bulkfun\+\_\+type6@{bulkfun\+\_\+type6}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type6}{bulkfun_type6}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type6) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a1259e71ee6f8b9e3985ef0cda16dd433}{}\label{namespacemu_a1259e71ee6f8b9e3985ef0cda16dd433}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type7@{bulkfun\+\_\+type7}}
+\index{bulkfun\+\_\+type7@{bulkfun\+\_\+type7}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type7}{bulkfun_type7}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type7) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a9726be97f12bc3b336884d462623ca8c}{}\label{namespacemu_a9726be97f12bc3b336884d462623ca8c}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type8@{bulkfun\+\_\+type8}}
+\index{bulkfun\+\_\+type8@{bulkfun\+\_\+type8}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type8}{bulkfun_type8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type8) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_aa4e562060c2c2377266ec1cf274856fe}{}\label{namespacemu_aa4e562060c2c2377266ec1cf274856fe}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!bulkfun\+\_\+type9@{bulkfun\+\_\+type9}}
+\index{bulkfun\+\_\+type9@{bulkfun\+\_\+type9}!mu@{mu}}
+\subsubsection[{\texorpdfstring{bulkfun\+\_\+type9}{bulkfun_type9}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::bulkfun\+\_\+type9) (int, int, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a51c71d5698d29b40688feaa8e968efc9}{}\label{namespacemu_a51c71d5698d29b40688feaa8e968efc9}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!char\+\_\+type@{char\+\_\+type}}
+\index{char\+\_\+type@{char\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{char\+\_\+type}{char_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef string\+\_\+type\+::value\+\_\+type {\bf mu\+::char\+\_\+type}}\hypertarget{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}{}\label{namespacemu_a81cc89a81a8872430ab1799b5848c5ca}
+
+
+The character type used by the parser. 
+
+Depends on wether U\+N\+I\+C\+O\+DE is used or not. \index{mu@{mu}!facfun\+\_\+type@{facfun\+\_\+type}}
+\index{facfun\+\_\+type@{facfun\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{facfun\+\_\+type}{facfun_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}$\ast$($\ast$ mu\+::facfun\+\_\+type) (const {\bf char\+\_\+type} $\ast$, void $\ast$)}\hypertarget{namespacemu_a97af5f5c39391d262dda72084788b83e}{}\label{namespacemu_a97af5f5c39391d262dda72084788b83e}
+
+
+Callback used for variable creation factory functions. 
+
+\index{mu@{mu}!fun\+\_\+type0@{fun\+\_\+type0}}
+\index{fun\+\_\+type0@{fun\+\_\+type0}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type0}{fun_type0}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type0) ()}\hypertarget{namespacemu_af74b1b05cca11b94eb7a478c6c1f8200}{}\label{namespacemu_af74b1b05cca11b94eb7a478c6c1f8200}
+
+
+Callback type used for functions without arguments. 
+
+\index{mu@{mu}!fun\+\_\+type1@{fun\+\_\+type1}}
+\index{fun\+\_\+type1@{fun\+\_\+type1}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type1}{fun_type1}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type1) ({\bf value\+\_\+type})}\hypertarget{namespacemu_affeaec09801b502b9955d7248b7e2706}{}\label{namespacemu_affeaec09801b502b9955d7248b7e2706}
+
+
+Callback type used for functions with a single arguments. 
+
+\index{mu@{mu}!fun\+\_\+type10@{fun\+\_\+type10}}
+\index{fun\+\_\+type10@{fun\+\_\+type10}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type10}{fun_type10}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type10) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a9d79a17c5171e8928f8c91964979e56c}{}\label{namespacemu_a9d79a17c5171e8928f8c91964979e56c}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!fun\+\_\+type2@{fun\+\_\+type2}}
+\index{fun\+\_\+type2@{fun\+\_\+type2}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type2}{fun_type2}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type2) ({\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_abd9aed5816d33116d687f5becd85b38f}{}\label{namespacemu_abd9aed5816d33116d687f5becd85b38f}
+
+
+Callback type used for functions with two arguments. 
+
+\index{mu@{mu}!fun\+\_\+type3@{fun\+\_\+type3}}
+\index{fun\+\_\+type3@{fun\+\_\+type3}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type3}{fun_type3}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type3) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_ac89cbeb049bfe0ac38464d9420bf3201}{}\label{namespacemu_ac89cbeb049bfe0ac38464d9420bf3201}
+
+
+Callback type used for functions with three arguments. 
+
+\index{mu@{mu}!fun\+\_\+type4@{fun\+\_\+type4}}
+\index{fun\+\_\+type4@{fun\+\_\+type4}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type4}{fun_type4}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type4) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_ada318070796bde216079092cfdcf6fe1}{}\label{namespacemu_ada318070796bde216079092cfdcf6fe1}
+
+
+Callback type used for functions with four arguments. 
+
+\index{mu@{mu}!fun\+\_\+type5@{fun\+\_\+type5}}
+\index{fun\+\_\+type5@{fun\+\_\+type5}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type5}{fun_type5}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type5) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a7a01724f9caaf71f99e46b49e75b3bc3}{}\label{namespacemu_a7a01724f9caaf71f99e46b49e75b3bc3}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!fun\+\_\+type6@{fun\+\_\+type6}}
+\index{fun\+\_\+type6@{fun\+\_\+type6}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type6}{fun_type6}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type6) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a575003f957a2a77d757e24fd04139001}{}\label{namespacemu_a575003f957a2a77d757e24fd04139001}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!fun\+\_\+type7@{fun\+\_\+type7}}
+\index{fun\+\_\+type7@{fun\+\_\+type7}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type7}{fun_type7}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type7) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_aa03550a6f05b1270e1e27214a63301ee}{}\label{namespacemu_aa03550a6f05b1270e1e27214a63301ee}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!fun\+\_\+type8@{fun\+\_\+type8}}
+\index{fun\+\_\+type8@{fun\+\_\+type8}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type8}{fun_type8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type8) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a17cfcdc39e8d1d95c1418e117eb923b8}{}\label{namespacemu_a17cfcdc39e8d1d95c1418e117eb923b8}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!fun\+\_\+type9@{fun\+\_\+type9}}
+\index{fun\+\_\+type9@{fun\+\_\+type9}!mu@{mu}}
+\subsubsection[{\texorpdfstring{fun\+\_\+type9}{fun_type9}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::fun\+\_\+type9) ({\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a04c92810aa2e6098af69f47474388d71}{}\label{namespacemu_a04c92810aa2e6098af69f47474388d71}
+
+
+Callback type used for functions with five arguments. 
+
+\index{mu@{mu}!funmap\+\_\+type@{funmap\+\_\+type}}
+\index{funmap\+\_\+type@{funmap\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{funmap\+\_\+type}{funmap_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf string\+\_\+type}, {\bf Parser\+Callback}$>$ {\bf mu\+::funmap\+\_\+type}}\hypertarget{namespacemu_aa38fb627ca71e44a49de0f2fe4d9031d}{}\label{namespacemu_aa38fb627ca71e44a49de0f2fe4d9031d}
+
+
+Container for Callback objects. 
+
+\index{mu@{mu}!generic\+\_\+fun\+\_\+type@{generic\+\_\+fun\+\_\+type}}
+\index{generic\+\_\+fun\+\_\+type@{generic\+\_\+fun\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{generic\+\_\+fun\+\_\+type}{generic_fun_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::generic\+\_\+fun\+\_\+type) ()}\hypertarget{namespacemu_ae289766395042975b51dda382cccc907}{}\label{namespacemu_ae289766395042975b51dda382cccc907}
+
+
+Callback type used for functions without arguments. 
+
+\index{mu@{mu}!identfun\+\_\+type@{identfun\+\_\+type}}
+\index{identfun\+\_\+type@{identfun\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{identfun\+\_\+type}{identfun_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ mu\+::identfun\+\_\+type) (const {\bf char\+\_\+type} $\ast$s\+Expr, int $\ast$n\+Pos, {\bf value\+\_\+type} $\ast$f\+Val)}\hypertarget{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}{}\label{namespacemu_a0e40974644c0e6488d76229ca0f4ce23}
+
+
+Callback used for functions that identify values in a string. 
+
+\index{mu@{mu}!multfun\+\_\+type@{multfun\+\_\+type}}
+\index{multfun\+\_\+type@{multfun\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{multfun\+\_\+type}{multfun_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::multfun\+\_\+type) (const {\bf value\+\_\+type} $\ast$, int)}\hypertarget{namespacemu_a004a9a10d015a8e2e17604cb632cd6c1}{}\label{namespacemu_a004a9a10d015a8e2e17604cb632cd6c1}
+
+
+Callback type used for functions with a variable argument list. 
+
+\index{mu@{mu}!strfun\+\_\+type1@{strfun\+\_\+type1}}
+\index{strfun\+\_\+type1@{strfun\+\_\+type1}!mu@{mu}}
+\subsubsection[{\texorpdfstring{strfun\+\_\+type1}{strfun_type1}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::strfun\+\_\+type1) (const {\bf char\+\_\+type} $\ast$)}\hypertarget{namespacemu_a578b844842f577e78da3f520f9ee2f9a}{}\label{namespacemu_a578b844842f577e78da3f520f9ee2f9a}
+
+
+Callback type used for functions taking a string as an argument. 
+
+\index{mu@{mu}!strfun\+\_\+type2@{strfun\+\_\+type2}}
+\index{strfun\+\_\+type2@{strfun\+\_\+type2}!mu@{mu}}
+\subsubsection[{\texorpdfstring{strfun\+\_\+type2}{strfun_type2}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::strfun\+\_\+type2) (const {\bf char\+\_\+type} $\ast$, {\bf value\+\_\+type})}\hypertarget{namespacemu_a14b9af8ec1e328b685221ca23fc9f765}{}\label{namespacemu_a14b9af8ec1e328b685221ca23fc9f765}
+
+
+Callback type used for functions taking a string and a value as arguments. 
+
+\index{mu@{mu}!strfun\+\_\+type3@{strfun\+\_\+type3}}
+\index{strfun\+\_\+type3@{strfun\+\_\+type3}!mu@{mu}}
+\subsubsection[{\texorpdfstring{strfun\+\_\+type3}{strfun_type3}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf value\+\_\+type}($\ast$ mu\+::strfun\+\_\+type3) (const {\bf char\+\_\+type} $\ast$, {\bf value\+\_\+type}, {\bf value\+\_\+type})}\hypertarget{namespacemu_a1ce7a16b2a2b87f662819b7ee1d87bc0}{}\label{namespacemu_a1ce7a16b2a2b87f662819b7ee1d87bc0}
+
+
+Callback type used for functions taking a string and two values as arguments. 
+
+\index{mu@{mu}!string\+\_\+type@{string\+\_\+type}}
+\index{string\+\_\+type@{string\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{string\+\_\+type}{string_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf M\+U\+P\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE} {\bf mu\+::string\+\_\+type}}\hypertarget{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}{}\label{namespacemu_ae9f8b44d9a97dd397180891e8390c3e9}
+
+
+The stringtype used by the parser. 
+
+Depends on wether U\+N\+I\+C\+O\+DE is used or not. \index{mu@{mu}!stringstream\+\_\+type@{stringstream\+\_\+type}}
+\index{stringstream\+\_\+type@{stringstream\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{stringstream\+\_\+type}{stringstream_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::basic\+\_\+stringstream$<${\bf char\+\_\+type}, std\+::char\+\_\+traits$<${\bf char\+\_\+type}$>$, std\+::allocator$<${\bf char\+\_\+type}$>$ $>$ {\bf mu\+::stringstream\+\_\+type}}\hypertarget{namespacemu_ab3b60f8311eb24cf437182a8d5125774}{}\label{namespacemu_ab3b60f8311eb24cf437182a8d5125774}
+
+
+Typedef for easily using stringstream that respect the parser stringtype. 
+
+\index{mu@{mu}!strmap\+\_\+type@{strmap\+\_\+type}}
+\index{strmap\+\_\+type@{strmap\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{strmap\+\_\+type}{strmap_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf string\+\_\+type}, std\+::size\+\_\+t$>$ {\bf mu\+::strmap\+\_\+type}}\hypertarget{namespacemu_aea1c20093e51d3dc13de10f3c17ae5b1}{}\label{namespacemu_aea1c20093e51d3dc13de10f3c17ae5b1}
+
+
+Type for assigning a string name to an index in the internal string table. 
+
+\index{mu@{mu}!valmap\+\_\+type@{valmap\+\_\+type}}
+\index{valmap\+\_\+type@{valmap\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{valmap\+\_\+type}{valmap_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf string\+\_\+type}, {\bf value\+\_\+type}$>$ {\bf mu\+::valmap\+\_\+type}}\hypertarget{namespacemu_a5940d281286a01342cf773f74481843c}{}\label{namespacemu_a5940d281286a01342cf773f74481843c}
+
+
+Type used for storing constants. 
+
+\index{mu@{mu}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{value\+\_\+type}{value_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf M\+U\+P\+\_\+\+B\+A\+S\+E\+T\+Y\+PE} {\bf mu\+::value\+\_\+type}}\hypertarget{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}{}\label{namespacemu_a17d4f113a4b88b8d971cca8ddbbe8a47}
+
+
+The numeric datatype used by the parser. 
+
+Normally this is a floating point type either single or double precision. \index{mu@{mu}!varmap\+\_\+type@{varmap\+\_\+type}}
+\index{varmap\+\_\+type@{varmap\+\_\+type}!mu@{mu}}
+\subsubsection[{\texorpdfstring{varmap\+\_\+type}{varmap_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf string\+\_\+type}, {\bf value\+\_\+type}$\ast$$>$ {\bf mu\+::varmap\+\_\+type}}\hypertarget{namespacemu_ab57755354e948a664ad94d38546dbb10}{}\label{namespacemu_ab57755354e948a664ad94d38546dbb10}
+
+
+Type used for storing variables. 
+
+
+
+\subsection{Documentación de las enumeraciones}
+\index{mu@{mu}!E\+Cmd\+Code@{E\+Cmd\+Code}}
+\index{E\+Cmd\+Code@{E\+Cmd\+Code}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Cmd\+Code}{ECmdCode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Cmd\+Code}}\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40e}
+
+
+Bytecode values. 
+
+\begin{DoxyAttention}{Atención}
+The order of the operator entries must match the order in \hyperlink{classmu_1_1_parser_base_a0cb4d456e6a82da96786ec73044470ea}{Parser\+Base\+::c\+\_\+\+Default\+Oprt}! 
+\end{DoxyAttention}
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{cm\+LE@{cm\+LE}!mu@{mu}}\index{mu@{mu}!cm\+LE@{cm\+LE}}\item[{\em 
+cm\+LE\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea62da784138e45f161918ddc845ea4420}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea62da784138e45f161918ddc845ea4420}
+}]Operator item\+: less or equal. \index{cm\+GE@{cm\+GE}!mu@{mu}}\index{mu@{mu}!cm\+GE@{cm\+GE}}\item[{\em 
+cm\+GE\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea188c6fd8324762d1513f28ef359408d7}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea188c6fd8324762d1513f28ef359408d7}
+}]Operator item\+: greater or equal. \index{cm\+N\+EQ@{cm\+N\+EQ}!mu@{mu}}\index{mu@{mu}!cm\+N\+EQ@{cm\+N\+EQ}}\item[{\em 
+cm\+N\+EQ\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac34e5f492d8b0f4f2f46d7c261a02e4c}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac34e5f492d8b0f4f2f46d7c261a02e4c}
+}]Operator item\+: not equal. \index{cm\+EQ@{cm\+EQ}!mu@{mu}}\index{mu@{mu}!cm\+EQ@{cm\+EQ}}\item[{\em 
+cm\+EQ\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eacedcb20eed5d83ea723cb47bb2c1cc0d}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eacedcb20eed5d83ea723cb47bb2c1cc0d}
+}]Operator item\+: equals. \index{cm\+LT@{cm\+LT}!mu@{mu}}\index{mu@{mu}!cm\+LT@{cm\+LT}}\item[{\em 
+cm\+LT\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea1f455ded43de3f52ce0a39f9dde843e5}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea1f455ded43de3f52ce0a39f9dde843e5}
+}]Operator item\+: less than. \index{cm\+GT@{cm\+GT}!mu@{mu}}\index{mu@{mu}!cm\+GT@{cm\+GT}}\item[{\em 
+cm\+GT\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac9cbc41a04d7b4dece063211d31ec5b3}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eac9cbc41a04d7b4dece063211d31ec5b3}
+}]Operator item\+: greater than. \index{cm\+A\+DD@{cm\+A\+DD}!mu@{mu}}\index{mu@{mu}!cm\+A\+DD@{cm\+A\+DD}}\item[{\em 
+cm\+A\+DD\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea127712855b500aff2b37a35c6767451a}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea127712855b500aff2b37a35c6767451a}
+}]Operator item\+: add. \index{cm\+S\+UB@{cm\+S\+UB}!mu@{mu}}\index{mu@{mu}!cm\+S\+UB@{cm\+S\+UB}}\item[{\em 
+cm\+S\+UB\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eadad0cd5d67567c1ad976e7d332537a9d}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eadad0cd5d67567c1ad976e7d332537a9d}
+}]Operator item\+: subtract. \index{cm\+M\+UL@{cm\+M\+UL}!mu@{mu}}\index{mu@{mu}!cm\+M\+UL@{cm\+M\+UL}}\item[{\em 
+cm\+M\+UL\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea703cb484ede1e3e4926c0a1fb3845679}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea703cb484ede1e3e4926c0a1fb3845679}
+}]Operator item\+: multiply. \index{cm\+D\+IV@{cm\+D\+IV}!mu@{mu}}\index{mu@{mu}!cm\+D\+IV@{cm\+D\+IV}}\item[{\em 
+cm\+D\+IV\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8923e5bebd1eb60c1436fa64a32492a0}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8923e5bebd1eb60c1436fa64a32492a0}
+}]Operator item\+: division. \index{cm\+P\+OW@{cm\+P\+OW}!mu@{mu}}\index{mu@{mu}!cm\+P\+OW@{cm\+P\+OW}}\item[{\em 
+cm\+P\+OW\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea3fad2e00b3026f83d90b135fd55ba7e3}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea3fad2e00b3026f83d90b135fd55ba7e3}
+}]Operator item\+: y to the power of ... \index{cm\+L\+A\+ND@{cm\+L\+A\+ND}!mu@{mu}}\index{mu@{mu}!cm\+L\+A\+ND@{cm\+L\+A\+ND}}\item[{\em 
+cm\+L\+A\+ND\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea502db65bd1b664c889bf8223c596cfd6}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea502db65bd1b664c889bf8223c596cfd6}
+}]\index{cm\+L\+OR@{cm\+L\+OR}!mu@{mu}}\index{mu@{mu}!cm\+L\+OR@{cm\+L\+OR}}\item[{\em 
+cm\+L\+OR\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8a136030771033042e8bdd8273746ae8}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea8a136030771033042e8bdd8273746ae8}
+}]\index{cm\+A\+S\+S\+I\+GN@{cm\+A\+S\+S\+I\+GN}!mu@{mu}}\index{mu@{mu}!cm\+A\+S\+S\+I\+GN@{cm\+A\+S\+S\+I\+GN}}\item[{\em 
+cm\+A\+S\+S\+I\+GN\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea471a75e04daaa2a387be5235484a3e01}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea471a75e04daaa2a387be5235484a3e01}
+}]Operator item\+: Assignment operator. \index{cm\+BO@{cm\+BO}!mu@{mu}}\index{mu@{mu}!cm\+BO@{cm\+BO}}\item[{\em 
+cm\+BO\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea677298c34553334aa70bfb87a58b7f0a}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea677298c34553334aa70bfb87a58b7f0a}
+}]Operator item\+: opening bracket. \index{cm\+BC@{cm\+BC}!mu@{mu}}\index{mu@{mu}!cm\+BC@{cm\+BC}}\item[{\em 
+cm\+BC\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacee8e4f918f65e180f8734f7e310aa1}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacee8e4f918f65e180f8734f7e310aa1}
+}]Operator item\+: closing bracket. \index{cm\+IF@{cm\+IF}!mu@{mu}}\index{mu@{mu}!cm\+IF@{cm\+IF}}\item[{\em 
+cm\+IF\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab9e28b93b1f434a7660559728a749eda}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab9e28b93b1f434a7660559728a749eda}
+}]For use in the ternary if-\/then-\/else operator. \index{cm\+E\+L\+SE@{cm\+E\+L\+SE}!mu@{mu}}\index{mu@{mu}!cm\+E\+L\+SE@{cm\+E\+L\+SE}}\item[{\em 
+cm\+E\+L\+SE\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf8f2c4094f7d220bd850f789f6622526}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf8f2c4094f7d220bd850f789f6622526}
+}]For use in the ternary if-\/then-\/else operator. \index{cm\+E\+N\+D\+IF@{cm\+E\+N\+D\+IF}!mu@{mu}}\index{mu@{mu}!cm\+E\+N\+D\+IF@{cm\+E\+N\+D\+IF}}\item[{\em 
+cm\+E\+N\+D\+IF\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea9115a14061048e465cc8c1b0132d6311}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea9115a14061048e465cc8c1b0132d6311}
+}]For use in the ternary if-\/then-\/else operator. \index{cm\+A\+R\+G\+\_\+\+S\+EP@{cm\+A\+R\+G\+\_\+\+S\+EP}!mu@{mu}}\index{mu@{mu}!cm\+A\+R\+G\+\_\+\+S\+EP@{cm\+A\+R\+G\+\_\+\+S\+EP}}\item[{\em 
+cm\+A\+R\+G\+\_\+\+S\+EP\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea554881ce7928a56e6e97f8f1149b9d50}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea554881ce7928a56e6e97f8f1149b9d50}
+}]function argument separator \index{cm\+V\+AR@{cm\+V\+AR}!mu@{mu}}\index{mu@{mu}!cm\+V\+AR@{cm\+V\+AR}}\item[{\em 
+cm\+V\+AR\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eafa2a28b5022d2454768c74e15d5ae377}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eafa2a28b5022d2454768c74e15d5ae377}
+}]variable item \index{cm\+V\+AL@{cm\+V\+AL}!mu@{mu}}\index{mu@{mu}!cm\+V\+AL@{cm\+V\+AL}}\item[{\em 
+cm\+V\+AL\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab1cf4ef5d34d815bb016fef14c331622}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eab1cf4ef5d34d815bb016fef14c331622}
+}]value item \index{cm\+V\+A\+R\+P\+O\+W2@{cm\+V\+A\+R\+P\+O\+W2}!mu@{mu}}\index{mu@{mu}!cm\+V\+A\+R\+P\+O\+W2@{cm\+V\+A\+R\+P\+O\+W2}}\item[{\em 
+cm\+V\+A\+R\+P\+O\+W2\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0484abbbb36506cac6748b6fa42285c9}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0484abbbb36506cac6748b6fa42285c9}
+}]\index{cm\+V\+A\+R\+P\+O\+W3@{cm\+V\+A\+R\+P\+O\+W3}!mu@{mu}}\index{mu@{mu}!cm\+V\+A\+R\+P\+O\+W3@{cm\+V\+A\+R\+P\+O\+W3}}\item[{\em 
+cm\+V\+A\+R\+P\+O\+W3\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae5e22685bf485df5b9f3be0e9a658501}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae5e22685bf485df5b9f3be0e9a658501}
+}]\index{cm\+V\+A\+R\+P\+O\+W4@{cm\+V\+A\+R\+P\+O\+W4}!mu@{mu}}\index{mu@{mu}!cm\+V\+A\+R\+P\+O\+W4@{cm\+V\+A\+R\+P\+O\+W4}}\item[{\em 
+cm\+V\+A\+R\+P\+O\+W4\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaed4b4e62d5decffbac8b811d055c5b97}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaed4b4e62d5decffbac8b811d055c5b97}
+}]\index{cm\+V\+A\+R\+M\+UL@{cm\+V\+A\+R\+M\+UL}!mu@{mu}}\index{mu@{mu}!cm\+V\+A\+R\+M\+UL@{cm\+V\+A\+R\+M\+UL}}\item[{\em 
+cm\+V\+A\+R\+M\+UL\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0383b2c00c33bdae17502b1f2f4a07fc}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea0383b2c00c33bdae17502b1f2f4a07fc}
+}]\index{cm\+P\+O\+W2@{cm\+P\+O\+W2}!mu@{mu}}\index{mu@{mu}!cm\+P\+O\+W2@{cm\+P\+O\+W2}}\item[{\em 
+cm\+P\+O\+W2\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea40c19d16d6030d0979f1a84a7d006abc}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea40c19d16d6030d0979f1a84a7d006abc}
+}]\index{cm\+F\+U\+NC@{cm\+F\+U\+NC}!mu@{mu}}\index{mu@{mu}!cm\+F\+U\+NC@{cm\+F\+U\+NC}}\item[{\em 
+cm\+F\+U\+NC\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaeacb1b1bb9859e8bc6147887a787feca}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaeacb1b1bb9859e8bc6147887a787feca}
+}]Code for a generic function item. \index{cm\+F\+U\+N\+C\+\_\+\+S\+TR@{cm\+F\+U\+N\+C\+\_\+\+S\+TR}!mu@{mu}}\index{mu@{mu}!cm\+F\+U\+N\+C\+\_\+\+S\+TR@{cm\+F\+U\+N\+C\+\_\+\+S\+TR}}\item[{\em 
+cm\+F\+U\+N\+C\+\_\+\+S\+TR\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae8ed179475f79bed80d66d389007717a}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eae8ed179475f79bed80d66d389007717a}
+}]Code for a function with a string parameter. \index{cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK@{cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK}!mu@{mu}}\index{mu@{mu}!cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK@{cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK}}\item[{\em 
+cm\+F\+U\+N\+C\+\_\+\+B\+U\+LK\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea052e0188c92157ef66581a31accfcab1}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea052e0188c92157ef66581a31accfcab1}
+}]Special callbacks for Bulk mode with an additional parameter for the bulk index. \index{cm\+S\+T\+R\+I\+NG@{cm\+S\+T\+R\+I\+NG}!mu@{mu}}\index{mu@{mu}!cm\+S\+T\+R\+I\+NG@{cm\+S\+T\+R\+I\+NG}}\item[{\em 
+cm\+S\+T\+R\+I\+NG\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea85db5789f85577dd5bcc21aea5b3244f}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea85db5789f85577dd5bcc21aea5b3244f}
+}]Code for a string token. \index{cm\+O\+P\+R\+T\+\_\+\+B\+IN@{cm\+O\+P\+R\+T\+\_\+\+B\+IN}!mu@{mu}}\index{mu@{mu}!cm\+O\+P\+R\+T\+\_\+\+B\+IN@{cm\+O\+P\+R\+T\+\_\+\+B\+IN}}\item[{\em 
+cm\+O\+P\+R\+T\+\_\+\+B\+IN\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacf35df01fc3b643b134e9d1ce3cc4e2}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaacf35df01fc3b643b134e9d1ce3cc4e2}
+}]user defined binary operator \index{cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX@{cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX}!mu@{mu}}\index{mu@{mu}!cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX@{cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX}}\item[{\em 
+cm\+O\+P\+R\+T\+\_\+\+P\+O\+S\+T\+F\+IX\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf866a95309b7573574b6e656045e4a2f}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eaf866a95309b7573574b6e656045e4a2f}
+}]code for postfix operators \index{cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX@{cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX}!mu@{mu}}\index{mu@{mu}!cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX@{cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX}}\item[{\em 
+cm\+O\+P\+R\+T\+\_\+\+I\+N\+F\+IX\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea961fe96555e0f036e52496126f70c404}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea961fe96555e0f036e52496126f70c404}
+}]code for infix operators \index{cm\+E\+ND@{cm\+E\+ND}!mu@{mu}}\index{mu@{mu}!cm\+E\+ND@{cm\+E\+ND}}\item[{\em 
+cm\+E\+ND\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea76086ac235dadbe9ad8a184190b21c8b}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40ea76086ac235dadbe9ad8a184190b21c8b}
+}]end of formula \index{cm\+U\+N\+K\+N\+O\+WN@{cm\+U\+N\+K\+N\+O\+WN}!mu@{mu}}\index{mu@{mu}!cm\+U\+N\+K\+N\+O\+WN@{cm\+U\+N\+K\+N\+O\+WN}}\item[{\em 
+cm\+U\+N\+K\+N\+O\+WN\hypertarget{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eabd8cbb2e08ff6806578535408feef0c3}{}\label{namespacemu_ab77181e591bebd278bf9c7a2e30ad40eabd8cbb2e08ff6806578535408feef0c3}
+}]uninitialized item \end{description}
+\end{Desc}
+\index{mu@{mu}!E\+Error\+Codes@{E\+Error\+Codes}}
+\index{E\+Error\+Codes@{E\+Error\+Codes}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Error\+Codes}{EErrorCodes}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Error\+Codes}}\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688a}
+
+
+Error codes. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+OR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7154513fd624589812610c190497bb0a}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7154513fd624589812610c190497bb0a}
+}]Unexpected binary operator found. \index{ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN@{ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN@{ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN}}\item[{\em 
+ec\+U\+N\+A\+S\+S\+I\+G\+N\+A\+B\+L\+E\+\_\+\+T\+O\+K\+EN\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa2c29f854b65e380ae4fcb4d4e00aaa22}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa2c29f854b65e380ae4fcb4d4e00aaa22}
+}]Token cant be identified. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+OF\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3995c6500fc04f8b203817a5d3443219}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3995c6500fc04f8b203817a5d3443219}
+}]Unexpected end of formula. (Example\+: \char`\"{}2+sin(\char`\"{}) \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+R\+G\+\_\+\+S\+EP\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa010c6130e7cf45723740cff95757737}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa010c6130e7cf45723740cff95757737}
+}]An unexpected comma has been found. (Example\+: \char`\"{}1,23\char`\"{}) \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+A\+RG\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa64b2880f566f8b44050142c94a0207fb}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa64b2880f566f8b44050142c94a0207fb}
+}]An unexpected argument has been found. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AL\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaf832f767e3f1c50a024da57221a2416f}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaf832f767e3f1c50a024da57221a2416f}
+}]An unexpected value token has been found. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+V\+AR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3de33dffb8946c3c4373aa3de3627759}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa3de33dffb8946c3c4373aa3de3627759}
+}]An unexpected variable token has been found. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+P\+A\+R\+E\+NS\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8c823a3bef7facd0d99cbfb4d2cd06e1}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8c823a3bef7facd0d99cbfb4d2cd06e1}
+}]Unexpected Parenthesis, opening or closing. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+TR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8a98a29c35c9b7744f4987476b0c3ca9}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa8a98a29c35c9b7744f4987476b0c3ca9}
+}]A string has been found at an inapropriate position. \index{ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED}!mu@{mu}}\index{mu@{mu}!ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED}}\item[{\em 
+ec\+S\+T\+R\+I\+N\+G\+\_\+\+E\+X\+P\+E\+C\+T\+ED\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4446abbd60038e6a7f1d4aced202ad05}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4446abbd60038e6a7f1d4aced202ad05}
+}]A string function has been called with a different type of argument. \index{ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED}!mu@{mu}}\index{mu@{mu}!ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED}}\item[{\em 
+ec\+V\+A\+L\+\_\+\+E\+X\+P\+E\+C\+T\+ED\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4e872315cffbc12a39947b60f9367088}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4e872315cffbc12a39947b60f9367088}
+}]A numerical function has been called with a non value type of argument. \index{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS@{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS}!mu@{mu}}\index{mu@{mu}!ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS@{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS}}\item[{\em 
+ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+NS\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34679c30e955b4c9c04ed36db8a288d0}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34679c30e955b4c9c04ed36db8a288d0}
+}]Missing parens. (Example\+: \char`\"{}3$\ast$sin(3\char`\"{}) \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+F\+UN\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa5132a541c023ecefe71e17fce886860e}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa5132a541c023ecefe71e17fce886860e}
+}]Unexpected function found. (Example\+: \char`\"{}sin(8)cos(9)\char`\"{}) \index{ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG@{ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG@{ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}}\item[{\em 
+ec\+U\+N\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaaf787ce3edd65d5f086ad298e158a4bf}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaaf787ce3edd65d5f086ad298e158a4bf}
+}]unterminated string constant. (Example\+: \char`\"{}3$\ast$valueof(\char`\"{}hello)") \index{ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS@{ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS}!mu@{mu}}\index{mu@{mu}!ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS@{ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS}}\item[{\em 
+ec\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+P\+A\+R\+A\+MS\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4560405f6d8f871084a57e8e4633d496}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa4560405f6d8f871084a57e8e4633d496}
+}]Too many function parameters. \index{ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS@{ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS}!mu@{mu}}\index{mu@{mu}!ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS@{ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS}}\item[{\em 
+ec\+T\+O\+O\+\_\+\+F\+E\+W\+\_\+\+P\+A\+R\+A\+MS\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aac7b48aee91620edca3bb0ccbaaf31772}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aac7b48aee91620edca3bb0ccbaaf31772}
+}]Too few function parameters. (Example\+: \char`\"{}ite(1$<$2,2)\char`\"{}) \index{ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT@{ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}!mu@{mu}}\index{mu@{mu}!ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT@{ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}}\item[{\em 
+ec\+O\+P\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa73e9671ee2b553affeb628a40ae745d1}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa73e9671ee2b553affeb628a40ae745d1}
+}]binary operators may only be applied to value items of the same type \index{ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT@{ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT}!mu@{mu}}\index{mu@{mu}!ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT@{ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT}}\item[{\em 
+ec\+S\+T\+R\+\_\+\+R\+E\+S\+U\+LT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa62f472030efcf7fda692e12a2da90338}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa62f472030efcf7fda692e12a2da90338}
+}]result is a string \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa125e953e3a9ab50e564cde8e981f56e9}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa125e953e3a9ab50e564cde8e981f56e9}
+}]Invalid function, variable or constant name. \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+O\+P\+\_\+\+I\+D\+E\+NT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa1fd2c3dfe53727a267d386f57ea37af1}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa1fd2c3dfe53727a267d386f57ea37af1}
+}]Invalid binary operator identifier. \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+F\+I\+X\+\_\+\+I\+D\+E\+NT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa723bd3d892e5fe4817f8acd71636a59f}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa723bd3d892e5fe4817f8acd71636a59f}
+}]Invalid function, variable or constant name. \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+I\+D\+E\+NT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad05cd43211abc3b9972ac2c9ffab2eed}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad05cd43211abc3b9972ac2c9ffab2eed}
+}]Invalid function, variable or constant name. \index{ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}!mu@{mu}}\index{mu@{mu}!ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}\item[{\em 
+ec\+B\+U\+I\+L\+T\+I\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34807cf30e3bb8ca4b348bd7742fa0a7}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa34807cf30e3bb8ca4b348bd7742fa0a7}
+}]Trying to overload builtin operator. \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+U\+N\+\_\+\+P\+TR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab3f728ed3fbe1e49ff37fc78bff68355}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab3f728ed3fbe1e49ff37fc78bff68355}
+}]Invalid callback function pointer. \index{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR@{ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR}}\item[{\em 
+ec\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+R\+\_\+\+P\+TR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa9d815bf7cb3eafa3887e0ed7c2eaf85f}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa9d815bf7cb3eafa3887e0ed7c2eaf85f}
+}]Invalid variable pointer. \index{ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}!mu@{mu}}\index{mu@{mu}!ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}}\item[{\em 
+ec\+E\+M\+P\+T\+Y\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad4ce9d26ad46c057b12100b16d6d26ae}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad4ce9d26ad46c057b12100b16d6d26ae}
+}]The Expression is empty. \index{ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT@{ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}!mu@{mu}}\index{mu@{mu}!ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT@{ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}}\item[{\em 
+ec\+N\+A\+M\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa40ffbd6629bb0ab70bbcbc5b15384274}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa40ffbd6629bb0ab70bbcbc5b15384274}
+}]Name conflict. \index{ec\+O\+P\+T\+\_\+\+P\+RI@{ec\+O\+P\+T\+\_\+\+P\+RI}!mu@{mu}}\index{mu@{mu}!ec\+O\+P\+T\+\_\+\+P\+RI@{ec\+O\+P\+T\+\_\+\+P\+RI}}\item[{\em 
+ec\+O\+P\+T\+\_\+\+P\+RI\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaad1847fc9b493d4cda79ea26ad09eb5a}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaad1847fc9b493d4cda79ea26ad09eb5a}
+}]Invalid operator priority. \index{ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR@{ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR}!mu@{mu}}\index{mu@{mu}!ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR@{ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+ec\+D\+O\+M\+A\+I\+N\+\_\+\+E\+R\+R\+OR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa971535886e930176428166ab78778619}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa971535886e930176428166ab78778619}
+}]catch division by zero, sqrt(-\/1), log(0) (currently unused) \index{ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO@{ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}!mu@{mu}}\index{mu@{mu}!ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO@{ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}}\item[{\em 
+ec\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaff779580d171527466424d4ecf75a1a8}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaff779580d171527466424d4ecf75a1a8}
+}]Division by zero (currently unused) \index{ec\+G\+E\+N\+E\+R\+IC@{ec\+G\+E\+N\+E\+R\+IC}!mu@{mu}}\index{mu@{mu}!ec\+G\+E\+N\+E\+R\+IC@{ec\+G\+E\+N\+E\+R\+IC}}\item[{\em 
+ec\+G\+E\+N\+E\+R\+IC\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaece22de75a7be641a196123e7e9c322f}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaece22de75a7be641a196123e7e9c322f}
+}]Generic error. \index{ec\+L\+O\+C\+A\+LE@{ec\+L\+O\+C\+A\+LE}!mu@{mu}}\index{mu@{mu}!ec\+L\+O\+C\+A\+LE@{ec\+L\+O\+C\+A\+LE}}\item[{\em 
+ec\+L\+O\+C\+A\+LE\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7f2b93cc8c3de8e45b1d7489f2693804}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa7f2b93cc8c3de8e45b1d7489f2693804}
+}]Conflict with current locale. \index{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL@{ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL}}\item[{\em 
+ec\+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+AL\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab38d12e1a8995c136661f18b0e259df3}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aab38d12e1a8995c136661f18b0e259df3}
+}]\index{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE@{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE}!mu@{mu}}\index{mu@{mu}!ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE@{ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE}}\item[{\em 
+ec\+M\+I\+S\+S\+I\+N\+G\+\_\+\+E\+L\+S\+E\+\_\+\+C\+L\+A\+U\+SE\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa95a743178c27386926fdcb435ffab90}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aaa95a743178c27386926fdcb435ffab90}
+}]\index{ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON@{ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON}!mu@{mu}}\index{mu@{mu}!ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON@{ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON}}\item[{\em 
+ec\+M\+I\+S\+P\+L\+A\+C\+E\+D\+\_\+\+C\+O\+L\+ON\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa282864ddfeeb0846e6b79523dbbc3c38}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa282864ddfeeb0846e6b79523dbbc3c38}
+}]\index{ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS@{ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS@{ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS}}\item[{\em 
+ec\+U\+N\+R\+E\+A\+S\+O\+N\+A\+B\+L\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+M\+P\+U\+T\+A\+T\+I\+O\+NS\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa482dd716c466b0cd1fda24d628c5c85b}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa482dd716c466b0cd1fda24d628c5c85b}
+}]\index{ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR@{ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}!mu@{mu}}\index{mu@{mu}!ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR@{ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+ec\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa91b338cf5e35059bb452f783aeb88a5f}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa91b338cf5e35059bb452f783aeb88a5f}
+}]Internal error of any kind. \index{ec\+C\+O\+U\+NT@{ec\+C\+O\+U\+NT}!mu@{mu}}\index{mu@{mu}!ec\+C\+O\+U\+NT@{ec\+C\+O\+U\+NT}}\item[{\em 
+ec\+C\+O\+U\+NT\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad0077acc7594040e4dd7fe5de229b455}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aad0077acc7594040e4dd7fe5de229b455}
+}]This is no error code, It just stores just the total number of error codes. \index{ec\+U\+N\+D\+E\+F\+I\+N\+ED@{ec\+U\+N\+D\+E\+F\+I\+N\+ED}!mu@{mu}}\index{mu@{mu}!ec\+U\+N\+D\+E\+F\+I\+N\+ED@{ec\+U\+N\+D\+E\+F\+I\+N\+ED}}\item[{\em 
+ec\+U\+N\+D\+E\+F\+I\+N\+ED\hypertarget{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa49ba8c4fa03b5e822bc4573f84d44062}{}\label{namespacemu_acf304a3ef5c4625d0eac5953aa1b688aa49ba8c4fa03b5e822bc4573f84d44062}
+}]Undefined message, placeholder to detect unassigned error messages. \end{description}
+\end{Desc}
+\index{mu@{mu}!E\+Oprt\+Associativity@{E\+Oprt\+Associativity}}
+\index{E\+Oprt\+Associativity@{E\+Oprt\+Associativity}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Oprt\+Associativity}{EOprtAssociativity}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Oprt\+Associativity}}\hypertarget{namespacemu_aff435b0c277f66041374f93a3803e1f1}{}\label{namespacemu_aff435b0c277f66041374f93a3803e1f1}
+
+
+\hyperlink{classmu_1_1_parser}{Parser} operator precedence values. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{oa\+L\+E\+FT@{oa\+L\+E\+FT}!mu@{mu}}\index{mu@{mu}!oa\+L\+E\+FT@{oa\+L\+E\+FT}}\item[{\em 
+oa\+L\+E\+FT\hypertarget{namespacemu_aff435b0c277f66041374f93a3803e1f1a4b1875076b2c85879e9596a7a98af7a6}{}\label{namespacemu_aff435b0c277f66041374f93a3803e1f1a4b1875076b2c85879e9596a7a98af7a6}
+}]\index{oa\+R\+I\+G\+HT@{oa\+R\+I\+G\+HT}!mu@{mu}}\index{mu@{mu}!oa\+R\+I\+G\+HT@{oa\+R\+I\+G\+HT}}\item[{\em 
+oa\+R\+I\+G\+HT\hypertarget{namespacemu_aff435b0c277f66041374f93a3803e1f1ae10ad97402ffc0c524f5fd3919e4bbfa}{}\label{namespacemu_aff435b0c277f66041374f93a3803e1f1ae10ad97402ffc0c524f5fd3919e4bbfa}
+}]\index{oa\+N\+O\+NE@{oa\+N\+O\+NE}!mu@{mu}}\index{mu@{mu}!oa\+N\+O\+NE@{oa\+N\+O\+NE}}\item[{\em 
+oa\+N\+O\+NE\hypertarget{namespacemu_aff435b0c277f66041374f93a3803e1f1a91ec8ef41d1b2308e7fcd096bf9a7162}{}\label{namespacemu_aff435b0c277f66041374f93a3803e1f1a91ec8ef41d1b2308e7fcd096bf9a7162}
+}]\end{description}
+\end{Desc}
+\index{mu@{mu}!E\+Oprt\+Precedence@{E\+Oprt\+Precedence}}
+\index{E\+Oprt\+Precedence@{E\+Oprt\+Precedence}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Oprt\+Precedence}{EOprtPrecedence}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Oprt\+Precedence}}\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3d}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3d}
+
+
+\hyperlink{classmu_1_1_parser}{Parser} operator precedence values. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{pr\+L\+OR@{pr\+L\+OR}!mu@{mu}}\index{mu@{mu}!pr\+L\+OR@{pr\+L\+OR}}\item[{\em 
+pr\+L\+OR\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da2ef641de328c60277d2d1cb8e4e542b0}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da2ef641de328c60277d2d1cb8e4e542b0}
+}]\index{pr\+L\+A\+ND@{pr\+L\+A\+ND}!mu@{mu}}\index{mu@{mu}!pr\+L\+A\+ND@{pr\+L\+A\+ND}}\item[{\em 
+pr\+L\+A\+ND\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3dafc5dd83c0caa263db1637b4b075b1a7d}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3dafc5dd83c0caa263db1637b4b075b1a7d}
+}]\index{pr\+L\+O\+G\+IC@{pr\+L\+O\+G\+IC}!mu@{mu}}\index{mu@{mu}!pr\+L\+O\+G\+IC@{pr\+L\+O\+G\+IC}}\item[{\em 
+pr\+L\+O\+G\+IC\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da5a921789427276e8c641653459da2302}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da5a921789427276e8c641653459da2302}
+}]logic operators \index{pr\+C\+MP@{pr\+C\+MP}!mu@{mu}}\index{mu@{mu}!pr\+C\+MP@{pr\+C\+MP}}\item[{\em 
+pr\+C\+MP\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da570966afb3a2a2e7c12bf0f0aff47d56}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da570966afb3a2a2e7c12bf0f0aff47d56}
+}]comparsion operators \index{pr\+A\+D\+D\+\_\+\+S\+UB@{pr\+A\+D\+D\+\_\+\+S\+UB}!mu@{mu}}\index{mu@{mu}!pr\+A\+D\+D\+\_\+\+S\+UB@{pr\+A\+D\+D\+\_\+\+S\+UB}}\item[{\em 
+pr\+A\+D\+D\+\_\+\+S\+UB\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3dac287fcda15dc853e73e3000f7da24c2a}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3dac287fcda15dc853e73e3000f7da24c2a}
+}]addition \index{pr\+M\+U\+L\+\_\+\+D\+IV@{pr\+M\+U\+L\+\_\+\+D\+IV}!mu@{mu}}\index{mu@{mu}!pr\+M\+U\+L\+\_\+\+D\+IV@{pr\+M\+U\+L\+\_\+\+D\+IV}}\item[{\em 
+pr\+M\+U\+L\+\_\+\+D\+IV\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3daf90e37568d297c82df0f908e6b0852e0}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3daf90e37568d297c82df0f908e6b0852e0}
+}]multiplication/division \index{pr\+P\+OW@{pr\+P\+OW}!mu@{mu}}\index{mu@{mu}!pr\+P\+OW@{pr\+P\+OW}}\item[{\em 
+pr\+P\+OW\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da706c8deebfec7a93ee879ab575b478c0}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da706c8deebfec7a93ee879ab575b478c0}
+}]power operator priority (highest) \index{pr\+I\+N\+F\+IX@{pr\+I\+N\+F\+IX}!mu@{mu}}\index{mu@{mu}!pr\+I\+N\+F\+IX@{pr\+I\+N\+F\+IX}}\item[{\em 
+pr\+I\+N\+F\+IX\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da50b576d79c0d155f703d409967ad3727}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da50b576d79c0d155f703d409967ad3727}
+}]Signs have a higher priority than A\+D\+D\+\_\+\+S\+UB, but lower than power operator. \index{pr\+P\+O\+S\+T\+F\+IX@{pr\+P\+O\+S\+T\+F\+IX}!mu@{mu}}\index{mu@{mu}!pr\+P\+O\+S\+T\+F\+IX@{pr\+P\+O\+S\+T\+F\+IX}}\item[{\em 
+pr\+P\+O\+S\+T\+F\+IX\hypertarget{namespacemu_af05119698ed9c62239c0b31ac9861d3da1df5768036a033427841dfabe126e016}{}\label{namespacemu_af05119698ed9c62239c0b31ac9861d3da1df5768036a033427841dfabe126e016}
+}]Postfix operator priority (currently unused) \end{description}
+\end{Desc}
+\index{mu@{mu}!E\+Parser\+Version\+Info@{E\+Parser\+Version\+Info}}
+\index{E\+Parser\+Version\+Info@{E\+Parser\+Version\+Info}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Parser\+Version\+Info}{EParserVersionInfo}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Parser\+Version\+Info}}\hypertarget{namespacemu_abc734ff078c5336d2a379d87537a5789}{}\label{namespacemu_abc734ff078c5336d2a379d87537a5789}
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{pvi\+B\+R\+I\+EF@{pvi\+B\+R\+I\+EF}!mu@{mu}}\index{mu@{mu}!pvi\+B\+R\+I\+EF@{pvi\+B\+R\+I\+EF}}\item[{\em 
+pvi\+B\+R\+I\+EF\hypertarget{namespacemu_abc734ff078c5336d2a379d87537a5789a344ba8a4705909938708d365484ca563}{}\label{namespacemu_abc734ff078c5336d2a379d87537a5789a344ba8a4705909938708d365484ca563}
+}]\index{pvi\+F\+U\+LL@{pvi\+F\+U\+LL}!mu@{mu}}\index{mu@{mu}!pvi\+F\+U\+LL@{pvi\+F\+U\+LL}}\item[{\em 
+pvi\+F\+U\+LL\hypertarget{namespacemu_abc734ff078c5336d2a379d87537a5789a15f2fdade93277c8923e2384f184e1af}{}\label{namespacemu_abc734ff078c5336d2a379d87537a5789a15f2fdade93277c8923e2384f184e1af}
+}]\end{description}
+\end{Desc}
+\index{mu@{mu}!E\+Type\+Code@{E\+Type\+Code}}
+\index{E\+Type\+Code@{E\+Type\+Code}!mu@{mu}}
+\subsubsection[{\texorpdfstring{E\+Type\+Code}{ETypeCode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mu\+::\+E\+Type\+Code}}\hypertarget{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302}{}\label{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302}
+
+
+Types internally used by the parser. 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{tp\+S\+TR@{tp\+S\+TR}!mu@{mu}}\index{mu@{mu}!tp\+S\+TR@{tp\+S\+TR}}\item[{\em 
+tp\+S\+TR\hypertarget{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302ac02584cb1ca179714a5ac8a951653ad4}{}\label{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302ac02584cb1ca179714a5ac8a951653ad4}
+}]String type (Function arguments and constants only, no string variables) \index{tp\+D\+BL@{tp\+D\+BL}!mu@{mu}}\index{mu@{mu}!tp\+D\+BL@{tp\+D\+BL}}\item[{\em 
+tp\+D\+BL\hypertarget{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a38692f5e59ea960113e0de77ed9a9428}{}\label{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a38692f5e59ea960113e0de77ed9a9428}
+}]Floating point variables. \index{tp\+V\+O\+ID@{tp\+V\+O\+ID}!mu@{mu}}\index{mu@{mu}!tp\+V\+O\+ID@{tp\+V\+O\+ID}}\item[{\em 
+tp\+V\+O\+ID\hypertarget{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a2a6b3ae75a0e6a44a992a87d222b4481}{}\label{namespacemu_ac3ccf6a749baacffd48fe97b9c2af302a2a6b3ae75a0e6a44a992a87d222b4481}
+}]Undefined type. \end{description}
+\end{Desc}
+
+
+\subsection{Documentación de las funciones}
+\index{mu@{mu}!console@{console}}
+\index{console@{console}!mu@{mu}}
+\subsubsection[{\texorpdfstring{console()}{console()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& mu\+::console (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacemu_a0346964f0b93f6c904a9964387522d97}{}\label{namespacemu_a0346964f0b93f6c904a9964387522d97}
+
+
+Encapsulate cout. 
+
+Used for supporting U\+N\+I\+C\+O\+DE more easily. \index{mu@{mu}!console\+\_\+in@{console\+\_\+in}}
+\index{console\+\_\+in@{console\+\_\+in}!mu@{mu}}
+\subsubsection[{\texorpdfstring{console\+\_\+in()}{console_in()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& mu\+::console\+\_\+in (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacemu_a4bcc4027b54951ec8c490fb8d0f68a1d}{}\label{namespacemu_a4bcc4027b54951ec8c490fb8d0f68a1d}
+
+
+Encapsulate cin. 
+
+Used for supporting U\+N\+I\+C\+O\+DE more easily. 
