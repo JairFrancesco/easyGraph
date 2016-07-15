@@ -29,16 +29,17 @@ public:
 protected:
     void next_point(std::vector<double>,vtkSmartPointer<vtkPoints>);
 
+    vtkSmartPointer<vtkStructuredGrid> structuredGrid =  vtkSmartPointer<vtkStructuredGrid>::New();
     vtkStructuredGrid *  set_points(vtkPoints *,int,int,int);
-
-    void print_grid(vtkStructuredGrid *);
+    void print_grid();
 
     //filtros retornan pointers StructuredGrid
-    vtkSmartPointer<vtkActor> filtro_puntos(vtkStructuredGrid *);
-    vtkSmartPointer<vtkActor> filtro_lineas(vtkStructuredGrid *);
+    vtkSmartPointer<vtkActor> filtro_puntos();
+    vtkSmartPointer<vtkActor> filtro_lineas();
 
     //retorna actors
-    vtkSmartPointer< vtkActor >mapear(vtkSmartPointer< vtkStructuredGrid  >);
+    vtkSmartPointer < vtkDataSetMapper> mapper =   vtkSmartPointer<vtkDataSetMapper>::New();
+    vtkSmartPointer< vtkActor >mapear();
 
     //retorna actor axes
     vtkSmartPointer<vtkAxesActor>  axes();
@@ -50,6 +51,7 @@ protected:
    //Actors
    // vtkSmartPointer<vtkActor> actor =   vtkSmartPointer<vtkActor>::New();
     //
+    vtkSmartPointer<vtkAxesActor> axess = vtkSmartPointer<vtkAxesActor>::New();
 
     // Visualize
 

@@ -13,8 +13,22 @@ Graficador::Graficador()
 
 }
 
+Graficador::~Graficador(){
+  // this->actores.clear(); ;
+    //this->camera->Delete();
+    //delete this->colors;
+   //this->pointss->Delete();
+  /*  delete this->renderer;
+    delete this->axess;
+    delete this->structuredGrid;
+    delete this->mapper;
+    delete this->renderWindow;
+    delete this->renderWindowInteractor; */
+}
+
+
 void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
-    vtkSmartPointer<vtkPoints> pointss = vtkSmartPointer<vtkPoints>::New();
+
 
     for(auto i:vec){
         std::cout <<i[0]<< " /" <<i[1]<< " /"<<i[2]<<"\n" ;
@@ -28,8 +42,8 @@ void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
     this->structuredGrid->SetPoints(pointss);
 
 
-    this->print_grid(this->structuredGrid);
-    auto actor = this->mapear(this->structuredGrid);
+    this->print_grid();
+    auto actor = this->mapear();
     actor->GetProperty()->SetInterpolationToFlat();
 
     // Set the color for edges of the sphere
@@ -42,10 +56,10 @@ void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
 
 void Graficador::add_filtros(){
 
-    vtkSmartPointer<vtkActor> actor1 = this->filtro_lineas(this->structuredGrid);
+    vtkSmartPointer<vtkActor> actor1 = this->filtro_lineas();
     this->actores.push_back(actor1);
 
-    vtkSmartPointer<vtkActor> actor2 = this->filtro_puntos(this->structuredGrid);
+    vtkSmartPointer<vtkActor> actor2 = this->filtro_puntos();
     this->actores.push_back(actor2);
 
 }
@@ -83,5 +97,6 @@ void Graficador::add_axes(){
 }
 
 void Graficador::renderizar(bool mostrar){
+
     this->render(this->actores,mostrar);
 }

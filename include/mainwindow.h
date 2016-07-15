@@ -7,6 +7,9 @@
 #include "graficador.h"
 #include "interprete.h"
  #include <thread>
+#include <vtkRendererCollection.h>
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -31,8 +34,7 @@ private slots:
     void on_btnCalcular_clicked();
 
 private:
-
-    interprete * interp = new interprete();
+    interprete * interp =  new interprete();
     QStandardItemModel *model = new QStandardItemModel();
     std::vector<std::vector<double>>coordenadas;
 

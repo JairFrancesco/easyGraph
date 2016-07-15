@@ -46,6 +46,8 @@ void MainWindow::resetCamera(){
     g->camera->SetFocalPoint(0, 0, 0);
     g->camera->SetViewUp(0,1,0);
 
+    g->renderer->SetActiveCamera(g->camera);
+
      this->ui->qvtkWidget->GetRenderWindow()->Render();
 }
 
@@ -79,13 +81,27 @@ void MainWindow::graficar(int x,int y ){
 
 
     g->renderizar();
+    auto lista = this->ui->qvtkWidget->GetRenderWindow()->GetRenderers();
+    auto i = lista->GetFirstRenderer();
+
+    while (i != NULL) {
+        this->ui->qvtkWidget->GetRenderWindow()->RemoveRenderer(i);
+        i = lista->GetFirstRenderer();
+    }
+
     this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
+
     this->ui->qvtkWidget->GetRenderWindow()->Render();
 
 }
 
 void MainWindow::on_btnCalcular_clicked()
 {
+    delete this->g;
+    this->g = new Graficador();
+    this->g->renderer = vtkSmartPointer<vtkRenderer>::New();
+    this->resetCamera();
+
 
     //string ecuacion = "((x+2*y)/sin(y)-12)";
     this->ui->lblEquation->setText(this->ui->lineEdit->text());
@@ -93,9 +109,9 @@ void MainWindow::on_btnCalcular_clicked()
     std::cout << ecuacion << std::endl;
 
 
-    this->interp -> set_ecuacion(ecuacion);
-    this->interp -> crear_arbol();
-    this->interp->set_diferencial(this->ui->spinDiferencial->value()); // por defecto el diferencial es 1
+    interp -> set_ecuacion(ecuacion);
+    interp -> crear_arbol();
+    interp->set_diferencial(this->ui->spinDiferencial->value()); // por defecto el diferencial es 1
     //por defecto los limites van de -10 a 10, por lo que podrias omitir las proximas 4 lineas
 
     cout<<"settings limits.."<<endl;
@@ -114,9 +130,13 @@ void MainWindow::on_btnCalcular_clicked()
 
     cout<<"Graficando.."<<endl;
     //graficar
-    this->graficar(*interp->cont_x,*interp->cont_y);
+
+
+    graficar(*interp->cont_x,*interp->cont_y);
 
     cout << *interp->cont_x << "/" << *interp->cont_y <<  endl;
+    coordenadas.clear();
+
 }
 
 

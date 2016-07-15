@@ -11,14 +11,17 @@ class Graficador : public Gpadre
 
 public:
     Graficador();
+   ~Graficador();
 
     std::vector<vtkSmartPointer<vtkActor>> actores;
-    vtkSmartPointer<vtkStructuredGrid> structuredGrid =  vtkSmartPointer<vtkStructuredGrid>::New();
+
 
     void crear(std::vector<std::vector<double>>,int,int);
     void add_filtros();
     void add_axes();
     void renderizar(bool mostrar=true);
+
+    vtkSmartPointer<vtkPoints> pointss = vtkSmartPointer<vtkPoints>::New();
 
 void clean();
 vtkSmartPointer<vtkCamera> camera =    vtkSmartPointer<vtkCamera>::New();
