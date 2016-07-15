@@ -12,6 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    g->add_axes();
+
+
+    g->renderizar();
     this->ui->qvtkWidget->GetRenderWindow()->AddRenderer(g->renderer);
     this->ui->qvtkWidget->GetRenderWindow()->Render();
     //this->refresh();

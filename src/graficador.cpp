@@ -79,14 +79,12 @@ void Graficador::add_axes(){
     cubeAxesActor->GetLabelTextProperty(2)->SetColor(0.0, 0.0, 1.0);
 
     cubeAxesActor->DrawXGridlinesOn();
+
     cubeAxesActor->DrawYGridlinesOn();
     cubeAxesActor->DrawZGridlinesOn();
-  #if VTK_MAJOR_VERSION == 6
-    cubeAxesActor->SetGridLineLocation(VTK_GRID_LINES_FURTHEST);
-  #endif
-  #if VTK_MAJOR_VERSION > 6
-    cubeAxesActor->SetGridLineLocation(2);
-  #endif
+
+    cubeAxesActor->SetGridLineLocation(0);
+
 
     cubeAxesActor->XAxisMinorTickVisibilityOff();
     cubeAxesActor->YAxisMinorTickVisibilityOff();
