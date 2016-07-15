@@ -63,6 +63,7 @@ std::vector<std::vector<double>> procesador_de_arbol::get_coordenadas(){
                 std::cout<<"Procesando.."<<std::endl;
                 v_temp1.push_back(tree->raiz->procesar());
                 std::cout<<"Finish Procesando.."<<std::endl;
+                v_temp1.push_back(0);
                 v_temp2.push_back(v_temp1);
                 std::cout<<i<<std::endl;
                 i+=dx;
@@ -98,6 +99,7 @@ std::vector<std::vector<double>> procesador_de_arbol::get_coordenadas(){
                 std::vector<double> v_temp1;
                 v_temp1.push_back(i);
                 v_temp1.push_back(tree->raiz->procesar());
+                v_temp1.push_back(0);
                 v_temp2.push_back(v_temp1);
             }
         }
