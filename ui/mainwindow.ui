@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1252</width>
-    <height>479</height>
+    <height>577</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,9 +42,6 @@
         </rect>
        </property>
       </widget>
-      <zorder>tableView</zorder>
-      <zorder>groupBox</zorder>
-      <zorder>groupBox</zorder>
      </widget>
     </item>
     <item row="0" column="3">
@@ -422,6 +419,22 @@
        </property>
        <property name="text">
         <string>Limites y</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="boxFiltros">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>310</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mostrar Grid y Puntos</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>

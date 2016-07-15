@@ -78,9 +78,17 @@ void MainWindow::llenarTabla(){
 void MainWindow::graficar(int x,int y ){
     //Graficar
     cout << "here " << x << "," << y<< endl;
-    g->crear(coordenadas,x,y);
     //g->crear(coordenadas,21,1); // Esto es para 2d ... ideas papus ?
-    g->add_filtros();
+
+    if(this->ui->boxFiltros->isChecked()){
+        g->crear(coordenadas,x,y,true);
+        g->add_filtros();
+
+    }
+    else{
+        g->crear(coordenadas,x,y,false);
+    }
+
     g->add_axes();
 
 

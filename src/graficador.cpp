@@ -27,7 +27,7 @@ Graficador::~Graficador(){
 }
 
 
-void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
+void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y,bool lineas_activo){
 
 
     for(auto i:vec){
@@ -47,20 +47,28 @@ void Graficador::crear(std::vector<std::vector<double>> vec, int x, int y){
     actor->GetProperty()->SetInterpolationToFlat();
 
     // Set the color for edges of the sphere
-    actor->GetProperty()->SetColor(0,255,0);
-    actor->GetProperty()->SetEdgeColor(1.0, 0.0, 0.0); //(R,G,B)
-    actor->GetProperty()->EdgeVisibilityOn();
+
+
+    if(lineas_activo){
+        actor->GetProperty()->SetColor(0,255,0);
+        actor->GetProperty()->SetEdgeColor(1.0, 0.0, 0.0); //(R,G,B)
+        actor->GetProperty()->EdgeVisibilityOn();
+    }
+
     this->actores.push_back(actor);
 
 }
 
 void Graficador::add_filtros(){
 
-    vtkSmartPointer<vtkActor> actor1 = this->filtro_lineas();
-    this->actores.push_back(actor1);
 
-    vtkSmartPointer<vtkActor> actor2 = this->filtro_puntos();
-    this->actores.push_back(actor2);
+        vtkSmartPointer<vtkActor> actor1 = this->filtro_lineas();
+        this->actores.push_back(actor1);
+
+        vtkSmartPointer<vtkActor> actor2 = this->filtro_puntos();
+        this->actores.push_back(actor2);
+
+
 
 }
 void Graficador::add_axes(){

@@ -75,7 +75,6 @@ vtkSmartPointer<vtkActor> Gpadre::mapear(){
 
 void Gpadre::render(std::vector<vtkSmartPointer<vtkActor> > actors,bool mostrar){
 
-
     this->renderer->SetBackground(.2, .3, .4);
     if (mostrar){
         for(auto actor: actors){
