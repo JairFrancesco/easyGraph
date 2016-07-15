@@ -15,7 +15,7 @@ procesador_de_arbol::~procesador_de_arbol()
     //dtor
 }
 
-void procesador_de_arbol::set_limite_var(double lim_izq, double lim_der, std::string nom_var){
+void procesador_de_arbol::set_limite_var(double lim_izq, double lim_der, str_interp nom_var){
     if (nom_var== std::get<0>(tree->variables->at(0) )){
         this->limite_izq_var1=lim_izq;
         this->limite_der_var1=lim_der;

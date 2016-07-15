@@ -12,7 +12,7 @@ string unir_vector(std::vector<string> v){
 
 
 
-bool isOper(std::map<str_interp,num_interp (*) (num_interp,num_interp)> func_b, std::map<str_interp,num_interp (*) (num_interp)> func_u, str_interp text){
+booleano isOper(std::map<str_interp,num_interp (*) (num_interp,num_interp)> func_b, std::map<str_interp,num_interp (*) (num_interp)> func_u, str_interp text){
   for (auto it : func_b){
     if (text == it.first){
       return true;
@@ -49,6 +49,9 @@ Interpretador::Interpretador()
 
     T_do (*log_p)(num_interp);
     log_p =&log;
+
+    T_do (*raiz_p)(num_interp);
+    raiz_p =&raiz;
     
     T_do (*seno_p)(num_interp);
     seno_p =&seno;
@@ -115,7 +118,7 @@ Interpretador::Interpretador()
     //------------------map_unario
 
     funciones_unarias["abs"]=v_absoluto_p;
-
+    funciones_unarias["sqrt"]=raiz_p;
     funciones_unarias["log"]=log_p;
     funciones_unarias["lg"]=log_p;
 
@@ -184,6 +187,7 @@ Interpretador::Interpretador()
     prioridad_funciones["ahcsc"]=2;
     prioridad_funciones["ahtan"]=2;
     prioridad_funciones["ahcot"]=2;
+    prioridad_funciones["sqrt"]=1;
     prioridad_funciones["^"]=1;
     prioridad_funciones["abs"]=1;
     
@@ -198,7 +202,7 @@ Interpretador::~Interpretador()
     //dtor
 }
 
-bool Interpretador::es_operador_unario(string oper){
+booleano Interpretador::es_operador_unario(string oper){
   for(auto it:this->funciones_unarias){
     if(it.first==oper){
       return true;
@@ -207,7 +211,7 @@ bool Interpretador::es_operador_unario(string oper){
   return false;
 }
 
-bool Interpretador::es_operador_binario(string oper){
+booleano Interpretador::es_operador_binario(string oper){
   for(auto it:this->funciones_binarias){
     if(it.first==oper){
       return true;
@@ -216,7 +220,7 @@ bool Interpretador::es_operador_binario(string oper){
   return false;
 } 
 
-bool Interpretador::es_expresion(string texto){
+booleano Interpretador::es_expresion(string texto){
   if(texto[0]=='('&&texto[texto.size()-1]==')'){
     return true;
   }
@@ -225,7 +229,7 @@ bool Interpretador::es_expresion(string texto){
 
 void Interpretador::fix_operaciones_unarias(std::vector<string>& v){
   
-  for(int i=0;i<v.size();i++){
+  for(T_int i=0;i<v.size();i++){
     if(this->es_operador_unario(v.at(i))){
       v.at(i)="("+v.at(i)+v.at(i+1)+")";
       v.erase(v.begin()+i+1);
@@ -234,9 +238,7 @@ void Interpretador::fix_operaciones_unarias(std::vector<string>& v){
 }
 
 void Interpretador::fix_multiplicaciones(std::vector<string>& v){
-  for(auto it:v){
-    cout<<it<<endl;
-  }
+  
   string l_last="";
   string last="";
   for (string& it : v){
@@ -247,8 +249,7 @@ void Interpretador::fix_multiplicaciones(std::vector<string>& v){
       }
 
       else{
-          cout<<"-"<<it<<"-"<<this->es_operador(last)<<endl;
-          bool tmp=false;
+          booleano tmp=false;
           string temp="";
           for(auto& ite:it){
             if(isdigit(ite)==false&&tmp==false&&ite!='.'){
@@ -274,7 +275,7 @@ std::vector<string> Interpretador::string_to_vector(string text){
   int_c num_parent=0;
   str_interp temp="";
   string oper_mayor_prio="";
-  int mayor_prio=0;
+  T_int mayor_prio=0;
   for (auto it : text){
       temp+=it;
       if (it=='('){
@@ -319,37 +320,22 @@ std::vector<string> Interpretador::string_to_vector(string text){
 string Interpretador::verif_sintaxis(std::string  text){
   elim_parent(text);
   std::vector<string> v=this->string_to_vector(text);
-  cout<<"********************"<<endl;
-  for(auto it:v){
-    cout<<it<<endl;
-  }
-  cout<<"********************"<<endl;
   this->fix_operaciones_unarias(v);
   this->fix_multiplicaciones(v);     
   this->fix_negativos(v);
-  cout<<"------------------"<<endl;
-  cout<<"********************"<<endl;
   string temp=unir_vector(v);
   elim_parent(temp);
   v=string_to_vector(temp);  
-  for(auto it:v){
-    cout<<it<<endl;
-  }
-  cout<<"********************"<<endl;
   
-    for (int i=0; i<v.size();i++){
+    for (T_int i=0; i<v.size();i++){
         
-        cout<<"-->"<<v.at(i)<<endl;
       if (v.at(i)[0]=='(' & v.at(i)[v.at(i).size()-1]==')'){
-        std::cout << "entro" << std::endl;
         elim_parent(v.at(i));
         v.at(i)=  '('+verif_sintaxis(v.at(i))+')' ;
       }
     }    
   
   
-  
-
   string result=unir_vector(v);
   elim_parent(result);
   return result;
@@ -369,7 +355,7 @@ void Interpretador::fix_negativos(std::vector<string>& v){
       v.erase(v.begin()+1);
     }
   }
-  for(int i=1;i<v.size();i++){
+  for(T_int i=1;i<v.size();i++){
     if(v.at(i)=="-" && this->es_operador(v.at(i-1))==true ){
       if(this->es_operador(v.at(i+1))==true){
         v.at(i)="(0-"+v.at(i+1)+v.at(i+2)+")";
@@ -384,7 +370,7 @@ void Interpretador::fix_negativos(std::vector<string>& v){
   }
 }
 
-bool Interpretador::es_operador(string oper){
+booleano Interpretador::es_operador(string oper){
   for(auto it : this->funciones_unarias){
     if(oper==it.first){
       return true;
@@ -439,7 +425,7 @@ booleano Interpretador::esta_en(str_interp text, str_interp ope){
 
 string Interpretador::get_operador_mayor_prioridad(std::vector<string> v){
   string operador_mayor_prioridad="";
-  int mayor_prio=0;
+  T_int mayor_prio=0;
   for(auto it:v){
     if(this->es_operador(it)){
       if(this->get_operador_prioridad(it)>mayor_prio){
@@ -451,7 +437,7 @@ string Interpretador::get_operador_mayor_prioridad(std::vector<string> v){
   return operador_mayor_prioridad;
 }
 
-int Interpretador::get_operador_prioridad(string oper){
+T_int Interpretador::get_operador_prioridad(string oper){
   return this->prioridad_funciones[oper];
 }
 
@@ -506,8 +492,8 @@ void Interpretador::transformar(str_interp text){
   elim_parent(text);
   vector<string> v=string_to_vector(text);
   string oper_mayor_prio=get_operador_mayor_prioridad(v);
-  int mayor_prio=get_operador_prioridad(oper_mayor_prio);
-  bool func_bin=es_operador_binario(oper_mayor_prio);
+  T_int mayor_prio=get_operador_prioridad(oper_mayor_prio);
+  booleano func_bin=es_operador_binario(oper_mayor_prio);
   
 
 
@@ -518,13 +504,12 @@ void Interpretador::transformar(str_interp text){
       return;
     }
   }
-  //std::cout << oper_mayor_prio<<"<--"<< std::endl;
-  //std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
+  
   
   separar_en_dos(v, oper_mayor_prio);
   elim_vacio(v);
   Nodo*raiz;
-  //std::cout << func_bin << std::endl;
+  
   if(func_bin){
     raiz=new Nodo_funcion_binaria(*funciones_binarias[oper_mayor_prio]);
     this->tree=new arbol_binario(raiz);
@@ -539,11 +524,7 @@ void Interpretador::transformar(str_interp text){
     this->tree=new arbol_binario(raiz);
     transformar(v.at(0), this->tree->raiz, true);
   }
-/*
-  double(* funcion)(double, double);
-  this->tree->raiz->get_valor(funcion);
-  std::cout << ((*funcion)(23,4)) << std::endl;
-*/
+
 }
 booleano Interpretador::isAlpha(const str_interp &str){
   for (auto i : str){
@@ -555,9 +536,9 @@ booleano Interpretador::isAlpha(const str_interp &str){
 }
 
 void Interpretador::elim_parent(str_interp & texto){
-  int temp=0;
-  int temp2=1;
-  int tam=texto.size();
+  T_int temp=0;
+  T_int temp2=1;
+  T_int tam=texto.size();
   if (tam>=3){
       for (auto it : texto){
           if (it=='('){
@@ -583,9 +564,7 @@ void Interpretador::elim_parent(str_interp & texto){
 }
 
 void Interpretador::transformar(str_interp text, Nodo* padre, booleano der){
-  cout<<"transformando 2"<<endl;
   elim_parent(text);
-  cout<<"1"<<endl;
   if(is_number(text)){
     
     Nodo* nodo=new Nodo_double(string_to_double(text));
@@ -606,8 +585,8 @@ void Interpretador::transformar(str_interp text, Nodo* padre, booleano der){
   elim_parent(text);
   vector<string> v=string_to_vector(text);
   string oper_mayor_prio=get_operador_mayor_prioridad(v);
-  int mayor_prio=get_operador_prioridad(oper_mayor_prio);
-  bool func_bin=es_operador_binario(oper_mayor_prio);
+  T_int mayor_prio=get_operador_prioridad(oper_mayor_prio);
+  booleano func_bin=es_operador_binario(oper_mayor_prio);
 
   
   if(oper_mayor_prio==""){
@@ -623,8 +602,7 @@ void Interpretador::transformar(str_interp text, Nodo* padre, booleano der){
     }
   }
 
-  //std::cout << oper_mayor_prio<<"<---------" << std::endl;
-  //std::cout << (func_bin? "es binario" : "es unario") <<"<---------" << std::endl;
+
   
   separar_en_dos(v, oper_mayor_prio);
   elim_vacio(v);
@@ -658,7 +636,7 @@ void Interpretador::transformar(str_interp text, Nodo* padre, booleano der){
 
 }
 
-bool Interpretador::is_number(const std::string& s)
+booleano Interpretador::is_number(const std::string& s)
 {
     for(auto it:s){
       if(isdigit(it) || (it=='.')){

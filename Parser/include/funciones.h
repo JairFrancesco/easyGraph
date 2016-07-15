@@ -40,6 +40,10 @@ double cuadrado(double x){
     return x*x;
 }
 
+double raiz(double x){
+    return sqrt(x);
+}
+
 double cubo(double x){
     return pow(x,3);
 }
